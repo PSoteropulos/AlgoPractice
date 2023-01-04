@@ -1,7 +1,20 @@
 const gradingStudents = (grades) => {
-
+    let roundedArray = []
+    for (let i=0;i<grades.length;i++){
+        if (grades[i]<38){
+            roundedArray.push(grades[i])
+        }
+        else if (grades[i]%5<3){
+            roundedArray.push(grades[i])
+        }
+        else {
+            roundedArray.push(Math.round(grades[i]/5) * 5)
+        }
+    }
+    return roundedArray
 }
 
+console.log(gradingStudents([73, 67, 38, 33]))
 
 
 
