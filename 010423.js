@@ -19,17 +19,6 @@ countApplesAndOranges(7, 11, 5, 15, [-2,2,1],[5,-6])
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Sam's house has an apple tree and an orange tree that yield an abundance of fruit. Using the information given below, determine the number of apples and oranges that land on Sam's house.
 
 // In the diagram below:
