@@ -22,7 +22,7 @@ const birthday = (s, d, m) => {
     return solutions
 }
 
-// console.log(birthday([1,2,1,3,2],3,2))
+console.log(birthday([1,2,1,3,2],3,2))
 // console.log(birthday([1,1,1,1,1],3,2))
 // console.log(birthday([4],4,1))
 
