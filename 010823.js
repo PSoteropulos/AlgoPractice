@@ -33,16 +33,17 @@ const migratoryBirds = (arr) => {
     else if (typeFourCount > typeOneCount && typeFourCount > typeTwoCount && typeFourCount > typeThreeCount && typeFourCount >= typeFiveCount){
         return 4
     }
-    else if (typeFiveCount > typeOneCount && typeFiveCount > typeTwoCount && typeFiveCount > typeOneCount &&)
+    else if (typeFiveCount > typeOneCount && typeFiveCount > typeTwoCount && typeFiveCount > typeThreeCount && typeFiveCount > typeFourCount){
+        return 5
+    }
     // let totalArray = [typeOneCount, typeTwoCount, typeThreeCount, typeFourCount, typeFiveCount];
     // let sortedTotalArray = totalArray.sort(function(a, b){return b-a})
     // return sortedTotalArray
-
 }
 
-console.log(migratoryBirds([1,1,2,2,3]))
+// console.log(migratoryBirds([1,1,2,2,3]))
 // console.log(migratoryBirds([1,4,4,4,5,3]))
-// console.log(migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]))
+console.log(migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]))
 
 
 // Given an array of bird sightings where every element represents a bird type id, determine the id of the most frequently sighted type. If more than 1 type has been spotted that maximum amount, return the smallest of their ids.
