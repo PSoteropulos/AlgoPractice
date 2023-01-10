@@ -1,11 +1,22 @@
 const  bonAppetit = (bill, k, b) => {
-    
+    let annaTotal = 0;
+    for (let i=0; i<bill.length; i++){
+        if (i != k){
+            annaTotal += bill[i]
+        }
+    }
+    if ((annaTotal/2) == b){
+        console.log("Bon Appetit")
+    }
+    else {
+        console.log(b - (annaTotal/2))
+    }
 }
 
-console.log(bonAppetit([2,4,6], 2, 3))
-// console.log(bonAppetit([2,4,6], 2, 6))
-// console.log(bonAppetit([3,10,2,9], 1, 12))
-// console.log(bonAppetit([3,10,2,9], 1, 7))
+// bonAppetit([2,4,6], 2, 3)
+// bonAppetit([2,4,6], 2, 6)
+// bonAppetit([3,10,2,9], 1, 12)
+bonAppetit([3,10,2,9], 1, 7)
 
 
 
