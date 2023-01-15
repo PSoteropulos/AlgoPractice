@@ -1,5 +1,14 @@
 def getMoneySpent(keyboards, drives, b):
-    pass
+    greatestCost = -1
+    for i in keyboards:
+        for j in drives:
+            if ((i + j <= b) & (i + j > greatestCost)):
+                greatestCost = i + j
+    return greatestCost
+
+# print(getMoneySpent([40,50,60],[5,8,12],60))
+# print(getMoneySpent([3,1],[5,2,8],10))
+# print(getMoneySpent([4],[5],5))
 
 
 
