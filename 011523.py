@@ -1,5 +1,5 @@
 def getMoneySpent(keyboards, drives, b):
-    
+    pass
 
 
 
@@ -27,4 +27,4 @@ def getMoneySpent(keyboards, drives, b):
 
 # The first line contains three space-separated integers , , and , the budget, the number of keyboard models and the number of USB drive models.
 # The second line contains  space-separated integers , the prices of each keyboard model.
-# The third line contains  space-separated integers , the prices of the USB drives.
+# The third line contains  space-separated integers , the prices of the USB drives
