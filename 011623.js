@@ -1,14 +1,13 @@
 const countingValleys = (steps, path) => {
-    let pathArray = path.split("")
     let altitude = 0
     let valleyCount = 0
     for (let i=0; i < steps; i++){
         let signChange = false
         let step = 0
-        if (pathArray[i] == "U"){
+        if (path[i] == "U"){
             step = 1
         }
-        else if (pathArray[i] == "D"){
+        else if (path[i] == "D"){
             step = -1
         }
         let initialAltitudeSign = Math.sign(altitude)

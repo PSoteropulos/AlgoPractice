@@ -1,8 +1,37 @@
 def countingValleys(steps, path):
-    pass
+    altitude = 0
+    valleyCount = 0
+    for step in path:
+        # print(step)
+        signChange = False
+        thisStep = 0
+        if step == "U":
+            thisStep = 1
+        elif step == "D":
+            thisStep = -1
+        # print(thisStep)
+        if (altitude < 0):
+            initialAltitudeSign = -1
+        elif (altitude > 0):
+            initialAltitudeSign = 1
+        elif (altitude == 0):
+            initialAltitudeSign = 0
+        # print("altitude before step", altitude)
+        altitude += thisStep
+        # print("altitude after step", altitude)
+        if (altitude < 0):
+            changedAltitudeSign = -1
+        elif (altitude > 0):
+            changedAltitudeSign = 1
+        elif (altitude == 0):
+            changedAltitudeSign = 0
+        if (initialAltitudeSign != changedAltitudeSign):
+            signChange = True
+        if ((signChange == True) & (changedAltitudeSign == -1)):
+            valleyCount += 1
+    return valleyCount
 
-
-
+print(countingValleys(8, "UDDDUDUU"))
 
 
 
@@ -14,7 +43,6 @@ def countingValleys(steps, path):
 
 # Example
 
- 
 
 # The hiker first enters a valley  units deep. Then they climb out and up onto a mountain  units high. Finally, the hiker returns to sea level and ends the hike.
 
