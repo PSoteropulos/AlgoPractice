@@ -1,5 +1,19 @@
 def pickingNumbers(a):
-    pass
+    maxLength = 0
+    for i in a:
+        tempArrayPlus = [i]
+        for j in a:
+            if ((i == j) or (j == (i+1))):
+                tempArrayPlus.append(j)
+            if (len(tempArrayPlus)-1 > maxLength):
+                maxLength = len(tempArrayPlus)-1
+        tempArrayMinus = [i]
+        for j in a:
+            if ((i == j) or (j == (i-1))):
+                tempArrayMinus.append(j)
+            if (len(tempArrayMinus)-1 > maxLength):
+                maxLength = len(tempArrayMinus)-1
+    return maxLength
 
 print(pickingNumbers([4,6,5,3,3,1]))
 
