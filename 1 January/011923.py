@@ -1,6 +1,20 @@
 def permutationEquation(p):
-    pass
+    yArray = []
+    for x in range(1, len(p)+1):
+        firstIndex = 0
+        y = 0
+        for i in range(len(p)):
+            if (p[i] == x):
+                firstIndex = i+1
+        for j in range(len(p)):
+            if(p[j] == firstIndex):
+                y = j+1
+        yArray.append(y)
+    return yArray
 
+print(permutationEquation([5,2,1,3,4]))
+print(permutationEquation([2,3,1]))
+print(permutationEquation([4,3,5,1,2]))
 
 
 
