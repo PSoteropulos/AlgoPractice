@@ -1,7 +1,19 @@
+import math
+
+def viralAdvertising(n):
+    totalLikes = 0
+    mostRecentShare = 5
+    for num in range(1, n+1):
+        incrementalLikeAndShare = math.floor(mostRecentShare/2)
+        totalLikes += incrementalLikeAndShare
+        mostRecentShare = incrementalLikeAndShare*3
+    return totalLikes
 
 
 
 
+print(viralAdvertising(5))
+print(viralAdvertising(3))
 
 
 

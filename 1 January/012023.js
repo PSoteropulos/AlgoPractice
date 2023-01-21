@@ -1,6 +1,5 @@
 const viralAdvertising = (n) => {
     let totalLikes = 0;
-    let totalShares = 5;
     let mostRecentShare = 5;
     for (let i=1; i <= n; i++){
         let incrementalLikeAndShare = Math.floor(mostRecentShare/2)
