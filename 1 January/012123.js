@@ -27,9 +27,9 @@ const cutTheSticks = (arr) => {
     return whatsLeftArray
 }
 
-// console.log(cutTheSticks([1,2,3]))
-// console.log(cutTheSticks([5,4,4,2,2,8]))
-// console.log(cutTheSticks([1,2,3,4,3,3,2,1]))
+console.log(cutTheSticks([1,2,3]))
+console.log(cutTheSticks([5,4,4,2,2,8]))
+console.log(cutTheSticks([1,2,3,4,3,3,2,1]))
 console.log(cutTheSticks([8,8,14,10,3,5,14,12]))
 
 
