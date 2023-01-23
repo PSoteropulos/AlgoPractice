@@ -1,10 +1,10 @@
 def equalizeArray(arr):
     minDeletions = len(arr) - 1
-    for i in range(len(arr)):
-        tempMatchArray = [i]
+    for i in range(0, len(arr)):
+        tempMatchArray = [arr[i]]
         for j in range((i+1),len(arr)):
-            if (i==j):
-                tempMatchArray.append(j)
+            if (arr[i]==arr[j]):
+                tempMatchArray.append(arr[j])
         if ((len(arr) - len(tempMatchArray)) < minDeletions):
             minDeletions = (len(arr) - len(tempMatchArray))
     return minDeletions
@@ -12,6 +12,7 @@ def equalizeArray(arr):
 
 
 print(equalizeArray([1,2,2,3]))
+print(equalizeArray([3,3,2,1,3]))
 
 
 
