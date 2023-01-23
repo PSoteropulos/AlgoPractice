@@ -1,9 +1,22 @@
 def findDigits(n):
-    pass
+    numString = str(n)
+    stringArray = [ ]
+    divisorCount = 0
+    for string in numString:
+        stringArray.append(string)
+    for num in stringArray:
+        numInt = int(num)
+        if ((numInt != 0) and (n % numInt == 0)):
+            divisorCount += 1
+    return divisorCount
 
 
 
 print(findDigits(124))
+print(findDigits(111))
+print(findDigits(10))
+print(findDigits(12))
+print(findDigits(1012))
 
 
 

@@ -1,10 +1,25 @@
 const findDigits = (n) => {
-    
+    let numString = n.toString()
+    let stringArray = [ ]
+    let divisorCount = 0
+    for (let i=0; i<numString.length; i++){
+        stringArray.push(numString[i])
+    }
+    for (let j=0; j<stringArray.length; j++){
+        if (n % (Number(stringArray[j])) == 0){
+            divisorCount ++
+        } 
+    }
+    return divisorCount
 }
 
 
 
 console.log(findDigits(124))
+console.log(findDigits(111))
+console.log(findDigits(10))
+console.log(findDigits(12))
+console.log(findDigits(1012))
 
 
 
