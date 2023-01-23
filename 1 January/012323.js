@@ -1,10 +1,27 @@
 const equalizeArray = (arr) => {
-    
+    let minDeletions = arr.length-1
+    for (let i=0; i<arr.length;i++){
+        let tempMatchArray = [arr[i]]
+        // console.log("tempMatchArray before j loop", tempMatchArray)
+        for (let j=i+1; j<arr.length; j++){
+            if (arr[i]==arr[j]){
+                tempMatchArray.push(arr[j])
+                // console.log("tempMatchArray after addition", tempMatchArray)
+            }
+        }
+        // console.log("arr.length", arr.length, "minus tempMatchArray.length", tempMatchArray.length, "equals", (arr.length - tempMatchArray.length))
+        if ((arr.length - tempMatchArray.length) < minDeletions){
+            // console.log("minDeletions before alteration", minDeletions)
+            minDeletions = arr.length - tempMatchArray.length
+            // console.log("minDeletions after alteration", minDeletions)
+        }
+    }
+    return minDeletions
 }
 
 
-
-
+// console.log(equalizeArray([1, 2, 2, 3]))
+console.log(equalizeArray([3, 3, 2, 1, 3]))
 
 
 
