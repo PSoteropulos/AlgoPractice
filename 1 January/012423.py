@@ -1,8 +1,43 @@
 def jumpingOnClouds(c, k):
-    pass
+    energy = 100
+    position = 0
+    while (energy > 0):
+        if ((position == 0) and (energy == 100)):
+            position += k
+            energy -= 1
+            if ((position < len(c)) and (c[position] == 1)):
+                energy -= 2
+            if (position >= len(c)):
+                position -= len(c)
+                if (c[position] == 1):
+                    energy -= 2
+                    if (position == 0):
+                        break
+                if (position == 0):
+                    break
+        else:
+            if (position == 0):
+                break
+            energy -= 1
+            position += k
+            if ((position < len(c)) and (c[position] == 1)):
+                energy -= 2
+            if (position >= len(c)):
+                position -= len(c)
+                if (c[position] == 1):
+                    energy -= 2
+                    if (position == 0):
+                        break
+                if (position == 0):
+                    break
+    return energy
 
 
 
+print(jumpingOnClouds([0,0,1,0],2))
+# print(jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0],2))
+# print(jumpingOnClouds([1, 1, 1, 0, 1, 1, 0, 0, 0, 0],3))
+# print(jumpingOnClouds([1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1], 19))
 
 
 

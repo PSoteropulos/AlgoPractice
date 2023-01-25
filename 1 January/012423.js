@@ -56,9 +56,9 @@ const jumpingOnClouds = (c, k) => {
     return energy
 }
 
-// console.log(jumpingOnClouds([0,0,1,0],2))
-// console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0],2))
-// console.log(jumpingOnClouds([1, 1, 1, 0, 1, 1, 0, 0, 0, 0],3))
+console.log(jumpingOnClouds([0,0,1,0],2))
+console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0],2))
+console.log(jumpingOnClouds([1, 1, 1, 0, 1, 1, 0, 0, 0, 0],3))
 console.log(jumpingOnClouds([1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1], 19))
 
 
