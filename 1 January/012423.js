@@ -1,6 +1,7 @@
 const jumpingOnClouds = (c, k) => {
     let energy = 100
     let position = 0
+    console.log(k)
     while (energy > 0){
         console.log("-------new loop ------")
         console.log("energy at beginning of iteration", energy)
@@ -13,31 +14,39 @@ const jumpingOnClouds = (c, k) => {
             if (c[position] == 1){
                 energy -= 2
             }
-        }
-        else {
             if (position >= c.length){
-                console.log("index position > length conditional before operation", position)
                 position -= c.length
-                console.log("index position > length conditional after operation", position)
+                if (c[position] == 1){
+                    energy -= 2
+                    if (position == 0){
+                        break
+                    }
                 if (position == 0){
                     break
                 }
-                if (c[position] == 1){
-                    energy -= 3
-                    position += k
                 }
-                else {
-                    energy --
-                    position += k
-                }
-                // position = position + k
             }
-            else {
-                energy--
+        }
+        else {
+            if (position == 0){
+                break
+            }
+            energy--
+            position += k 
+            if (c[position] == 1){
+                energy -= 2
+            }
+            if (position >= c.length){
+                position -= c.length
                 if (c[position] == 1){
                     energy -= 2
+                    if (position == 0){
+                        break
+                    }
+                if (position == 0){
+                    break
                 }
-                position += k 
+                }
             }
         }
         console.log("index position at end of iteration", position)
@@ -49,8 +58,8 @@ const jumpingOnClouds = (c, k) => {
 
 // console.log(jumpingOnClouds([0,0,1,0],2))
 // console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 1, 0],2))
-console.log(jumpingOnClouds([1, 1, 1, 0, 1, 1, 0, 0, 0, 0],3))
-
+// console.log(jumpingOnClouds([1, 1, 1, 0, 1, 1, 0, 0, 0, 0],3))
+console.log(jumpingOnClouds([1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1], 19))
 
 
 
