@@ -1,5 +1,15 @@
-function serviceLane(n, cases) {
-    
+function serviceLane(n, width, cases) {
+    let widthArray = [ ]
+    for (let i=0;i<cases.length;i++){
+        let maxWidth = 100000
+        for (let j=cases[i][0];j<=cases[i][1];j++){
+            if (width[j] < maxWidth){
+                maxWidth = width[j]
+            }
+        }
+        widthArray.push(maxWidth)
+    }
+    return widthArray
 }
 
 

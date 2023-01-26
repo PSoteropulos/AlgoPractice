@@ -1,7 +1,15 @@
-def serviceLane(n, cases):
-    pass
+def serviceLane(n, width, cases):
+    widthArray = [ ]
+    for case in cases:
+        maxWidth = 100000
+        for i in range(case[0], case[1]):
+            if (width[i] < maxWidth):
+                maxWidth = width[i]
+        widthArray.append(maxWidth)
+    return widthArray
 
 
+print(serviceLane(8, [2,3,1,2,3,2,3,3], [[0,3],[4,6],[6,7],[3,5],[0,7]]))
 
 
 
