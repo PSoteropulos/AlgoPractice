@@ -1,9 +1,29 @@
+function minimumDistances(a) {
+    let minDist = 100000
+    let matches = false
+    for (let i=0;i<a.length;i++){
+        for (let j=i+1;j<a.length;j++){
+            if (a[i] == a[j]){
+                matches = true
+                if ((Math.abs(i - j))<minDist){
+                    minDist=Math.abs(i - j)
+                }
+            }
+        }
+    }
+    if (matches == true){
+        return minDist
+    }
+    else {
+        return -1
+    }
+}
 
 
 
 
-
-
+console.log(minimumDistances([3,2,1,2,3]))
+console.log(minimumDistances([7,1,3,4,1,7]))
 
 
 

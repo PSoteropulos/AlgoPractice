@@ -1,8 +1,21 @@
+def minimumDistances(a):
+    minDist = 100000
+    matches = False
+    for i in range(len(a)+1):
+        for j in range(i+1, len(a)):
+            if (a[i] == a[j]):
+                matches = True
+                if (abs(i - j) < minDist):
+                    minDist = abs(i - j)
+    if (matches == True):
+        return minDist
+    else:
+        return -1
 
 
 
-
-
+print(minimumDistances([3,2,1,2,3]))
+print(minimumDistances([7,1,3,4,1,7]))
 
 
 
