@@ -1,8 +1,14 @@
+def camelcase(s):
+    totalCaps = 0
+    for char in s:
+        if (char == char.upper()):
+            totalCaps += 1
+    return totalCaps + 1
 
 
 
-
-
+print(camelcase("oneTwoThree"))
+print(camelcase("saveChangesInTheEditor"))
 
 
 
