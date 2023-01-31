@@ -1,7 +1,20 @@
+def alternatingCharacters(s):
+    augmentedString = [s[0]]
+    deletions = 0
+    for i in range(1, len(s)):
+        if (s[i] != s[i-1]):
+            augmentedString.append(s[i])
+        else:
+            deletions += 1
+    return deletions
 
 
-
-
+print(alternatingCharacters("AABAAB"))
+print(alternatingCharacters("AAAA"))
+print(alternatingCharacters("BBBBB"))
+print(alternatingCharacters("ABABABAB"))
+print(alternatingCharacters("BABABA"))
+print(alternatingCharacters("AAABBB"))
 
 
 
