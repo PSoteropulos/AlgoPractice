@@ -1,12 +1,29 @@
 const hackerrankInString = (s) => {
-    
+    let condition = false
+    let stringChecker = ["k","n","a","r","r","e","k","c","a","h"]
+    for (let i=0;i<s.length;i++){
+        if (s[i] == stringChecker[stringChecker.length-1]){
+            stringChecker.pop()
+        }
+    }
+    if (stringChecker == ""){
+        condition = true
+    }
+    if (condition == true){
+        return "YES"
+    }
+    else if (condition == false){
+        return "NO"
+    }
 }
 
 
 
-
-
-
+console.log(hackerrankInString("haacckkerrannkk"))
+console.log(hackerrankInString("haacckkerannkk"))
+console.log(hackerrankInString("hccaakkerrannkk"))
+console.log(hackerrankInString("hereiamstackerrank"))
+console.log(hackerrankInString("hackerworld"))
 
 
 // We say that a string contains the word hackerrank if a subsequence of its characters spell the word hackerrank. Remeber that a subsequence maintains the order of characters selected from a sequence.
