@@ -1,8 +1,22 @@
 def hackerrankInString(s):
-    pass
+    condition = False
+    stringChecker = ["k","n","a","r","r","e","k","c","a","h"]
+    for char in s:
+        if ((len(stringChecker)>0) and (char == stringChecker[(len(stringChecker))-1])):
+            stringChecker.pop()
+    if (stringChecker == []):
+        condition = True
+    if (condition == True):
+        return "YES"
+    elif (condition == False):
+        return "NO"
 
 
-
+print(hackerrankInString("haacckkerrannkk"))
+print(hackerrankInString("haacckkerannkk"))
+print(hackerrankInString("hccaakkerrannkk"))
+print(hackerrankInString("hereiamstackerrank"))
+print(hackerrankInString("hackerworld"))
 
 
 
