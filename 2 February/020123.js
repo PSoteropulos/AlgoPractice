@@ -13,9 +13,9 @@ const lonelyinteger = (a) => {
     return newArray[0]
 }
 
-// console.log(lonelyinteger([1,2,3,4,3,2,1]))
-// console.log(lonelyinteger([1,1,2]))
-// console.log(lonelyinteger([1]))
+console.log(lonelyinteger([1,2,3,4,3,2,1]))
+console.log(lonelyinteger([1,1,2]))
+console.log(lonelyinteger([1]))
 console.log(lonelyinteger([0,0,1,2,1]))
 
 

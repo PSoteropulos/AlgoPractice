@@ -1,8 +1,19 @@
+def lonelyinteger(a):
+    newArray = a
+    while (len(newArray) > 1):
+        for i in range(0,len(newArray)):
+            for j in range((i+1),len(newArray)):
+                if (newArray[i] == newArray[j]):
+                    del newArray[j]
+                    del newArray[i]
+                    break
+    return newArray[0]
 
 
-
-
-
+print(lonelyinteger([1,2,3,4,3,2,1]))
+print(lonelyinteger([1,1,2]))
+print(lonelyinteger([1]))
+print(lonelyinteger([0,0,1,2,1]))
 
 
 
