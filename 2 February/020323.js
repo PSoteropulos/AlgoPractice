@@ -4,7 +4,7 @@ const pangrams = (s) => {
     }
     let alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     for (let i=0;i<s.length;i++){
-        let foundIndex = alphabetArray.indexOf(s[i])
+        let foundIndex = alphabetArray.indexOf(s[i].toLowerCase())
         if (foundIndex != -1){
             deleteIndex(foundIndex)
         }
@@ -19,7 +19,7 @@ const pangrams = (s) => {
 
 
 console.log(pangrams("The quick brown fox jumps over the lazy dog"))
-
+console.log(pangrams("We promptly judged antique ivory buckles for the next prize"))
 
 
 
