@@ -1,8 +1,14 @@
+def marcsCakewalk(calorie):
+    calorie.sort(reverse=True)
+    minMiles = 0
+    for i in range(len(calorie)):
+        minMiles += ((2**i) * calorie[i])
+    return minMiles
 
 
-
-
-
+print(marcsCakewalk([5,10,7]))
+print(marcsCakewalk([1,3,2]))
+print(marcsCakewalk([7,4,9,6]))
 
 
 
