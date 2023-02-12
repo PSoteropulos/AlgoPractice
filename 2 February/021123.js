@@ -1,8 +1,21 @@
+const finalValueAfterOperations = (operations) => {
+    let value = 0
+    for (let i=0;i<operations.length;i++){
+        if ((operations[i] == "++X") || (operations[i] == "X++")){
+            value += 1
+        }
+        if ((operations[i] == "--X") || (operations[i] == "X--")){
+            value -= 1
+        }
+    }
+    return value
+};
 
 
 
-
-
+console.log(finalValueAfterOperations(["--X","X++","X++"]))
+console.log(finalValueAfterOperations(["++X","++X","X++"]))
+console.log(finalValueAfterOperations(["X++","++X","--X","X--"]))
 
 
 
