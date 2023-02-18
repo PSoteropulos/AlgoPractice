@@ -2,11 +2,17 @@ def mostWordsFound(sentences):
     biggestCount = 0
     for sentence in sentences:
         localCount = 1
+        for char in sentence:
+            if char == " ":
+                localCount += 1
+        if localCount > biggestCount:
+            biggestCount = localCount
+    return biggestCount
 
 
 
-
-
+print(mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]))
+print(mostWordsFound(["please wait", "continue to fight", "continue to win"]))
 
 
 
