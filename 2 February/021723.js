@@ -1,7 +1,22 @@
+const mostWordsFound = (sentences) => {
+    let biggestCount = 0
+    for (let i=0; i<sentences.length; i++){
+        localCount = 1
+        for (let j=0; j<sentences[i].length; j++){
+            if (sentences[i][j] == " "){
+                localCount ++
+            }
+        }
+        if (localCount > biggestCount){
+            biggestCount = localCount
+        }
+    }
+    return biggestCount
+}
 
 
-
-
+console.log(mostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]))
+console.log(mostWordsFound(["please wait", "continue to fight", "continue to win"]))
 
 
 
