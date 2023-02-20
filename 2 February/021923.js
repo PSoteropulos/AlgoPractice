@@ -1,9 +1,20 @@
+const subtractProductAndSum = (n) => {
+    let digitProduct = 1
+    let digitSum = 0
+    let nString = n.toString()
+    digitArray = [ ]
+    for (let i=0; i<nString.length; i++){
+        digitArray.push(nString[i])
+    }
+    for (let j=0;j<digitArray.length;j++){
+        digitProduct = digitProduct * Number(digitArray[j])
+        digitSum = digitSum + Number(digitArray[j])
+    }
+    return digitProduct - digitSum
+};
 
-
-
-
-
-
+console.log(subtractProductAndSum(234))
+console.log(subtractProductAndSum(4421))
 
 
 
