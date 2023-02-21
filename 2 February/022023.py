@@ -1,7 +1,17 @@
+def smallerNumbersThanCurrent(nums):
+    resultArray = [ ]
+    for i in range(len(nums)):
+        count = 0
+        for j in range(len(nums)):
+            if ((i != j) and (nums[j] < nums[i])):
+                count += 1
+        resultArray.append(count)
+    return resultArray
 
 
-
-
+print(smallerNumbersThanCurrent([8,1,2,2,3]))
+print(smallerNumbersThanCurrent([6,5,4,8]))
+print(smallerNumbersThanCurrent([7,7,7,7]))
 
 
 
