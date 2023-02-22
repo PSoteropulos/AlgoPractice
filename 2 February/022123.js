@@ -1,4 +1,25 @@
+const interpret = (command) => {
+    let interpretedString = ""
+    for (let i=0; i<command.length; i++){
+        if (command[i] == "G"){
+            interpretedString += "G"
+        }
+        else if (command[i] == "("){
+            if (command[i+1] == ")"){
+                interpretedString += "o"
+            }
+            else if (command[i+1] == "a"){
+                interpretedString += "al"
+            }
+        }
+    }
+    return interpretedString
+}
 
+
+console.log(interpret("G()(al)"))
+console.log(interpret("G()()()()(al)"))
+console.log(interpret("(al)G(al)()()G"))
 
 
 
