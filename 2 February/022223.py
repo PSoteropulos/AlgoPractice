@@ -1,9 +1,17 @@
+def differenceOfSum(nums):
+    elementSum = 0
+    digitSum = 0
+    for num in nums:
+        elementSum += num
+        numString = str(num)
+        for char in numString:
+            digitSum += int(char)
+    return abs(elementSum - digitSum)
 
 
 
-
-
-
+print(differenceOfSum([1,15,6,3]))
+print(differenceOfSum([1,2,3,4]))
 
 
 
