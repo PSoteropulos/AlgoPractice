@@ -1,9 +1,15 @@
+def decompressRLElist(nums):
+    finalArray = [ ]
+    for i in range(0,len(nums),2):
+        for j in range(nums[i]):
+            finalArray.append(nums[i+1])
+    return finalArray
 
 
 
 
-
-
+print(decompressRLElist([1,2,3,4]))
+print(decompressRLElist([1,1,2,3]))
 
 
 
