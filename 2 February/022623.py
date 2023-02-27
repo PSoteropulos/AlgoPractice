@@ -1,16 +1,17 @@
 def cellsInRange(s):
     alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    firstLetterIndex = alphabetArray.indexOf(s[0])
-    lastLetterIndex = alphabetArray.indexOf(s[3])
+    firstLetterIndex = alphabetArray.index(s[0])
+    lastLetterIndex = alphabetArray.index(s[3])
     rangeIndex = [ ]
     for j in range(firstLetterIndex, lastLetterIndex+1):
-        for i in range(s[1], s[4]+1):
-            rangeIndex.append(`${alphabetArray[j]}${i}`)
+        for i in range(int(s[1]), int(s[4])+1):
+            rangeIndex.append(f'{alphabetArray[j]}{str(i)}')
     return rangeIndex
 
 
 
-
+print(cellsInRange("K1:L2"))
+print(cellsInRange("A1:F1"))
 
 
 
