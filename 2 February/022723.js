@@ -1,8 +1,24 @@
+const numberOfSteps = (num) => {
+    let stepCount = 0
+    let newNum = num
+    while (newNum>0){
+        if (newNum%2==0){
+            newNum = (newNum/2)
+            stepCount += 1
+        }
+        else{
+            newNum -= 1
+            stepCount += 1
+        }
+    }
+    return stepCount
+};
 
 
 
-
-
+console.log(numberOfSteps(14))
+console.log(numberOfSteps(8))
+console.log(numberOfSteps(123))
 
 
 

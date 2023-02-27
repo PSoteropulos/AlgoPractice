@@ -2,9 +2,7 @@ def numberOfSteps(num):
     stepCount = 0
     newNum = num
     while newNum>0:
-        if (newNum == 0):
-            break
-        elif (newNum%2==0):
+        if (newNum%2==0):
             newNum = (newNum/2)
             stepCount += 1
         else:
