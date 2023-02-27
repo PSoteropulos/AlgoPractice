@@ -1,8 +1,20 @@
+const cellsInRange = (s) => {
+    let alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    let firstLetterIndex = alphabetArray.indexOf(s[0])
+    let lastLetterIndex = alphabetArray.indexOf(s[3])
+    let rangeIndex = [ ]
+    for (let j=firstLetterIndex; j <= lastLetterIndex; j++){
+        for (let i = s[1]; i <= s[4]; i++){
+            rangeIndex.push(`${alphabetArray[j]}${i}`)
+        }
+    }
+    return rangeIndex
+};
 
 
 
-
-
+console.log(cellsInRange("K1:L2"))
+console.log(cellsInRange("A1:F1"))
 
 
 

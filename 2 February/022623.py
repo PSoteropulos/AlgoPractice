@@ -1,4 +1,12 @@
-
+def cellsInRange(s):
+    alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    firstLetterIndex = alphabetArray.indexOf(s[0])
+    lastLetterIndex = alphabetArray.indexOf(s[3])
+    rangeIndex = [ ]
+    for j in range(firstLetterIndex, lastLetterIndex+1):
+        for i in range(s[1], s[4]+1):
+            rangeIndex.append(`${alphabetArray[j]}${i}`)
+    return rangeIndex
 
 
 
