@@ -1,9 +1,16 @@
+def countDigits(num):
+    count = 0
+    numString = str(num)
+    for i in range(len(numString)):
+        if (num % int(numString[i]) == 0):
+            count += 1
+    return count
 
 
 
-
-
-
+print(countDigits(7))
+print(countDigits(121))
+print(countDigits(1248))
 
 
 
