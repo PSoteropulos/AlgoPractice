@@ -1,9 +1,20 @@
+const countDigits = (num) => {
+    let count = 0
+    let numString = num.toString()
+    for (let i=0; i<numString.length; i++) {
+        if (num % Number(numString[i]) == 0){
+            count ++
+        }
+    }
+    return count
+};
 
 
 
 
-
-
+console.log(countDigits(7))
+console.log(countDigits(121))
+console.log(countDigits(1248))
 
 
 
