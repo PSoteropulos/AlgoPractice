@@ -1,8 +1,21 @@
+def decodeMessage(key, message):
+    alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    keyArray = []
+    decodedMessage = ""
+    for i in range(len(key)):
+        if ((key[i] not in keyArray) and (key[i] != " ")):
+            keyArray.append(key[i])
+    for j in range(len(message)):
+        if (message[j] == " "):
+            decodedMessage += " "
+        else:
+            decodedMessage += f'{alphabetArray[keyArray.index(message[j])].lower()}'
+    return decodedMessage
 
 
 
-
-
+print(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))
+print(decodeMessage("eljuxhpwnyrdgtqkviszcfmabo", "zwx hnfx lqantp mnoeius ycgk vcnjrdb"))
 
 
 
