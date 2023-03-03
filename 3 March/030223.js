@@ -1,9 +1,30 @@
+const countMatches = (items, ruleKey, ruleValue) => {
+    let matches = 0
+    for (let item=0; item<items.length; item++){
+        if (ruleKey == 'type'){
+            if (items[item][0] == ruleValue){
+                matches ++
+            }
+        }
+        else if (ruleKey == 'color'){
+            if (items[item][1] == ruleValue){
+                matches ++
+            }
+        }
+        else if (ruleKey == 'name'){
+            if (items[item][2] == ruleValue){
+                matches ++
+            }
+        }
+    }
+    return matches
+};
 
 
 
 
-
-
+console.log(countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver"))
+console.log(countMatches([["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], "type", "phone"))
 
 
 
