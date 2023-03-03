@@ -1,12 +1,21 @@
 def countMatches(items, ruleKey, ruleValue):
     matches = 0
     for item in items:
-        
+        if ruleKey == 'type':
+            if item[0] == ruleValue:
+                matches += 1
+        elif ruleKey == 'color':
+            if item[1] == ruleValue:
+                matches += 1
+        elif ruleKey == 'name':
+            if item[2] == ruleValue:
+                matches += 1
+    return matches
 
 
 
-
-
+print(countMatches([["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], "color", "silver"))
+print(countMatches([["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]], "type", "phone"))
 
 
 
