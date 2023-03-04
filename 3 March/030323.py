@@ -1,9 +1,20 @@
 def sortSentence(s):
+    stringArray = s.split()
+    def sortFunction(i):
+        return i[len(i)-1]
+    stringArray.sort(key=sortFunction)
+    alteredString = ""
+    for i in range(len(stringArray)):
+        if i == len(stringArray)-1:
+            alteredString += stringArray[i][:len(stringArray[i])-1]
+        else:
+            alteredString += stringArray[i][:len(stringArray[i])-1] + " "
+    return alteredString
 
 
 
-
-
+print(sortSentence("is2 sentence4 This1 a3"))
+print(sortSentence("Myself2 Me1 I4 and3"))
 
 
 
