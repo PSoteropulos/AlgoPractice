@@ -1,9 +1,28 @@
+const arithmeticTriplets = (nums, diff) => {
+    let totalTriplets = 0
+    for (let i=0; i<nums.length-1;i++){
+        let possibleTriplets = 0
+        let secondIndex = 0
+        for (let j=i+1; j<nums.length; j++){
+            if (nums[i] + diff == nums[j]){
+                possibleTriplets += 1
+                secondIndex = j
+            }
+        }
+        for (let k=secondIndex; k<nums.length; k++){
+            if ((nums[secondIndex] + diff == nums[k])&&(possibleTriplets == 1)){
+                totalTriplets += 1
+            }
+        }
+    }
+    return totalTriplets
+};
 
 
 
 
-
-
+console.log(arithmeticTriplets([0,1,4,6,7,10], 3))
+console.log(arithmeticTriplets([4,5,6,7,8,9], 2))
 
 
 
