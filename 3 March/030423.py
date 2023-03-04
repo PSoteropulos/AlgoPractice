@@ -1,20 +1,24 @@
 def arithmeticTriplets(nums, diff):
     totalTriplets = 0
     for i in range(len(nums)-1):
+        print("i:", i, "nums[i]:", nums[i])
         possibleTriplets = 0
         secondIndex = 0
         for j in range(i+1, len(nums)):
+            print("j:", j, "nums[j]:", nums[j])
             if nums[i] + diff == nums[j]:
                 possibleTriplets += 1
                 secondIndex = j
         for k in range(secondIndex, len(nums)):
-            if nums[secondIndex] + diff == nums[k]:
+            print("k:", k, "nums[k]:", nums[k])
+            if (nums[secondIndex] + diff == nums[k]) and (possibleTriplets==1):
                 totalTriplets += 1
     return totalTriplets
 
 
 
-
+print(arithmeticTriplets([0,1,4,6,7,10], 3))
+print(arithmeticTriplets([4,5,6,7,8,9], 2))
 
 
 
