@@ -1,9 +1,23 @@
 var sortSentence = function(s) {
-    
+    let stringArray = s.split(" ")
+    stringArray.sort(function(a, b){return a[a.length-1] - b[b.length-1]})
+    let alteredString = ""
+    for (let i=0; i<stringArray.length; i++){
+        if (i == stringArray.length-1){
+            alteredString = alteredString.concat(stringArray[i].slice(0, stringArray[i].length-1))
+        }
+        else {
+            alteredString = alteredString.concat(stringArray[i].slice(0, stringArray[i].length-1), " ")
+        }
+    }
+
+    return alteredString
 };
 
 
 
+console.log(sortSentence("is2 sentence4 This1 a3"))
+console.log(sortSentence("Myself2 Me1 I4 and3"))
 
 
 
