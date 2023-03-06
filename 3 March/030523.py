@@ -1,10 +1,17 @@
+def checkIfPangram(sentence):
+    alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    includesAll = True
+    sentenceArray = [*sentence]
+    for i in range(len(alphabetArray)):
+        if alphabetArray[i] not in sentenceArray:
+            includesAll = False
+    return includesAll
 
 
 
 
-
-
-
+print(checkIfPangram("thequickbrownfoxjumpsoverthelazydog"))
+print(checkIfPangram("leetcode"))
 
 
 # 1832. Check if the Sentence Is Pangram
