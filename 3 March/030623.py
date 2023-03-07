@@ -3,10 +3,10 @@ def findCenter(edges):
     initialTwo = edges[0][1]
     commonNum = None
     for i in range(1, len(edges)):
-        if ((edges[i][0] == initialOne) or (edges[i][1] == initialOne)):
-            commonNum = initialOne
-        if ((edges[i][0] == initialTwo) or (edges[i][1] == initialTwo)):
-            commonNum = initialTwo
+        if ((edges[i][0] == edges[0][0]) or (edges[i][1] ==edges[0][0])):
+            commonNum = edges[0][0]
+        if ((edges[i][0] == edges[0][1]) or (edges[i][1] == edges[0][1])):
+            commonNum = edges[0][1]
     return commonNum
 
 

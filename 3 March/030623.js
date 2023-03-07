@@ -1,8 +1,22 @@
+const findCenter = (edges) => {
+    let initialOne = edges[0][0]
+    let initialTwo = edges[0][1]
+    let commonNum = undefined
+    for (let i=1; i<edges.length; i++){
+        if ((edges[i][0] == initialOne) || (edges[i][1] == initialOne)){
+            commonNum = initialOne
+        }
+        if ((edges[i][0] == initialTwo) || (edges[i][1] == initialTwo)){
+            commonNum = initialTwo
+        }
+    }
+    return commonNum
+}
 
 
 
-
-
+console.log(findCenter([[1,2],[2,3],[4,2]]))
+console.log(findCenter([[1,2],[5,1],[1,3],[1,4]]))
 
 
 
