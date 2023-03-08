@@ -1,7 +1,21 @@
+def arrayStringsAreEqual(word1, word2):
+    word1String = ""
+    word2String = ""
+    for i in range(len(word1)):
+        word1String = word1String + word1[i]
+    
+    for j in range (len(word2)):
+        word2String = word2String + word2[j]
+    
+    if word1String==word2String:
+        return True
+    else:
+        return False
 
 
-
-
+print(arrayStringsAreEqual(["ab", "c"], ["a", "bc"]))
+print(arrayStringsAreEqual(["a", "cb"], ["ab", "c"]))
+print(arrayStringsAreEqual(["abc", "d", "defg"], ["abcddefg"]))
 
 
 
