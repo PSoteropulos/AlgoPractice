@@ -1,8 +1,23 @@
+const numberOfMatches = (n) => {
+    let matchCount = 0
+    let teams = n
+    while (teams > 1){
+        if (teams%2==0){
+            matchCount += (teams/2)
+            teams = teams / 2
+        }
+        else if (teams%2==1){
+            matchCount += ((teams-1)/2)
+            teams = ((teams-1)/2) +1
+        }
+    }
+    return matchCount
+};
 
 
 
-
-
+console.log(numberOfMatches(7))
+console.log(numberOfMatches(14))
 
 
 
