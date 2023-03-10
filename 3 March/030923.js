@@ -1,5 +1,15 @@
 const truncateSentence = (s, k) => {
-    
+    let sentenceArray = s.split(" ")
+    let newSentence = ""
+    for (let i=0; i<k;i++){
+        if (i==k-1){
+            newSentence += sentenceArray[i]
+        }
+        else {
+            newSentence += sentenceArray[i] + " "
+        }
+    }
+    return newSentence
 };
 
 
