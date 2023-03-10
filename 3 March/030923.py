@@ -1,5 +1,12 @@
 def truncateSentence(s, k):
-    pass
+    sentenceArray = s.split(" ")
+    newSentence = ""
+    for i in range(k):
+        if i == k-1:
+            newSentence += sentenceArray[i]
+        else:
+            newSentence += sentenceArray[i] + " "
+    return newSentence
 
 
 
