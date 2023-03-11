@@ -10,10 +10,9 @@ const countKDifference = (nums, k) => {
     return count
 };
 
-
-
-
-
+console.log(countKDifference([1,2,2,1], 1))
+console.log(countKDifference([1,3], 3))
+console.log(countKDifference([3,2,1,5,4], 2))
 
 
 
