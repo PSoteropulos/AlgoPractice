@@ -1,8 +1,15 @@
+def toLowerCase(s):
+    lowerCaseWord = ""
+    for i in range(len(s)):
+        lowerCaseWord +=  s[i].lower()
+    return lowerCaseWord
 
 
 
 
-
+print(toLowerCase("Hello"))
+print(toLowerCase("here"))
+print(toLowerCase("LOVELY"))
 
 
 
