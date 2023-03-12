@@ -1,9 +1,21 @@
+def uniqueMorseRepresentations(words):
+    morseAlphabet = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+    letterAlphabet =  ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    transformationArray = []
+    for i in range (len(words)):
+        wordArray = [*words[i]]
+        concatMorseWord = ""
+        for j in range(len(wordArray)):
+            letterIndex = letterAlphabet.index(wordArray[j].upper())
+            concatMorseWord += morseAlphabet[letterIndex]
+        if concatMorseWord not in transformationArray:
+            transformationArray.append(concatMorseWord)
+    return len(transformationArray)
 
 
 
-
-
-
+print(uniqueMorseRepresentations(["gin","zen","gig","msg"]))
+print(uniqueMorseRepresentations(["a"]))
 
 
 
