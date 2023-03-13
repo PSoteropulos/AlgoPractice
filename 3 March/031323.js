@@ -1,7 +1,7 @@
 const maxDepth = (s) => {
     let currentCount = 0
     let maxCount = 0
-    for (let i=0; i,s.length;i++){
+    for (let i=0; i<s.length;i++){
         if (s[i] === "("){
             currentCount ++
         }
@@ -18,6 +18,7 @@ const maxDepth = (s) => {
 
 
 console.log(maxDepth("(1+(2*3)+((8)/4))+1"))
+console.log(maxDepth("(1)+((2))+(((3)))"))
 
 
 
