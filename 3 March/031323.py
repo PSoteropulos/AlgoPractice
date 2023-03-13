@@ -1,9 +1,19 @@
+def maxDepth(s):
+    currentCount = 0
+    maxCount = 0
+    for i in range(len(s)):
+        if (s[i] == "("):
+            currentCount += 1
+        elif (s[i] == ")"):
+            currentCount -= 1
+        if (currentCount > maxCount):
+            maxCount = currentCount
+    return maxCount
 
 
 
-
-
-
+print(maxDepth("(1+(2*3)+((8)/4))+1"))
+print(maxDepth("(1)+((2))+(((3)))"))
 
 
 
