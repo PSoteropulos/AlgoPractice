@@ -1,8 +1,19 @@
+const minPartitions = (n) => {
+    let maxCount = 0
+    let stringArray = n.split("")
+    for (let i=0; i<n.length; i++){
+        if (stringArray[i] > maxCount){
+            maxCount = stringArray[i]
+        }
+    }
+    return maxCount
+};
 
 
 
-
-
+console.log(minPartitions("332"))
+console.log(minPartitions("82734"))
+console.log(minPartitions("27346209830709182346"))
 
 
 
