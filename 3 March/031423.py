@@ -1,8 +1,16 @@
 def minPartitions(n):
+    maxCount = 0
+    stringArray = [*n]
+    for i in range(len(stringArray)):
+        if int(stringArray[i]) > maxCount:
+            maxCount = int(stringArray[i])
+    return maxCount
 
 
 
-
+print(minPartitions("332"))
+print(minPartitions("82734"))
+print(minPartitions("27346209830709182346"))
 
 
 
