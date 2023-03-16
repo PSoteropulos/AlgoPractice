@@ -1,9 +1,22 @@
+def countConsistentStrings(allowed, words):
+    count = 0
+    for i in range(len(words)):
+        localWordArray = [*words[i]]
+        valid = True
+        for j in range(len(localWordArray)):
+            if localWordArray[j] not in allowed:
+                valid = False
+        if valid == True:
+            count += 1
+    return count
 
 
 
 
 
-
+print(countConsistentStrings("ab",["ad","bd","aaab","baa","badab"]))
+print(countConsistentStrings("abc", ["a","b","c","ab","ac","bc","abc"]))
+print(countConsistentStrings("cad", ["cc","acd","b","ba","bac","bad","ac","d"]))
 
 
 
