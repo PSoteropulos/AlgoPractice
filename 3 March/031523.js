@@ -1,8 +1,30 @@
+const countConsistentStrings = (allowed, words) => {
+    let count = 0
+    let allowedArray = allowed.split("")
+    for (let i=0; i<words.length; i++){
+        let localWordArray = words[i].split("")
+        let valid = true
+        for (let j=0; j<localWordArray.length; j++){
+            if (allowed.includes(localWordArray[j])){
+                valid = true
+            }
+            else {
+                valid = false
+                break
+            }
+        }
+        if (valid === true){
+            count ++
+        }
+    }
+    return count
+};
 
 
 
-
-
+console.log(countConsistentStrings("ab",["ad","bd","aaab","baa","badab"]))
+console.log(countConsistentStrings("abc", ["a","b","c","ab","ac","bc","abc"]))
+console.log(countConsistentStrings("cad", ["cc","acd","b","ba","bac","bad","ac","d"]))
 
 
 
