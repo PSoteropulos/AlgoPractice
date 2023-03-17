@@ -1,5 +1,12 @@
 def countAsterisks(s):
-    pass
+    inBar = False
+    asteriskCount = 0
+    for i in range(len(s)):
+        if (s[i] == "|"):
+            inBar = not inBar
+        if ((s[i] == "*") and (inBar == False)):
+            asteriskCount += 1
+    return asteriskCount
 
 
 
