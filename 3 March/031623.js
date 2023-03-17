@@ -1,5 +1,15 @@
 const countAsterisks = (s) => {
-    
+    let inBar = false
+    let asteriskCount = 0
+    for (let i=0; i<s.length; i++){
+        if (s[i] === "|"){
+            inBar = !inBar
+        }
+        if ((s[i] === "*") && (inBar === false)){
+            asteriskCount ++
+        }
+    }
+    return asteriskCount
 };
 
 
