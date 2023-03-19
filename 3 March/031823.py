@@ -1,5 +1,25 @@
+def reverseWords(s):
+    wordArray = s.split(" ")
+    reversedWordArray = []
+    reversedWordArrayFinal = ""
+    for i in range(len(wordArray)):
+        loopWord = [*wordArray[i]]
+        reversedWord = ""
+        for j in range((len(loopWord)-1), -1, -1):
+            # print(loopWord[j])
+            reversedWord += loopWord[j]
+        reversedWordArray.append(reversedWord)
+    for x in range(len(reversedWordArray)):
+        if (x == len(reversedWordArray)) or (x == 0):
+            reversedWordArrayFinal += reversedWordArray[x]
+        else:
+            reversedWordArrayFinal = reversedWordArrayFinal + " " + reversedWordArray[x]
+    return reversedWordArrayFinal
 
 
+
+print(reverseWords("Let's take LeetCode contest"))
+print(reverseWords("God Ding"))
 
 
 
