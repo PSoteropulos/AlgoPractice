@@ -1,10 +1,12 @@
 const maxProductDifference = (nums) => {
-    
+    let numsSorted = nums.sort()
+    return (numsSorted[nums.length-1]*numsSorted[len(nums)-2]) - (numsSorted[0]*numsSorted[1])
 };
 
 
 
-
+print(maxProductDifference([5,6,2,7,4]))
+print(maxProductDifference([4,2,5,9,7,4,8]))
 
 
 
