@@ -1,15 +1,19 @@
 const sortPeople = (names, heights) => {
-    // let sortedHeights = heights.sort(function(a, b){return b - a})
     let objectArray = []
+    let namesOnly = []
     for (let i=0; i<names.length; i++){
-        objectArray.push({name: `${names[i]}`, height: `${heights[i]}`})
+        objectArray.push({name: `${names[i]}`, height: heights[i]})
     }
-    return objectArray
+    objectArray.sort(function(a, b){return b.height - a.height})
+    for (let j=0; j < names.length; j++){
+        namesOnly.push(objectArray[j].name)
+    }
+    return namesOnly;
 };
 
 
-console.log
-
+console.log(sortPeople(["Mary","John","Emma"], [180,165,170]))
+console.log(sortPeople(["Alice","Bob","Bob"], [155,185,150]))
 
 
 

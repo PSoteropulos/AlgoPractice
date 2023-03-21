@@ -1,8 +1,17 @@
+def sortPeople(names, heights):
+    objectArray = []
+    namesOnly = []
+    for i in range(len(names)):
+        objectArray.append({"name": f"{names[i]}", "height": heights[i]})
+    objectArray.sort(key = objectArray.height)
+    for j in range(len(names)):
+        namesOnly.push(objectArray[j].name)
+    return namesOnly
 
 
 
-
-
+print(sortPeople(["Mary","John","Emma"], [180,165,170]))
+print(sortPeople(["Alice","Bob","Bob"], [155,185,150]))
 
 
 
