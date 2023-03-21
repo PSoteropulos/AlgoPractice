@@ -3,9 +3,9 @@ def sortPeople(names, heights):
     namesOnly = []
     for i in range(len(names)):
         objectArray.append({"name": f"{names[i]}", "height": heights[i]})
-    objectArray.sort(key = objectArray.height)
+    sortedArray = sorted(objectArray, key = lambda x: x["height"], reverse= True)
     for j in range(len(names)):
-        namesOnly.push(objectArray[j].name)
+        namesOnly.append(sortedArray[j]["name"])
     return namesOnly
 
 
