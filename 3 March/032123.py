@@ -1,10 +1,26 @@
 def deleteGreatestValue(grid):
-    pass
+    maxArray = []
+    iteration = 0
+    while grid[len(grid)-1]:
+        for i in range(len(grid)):
+            grid[i].sort()
+            if (i == 0):
+                maxArray.append(0)
+            if ((grid[i][len(grid[i])-1])>maxArray[len(maxArray)-1]):
+                maxArray[iteration] = grid[i][len(grid[i])-1]
+            grid[i].pop()
+            if (i == len(grid)-1):
+                iteration += 1
+    sum = 0
+    for j in range(len(maxArray)):
+        sum += maxArray[j]
+    return sum
 
 
 
 
-
+print(deleteGreatestValue([[1,2,4],[3,3,1]]))
+print(deleteGreatestValue([[10]]))
 
 
 
