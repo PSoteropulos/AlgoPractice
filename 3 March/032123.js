@@ -1,8 +1,26 @@
 const deleteGreatestValue = (grid) => {
     let maxArray = []
-    for (let i=0; i<grid.length; i++){
-        
+    let iteration = 0
+    while (grid[grid.length-1][0] !== undefined){
+        for (let i=0; i<grid.length; i++){
+            grid[i].sort(function(a, b){return a - b})
+            if (i === 0){
+                maxArray.push(0)
+            }
+            if ((grid[i][grid[i].length-1])>maxArray[maxArray.length-1]){
+                maxArray[iteration] = grid[i][grid[i].length-1]
+            }
+            grid[i].pop()
+            if (i === grid.length-1){
+                iteration ++
+            }
+        }
     }
+    let sum = 0
+    for (j=0; j<maxArray.length; j++){
+        sum += maxArray[j]
+    }
+    return sum
 };
 
 
