@@ -1,5 +1,15 @@
 def flipAndInvertImage(image):
-    pass
+    finalFlippedArray = []
+    for i in range(len(image)):
+        image[i].reverse()
+        doubleFlippedLocalArray = []
+        for j in range(len(image)):
+            if image[i][j] == 1:
+                doubleFlippedLocalArray.append(0)
+            else :
+                doubleFlippedLocalArray.append(1)
+        finalFlippedArray.append(doubleFlippedLocalArray)
+    return finalFlippedArray
 
 
 
