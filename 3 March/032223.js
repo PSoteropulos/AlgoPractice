@@ -1,5 +1,19 @@
 const flipAndInvertImage = (image) => {
-    
+    let finalFlippedArray = []
+    for (let i=0; i < image.length; i++){
+        let xFlippedArray = image[i].reverse()
+        let doubleFlippedLocalArray = []
+        for (let j=0; j<xFlippedArray.length; j++){
+            if (xFlippedArray[j] === 1){
+                doubleFlippedLocalArray.push(0)
+            }
+            else {
+                doubleFlippedLocalArray.push(1)
+            }
+        }
+        finalFlippedArray.push(doubleFlippedLocalArray)
+    }
+    return finalFlippedArray
 };
 
 
