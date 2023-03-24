@@ -1,5 +1,24 @@
 const removeOuterParentheses = (s) => {
-    
+    let openParenth = false
+    let finalString = ""
+    let openCount = 0
+    for (let i=0; i<s.length; i++){
+        if ((s[i] === "(") && (openParenth == false)){
+            openParenth = true
+        }
+        else if ((s[i] === "(") && (openParenth == true)){
+            finalString += s[i]
+            openCount += 1
+        }
+        else if ((s[i] === ")") && (openParenth == true) && (openCount>0)){
+            finalString += s[i]
+            openCount -= 1
+        }
+        else if ((s[i] === ")") && (openParenth == true) && (openCount == 0)){
+            openParenth = false
+        }
+    }
+    return finalString
 };
 
 
