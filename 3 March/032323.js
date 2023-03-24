@@ -1,8 +1,12 @@
+const removeOuterParentheses = (s) => {
+    
+};
 
 
 
-
-
+console.log(removeOuterParentheses("(()())(())"))
+console.log(removeOuterParentheses("(()())(())(()(()))"))
+console.log(removeOuterParentheses("()()"))
 
 
 

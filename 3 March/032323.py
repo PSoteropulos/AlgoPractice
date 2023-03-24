@@ -1,5 +1,19 @@
 def removeOuterParentheses(s):
-
+    openParenth = False
+    finalString = ""
+    openCount = 0
+    for i in range(len(s)):
+        if (s[i] == "(") and (openParenth == False):
+            openParenth = True
+        elif (s[i] == "(") and (openParenth == True):
+            finalString += s[i]
+            openCount += 1
+        elif (s[i] == ")") and (openParenth == True) and (openCount>0):
+            finalString += s[i]
+            openCount -= 1
+        elif (s[i] == ")") and (openParenth == True) and (openCount == 0):
+            openParenth = False
+    return finalString
 
 
 
