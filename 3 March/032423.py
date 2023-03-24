@@ -1,5 +1,14 @@
 def replaceDigits(s):
-    pass
+    alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    newString = ""
+    for i in range(len(s)):
+        if ((i == 0) or (i%2==0)):
+            newString += s[i]
+        else:
+            digit = int(s[i])
+            referencePoint = alphabetArray.index(f'{s[i-1]}')
+            newString += str(alphabetArray[referencePoint+digit])
+    return newString
 
 
 
