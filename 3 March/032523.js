@@ -1,9 +1,17 @@
 const diagonalSum = (mat) => {
-    
+    let runningSum = 0
+    for (let i=0; i<mat.length; i++){
+        runningSum += mat[i][i]
+        if (mat.length-1-i !== i){
+            runningSum += mat[i][mat.length-1-i]
+        }
+    }
+    return runningSum
 };
 
 
 console.log(diagonalSum([[1,2,3],[4,5,6],[7,8,9]]))
+console.log(diagonalSum([[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]]))
 console.log(diagonalSum([[5]]))
 
 

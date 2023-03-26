@@ -1,9 +1,16 @@
 def diagonalSum(mat):
+    runningSum = 0
+    for i in range(len(mat)):
+        runningSum += mat[i][i]
+        if (len(mat)-1-i != i):
+            runningSum += mat[i][len(mat)-1-i]
+    return runningSum
 
 
 
 
 print(diagonalSum([[1,2,3],[4,5,6],[7,8,9]]))
+print(diagonalSum([[1,1,1,1],[1,1,1,1],[1,1,1,1],[1,1,1,1]]))
 print(diagonalSum([[5]]))
 
 
