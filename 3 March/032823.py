@@ -10,10 +10,8 @@ def commonFactors(a, b):
     return factorCount
 
 
-
 print(commonFactors(12, 6))
 print(commonFactors(25, 30))
-
 
 
 
