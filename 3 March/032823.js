@@ -1,8 +1,24 @@
+const commonFactors = (a, b) => {
+    let factorCount = 0
+    let higherNum = 0
+    if (a > b){
+        higherNum = a
+    }
+    else{
+        higherNum = b
+    }
+    for (let i=1; i<= higherNum; i++){
+        if ((a%i === 0) && (b%i === 0)){
+            factorCount += 1
+        }
+    }
+    return factorCount
+};
 
 
 
-
-
+console.log(commonFactors(12, 6))
+console.log(commonFactors(25, 30))
 
 
 
