@@ -1,5 +1,6 @@
 def maxProduct(nums):
-    pass
+    nums.sort()
+    return (nums[len(nums)-1]-1)*(nums[len(nums)-2]-1)
 
 
 
