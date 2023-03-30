@@ -1,6 +1,16 @@
 def freqAlphabets(s):
-    pass
-
+    alphabet = ["zeropoint", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    newString = ""
+    i = len(s)-1
+    while i >= 0:
+        if s[i] == "#":
+            index = int(s[i-2]+s[i-1])
+            newString = newString + alphabet[index]
+            i = i-3
+        else:
+            newString = newString + alphabet[int(s[i])]
+            i = i-1
+    return newString[::-1]
 
 
 print(freqAlphabets("10#11#12"))
