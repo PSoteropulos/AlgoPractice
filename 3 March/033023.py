@@ -1,5 +1,10 @@
 def countPairs( nums, k):
-    pass
+    count = 0
+    for i in range(len(nums)-1):
+        for j in range(i+1, len(nums)):
+            if ((nums[i]==nums[j]) and ((i*j)%k==0)):
+                count += 1
+    return count
 
 
 print(countPairs([3,1,2,2,2,1,3], 2))
