@@ -1,5 +1,19 @@
-const pivotArray = (nums, pivot) > {
-    
+const pivotArray = (nums, pivot) => {
+    let lowerArray = []
+    let upperArray = []
+    let pivotArray = []
+    for (let i=0; i<nums.length; i++){
+        if (nums[i] < pivot){
+            lowerArray.push(nums[i])
+        }
+        else if (nums[i] > pivot){
+            upperArray.push(nums[i])
+        }
+        else if (nums[i] === pivot){
+            pivotArray.push(nums[i])
+        }
+    }
+    return lowerArray.concat(pivotArray, upperArray)
 };
 
 
