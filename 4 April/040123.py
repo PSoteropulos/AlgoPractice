@@ -1,5 +1,15 @@
 def pivotArray(nums, pivot):
-    pass
+    lowerArray = []
+    upperArray = []
+    pivotArray = []
+    for number in nums:
+        if number < pivot:
+            lowerArray.append(number)
+        elif number > pivot:
+            upperArray.append(number)
+        elif number == pivot:
+            pivotArray.append(number)
+    return lowerArray +pivotArray + upperArray
 
 
 
