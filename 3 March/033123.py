@@ -1,5 +1,10 @@
 def separateDigits(nums):
-    pass
+    numArray = []
+    for number in nums:
+        numString = str(number)
+        for character in numString:
+            numArray.append(int(character))
+    return numArray 
 
 
 
