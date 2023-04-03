@@ -1,5 +1,11 @@
 def largestAltitude(gain):
-
+    altitude = 0
+    highestPoint = 0
+    for change in gain:
+        altitude += change
+        if altitude > highestPoint:
+            highestPoint = altitude
+    return highestPoint
 
 
 print(largestAltitude([-5,1,5,0,-7]))
