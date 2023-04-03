@@ -1,49 +1,46 @@
-const maxWidthOfVerticalArea = (points) => {
+const largestAltitude = (gain) => {
     
 };
 
 
-
-console.log(maxWidthOfVerticalArea([[8,7],[9,9],[7,4],[9,7]]))
-console.log(maxWidthOfVerticalArea([[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]))
-
+console.log(largestAltitude([-5,1,5,0,-7]))
+console.log(largestAltitude([-4,-3,-2,-1,4,3,2]))
 
 
 
-// 1637. Widest Vertical Area Between Two Points Containing No Points
-// Medium
-// 279
-// 674
+
+
+// 1732. Find the Highest Altitude
+// Easy
+// 1.3K
+// 108
 // Companies
-// Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such that no points are inside the area.
+// There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
-// A vertical area is an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The widest vertical area is the one with the maximum width.
-
-// Note that points on the edge of a vertical area are not considered included in the area.
+// You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
 
  
 
 // Example 1:
 
-// ​
-// Input: points = [[8,7],[9,9],[7,4],[9,7]]
+// Input: gain = [-5,1,5,0,-7]
 // Output: 1
-// Explanation: Both the red and the blue area are optimal.
+// Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
 // Example 2:
 
-// Input: points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]
-// Output: 3
+// Input: gain = [-4,-3,-2,-1,4,3,2]
+// Output: 0
+// Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
  
 
 // Constraints:
 
-// n == points.length
-// 2 <= n <= 105
-// points[i].length == 2
-// 0 <= xi, yi <= 109
+// n == gain.length
+// 1 <= n <= 100
+// -100 <= gain[i] <= 100
 // Accepted
-// 38.8K
+// 109.6K
 // Submissions
-// 46K
+// 139K
 // Acceptance Rate
-// 84.4%
+// 78.9%
