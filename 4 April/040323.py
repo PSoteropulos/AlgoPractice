@@ -1,5 +1,20 @@
 def leftRigthDifference(nums):
-    pass
+    leftSumArray = []
+    rightSumArray = []
+    answerArray = []
+    for i in range(len(nums)):
+        if (i == 0):
+            leftSumArray.append(0)
+        else:
+            leftSumArray.append(nums[i-1] + leftSumArray[i-1])
+    for j in range((len(nums)-1),-1,-1):
+        if j == (len(nums)-1):
+            rightSumArray.append(0)
+        else:
+            rightSumArray.insert(0, (nums[j+1] + rightSumArray[0]))
+    for k in range(len(nums)):
+        answerArray.append(abs(leftSumArray[k]-rightSumArray[k]))
+    return answerArray
 
 
 
