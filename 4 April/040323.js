@@ -7,21 +7,16 @@ const leftRigthDifference = (nums) => {
             leftSumArray.push(0)
         }
         else {
-            // console.log(nums[i])
             leftSumArray.push(nums[i-1] + leftSumArray[i-1])
         }
     }
     for (let j=nums.length-1; j>=0; j--){
-        console.log("index/j:",j)
         if (j === (nums.length-1)){
             rightSumArray.push(0)
         }
         else {
-            console.log("nums[j+1]:",nums[j+1])
-            console.log("rightsum[len-1]:",rightSumArray[0])
             rightSumArray.splice(0, 0, (nums[j+1] + rightSumArray[0]))
         }
-        console.log("array:",rightSumArray)
     }
     for (let k=0; k<nums.length; k++){
         answerArray.push(Math.abs(leftSumArray[k]-rightSumArray[k]))
@@ -32,7 +27,7 @@ const leftRigthDifference = (nums) => {
 
 
 console.log(leftRigthDifference([10,4,8,3]))
-// console.log(leftRigthDifference([1]))
+console.log(leftRigthDifference([1]))
 
 
 
