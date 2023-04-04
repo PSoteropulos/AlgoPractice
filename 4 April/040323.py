@@ -1,48 +1,51 @@
-def maxWidthOfVerticalArea(points):
+def leftRigthDifference(nums):
     pass
 
 
 
-print(maxWidthOfVerticalArea([[8,7],[9,9],[7,4],[9,7]]))
-print(maxWidthOfVerticalArea([[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]))
+print(leftRigthDifference([10,4,8,3]))
+print(leftRigthDifference([1]))
 
 
 
-
-# 1637. Widest Vertical Area Between Two Points Containing No Points
-# Medium
-# 279
-# 674
+# 2574. Left and Right Sum Differences
+# Easy
+# 366
+# 18
 # Companies
-# Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such that no points are inside the area.
+# Given a 0-indexed integer array nums, find a 0-indexed integer array answer where:
 
-# A vertical area is an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The widest vertical area is the one with the maximum width.
+# answer.length == nums.length.
+# answer[i] = |leftSum[i] - rightSum[i]|.
+# Where:
 
-# Note that points on the edge of a vertical area are not considered included in the area.
+# leftSum[i] is the sum of elements to the left of the index i in the array nums. If there is no such element, leftSum[i] = 0.
+# rightSum[i] is the sum of elements to the right of the index i in the array nums. If there is no such element, rightSum[i] = 0.
+# Return the array answer.
 
  
 
 # Example 1:
 
-# ​
-# Input: points = [[8,7],[9,9],[7,4],[9,7]]
-# Output: 1
-# Explanation: Both the red and the blue area are optimal.
+# Input: nums = [10,4,8,3]
+# Output: [15,1,11,22]
+# Explanation: The array leftSum is [0,10,14,22] and the array rightSum is [15,11,3,0].
+# The array answer is [|0 - 15|,|10 - 11|,|14 - 3|,|22 - 0|] = [15,1,11,22].
 # Example 2:
 
-# Input: points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]
-# Output: 3
+# Input: nums = [1]
+# Output: [0]
+# Explanation: The array leftSum is [0] and the array rightSum is [0].
+# The array answer is [|0 - 0|] = [0].
  
 
 # Constraints:
 
-# n == points.length
-# 2 <= n <= 105
-# points[i].length == 2
-# 0 <= xi, yi <= 109
+# 1 <= nums.length <= 1000
+# 1 <= nums[i] <= 105
 # Accepted
-# 38.8K
+# 41.5K
 # Submissions
-# 46K
+# 46.8K
 # Acceptance Rate
-# 84.4%
+# 88.7%
