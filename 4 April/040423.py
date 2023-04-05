@@ -1,5 +1,12 @@
 def minimumSum(num):
-    pass
+    numStringArray = [*str(num)]
+    numArray = []
+    for num in numStringArray:
+        numArray.append(num)
+    numArray.sort()
+    num1 = numArray[0] + numArray[2]
+    num2 = numArray[1] + numArray[3]
+    return (int(num1)) + (int(num2))
 
 
 
