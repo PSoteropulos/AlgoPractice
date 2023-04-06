@@ -1,5 +1,17 @@
 const findMatrix = (nums) => {
-    
+    let clonedNums = nums
+    let answerArray = []
+    while (clonedNums.length > 0){
+        let newArray = []
+        for (let i=clonedNums.length-1;i>=0;i--){
+            if (newArray.includes(clonedNums[i]) === false){
+                newArray.push(clonedNums[i])
+                clonedNums.splice(i, 1)
+            }
+        }
+        answerArray.push(newArray)
+    }
+    return answerArray
 };
 
 
