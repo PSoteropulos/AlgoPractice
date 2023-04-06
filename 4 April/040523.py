@@ -1,5 +1,14 @@
 def findMatrix(nums):
-    pass
+    clonedNums = nums
+    answerArray = []
+    while (len(clonedNums) > 0):
+        newArray = []
+        for i in range(len(clonedNums)-1, -1, -1):
+            if clonedNums[i] not in newArray:
+                newArray.append(clonedNums[i])
+                clonedNums.pop(i)
+        answerArray.append(newArray)
+    return answerArray
 
 
 
