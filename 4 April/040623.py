@@ -1,5 +1,14 @@
 def firstPalindrome(words):
-    pass
+    fancyWord = ""
+    for word in words:
+        forwards = word
+        backwards = ""
+        for j in range(len(word)-1, -1, -1):
+            backwards += forwards[j]
+        if (forwards == backwards):
+            fancyWord = forwards
+            break
+    return fancyWord
 
 
 
