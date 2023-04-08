@@ -1,5 +1,20 @@
 def reversePrefix(word, ch):
-    pass
+    firstChunk = ""
+    secondChunk = ""
+    indexBreak = None
+    for i in range(len(word)):
+        if word[i] == ch:
+            firstChunk += word[i]
+            indexBreak = i
+            break
+        else:
+            firstChunk += word[i]
+    if indexBreak != None:
+        for j in range(indexBreak+1, len(word)):
+            secondChunk += word[j]
+        return firstChunk[::-1] + secondChunk
+    else:
+        return firstChunk
 
 
 
