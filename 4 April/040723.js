@@ -1,5 +1,26 @@
 const reversePrefix = (word, ch) => {
-    
+    let firstChunk = ""
+    let secondChunk = ""
+    let indexBreak = undefined
+    for (let i=0; i<word.length; i++){
+        if (word[i] === ch){
+            firstChunk += word[i]
+            indexBreak = i
+            break
+        }
+        else {
+            firstChunk += word[i]
+        }
+    }
+    if (indexBreak !== undefined){
+        for (let j=indexBreak+1; j<word.length; j++){
+            secondChunk += word[j]
+        }
+        return (firstChunk.split("").reverse().join("").concat(secondChunk))
+    }
+    else {
+        return firstChunk
+    }
 };
 
 
