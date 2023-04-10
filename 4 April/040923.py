@@ -1,5 +1,14 @@
 def selfDividingNumbers(left, right):
-    pass
+    answerArray = []
+    for i in range(left, right+1):
+        numStringArray = [*str(i)]
+        valid = True
+        for j in range(len(numStringArray)):
+            if ((int(numStringArray[j]) == 0) or (i % int(numStringArray[j]) != 0)):
+                valid = False
+        if (valid == True):
+            answerArray.append(i)
+    return answerArray
 
 
 
