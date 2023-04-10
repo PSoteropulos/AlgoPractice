@@ -1,5 +1,18 @@
 const selfDividingNumbers = (left, right) => {
-    
+    let answerArray = []
+    for (let i=left; i<= right; i++){
+        let numStringArray = i.toString().split("")
+        let valid = true
+        for (let j=0; j<numStringArray.length; j++){
+            if ((i % Number(numStringArray[j]) !== 0) || (numStringArray[j] === 0)){
+                valid = false
+            } 
+        }
+        if (valid === true){
+            answerArray.push(i)
+        }
+    }
+    return answerArray
 };
 
 
