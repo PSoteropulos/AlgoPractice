@@ -1,5 +1,16 @@
 const halvesAreAlike = (s) => {
-    
+    let firstHalfCount = 0
+    let secondHalfCount = 0
+    let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    for (let i=0; i<s.length;i++){
+        if ((i<(s.length/2)) && (vowels.includes(s[i]))){
+            firstHalfCount ++
+        }
+        else if ((i>=(s.length/2)) && (vowels.includes(s[i]))){
+            secondHalfCount ++
+        }
+    }
+    return firstHalfCount === secondHalfCount ? true : false
 };
 
 
