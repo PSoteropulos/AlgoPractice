@@ -1,5 +1,16 @@
 def halvesAreAlike(s):
-    pass
+    firstHalfCount = 0
+    secondHalfCount = 0
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    for i in range(len(s)):
+        if ((i<(len(s)/2)) and (s[i] in vowels)):
+            firstHalfCount += 1
+        elif ((i>=(len(s)/2)) and (s[i] in vowels)):
+            secondHalfCount += 1
+    if firstHalfCount == secondHalfCount:
+        return True
+    else:
+        return False
 
 
 
