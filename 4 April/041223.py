@@ -1,5 +1,19 @@
 def mergeAlternately(word1, word2):
-    pass
+    if len(word1) <= len(word2):
+        shortestLength = len(word1)
+    else:
+        shortestLength = len(word2)
+    finalString = ""
+    for i in range(shortestLength):
+        finalString += word1[i]
+        finalString += word2[i]
+    if (len(word1) > len(word2)):
+        for j in range(shortestLength, len(word1)):
+            finalString += word1[j]
+    elif (len(word2) > len(word1)):
+        for j in range(shortestLength, len(word2)):
+            finalString += word2[j]
+    return finalString 
 
 
 
