@@ -1,8 +1,17 @@
 const prefixCount = (words, pref) => {
     let counts = 0
     for (let i=0; i<words.length; i++){
-        
+        let prefMatch = true
+        for (let j=0;j<pref.length;j++){
+            if (words[i][j] !== pref[j]){
+                prefMatch = false
+            }
+        }
+        if (prefMatch === true){
+            counts ++
+        }
     }
+    return counts
 };
 
 
