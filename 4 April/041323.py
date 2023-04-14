@@ -1,5 +1,14 @@
 def prefixCount(words, pref):
-    pass
+    counts = 0
+    for word in words:
+        prefMatch = True
+        if len(word) >= len(pref):
+            for j in range(len(pref)):
+                if word[j] != pref[j]:
+                    prefMatch = False
+            if prefMatch == True:
+                counts += 1
+    return counts
 
 
 
