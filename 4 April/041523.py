@@ -1,6 +1,9 @@
 def isSameAfterReversals(num):
-    pass
-
+    numString = str(num)
+    if (numString[len(numString)-1] == "0") and (len(numString)>1):
+        return False
+    else:
+        return True
 
 
 
