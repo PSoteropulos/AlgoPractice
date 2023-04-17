@@ -1,12 +1,21 @@
 def findGCD(nums):
-    pass
-
+    nums.sort()
+    smolBoi = nums[0]
+    smolBoiFactors = []
+    for i in range(1, smolBoi+1):
+        if (smolBoi % i == 0):
+            smolBoiFactors.append(i)
+    for j in range(len(smolBoiFactors)-1, -1, -1):
+        if (nums[len(nums)-1] % smolBoiFactors[j] == 0):
+            return smolBoiFactors[j]
 
 
 
 print(findGCD([2,5,6,9,10]))
 print(findGCD([7,5,6,8,3]))
 print(findGCD([3,3]))
+print(findGCD([6,7,9]))
+print(findGCD([6,9,10]))
 
 
 
