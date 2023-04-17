@@ -1,12 +1,25 @@
 const findGCD = (nums) => {
-    
+    let numsSorted = nums.sort(function(a, b){return a-b})
+    let smolBoi = numsSorted[0]
+    let smolBoiFactors = []
+    for (let i=0; i<=smolBoi;i++){
+        if (smolBoi % i === 0){
+            smolBoiFactors.push(i)
+        }
+    }
+    for (let j=smolBoiFactors.length-1;j>=0;j--){
+        if (numsSorted[numsSorted.length-1] % smolBoiFactors[j] === 0){
+            return smolBoiFactors[j]
+        }
+    }
 };
 
 
 console.log(findGCD([2,5,6,9,10]))
 console.log(findGCD([7,5,6,8,3]))
 console.log(findGCD([3,3]))
-
+console.log(findGCD([6,7,9]))
+console.log(findGCD([6,9,10]))
 
 
 // 1979. Find Greatest Common Divisor of Array
