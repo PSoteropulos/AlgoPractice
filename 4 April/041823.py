@@ -1,5 +1,17 @@
+import math
+
 def sumZero(n):
-    pass
+    answerArray = []
+    if (n%2==1):
+        for i in range(1,(math.floor(n/2) + 1)):
+            answerArray.append(i)
+            answerArray.append(-i)
+        answerArray.append(0)
+    elif (n%2 == 0):
+        for j in range(1,(math.floor(n/2) + 1)):
+            answerArray.append(j)
+            answerArray.append(-j)
+    return answerArray
 
 
 
