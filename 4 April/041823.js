@@ -1,5 +1,19 @@
 const sumZero = (n) => {
-    
+    let answerArray = []
+    if (n%2===1){
+        for (let i=1; i<=(Math.floor(n/2));i++){
+            answerArray.push(i)
+            answerArray.push(-i)
+        }
+        answerArray.push(0)
+    }
+    else if (n%2 === 0){
+        for (let j=1; j<=(Math.floor(n/2));j++){
+            answerArray.push(j)
+            answerArray.push(-j)
+        }
+    }
+    return answerArray
 };
 
 
