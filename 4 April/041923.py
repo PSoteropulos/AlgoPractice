@@ -1,5 +1,21 @@
-def areOccurrencesEqual(self, s: str) -> bool:
-    pass
+def areOccurrencesEqual(s):
+    occurences = {}
+    bool = True
+    count = 0
+    for letter in s:
+        if letter in occurences:
+            occurences[letter] = occurences[letter] + 1
+        else:
+            occurences = {**occurences, letter: 1 }
+    keyList = list(occurences.keys())
+    for x, y in occurences.items():
+        if keyList[0] == x:
+            count = y
+        else:
+            if y != count:
+                bool = False
+    return bool
+
 
 
 
