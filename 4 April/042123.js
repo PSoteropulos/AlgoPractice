@@ -1,5 +1,18 @@
 const sumOfUnique = (nums) => {
-    
+    let count = 0
+    let encounteredNums = []
+    let deductedNums = []
+    for (let i=0; i<nums.length; i++){
+        if ((encounteredNums.includes(nums[i]) === true) && (deductedNums.includes(nums[i])===false)){
+            count -= nums[i]
+            deductedNums.push(nums[i])
+        }
+        else if (encounteredNums.includes(nums[i]) === false){
+            count += nums[i]
+            encounteredNums.push(nums[i])
+        }
+    }
+    return count
 };
 
 
