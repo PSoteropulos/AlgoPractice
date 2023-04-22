@@ -1,5 +1,15 @@
 def sumOfUnique(nums):
-    pass
+    count = 0
+    encounteredNums = []
+    deductedNums = []
+    for num in nums:
+        if ((num in encounteredNums) and (num not in deductedNums)):
+            count -= num
+            deductedNums.append(num)
+        elif (num not in encounteredNums):
+            count += num
+            encounteredNums.append(num)
+    return count
 
 
 
