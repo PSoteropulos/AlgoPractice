@@ -1,5 +1,21 @@
-var finalPrices = function(prices) {
-    
+const finalPrices = (prices) => {
+    let answerArray = []
+    for (let i=0; i<prices.length;i++){
+        if (i === prices.length-1){
+            answerArray.push(prices[i])
+            break
+        }
+        for (let j=i+1; j<prices.length;j++){
+            if (prices[j] <= prices[i]){
+                answerArray.push(prices[i] - prices[j])
+                break
+            }
+            else if (j === prices.length-1){
+                answerArray.push(prices[i])
+            }
+        }
+    }
+    return answerArray
 };
 
 
