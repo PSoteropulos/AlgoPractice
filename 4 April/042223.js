@@ -1,5 +1,15 @@
 const targetIndices = (nums, target) => {
-    
+    let numsSorted = nums.sort(function(a, b){return a-b})
+    let answerArray = []
+    for (let i=0; i<nums.length; i++){
+        if (numsSorted[i] === target){
+            answerArray.push(i)
+            if (numsSorted[i+1] !== target){
+                break
+            }
+        }
+    }
+    return answerArray
 };
 
 

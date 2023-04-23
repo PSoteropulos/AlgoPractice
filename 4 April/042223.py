@@ -1,5 +1,10 @@
 def targetIndices(nums, target):
-    pass
+    nums.sort()
+    answerArray = []
+    for i in range(len(nums)):
+        if nums[i] == target:
+            answerArray.append(i)
+    return answerArray
 
 
 
