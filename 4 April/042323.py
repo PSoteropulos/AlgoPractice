@@ -1,5 +1,16 @@
 def finalPrices(prices):
-    pass
+    answerArray = []
+    for i in range(len(prices)):
+        if (i == len(prices)-1):
+            answerArray.append(prices[i])
+            break
+        for j in range(i+1, len(prices)):
+            if (prices[j] <= prices[i]):
+                answerArray.append(prices[i] - prices[j])
+                break
+            elif (j == len(prices)-1):
+                answerArray.append(prices[i])
+    return answerArray
 
 
 
