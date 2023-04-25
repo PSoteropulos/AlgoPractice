@@ -1,5 +1,23 @@
 const numberOfPairs = (nums) => {
-    
+    let pairs = 0
+    let running = true
+    while (running) {
+        let matchesThisLoop = false
+        for (let i = 0; i<nums.length-1;i++){
+            for (let j = i+1; j<nums.length; j++){
+                if (nums[i] === nums[j]){
+                    pairs ++
+                    nums.splice(j, 1)
+                    nums.splice(i, 1)
+                    matchesThisLoop = true
+                }
+            }
+        }
+        if (matchesThisLoop === false) {
+            running = false
+        }
+    }
+    return [pairs, nums.length]
 };
 
 
