@@ -1,5 +1,19 @@
 def mergeSimilarItems(items1, items2):
-    pass
+    answer = {}
+    ansArray = []
+    for i in range(len(items1)):
+        if items1[i][0] in answer:
+            answer[items1[i][0]] += items1[i][1]
+        else:
+            answer[items1[i][0]] = items1[i][1]
+    for j in range(len(items2)):
+        if items2[j][0] in answer:
+            answer[items2[j][0]] += items2[j][1]
+        else:
+            answer[items2[j][0]] = items2[j][1]
+    for z in sorted(answer):
+        ansArray.append([z, answer[z]])
+    return ansArray
 
 
 

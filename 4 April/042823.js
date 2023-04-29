@@ -1,5 +1,22 @@
 const mergeSimilarItems = (items1, items2) => {
-    
+    let answer = {}
+    for (let i=0;i<items1.length;i++){
+        if (items1[i][0] in answer){
+            answer[items1[i][0]] += items1[i][1] 
+        }
+        else {
+            answer = {...answer, [items1[i][0]]: items1[i][1]}
+        }
+    }
+    for (let j=0;j<items2.length;j++){
+        if (items2[j][0] in answer){
+            answer[items2[j][0]] += items2[j][1] 
+        }
+        else {
+            answer = {...answer, [items2[j][0]]: items2[j][1]}
+        }
+    }
+    return Object.entries(answer)
 };
 
 
