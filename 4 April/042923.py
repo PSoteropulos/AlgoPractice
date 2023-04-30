@@ -1,5 +1,18 @@
 def judgeCircle(moves):
-    pass
+    position = [0, 0]
+    for i in range(len(moves)):
+        if (moves[i] == "U"):
+            position[1] += 1
+        elif (moves[i] == "D"):
+            position[1] -= 1
+        elif (moves[i] == "L"):
+            position[0] -= 1
+        elif (moves[i] == "R"):
+            position[0] += 1
+    if ((position[0] == 0) and (position[1]==0)):
+        return True
+    else:
+        return False
 
 
 
