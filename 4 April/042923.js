@@ -1,5 +1,26 @@
 const judgeCircle = (moves) => {
-    
+    let position = [0, 0]
+    for (let i=0; i<moves.length; i++){
+        if (moves[i] === "U"){
+            position[1] ++
+        }
+        else if (moves[i] === "D"){
+            position[1] --
+        }
+        else if (moves[i] === "L"){
+            position[0] --
+        }
+        else if (moves[i] === "R"){
+            position[0] ++
+        }
+    }
+    console.log(position, [0,0])
+    if ((position[0] === 0) && (position[1]===0)){
+        return true
+    }
+    else{
+        return false
+    }
 };
 
 
