@@ -2,7 +2,7 @@ const countOperations = (num1, num2) => {
     let count = 0
     let running = true
     while (running === true){
-        if ((num1 === 0) || (num2 === 0)){
+        if (num1 === 0 || num2 === 0){
             running = false
             break
         }

@@ -1,5 +1,13 @@
 def countOperations(num1, num2):
-    pass
+    count = 0
+    running = True
+    while (running == True):
+        if (num1 == 0) or (num2 == 0):
+            running = False
+            break
+        if (num1 >= num2):
+            num1 = num1 - num2
+        else
 
 
 
