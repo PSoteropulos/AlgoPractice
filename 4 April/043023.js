@@ -1,5 +1,21 @@
 const countOperations = (num1, num2) => {
-    
+    let count = 0
+    let running = true
+    while (running === true){
+        if ((num1 === 0) || (num2 === 0)){
+            running = false
+            break
+        }
+        if (num1 >= num2){
+            num1 = num1 - num2
+            count ++
+        }
+        else {
+            num2 = num2 - num1
+            count ++
+        }
+    }
+    return count
 };
 
 
