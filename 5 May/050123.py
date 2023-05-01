@@ -1,6 +1,18 @@
 def hammingDistance(x, y):
-    pass
-
+    xString = str(bin(x)).lstrip('0b')
+    yString = str(bin(y)).lstrip('0b')
+    count = 0
+    if len(yString) > len(xString):
+        xPadded = xString.rjust(len(yString), '0')
+        for i in range(len(yString)):
+            if xPadded[i] != yString[i]:
+                count += 1
+    else:
+        yPadded = yString.rjust(len(xString), '0')
+        for j in range(len(xString)):
+            if yPadded[j] != xString[j]:
+                count += 1
+    return count
 
 
 print(hammingDistance(1,4))
