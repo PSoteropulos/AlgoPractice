@@ -1,15 +1,31 @@
 const hammingDistance = (x, y) => {
-    let xString = x.toString(2).toString()
-    let yString = y.toString(2).toString()
+    let xString = x.toString(2)
+    let yString = y.toString(2)
     let count = 0
-    for (let i=)
+    if (yString.length > xString.length){
+        let xPadded = xString.padStart(yString.length, '0')
+        for (let i=yString.length-1; i>=0;i--){
+            if (xPadded[i] !== yString[i]){
+                count ++
+            }
+        }
+    }
+    else {
+        let yPadded = yString.padStart(xString.length, '0')
+        for (let i=xString.length-1; i>=0;i--){
+            if (xString[i] !== yPadded[i]){
+                count ++
+            }
+        }
+    }
+    return count
 };
 
 
 
-console.log(hammingDistance(1,4))
-console.log(hammingDistance(3,1))
-
+// console.log(hammingDistance(1,4))
+// console.log(hammingDistance(3,1))
+console.log(hammingDistance(4,14))
 
 
 
