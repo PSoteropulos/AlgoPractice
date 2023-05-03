@@ -1,5 +1,15 @@
 def minDeletionSize(strs):
-    pass
+    count = 0
+    for i in range(len(strs[0])):
+        column = ""
+        for j in range(len(strs)):
+            column += strs[j][i]
+        columnArray = [*column]
+        columnArray.sort()
+        sortedColumnString = "".join(columnArray)
+        if column != sortedColumnString:
+            count += 1
+    return count
 
 
 
@@ -8,6 +18,8 @@ def minDeletionSize(strs):
 print(minDeletionSize(["abc", "bce", "cae"]))
 print(minDeletionSize(["cba","daf","ghi"]))
 print(minDeletionSize(["a","b"]))
+print(minDeletionSize(["zyx","wvu","tsr"]))
+print(minDeletionSize(["rrjk","furt","guzm"]))
 
 
 
