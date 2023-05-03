@@ -1,15 +1,31 @@
 const minDeletionSize = (strs) => {
-    
+    let count = 0
+    // console.log(strs[0].length)
+    for (let i=0; i<strs[0].length;i++){
+        let column = ""
+        // console.log(i)
+        for (let j=0; j<strs.length;j++){
+            // console.log(i, j)
+            // console.log(strs[j])
+            column += strs[j][i]
+        }
+        // console.log(column)
+        if (column !== column.split("").sort().join("")){
+            count ++
+        }
+    }
+    return count
 };
 
 
-
+// apparently you can compare string letters with > or <
 
 
 console.log(minDeletionSize(["abc", "bce", "cae"]))
 console.log(minDeletionSize(["cba","daf","ghi"]))
 console.log(minDeletionSize(["a","b"]))
-
+console.log(minDeletionSize(["zyx","wvu","tsr"]))
+console.log(minDeletionSize(["rrjk","furt","guzm"]))
 
 
 
