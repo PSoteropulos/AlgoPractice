@@ -1,6 +1,21 @@
 def calPoints(operations):
-    pass
-
+    entries = []
+    for i in range(len(operations)):
+        if operations[i] == "+":
+            entries.append(entries[len(entries)-1] + entries[len(entries)-2])
+        elif operations[i] == "D":
+            entries.append(entries[len(entries)-1]*2)
+        elif operations[i] == "C":
+            entries.pop()
+        else:
+            entries.append(int(operations[i]))
+    if len(entries) == 0:
+        return 0
+    else:
+        sum = 0
+        for num in entries:
+            sum += num
+        return sum
 
 
 print(calPoints(["5","2","C","D","+"]))
