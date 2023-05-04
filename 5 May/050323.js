@@ -1,63 +1,83 @@
-const repeatedCharacter = (s) => {
-    let running = true
-    counter = 1
-    while (running){
-        for (let i=0; i<s.length;i++){
-            if (s[i] === s[i+counter]){
-                return s[i]
-            }
-        }
-        counter ++
-    }
+const calPoints = (operations) => {
+    
 };
 
 
 
-console.log(repeatedCharacter("abccbaacz"))
-console.log(repeatedCharacter("abcdd"))
+console.log(calPoints(["5","2","C","D","+"]))
+console.log(calPoints(["5","-2","4","C","D","9","+","+"]))
+console.log(calPoints(["1","C"]))
 
 
 
 
-// 2351. First Letter to Appear Twice
+// 682. Baseball Game
 // Easy
-// 747
-// 40
+// 2.3K
+// 1.8K
 // Companies
-// Given a string s consisting of lowercase English letters, return the first letter to appear twice.
+// You are keeping the scores for a baseball game with strange rules. At the beginning of the game, you start with an empty record.
 
-// Note:
+// You are given a list of strings operations, where operations[i] is the ith operation you must apply to the record and is one of the following:
 
-// A letter a appears twice before another letter b if the second occurrence of a is before the second occurrence of b.
-// s will contain at least one letter that appears twice.
+// An integer x.
+// Record a new score of x.
+// '+'.
+// Record a new score that is the sum of the previous two scores.
+// 'D'.
+// Record a new score that is the double of the previous score.
+// 'C'.
+// Invalidate the previous score, removing it from the record.
+// Return the sum of all the scores on the record after applying all the operations.
+
+// The test cases are generated such that the answer and all intermediate calculations fit in a 32-bit integer and that all operations are valid.
+
  
 
 // Example 1:
 
-// Input: s = "abccbaacz"
-// Output: "c"
+// Input: ops = ["5","2","C","D","+"]
+// Output: 30
 // Explanation:
-// The letter 'a' appears on the indexes 0, 5 and 6.
-// The letter 'b' appears on the indexes 1 and 4.
-// The letter 'c' appears on the indexes 2, 3 and 7.
-// The letter 'z' appears on the index 8.
-// The letter 'c' is the first letter to appear twice, because out of all the letters the index of its second occurrence is the smallest.
+// "5" - Add 5 to the record, record is now [5].
+// "2" - Add 2 to the record, record is now [5, 2].
+// "C" - Invalidate and remove the previous score, record is now [5].
+// "D" - Add 2 * 5 = 10 to the record, record is now [5, 10].
+// "+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
+// The total sum is 5 + 10 + 15 = 30.
 // Example 2:
 
-// Input: s = "abcdd"
-// Output: "d"
+// Input: ops = ["5","-2","4","C","D","9","+","+"]
+// Output: 27
 // Explanation:
-// The only letter that appears twice is 'd' so we return 'd'.
+// "5" - Add 5 to the record, record is now [5].
+// "-2" - Add -2 to the record, record is now [5, -2].
+// "4" - Add 4 to the record, record is now [5, -2, 4].
+// "C" - Invalidate and remove the previous score, record is now [5, -2].
+// "D" - Add 2 * -2 = -4 to the record, record is now [5, -2, -4].
+// "9" - Add 9 to the record, record is now [5, -2, -4, 9].
+// "+" - Add -4 + 9 = 5 to the record, record is now [5, -2, -4, 9, 5].
+// "+" - Add 9 + 5 = 14 to the record, record is now [5, -2, -4, 9, 5, 14].
+// The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
+// Example 3:
+
+// Input: ops = ["1","C"]
+// Output: 0
+// Explanation:
+// "1" - Add 1 to the record, record is now [1].
+// "C" - Invalidate and remove the previous score, record is now [].
+// Since the record is empty, the total sum is 0.
  
 
 // Constraints:
 
-// 2 <= s.length <= 100
-// s consists of lowercase English letters.
-// s has at least one repeated letter.
+// 1 <= operations.length <= 1000
+// operations[i] is "C", "D", "+", or a string representing an integer in the range [-3 * 104, 3 * 104].
+// For operation "+", there will always be at least two previous scores on the record.
+// For operations "C" and "D", there will always be at least one previous score on the record.
 // Accepted
-// 71.9K
+// 248.9K
 // Submissions
-// 96.4K
+// 334.5K
 // Acceptance Rate
-// 74.6%
+// 74.4%
