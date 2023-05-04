@@ -1,5 +1,29 @@
 const calPoints = (operations) => {
-    
+    let entries = [ ]
+    for (let i=0; i<operations.length; i++){
+        if (operations[i] === "+"){
+            entries.push(entries[entries.length-1] + entries[entries.length-2])
+        }
+        else if (operations[i] === "D"){
+            entries.push(entries[entries.length-1]*2)
+        }
+        else if (operations[i] === "C"){
+            entries.pop()
+        }
+        else {
+            entries.push(Number(operations[i]))
+        }
+    }
+    if (entries.length === 0){
+        return 0
+    }
+    else {
+        let sum = 0
+        for (let j=0; j<entries.length; j++){
+            sum += entries[j]
+        }
+        return sum
+    }
 };
 
 
