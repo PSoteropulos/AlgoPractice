@@ -7,8 +7,6 @@ def percentageLetter(s, letter):
     return math.floor(occurrences/len(s)*100)
 
 
-
-
 print(percentageLetter("foobar", "o"))
 print(percentageLetter("jjjj", "k"))
 
