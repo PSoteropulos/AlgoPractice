@@ -1,5 +1,15 @@
 def maximumCount(nums):
-    pass
+    negCount = 0
+    posCount = 0
+    for num in nums:
+        if num>0:
+            posCount += 1
+        elif num<0:
+            negCount += 1
+    if negCount >= posCount:
+        return negCount
+    else: 
+        return posCount
 
 
 
