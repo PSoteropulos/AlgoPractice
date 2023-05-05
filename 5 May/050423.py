@@ -1,5 +1,10 @@
+import math
 def percentageLetter(s, letter):
-    pass
+    occurrences = 0
+    for char in s:
+        if char == letter:
+            occurrences += 1
+    return math.floor(occurrences/len(s)*100)
 
 
 
