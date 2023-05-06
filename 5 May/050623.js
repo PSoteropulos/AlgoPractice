@@ -1,5 +1,18 @@
 const isSumEqual = (firstWord, secondWord, targetWord) => {
-    
+    let alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    let firstString = ""
+    let secondString = ""
+    let targetString = ""
+    for (let i=0; i<firstWord.length; i++){
+        firstString += alphArray.indexOf(firstWord[i]).toString()
+    }
+    for (let j=0; j<secondWord.length; j++){
+        secondString += alphArray.indexOf(secondWord[j]).toString()
+    }
+    for (let h=0; h<targetWord.length; h++){
+        targetString += alphArray.indexOf(targetWord[h]).toString()
+    }
+    return (Number(firstString)+Number(secondString) === Number(targetString)) ? true : false
 };
 
 
