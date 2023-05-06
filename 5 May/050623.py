@@ -1,6 +1,18 @@
 def isSumEqual(firstWord, secondWord, targetWord):
-    pass
-
+    alphArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    firstString = ""
+    secondString = ""
+    targetString = ""
+    for i in range(len(firstWord)):
+        firstString += str(alphArray.index(firstWord[i]))
+    for j in range(len(secondWord)):
+        secondString += str(alphArray.index(secondWord[j]))
+    for h in range(len(targetWord)):
+        targetString += str(alphArray.index(targetWord[h]))
+    if int(firstString) + int(secondString) == int(targetString):
+        return True
+    else:
+        return False
 
 
 print(isSumEqual("acb", "cba", "cdb"))
