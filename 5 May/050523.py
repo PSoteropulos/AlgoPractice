@@ -6,11 +6,7 @@ def maximumCount(nums):
             posCount += 1
         elif num<0:
             negCount += 1
-    if negCount >= posCount:
-        return negCount
-    else: 
-        return posCount
-
+    return max(negCount, posCount)
 
 
 
