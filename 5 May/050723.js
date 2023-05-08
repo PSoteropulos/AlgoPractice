@@ -1,11 +1,12 @@
 const maximumUnits = (boxTypes, truckSize) => {
-    
+    boxTypes.sort((a,b)=>a[1] - b[1])
+    console.log(boxTypes)
 };
 
 
 
 console.log(maximumUnits([[1,3],[2,2],[3,1]],4))
-console.log(maximumUnits([[5,10],[2,5],[4,7],[3,9]],10))
+// console.log(maximumUnits([[5,10],[2,5],[4,7],[3,9]],10))
 
 
 
