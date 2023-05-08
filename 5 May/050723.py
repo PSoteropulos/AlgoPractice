@@ -1,7 +1,20 @@
 def maximumUnits(boxTypes, truckSize):
     def sortFunc(boxTypes):
         return boxTypes[1]
-    boxTypes.sort(key=sortFunc)
+    boxTypes.sort(reverse= True, key=sortFunc)
+    unitCount = 0
+    boxCount = 0
+    for i in range(len(boxTypes)):
+        if boxCount == truckSize:
+            break
+        if boxCount + boxTypes[i][0] <= truckSize:
+            unitCount += boxTypes[i][0] * boxTypes[i][1]
+            boxCount += boxTypes[i][0]
+        else:
+            spaceLeft = truckSize - boxCount
+            unitCount += spaceLeft * boxTypes[i][1]
+            boxCount += spaceLeft
+    return unitCount
 
 
 
