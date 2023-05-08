@@ -1,5 +1,7 @@
 def maximumUnits(boxTypes, truckSize):
-    pass
+    def sortFunc(boxTypes):
+        return boxTypes[1]
+    boxTypes.sort(key=sortFunc)
 
 
 
