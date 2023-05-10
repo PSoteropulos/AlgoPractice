@@ -1,14 +1,24 @@
 def twoOutOfThree(nums1, nums2, nums3):
-    pass
+    answerArray = []
+    for num1 in nums1:
+        if (num1 in nums2 or num1 in nums3) and (num1 not in answerArray):
+            answerArray.append(num1)
+    for num2 in nums2:
+        if (num2 in nums1 or num2 in nums3) and (num2 not in answerArray):
+            answerArray.append(num2)
+    for num3 in nums3:
+        if (num3 in nums1 or num3 in nums2) and (num3 not in answerArray):
+            answerArray.append(num3)
+    return answerArray
 
 
 
 
 
-print(twoOutOfThree([1,1,3,2], [2,3], [3]))
-print(twoOutOfThree([3,1], [2,3], [1,2]))
-print(twoOutOfThree([1,2,2], [4,3,3], [5]))
-
+# print(twoOutOfThree([1,1,3,2], [2,3], [3]))
+# print(twoOutOfThree([3,1], [2,3], [1,2]))
+# print(twoOutOfThree([1,2,2], [4,3,3], [5]))
+print(twoOutOfThree([2,15,10,11,14,12,14,11,9,1],[8,9,13,2,11,8], [13,5,15,7,12,7,8,3,13,15]))
 
 
 
