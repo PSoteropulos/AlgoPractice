@@ -1,11 +1,27 @@
 const mergeArrays = (nums1, nums2) => {
-    
+    let answerObject = {}
+    let answerArray = []
+    for (let i=0; i<nums1.length; i++){
+        answerObject = {...answerObject, [nums1[i][0]]:nums1[i][1]}
+    }
+    for (let j=0; j<nums2.length; j++){
+        if (`${nums2[j][0]}` in answerObject){
+            answerObject[nums2[j][0]] += nums2[j][1]
+        }
+        else {
+            answerObject = {...answerObject, [nums2[j][0]]:nums2[j][1]}
+        }
+    }
+    for (const key in answerObject){
+        answerArray.push([key, answerObject[key]])
+    }
+    return answerArray
 };
 
 
 
 console.log(mergeArrays([[1,2],[2,3],[4,5]], [[1,4],[3,2],[4,1]]))
-console.log(mergeArrays([[2,4],[3,6],[5,5]], [[1,3],[4,3]]))
+// console.log(mergeArrays([[2,4],[3,6],[5,5]], [[1,3],[4,3]]))
 
 
 
