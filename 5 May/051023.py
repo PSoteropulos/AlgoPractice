@@ -1,10 +1,24 @@
 def mergeArrays(nums1, nums2):
-    pass
+    answerObject = {}
+    answerArray = []
+    for pair in nums1:
+        answerObject[pair[0]] = pair[1]
+    for pair in nums2:
+        if pair[0] not in answerObject:
+            answerObject[pair[0]] = pair[1]
+        else:
+            answerObject[pair[0]] += pair[1]
+    for key in answerObject:
+        answerArray.append([key,answerObject[key]])
+    def sortFunc(item):
+        return item[0]
+    answerArray.sort(key=sortFunc)
+    return answerArray
 
 
 
 print(mergeArrays([[1,2],[2,3],[4,5]], [[1,4],[3,2],[4,1]]))
-print(mergeArrays([[2,4],[3,6],[5,5]], [[1,3],[4,3]]))
+# print(mergeArrays([[2,4],[3,6],[5,5]], [[1,3],[4,3]]))
 
 
 
