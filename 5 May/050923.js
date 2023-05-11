@@ -2,7 +2,6 @@ const twoOutOfThree = (nums1, nums2, nums3) => {
     nums1.sort((a,b)=>(a-b))
     nums2.sort((a,b)=>(a-b))
     nums3.sort((a,b)=>(a-b))
-    console.log({num1:nums1, num2:nums2, num3:nums3})
     let obj = {}
     let answerArray = []
     for (let i = 0; i<nums1.length;i++){
