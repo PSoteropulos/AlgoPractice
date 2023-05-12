@@ -1,5 +1,32 @@
 const uniqueOccurrences = (arr) => {
-    
+    arr.sort((a,b)=>(a-b))
+    let occurencesArray = []
+    let occurenceCounter = 1
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]===arr[i+1]){
+            // console.log({i}, "array[i]", arr[i])
+            // console.log("first if before increment", {occurencesArray})
+            // console.log("first if before increment", {occurenceCounter})
+            occurenceCounter ++
+            // console.log("first if after increment", {occurencesArray})
+            // console.log("first if after increment", {occurenceCounter})
+        }
+        else if (occurencesArray.includes(occurenceCounter) === false){
+            // console.log({i}, "array[i]", arr[i])
+            // console.log("first else if before push", {occurencesArray})
+            // console.log("first else if before push", {occurenceCounter})
+            occurencesArray.push(occurenceCounter)
+            occurenceCounter = 1
+            // console.log("first else if after push", {occurencesArray})
+            // console.log("first else if after push", {occurenceCounter})
+        }
+        else if (occurencesArray.includes(occurenceCounter) === true){
+            // console.log({i}, "array[i]", arr[i])
+            // console.log("second else if", occurencesArray, "does contain", occurenceCounter )
+            return false
+        }
+    }
+    return true
 };
 
 
