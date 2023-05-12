@@ -1,6 +1,16 @@
 def uniqueOccurrences(arr):
-    pass
-
+    arr.sort()
+    occurencesArray = []
+    occurenceCounter = 1
+    for i in range(len(arr)):
+        if i < len(arr)-1 and arr[i] == arr[i+1]:
+            occurenceCounter += 1
+        elif (occurenceCounter not in occurencesArray):
+            occurencesArray.append(occurenceCounter)
+            occurenceCounter = 1
+        elif (occurenceCounter in occurencesArray):
+            return False
+    return True
 
 
 print(uniqueOccurrences([1,2,2,1,1,3]))
