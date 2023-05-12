@@ -1,5 +1,21 @@
 const replaceElements = (arr) => {
-    
+    let answerArray = []
+    for (let i = 0; i<arr.length; i++){
+        let localHigh = 0
+        if (i===arr.length-1){
+            answerArray.push(-1)
+            break
+        }
+        else {
+            for (let j=i+1; j<arr.length; j++){
+                if (arr[j] > localHigh){
+                    localHigh = arr[j]
+                }
+            }
+        }
+        answerArray.push(localHigh)
+    }
+    return answerArray
 };
 
 

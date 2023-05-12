@@ -1,5 +1,20 @@
 def replaceElements(arr):
-    pass
+    answerArray = []
+    for i in range(len(arr)):
+        localHigh = 0
+        if i== len(arr)-1:
+            answerArray.push(-1)
+            break
+        else:
+            for (let j=i+1; j<arr.length; j++){
+                if (arr[j] > localHigh){
+                    localHigh = arr[j]
+                }
+            }
+        }
+        answerArray.push(localHigh)
+    }
+    return answerArray
 
 
 
