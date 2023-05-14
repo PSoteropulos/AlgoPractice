@@ -1,5 +1,5 @@
 const digitCount = (num) => {
-    
+    let bool = true
 };
 
 
