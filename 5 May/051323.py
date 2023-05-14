@@ -1,5 +1,12 @@
 def digitCount(num):
-    pass
+    for i in range(len(num)):
+        count = 0
+        for j in range(len(num)):
+            if i == int(num[j]):
+                count += 1
+        if int(num[i]) != count:
+            return False
+    return True
 
 
 
