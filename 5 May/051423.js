@@ -1,5 +1,18 @@
 const countPrefixes = (words, s) => {
-    
+    let count = 0
+    for (let i =0; i<words.length; i++){
+        let localBool = true
+        for (let j=0; j<words[i].length; j++){
+            if (words[i][j] !== s[j]){
+                localBool = false
+                break
+            }
+        }
+        if (localBool === true){
+            count ++
+        }
+    }
+    return count
 };
 
 
