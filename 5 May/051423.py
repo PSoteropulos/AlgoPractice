@@ -1,5 +1,15 @@
 def countPrefixes(words, s):
-    pass
+    count = 0
+    for word in words:
+        localBool = True
+        if len(word) <= len(s):
+            for j in range(len(word)):
+                if word[j] != s[j]:
+                    localBool = False
+                    break
+            if localBool == True:
+                count += 1
+    return count
 
 
 
