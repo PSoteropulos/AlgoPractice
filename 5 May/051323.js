@@ -1,5 +1,16 @@
 const digitCount = (num) => {
-    let bool = true
+    for (let i = 0; i<num.length;i++){
+        let count = 0
+        for (let j=0; j<num.length; j++){
+            if (i === parseInt(num[j])){
+                count ++
+            }
+        }
+        if (parseInt(num[i]) !== count){
+            return false
+        }
+    }
+    return true
 };
 
 
