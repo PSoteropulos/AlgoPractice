@@ -1,5 +1,27 @@
 const minimumOperations = (nums) => {
-    
+    let count = 0
+    let running = true
+    while (running){
+        let smallestNum = 100
+        let overZero = false
+        for (let i = 0; i <nums.length; i++){
+            if ((nums[i] <= smallestNum) && (nums[i] > 0)){
+                smallestNum = nums[i]
+            }
+            if (nums[i] > 0){
+                overZero = true
+            }
+        }
+        if (overZero === true){
+            for (let j = 0; j<nums.length; j++){
+                nums[j] = nums[j] - smallestNum
+            }
+            count ++
+        } else {
+            break
+        }
+    }
+    return count
 };
 
 
