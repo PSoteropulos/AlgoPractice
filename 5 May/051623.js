@@ -1,5 +1,12 @@
 const findFinalValue = (nums, original) => {
-    
+    while (nums){
+        if (nums.includes(original)){
+            original = original * 2
+        }
+        else {
+            return original
+        }
+    }
 };
 
 
