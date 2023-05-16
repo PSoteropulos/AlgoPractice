@@ -1,5 +1,9 @@
 def findFinalValue(nums, original):
-    pass
+    while nums:
+        if original in nums:
+            original = original * 2
+        else:
+            return original
 
 
 
