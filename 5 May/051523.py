@@ -1,5 +1,20 @@
 def minimumOperations(nums):
-    pass
+    count = 0
+    running = True
+    while running == True:
+        smallestNum = 100
+        overZero = False
+        for i in range(len(nums)):
+            if (nums[i] <= smallestNum) and (nums[i] > 0):
+                smallestNum = nums[i]
+                overZero = True
+        if overZero == True:
+            for j in range(len(nums)):
+                nums[j] = nums[j] - smallestNum
+            count += 1
+        else:
+            running = False
+    return count
 
 
 

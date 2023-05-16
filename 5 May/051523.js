@@ -7,8 +7,6 @@ const minimumOperations = (nums) => {
         for (let i = 0; i <nums.length; i++){
             if ((nums[i] <= smallestNum) && (nums[i] > 0)){
                 smallestNum = nums[i]
-            }
-            if (nums[i] > 0){
                 overZero = true
             }
         }
@@ -18,7 +16,7 @@ const minimumOperations = (nums) => {
             }
             count ++
         } else {
-            break
+            running = false
         }
     }
     return count
