@@ -7,9 +7,7 @@ const canBeEqual = (target, arr) => {
             return false
         }
     }
-    if (bool === true){
-        return true
-    }
+    return true
 };
 
 
