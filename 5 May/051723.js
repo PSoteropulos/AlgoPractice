@@ -1,5 +1,15 @@
 const canBeEqual = (target, arr) => {
-    
+    let bool = true
+    target.sort((a,b)=>(a-b))
+    arr.sort((a,b)=>(a-b))
+    for (let i=0; i<target.length;i++){
+        if (target[i] !== arr[i]){
+            return false
+        }
+    }
+    if (bool === true){
+        return true
+    }
 };
 
 
