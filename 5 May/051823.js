@@ -1,5 +1,18 @@
 const maximumValue = (strs) => {
-    
+    let max = 0
+    for (let i=0;i<strs.length;i++){
+        if (isNaN(strs[i])){
+            if (strs[i].length >= max){
+                max = strs[i].length
+            }
+        }
+        else{
+            if (parseInt(strs[i]) >= max){
+                max = parseInt(strs[i])
+            }
+        }
+    }
+    return max
 };
 
 
