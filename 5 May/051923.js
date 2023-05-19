@@ -1,5 +1,9 @@
 const sortedSquares = (nums) => {
-    
+    let newArray = []
+    for (let i = 0; i<nums.length; i++){
+        newArray.push(nums[i]*nums[i])
+    }
+    return newArray.sort((a,b)=>(a-b))
 };
 
 
