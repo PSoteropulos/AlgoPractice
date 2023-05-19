@@ -1,5 +1,9 @@
 def sortedSquares(nums):
-    pass
+    newArray = [ ]
+    for num in nums:
+        newArray.append(num*num)
+    newArray.sort()
+    return newArray
 
 
 
