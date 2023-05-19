@@ -1,5 +1,14 @@
 def maximumValue(strs):
-    pass
+    maximum = 0
+    for i in range(len(strs)):
+        if strs[i].isnumeric():
+            x = int(strs[i])
+            if x > maximum:
+                maximum = x
+        else:
+            if len(strs[i]) > maximum:
+                maximum = len(strs[i])
+    return maximum
 
 
 
