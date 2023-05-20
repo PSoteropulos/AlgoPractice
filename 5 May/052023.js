@@ -1,5 +1,19 @@
 const canBeTypedWords = (text, brokenLetters) => {
-    
+    let textArray = text.split(" ")
+    let count = 0
+    for (let i=0;i<textArray.length;i++){
+        let wordArray = textArray[i].split("")
+        for (let j=0;j<wordArray.length;j++){
+            if (brokenLetters.includes(wordArray[j])){
+                break
+            }
+            else if (j===wordArray.length-1){
+                count ++
+                break
+            }
+        }
+    }
+    return count
 };
 
 
