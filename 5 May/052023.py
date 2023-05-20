@@ -1,5 +1,15 @@
 def canBeTypedWords(text, brokenLetters):
-    pass
+    textArray = text.split()
+    count = 0
+    for word in textArray:
+        wordArray = [*word]
+        for i in range(len(wordArray)):
+            if wordArray[i] in brokenLetters:
+                break
+            elif i == len(wordArray)-1:
+                count += 1
+                break
+    return count
 
 
 print(canBeTypedWords("hello world", "ad"))
