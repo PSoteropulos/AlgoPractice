@@ -1,5 +1,17 @@
 const nextGreaterElement = (nums1, nums2) => {
-    
+    let ansArray = []
+    for (let i = 0; i< nums1.length; i++){
+        let local = -1
+        let index = nums2.indexOf(nums1[i])
+        for (let j=index; j<nums2.length; j++){
+            if (nums2[j]>nums1[i]){
+                local = nums2[j]
+                break
+            }
+        }
+        ansArray.push(local)
+    }
+    return ansArray
 };
 
 
