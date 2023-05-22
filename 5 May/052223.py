@@ -1,5 +1,15 @@
 def nextGreaterElement(nums1, nums2):
-    pass
+    ansArray = []
+    for ind, num in enumerate(nums1):
+        # print(ind, num)
+        local = -1
+        startIndex = nums2.index(num)
+        for j in range(startIndex, len(nums2)):
+            if nums2[j] > num:
+                local = nums2[j]
+                break
+        ansArray.append(local)
+    return ansArray
 
 
 
