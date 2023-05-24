@@ -1,5 +1,16 @@
 const checkString = (s) => {
-    
+    let letter = s[0]
+    let changeCount = 0
+    for (let i=1; i<s.length; i++){
+        if (s[i] !== letter){
+            letter = s[i]
+            changeCount ++
+        }
+    }
+    if (changeCount >= 1 && s[s.length-1]==="a"){
+        return false
+    }
+    return changeCount <= 1 ? true : false
 };
 
 
