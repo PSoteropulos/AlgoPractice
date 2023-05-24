@@ -1,5 +1,16 @@
 def checkString(s):
-    pass
+    letter = s[0]
+    changeCount = 0
+    for char in s:
+        if letter != char:
+            letter = char
+            changeCount += 1
+    if changeCount >=1 and s[len(s)-1] == "a":
+        return False
+    elif changeCount <= 1:
+        return True
+    else:
+        return False
 
 
 
