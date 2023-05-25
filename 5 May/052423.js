@@ -1,9 +1,14 @@
 const countGoodSubstrings = (s) => {
     let count = 0
-    console.log(s[s.length-3])
     for (let i=0; i<s.length-2;i++){
-        if 
+        if (s[i] === s[i+1] || s[i]===s[i+2] || s[i+1]===s[i+2]){
+            null
+        }
+        else{
+            count ++
+        }
     }
+    return count
 };
 
 
