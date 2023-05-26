@@ -1,15 +1,25 @@
-def intersection(nums1, nums2):
-    ansArray = []
-    if len(nums1)>len(nums2):
-        for num in nums1:
-            if num in nums2 and num not in ansArray:
-                ansArray.append(num)
-    else:
-        for num in nums2:
-            if num in nums1 and num not in ansArray:
-                ansArray.append(num)
-    return ansArray
+# def intersection(nums1, nums2):
+#     ansArray = []
+#     if len(nums1)>len(nums2):
+#         for num in nums1:
+#             if num in nums2 and num not in ansArray:
+#                 ansArray.append(num)
+#     else:
+#         for num in nums2:
+#             if num in nums1 and num not in ansArray:
+#                 ansArray.append(num)
+#     return ansArray
 
+
+# optimized with sets
+def intersection(nums1, nums2):
+    set1 = set(nums1)
+    ansArray = []
+    for num in nums2:
+        if num in set1:
+            ansArray.append(num)
+            set1.remove(num)
+    return ansArray
 
 
 
