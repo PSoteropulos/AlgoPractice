@@ -1,22 +1,37 @@
-const intersection = (nums1, nums2) => {
-    let ansArray = []
-    if (nums1.length>nums2.length){
-        for (let i=0; i<nums1.length; i++){
-            if ((nums2.includes(nums1[i])===true) && (ansArray.includes(nums1[i])===false)){
-                ansArray.push(nums1[i])
-            }
-        }
-    }
-    else {
-        for (let j=0; j<nums2.length; j++){
-            if ((nums1.includes(nums2[j])===true) && (ansArray.includes(nums2[j])===false)){
-                ansArray.push(nums2[j])
-            }
-        }
-    }
-    return ansArray
-};
+// const intersection = (nums1, nums2) => {
+//     let ansArray = []
+//     if (nums1.length>nums2.length){
+//         for (let i=0; i<nums1.length; i++){
+//             if ((nums2.includes(nums1[i])===true) && (ansArray.includes(nums1[i])===false)){
+//                 ansArray.push(nums1[i])
+//             }
+//         }
+//     }
+//     else {
+//         for (let j=0; j<nums2.length; j++){
+//             if ((nums1.includes(nums2[j])===true) && (ansArray.includes(nums2[j])===false)){
+//                 ansArray.push(nums2[j])
+//             }
+//         }
+//     }
+//     return ansArray
+// };
 
+
+// optimized
+const intersection = (nums1, nums2) => {
+    if (nums1.length > nums2.length) {
+        [nums1, nums2] = [nums2, nums1];
+    }
+    const set1 = new Set(nums1);
+    const intersectionSet = new Set();
+    for (const num of nums2) {
+        if (set1.has(num)) {
+        intersectionSet.add(num);
+        }
+    }
+    return Array.from(intersectionSet);
+};
 
 
 console.log(intersection([1,2,2,1], [2,2]))
