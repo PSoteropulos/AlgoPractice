@@ -1,5 +1,14 @@
 def intersection(nums1, nums2):
-    pass
+    ansArray = []
+    if len(nums1)>len(nums2):
+        for num in nums1:
+            if num in nums2 and num not in ansArray:
+                ansArray.append(num)
+    else:
+        for num in nums2:
+            if num in nums1 and num not in ansArray:
+                ansArray.append(num)
+    return ansArray
 
 
 
