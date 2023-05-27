@@ -1,5 +1,13 @@
 def singleNumber(nums):
-    pass
+    numsDict = {}
+    for num in nums:
+        if num not in numsDict:
+            numsDict[num] = 1
+        else:
+            numsDict[num] += 1
+    for key,val in numsDict.items():
+        if val == 1:
+            return key
 
 
 
