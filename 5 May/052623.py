@@ -1,14 +1,26 @@
-def singleNumber(nums):
-    numsDict = {}
-    for num in nums:
-        if num not in numsDict:
-            numsDict[num] = 1
-        else:
-            numsDict[num] += 1
-    for key,val in numsDict.items():
-        if val == 1:
-            return key
+# def singleNumber(nums):
+#     numsDict = {}
+#     for num in nums:
+#         if num not in numsDict:
+#             numsDict[num] = 1
+#         else:
+#             numsDict[num] += 1
+#     for key,val in numsDict.items():
+#         if val == 1:
+#             return key
 
+
+# optimized
+def singleNumber(nums):
+    unique_nums = set()
+    sum_unique = 0
+    sum_nums = 0
+    for num in nums:
+        if num not in unique_nums:
+            unique_nums.add(num)
+            sum_unique += num
+        sum_nums += num
+    return 2 * sum_unique - sum_nums
 
 
 
