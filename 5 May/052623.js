@@ -1,5 +1,16 @@
 const singleNumber = (nums) => {
-    
+    let numsObject = {}
+    nums.map((num, index)=>{
+        numsObject.hasOwnProperty(`${num}`)?
+        numsObject[`${num}`] = numsObject[`${num}`] + 1
+        :
+        numsObject[`${num}`] = 1
+    })
+    for (let key in numsObject){
+        if (numsObject[key] === 1){
+            return key
+        }
+    }
 };
 
 
