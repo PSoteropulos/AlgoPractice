@@ -1,18 +1,34 @@
+// const singleNumber = (nums) => {
+//     let numsObject = {}
+//     nums.map((num, index)=>{
+//         numsObject.hasOwnProperty(`${num}`)?
+//         numsObject[`${num}`] = numsObject[`${num}`] + 1
+//         :
+//         numsObject[`${num}`] = 1
+//     })
+//     for (let key in numsObject){
+//         if (numsObject[key] === 1){
+//             return key
+//         }
+//     }
+// };
+
+
+// optimized
 const singleNumber = (nums) => {
-    let numsObject = {}
-    nums.map((num, index)=>{
-        numsObject.hasOwnProperty(`${num}`)?
-        numsObject[`${num}`] = numsObject[`${num}`] + 1
-        :
-        numsObject[`${num}`] = 1
-    })
-    for (let key in numsObject){
-        if (numsObject[key] === 1){
-            return key
+    const numSet = new Set();
+    let sumOfNums = 0;
+    for (let num of nums){
+        if (!numSet.has(num)){
+            numSet.add(num);
+            sumOfNums += num
+        }
+        else {
+            sumOfNums -= num
         }
     }
-};
-
+    return sumOfNums
+}
 
 
 console.log(singleNumber([2,2,1]))
