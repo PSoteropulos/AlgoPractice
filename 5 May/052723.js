@@ -1,5 +1,15 @@
 const sortArrayByParityII = (nums) => {
-    
+    let evenArray = []
+    let oddArray = []
+    let ansArray = []
+    for (let i = 0; i<nums.length; i++){
+        nums[i]%2===0? evenArray.push(nums[i]) : oddArray.push(nums[i])
+    }
+    for (let j=0;j<evenArray.length;j++){
+        ansArray.push(evenArray[j])
+        ansArray.push(oddArray[j])
+    }
+    return ansArray
 };
 
 
