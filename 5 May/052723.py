@@ -1,5 +1,16 @@
 def sortArrayByParityII(nums):
-    pass
+    evenArray = []
+    oddArray = []
+    ansArray = []
+    for i in range(len(nums)):
+        if nums[i]%2==0:
+            evenArray.append(nums[i])
+        else:
+            oddArray.append(nums[i])
+    for j in range(len(evenArray)):
+        ansArray.append(evenArray[j])
+        ansArray.append(oddArray[j])
+    return ansArray
 
 
 
