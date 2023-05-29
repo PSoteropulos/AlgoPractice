@@ -1,5 +1,18 @@
 def checkDistances(s, distance):
-    pass
+    alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    charSet = set()
+    for i in range(len(s)-1):
+        if s[i] not in charSet:
+            charCount = 0
+            for j in range(i+1, len(s)):
+                if s[i] == s[j]:
+                    charIndex = alphabetArray.index(s[i])
+                    if charCount != distance[charIndex]:
+                        return False
+                else:
+                    charCount += 1
+            charSet.add(s[i])
+    return True
 
 
 
