@@ -1,5 +1,24 @@
 const checkDistances = (s, distance) => {
-    
+    let alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    let charSet = new Set()
+    for (let i=0; i<s.length-1; i++){
+        if (!charSet.has(s[i])){
+            let charCount = 0
+            for (let j=i+1;j<s.length;j++){
+                if (s[i] === s[j]){
+                    let charIndex = alphabetArray.indexOf(s[i])
+                    if (charCount !== distance[charIndex]){
+                        return false
+                    }
+                }
+                else {
+                    charCount ++
+                }
+            }
+            charSet.add(s[i])
+        }
+    }
+    return true
 };
 
 
