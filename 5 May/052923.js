@@ -1,5 +1,20 @@
 const fizzBuzz = (n) => {
-    
+    let ansArray = []
+    for (let i=1; i<=n; i++){
+        if (i%5===0 && i%3===0){
+            ansArray.push("FizzBuzz")
+        }
+        else if (i%5===0){
+            ansArray.push("Buzz")
+        }
+        else if (i%3===0){
+            ansArray.push("Fizz")
+        }
+        else {
+            ansArray.push(i.toString())
+        }
+    }
+    return ansArray
 };
 
 
