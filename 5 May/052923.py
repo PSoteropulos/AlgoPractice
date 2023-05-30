@@ -1,5 +1,15 @@
 def fizzBuzz(n):
-    pass
+    ansArray = []
+    for i in range(1,n+1):
+        if (i%5==0 and i%3==0):
+            ansArray.append("FizzBuzz")
+        elif (i%5==0):
+            ansArray.append("Buzz")
+        elif (i%3==0):
+            ansArray.append("Fizz")
+        else:
+            ansArray.append(str(i))
+    return ansArray
 
 
 
