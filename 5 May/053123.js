@@ -1,5 +1,36 @@
 const countWords = (words1, words2) => {
-    
+    let countObject = {}
+    let ansCount = 0
+    for (let i = 0; i<words1.length; i++){
+        for (let j = 0; j<words2.length; j++){
+            if (words1[i] === words2[j]){
+                if (countObject.hasOwnProperty(`${words1[i]}`)){
+                    countObject[`${words1[i]}`] = countObject[`${words1[i]}`] + 1
+                }
+                else {
+                    countObject[`${words1[i]}`] = 1
+                }
+            }
+        }
+    }
+    for (let i = 0; i<words2.length; i++){
+        for (let j = 0; j<words1.length; j++){
+            if (words2[i] === words1[j]){
+                if (countObject.hasOwnProperty(`${words1[j]}`)){
+                    countObject[`${words1[j]}`] = countObject[`${words1[j]}`] + 1
+                }
+                else {
+                    countObject[`${words1[j]}`] = 1
+                }
+            }
+        }
+    }
+    for (let key in countObject){
+        if (countObject[key] === 2){
+            ansCount ++
+        }
+    }
+    return ansCount
 };
 
 
