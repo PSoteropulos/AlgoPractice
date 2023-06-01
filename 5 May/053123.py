@@ -1,5 +1,24 @@
 def countWords(words1, words2):
-    pass
+    countObject = {}
+    ansCount = 0
+    for word1 in words1:
+        for word2 in words2:
+            if word1==word2:
+                if word1 in countObject:
+                    countObject[word1] = countObject[word1] + 1
+                else:
+                    countObject[word1] = 1
+    for word2 in words2:
+        for word1 in words1:
+            if word2==word1:
+                if word1 in countObject:
+                    countObject[word1] = countObject[word1] + 1
+                else:
+                    countObject[word1] = 1
+    for key in countObject:
+        if countObject[key] == 2:
+            ansCount += 1
+    return ansCount
 
 
 
