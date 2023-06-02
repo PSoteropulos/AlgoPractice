@@ -1,5 +1,9 @@
 def similarPairs(words):
-    pass
+    count = 0
+    for i in range(len(words)-1):
+        tempArray1 = sorted([*words[i]])
+        tempSet1 = set(tempArray1)
+        print(tempSet1)
 
 
 

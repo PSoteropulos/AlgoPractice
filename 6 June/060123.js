@@ -1,5 +1,19 @@
 const similarPairs = (words) => {
-    
+    let count = 0
+    for (let i=0; i<words.length-1;i++){
+        let tempSet1 = new Set (words[i].split('').sort())
+        let tempText1 = ""
+        tempSet1.forEach((item)=>tempText1+=item)
+        for (let j = i+1; j<words.length; j++){
+            let tempSet2 = new Set(words[j].split('').sort())
+            let tempText2 = ""
+            tempSet2.forEach((item)=>tempText2+=item)
+            if (tempText1 == tempText2){
+                count ++
+            }
+        }
+    }
+    return count
 };
 
 
