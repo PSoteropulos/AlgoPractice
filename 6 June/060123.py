@@ -2,9 +2,19 @@ def similarPairs(words):
     count = 0
     for i in range(len(words)-1):
         tempArray1 = sorted([*words[i]])
-        tempSet1 = set(tempArray1)
-        print(tempSet1)
-
+        tempList1 = []
+        for letter in tempArray1:
+            if letter not in tempList1:
+                tempList1.append(letter)
+        for j in range(i+1, len(words)):
+            tempList2 = []
+            tempArray2 = sorted([*words[j]])
+            for letter in tempArray2:
+                if letter not in tempList2:
+                    tempList2.append(letter)
+            if tempList1 == tempList2:
+                count += 1
+    return count
 
 
 
