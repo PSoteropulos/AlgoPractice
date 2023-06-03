@@ -1,5 +1,16 @@
 def findTheArrayConcVal(nums):
-    pass
+    concatVal = 0
+    while (len(nums)>0):
+        tempString = ""
+        if (len(nums) == 1): 
+            tempString += str(nums[0])
+            nums.pop()
+        else:
+            tempString = tempString + str(nums[0]) + str(nums[len(nums)-1])
+            nums.pop(0)
+            nums.pop()
+        concatVal += int(tempString)
+    return concatVal
 
 
 
