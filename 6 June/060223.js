@@ -1,12 +1,26 @@
 const findTheArrayConcVal = (nums) => {
-    
+    let concatVal = 0
+    while (nums.length>0) {
+        let tempString = ""
+        if (nums.length === 1) { 
+            tempString += nums[0]
+            nums.pop()
+        }
+        else {
+            tempString = tempString + nums[0] + nums[nums.length-1]
+            nums.splice(0,1)
+            nums.pop()
+        }
+        concatVal += Number(tempString)
+    }
+    return concatVal
 };
 
 
 
 
 
-console.log(findTheArrayConcVal([7,52,2,4]))
+// console.log(findTheArrayConcVal([7,52,2,4]))
 console.log(findTheArrayConcVal([5,14,13,8,12]))
 
 
