@@ -1,5 +1,23 @@
 def findWords(words):
-    pass
+    row1 = "qwertyuiop"
+    row2 = "asdfghjkl"
+    row3 = "zxcvbnm"
+    ansArray = []
+    for word in words:
+        valid = True
+        includedInRow = None
+        if word[0].lower() in row1:
+            includedInRow = row1
+        elif word[0].lower() in row2:
+            includedInRow = row2
+        elif word[0].lower() in row3:
+            includedInRow = row3
+        for j in range(len(word)):
+            if word[j].lower() not in includedInRow:
+                valid = False
+        if (valid):
+            ansArray.append(word)
+    return ansArray
 
 
 

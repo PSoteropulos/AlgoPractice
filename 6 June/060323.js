@@ -15,7 +15,6 @@ const findWords = (words) => {
         else if (row3.includes(words[i][0].toLowerCase())){
             includedInRow = row3
         }
-        console.log(includedInRow)
         for (let j = 1; j<words[i].length; j++){
             if (!includedInRow.includes(words[i][j].toLowerCase())){
                 valid = false
