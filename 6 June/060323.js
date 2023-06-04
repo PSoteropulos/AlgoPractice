@@ -5,21 +5,23 @@ const findWords = (words) => {
     let ansArray = []
     for (let i = 0; i<words.length; i++){
         let valid = true
-        if (row1.includes(words[i][0])){
-            let includedInRow = row1
+        let includedInRow = undefined
+        if (row1.includes(words[i][0].toLowerCase())){
+            includedInRow = row1
         }
-        else if (row2.includes(words[i][0])){
-            let includedInRow = row2
+        else if (row2.includes(words[i][0].toLowerCase())){
+            includedInRow = row2
         }
-        else if (row3.includes(words[i][0])){
-            let includedInRow = row3
+        else if (row3.includes(words[i][0].toLowerCase())){
+            includedInRow = row3
         }
+        console.log(includedInRow)
         for (let j = 1; j<words[i].length; j++){
-            if (!includedInRow.includes(words[i][j])){
+            if (!includedInRow.includes(words[i][j].toLowerCase())){
                 valid = false
             }
         }
-        if (valid) ansArray.ansArray.push(words[i]) 
+        if (valid) ansArray.push(words[i]) 
     }
     return ansArray
 };
