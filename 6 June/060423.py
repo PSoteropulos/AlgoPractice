@@ -1,5 +1,14 @@
 def minimumAbsDifference(arr):
-    pass
+    arr.sort()
+    minDiff = 10000000000000000000000
+    ansArray = []
+    for i in range(len(arr)-1):
+        if (arr[i+1] - arr[i] < minDiff):
+            minDiff = arr[i+1] - arr[i]
+    for j in range(len(arr)-1):
+        if (arr[j+1] - arr[j] == minDiff):
+            ansArray.append([arr[j], arr[j+1]])
+    return ansArray
 
 
 
