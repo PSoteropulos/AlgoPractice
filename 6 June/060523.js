@@ -1,13 +1,21 @@
 const greatestLetter = (s) => {
-    
+    let greatest = ""
+    let split = s.split("").sort()
+    for (let i = split.length-1;i>=0;i--){
+        if (s.includes(split[i].toUpperCase()) && s.includes(split[i].toLowerCase())){
+            greatest = split[i].toUpperCase()
+            break
+        }
+    }
+    return greatest
 };
 
 
 
 
-console.log(greatestLetter("lEeTcOdE"))
+// console.log(greatestLetter("lEeTcOdE"))
 console.log(greatestLetter("arRAzFif"))
-console.log(greatestLetter("AbCdEfGhIjK"))
+// console.log(greatestLetter("AbCdEfGhIjK"))
 
 
 
