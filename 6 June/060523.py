@@ -1,5 +1,12 @@
 def greatestLetter(s):
-    pass
+    greatest = ""
+    split = [*s]
+    split.sort(reverse=True)
+    for i in range(len(split)):
+        if split[i].upper() in s and split[i].lower() in s:
+            greatest = split[i].upper()
+            break
+    return greatest
 
 
 
