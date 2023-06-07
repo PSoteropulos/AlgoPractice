@@ -1,12 +1,18 @@
 def removeDuplicates(s):
-    pass
+    stack = []
+    for letter in s:
+        if stack and stack[len(stack)-1]==letter:
+            stack.pop()
+        else:
+            stack.append(letter)
+    return "".join(stack)
 
 
 
 
 print(removeDuplicates("abbaca"))
 print(removeDuplicates("azxxzy"))
-
+print(removeDuplicates("aaaaaaaa"))
 
 
 
