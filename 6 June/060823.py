@@ -1,5 +1,17 @@
 def minLength(s):
-    pass
+    sArray = [*s]
+    running = True
+    while running:
+        changes = False
+        for i in range(len(sArray)-1):
+            if (sArray[i] == "A" and sArray[i+1] == "B") or (sArray[i] == "C" and sArray[i+1] == "D"):
+                sArray.pop(i+1)
+                sArray.pop(i)
+                changes = True
+                break
+        if changes == False:
+            break
+    return len(sArray)
 
 
 
