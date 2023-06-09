@@ -1,6 +1,14 @@
 def relativeSortArray(arr1, arr2):
-    pass
-
+    arr1.sort()
+    ansArray = []
+    for num2 in arr2:
+        for num1 in arr1:
+            if num1 == num2:
+                ansArray.append(num1)
+    for number in arr1:
+        if number not in arr2:
+            ansArray.append(number)
+    return ansArray
 
 
 
