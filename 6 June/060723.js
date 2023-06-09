@@ -1,13 +1,27 @@
 const relativeSortArray = (arr1, arr2) => {
-    
+    arr1.sort((a,b)=>a-b)
+    let ansArray = []
+    for (let i = 0; i<arr2.length; i++){
+        for (let j=0;j<arr1.length; j++){
+            if (arr2[i] === arr1[j]){
+                ansArray.push(arr1[j])
+            }
+        }
+    }
+    for (let k=0;k<arr1.length;k++){
+        if (!arr2.includes(arr1[k])){
+            ansArray.push(arr1[k])
+        }
+    }
+    return ansArray
 };
 
 
 
 
 
-print(relativeSortArray([2,3,1,3,2,4,6,7,9,2,19], [2,1,4,3,9,6]))
-print(relativeSortArray([28,6,22,8,44,17], [22,28,8,6]))
+console.log(relativeSortArray([2,3,1,3,2,4,6,7,9,2,19], [2,1,4,3,9,6]))
+console.log(relativeSortArray([28,6,22,8,44,17], [22,28,8,6]))
 
 
 
