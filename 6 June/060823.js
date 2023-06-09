@@ -1,5 +1,19 @@
 const minLength = (s) => {
-    
+    let sArray = s.split("")
+    let running = true
+    while (running){
+        let changes = false
+        for (let i = 0; i<sArray.length-1;i++) {
+            if ((sArray[i] === "A" && sArray[i+1] === "B") || (sArray[i] === "C" && sArray[i+1] === "D")){
+                sArray.splice(i+1, 1)
+                sArray.splice(i, 1)
+                changes = true
+                break
+            }
+        }
+        if (changes === false) break
+    }
+    return sArray.length
 };
 
 
