@@ -1,5 +1,17 @@
 const intersection = (nums) => {
-    
+    let ansArray = []
+    let set1 = new Set(nums[0].sort((a,b)=>a-b))
+    for (let num of set1.values()){
+        let inAll = true
+        for (let i = 1; i<nums.length; i++){
+            let tempSet = new Set(nums[i])
+            if (!tempSet.has(num)){
+                inAll = false
+            }
+        }
+        if (inAll) ansArray.push(num)
+    }
+    return ansArray
 };
 
 
