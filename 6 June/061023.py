@@ -1,5 +1,13 @@
 def findMaxK(nums):
-    pass
+    answer = -1
+    nums.sort()
+    for num in nums:
+        if num >= 0:
+            break
+        elif abs(num) in nums:
+            answer = abs(num)
+            break
+    return answer
 
 
 
