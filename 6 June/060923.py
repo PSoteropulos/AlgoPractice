@@ -1,12 +1,21 @@
 def intersection(nums):
-    pass
+    ansArray = []
+    for num in nums[0]:
+        inAll = True
+        for i in range(1, len(nums)):
+            if num not in nums[i]:
+                inAll = False
+        if inAll == True:
+            ansArray.append(num)
+    ansArray.sort()
+    return ansArray
 
 
 
 
 print(intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]))
 print(intersection([[1,2,3],[4,5,6]]))
-
+print(intersection([[7,34,45,10,12,27,13],[27,21,45,10,12,13]]))
 
 
 
