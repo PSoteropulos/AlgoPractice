@@ -1,5 +1,16 @@
 const findMaxK = (nums) => {
-    
+    let answer = -1
+    nums.sort((a,b)=>a-b)
+    for (let i = 0; i < nums.length; i++){
+        if (nums[i] > 0) {
+            break
+        }
+        else if (nums.includes(Math.abs(nums[i]))){
+            answer = Math.abs(nums[i])
+            break
+        }
+    }
+    return answer
 };
 
 
