@@ -1,5 +1,17 @@
 def toGoatLatin(sentence):
-    pass
+    splitSentence = sentence.split(" ")
+    changedArray = []
+    vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U" ]
+    for i in range(len(splitSentence)):
+        addition = "a"*(i+1)
+        if splitSentence[i][0] in vowels:
+            changedArray.append(splitSentence[i] + "ma" + addition)
+        else:
+            letter = splitSentence[i][0]
+            wordSplit = [*splitSentence[i]]
+            wordSplit.pop(0)
+            changedArray.append("".join(wordSplit) + letter + "ma" + addition)
+    return " ".join(changedArray)
 
 
 
