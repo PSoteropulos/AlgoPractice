@@ -1,5 +1,18 @@
 const toGoatLatin = (sentence) => {
-    
+    let splitSentence = sentence.split(" ")
+    let changedArray = []
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    for (let i = 0; i<splitSentence.length;i++){
+        let addition = "a".repeat(1+ i)
+        if (vowels.includes(splitSentence[i][0].toLowerCase())){
+            changedArray.push(splitSentence[i] + "ma" + addition)
+        }
+        else {
+            let letter = splitSentence[i][0]
+            changedArray.push(splitSentence[i].split("").splice(1).join("") + letter + "ma" + addition)
+        }
+    }
+    return changedArray.join(" ")
 };
 
 
