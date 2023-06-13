@@ -1,13 +1,19 @@
 def findComplement(num):
-    pass
+    binaryString = bin(num).lstrip("0b")
+    binaryCompliment = ""
+    for char in binaryString:
+        if char == "1":
+            binaryCompliment = binaryCompliment + "0"
+        else:
+            binaryCompliment = binaryCompliment + "1"
+    return int(binaryCompliment,2)
 
 
 
 
-print(findComplement(5))
-print(findComplement(1))
-
-
+# print(findComplement(5))
+# print(findComplement(1))
+print(findComplement(2))
 
 
 
