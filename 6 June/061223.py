@@ -1,5 +1,21 @@
 def areNumbersAscending(s):
-    pass
+    numberArray = []
+    splitString = s.split(" ")
+    for chunk in splitString:
+        if chunk.isnumeric():
+            numberArray.append(int(chunk))
+    numsWithoutDupes = []
+    for number in numberArray:
+        if number not in numsWithoutDupes:
+            numsWithoutDupes.append(number)
+    numberArray.sort()
+    if len(numsWithoutDupes) != len(numberArray):
+        return False
+    else:
+        for i in range(len(numberArray)):
+            if numberArray[i] != numsWithoutDupes[i]:
+                return False
+        return True
 
 
 
