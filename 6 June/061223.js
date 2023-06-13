@@ -1,5 +1,26 @@
 const areNumbersAscending = (s) => {
-    
+    let numbers = []
+    let splitString = s.split(" ")
+    for (let i = 0; i<splitString.length; i++){
+        if (!isNaN(splitString[i])){
+            numbers.push(splitString[i])
+        }
+    }
+    let numberSet = new Set(numbers)
+    numbers.sort((a,b)=>a-b)
+    let numSetToArray = [...numberSet]
+    if (numbers.length !== numSetToArray.length){
+        return false
+    }
+    else {
+        let falseyCheck = true
+        for (let j = 0; j<numbers.length; j++){
+            if (numbers[j] !== numSetToArray[j]){
+                return false
+            }
+        }
+        return true
+    }
 };
 
 
