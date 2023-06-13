@@ -1,5 +1,16 @@
 const findComplement = (num) => {
-    
+    let binaryString = num.toString(2)
+    let binaryComplement = ""
+    for (let i = 0; i<binaryString.length; i++){
+        if (binaryString[i] === "1"){
+            binaryComplement = binaryComplement + 0
+        }
+        else if (binaryString[i] === "0"){
+            binaryComplement = binaryComplement + 1
+        }
+    }
+    let parsed = parseInt(binaryComplement, 2)
+    return parsed
 };
 
 
