@@ -1,5 +1,13 @@
 def applyOperations(nums):
-    pass
+    for i in range(len(nums)-1):
+        if nums[i]==nums[i+1] and nums[i] != 0:
+            nums[i] = nums[i]*2
+            nums[i+1] = 0
+    for j in range(len(nums)-1, -1, -1):
+        if nums[j] == 0:
+            nums.pop(j)
+            nums.append(0)
+    return nums
 
 
 
