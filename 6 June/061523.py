@@ -1,5 +1,18 @@
 def minStartValue(nums):
-    pass
+    startValue = 1
+    while nums:
+        runningSum = startValue
+        localIncrement = False
+        for num in nums:
+            if num + runningSum < 1:
+                startValue += 1
+                localIncrement = True
+                break
+            else:
+                runningSum += num
+        if localIncrement == False:
+            break
+    return startValue
 
 
 print(minStartValue([-3,2,-3,4,2]))
