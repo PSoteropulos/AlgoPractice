@@ -1,5 +1,21 @@
 const minStartValue = (nums) => {
-    
+    let startValue = 1
+    while (nums){
+        let runningSum = startValue
+        let localIncrement = false
+        for (let i=0; i<nums.length; i++){
+            if (nums[i] + runningSum < 1){
+                startValue ++
+                localIncrement = true
+                break
+            }
+            else {
+                runningSum += nums[i]
+            }
+        }
+        if (!localIncrement) break
+    }
+    return startValue
 };
 
 
