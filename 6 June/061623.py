@@ -1,5 +1,13 @@
 def findTheDistanceValue(arr1, arr2, d):
-    pass
+    count = 0
+    for num1 in arr1:
+        bool = False
+        for num2 in arr2:
+            if abs(num1 - num2) <= d:
+                bool = True
+        if bool == False:
+            count += 1
+    return count
 
 
 
