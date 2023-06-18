@@ -1,5 +1,9 @@
 def distributeCandies(candyType):
-    pass
+    candySet = set(candyType)
+    if len(candySet) > len(candyType)/2:
+        return int(len(candyType)/2)
+    else:
+        return len(candySet)
 
 
 

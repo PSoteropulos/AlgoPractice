@@ -1,5 +1,6 @@
 const distributeCandies = (candyType) => {
-    
+    let candySet = new Set(candyType)
+    return candySet.size > candyType.length/2 ? candyType.length/2 : candySet.size
 };
 
 
