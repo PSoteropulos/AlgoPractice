@@ -1,5 +1,14 @@
 const pickGifts = (gifts, k) => {
-    
+    while (k>0) {
+        gifts.sort((a,b)=>b-a)
+        gifts[0] = Math.floor(Math.sqrt(gifts[0]))
+        k --
+    }
+    let sum = 0
+    for (let i=0; i < gifts.length; i++){
+        sum += gifts[i]
+    }
+    return sum
 };
 
 
