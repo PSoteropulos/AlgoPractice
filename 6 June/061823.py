@@ -1,5 +1,14 @@
+import math
+
 def pickGifts(gifts, k):
-    pass
+    while (k>0):
+        gifts.sort(reverse=True)
+        gifts[0] = math.floor(math.sqrt(gifts[0]))
+        k -= 1
+    sum = 0
+    for gift in gifts:
+        sum += gift
+    return sum
 
 
 
