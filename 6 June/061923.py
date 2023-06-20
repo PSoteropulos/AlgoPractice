@@ -1,6 +1,16 @@
+import math
 def trimMean(arr):
-    pass
-
+    arr.sort()
+    numToRemove = len(arr) * 0.05
+    i=1
+    while (i<=numToRemove):
+        arr.pop()
+        arr.pop(0)
+        i += 1
+    runningSum = 0
+    for num in arr:
+        runningSum += num
+    return runningSum/len(arr)
 
 
 
