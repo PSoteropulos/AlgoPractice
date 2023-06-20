@@ -1,6 +1,17 @@
 const trimMean = (arr) => {
-    
-};
+    let sortedArray = arr.sort((a,b)=>a-b)
+    let numToRemove = arr.length * 0.05
+    for (let i=1; i <= numToRemove; i++){
+        sortedArray.pop()
+        sortedArray.splice(0,1)
+    }
+    let sum = 0
+    sortedArray.forEach(element => {
+        sum += element
+    });
+    return sum/sortedArray.length
+}
+
 
 
 
