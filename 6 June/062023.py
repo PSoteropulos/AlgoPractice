@@ -1,5 +1,11 @@
 def addDigits(num):
-    pass
+    while len([*str(num)]) > 1:
+        localArray = [*str(num)]
+        newNum = 0
+        for digit in localArray:
+            newNum += int(digit)
+        num = newNum
+    return num
 
 
 
