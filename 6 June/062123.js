@@ -1,12 +1,23 @@
 const countEven = (num) => {
-    
+    let count = 0
+    for (let i=1; i<=num; i++){
+        let localArray = i.toString().split("")
+        let localSum = 0
+        localArray.forEach(element => {
+            localSum += parseInt(element)
+        })
+        if (localSum % 2 === 0){
+            count ++
+        }
+    }
+    return count
 };
 
 
 
 
-print(countEven(4))
-print(countEven(30))
+console.log(countEven(4))
+console.log(countEven(30))
 
 
 
