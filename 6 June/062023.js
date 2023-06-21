@@ -1,5 +1,13 @@
 const addDigits = (num) => {
-    
+    while (num.toString().split("").length>1){
+        let localArray = num.toString().split("")
+        let newNum = 0
+        localArray.forEach(element => {
+            newNum += parseInt(element)
+        });
+        num = newNum
+    }
+    return num
 };
 
 
