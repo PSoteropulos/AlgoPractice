@@ -31,7 +31,7 @@ const divideString = (s, k, fill) => {
 
 console.log(divideString("abcdefghi", 3, "x"))
 console.log(divideString("abcdefghij", 3, "x"))
-// console.log(divideString("ctoyjrwtngqwt", 8, "n"))
+console.log(divideString("ctoyjrwtngqwt", 8, "n"))
 
 
 

@@ -1,12 +1,34 @@
+import math
 def divideString(s, k, fill):
-    pass
-
+    ansArray = []
+    stringArray = [*s]
+    loops = math.floor(len(s)/k)
+    while loops >= 0:
+        if loops > 0:
+            localString = ""
+            for i in range(k):
+                localString += stringArray[0]
+                stringArray.pop(0)
+            ansArray.append(localString)
+        elif (loops == 0 and len(stringArray)>0):
+            localString = ""
+            howManyToFill = k - len(stringArray)
+            for j in range(len(stringArray)):
+                localString += stringArray[j]
+            if howManyToFill > 1:
+                localString += fill*howManyToFill
+            else:
+                localString += fill
+            ansArray.append(localString)
+        loops -= 1
+    return ansArray
 
 
 
 
 print(divideString("abcdefghi", 3, "x"))
 print(divideString("abcdefghij", 3, "x"))
+print(divideString("ctoyjrwtngqwt", 8, "n"))
 
 
 
