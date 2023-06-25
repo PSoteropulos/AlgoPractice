@@ -1,12 +1,22 @@
 def lastStoneWeight(stones):
-    pass
+    while len(stones) > 1:
+        stones.sort(reverse=True)
+        if stones[0] == stones[1]:
+            stones.pop(1)
+            stones.pop(0)
+        else:
+            stones[0] = stones[0] - stones[1]
+            stones.pop(1)
+    if len(stones)==1:
+        return stones[0]
+    else:
+        return 0
 
 
 
 
-
-print(lastStoneWeight[2,7,4,1,8,1])
-print(lastStoneWeight[1])
+print(lastStoneWeight([2,7,4,1,8,1]))
+print(lastStoneWeight([1]))
 
 
 
