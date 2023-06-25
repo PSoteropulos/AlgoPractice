@@ -1,5 +1,11 @@
 def buyChoco(prices, money):
-    pass
+    prices.sort()
+    for i in range(len(prices)-1):
+        for j in range (i+1, len(prices)):
+            if prices[i] + prices[j] <= money:
+                money = money - prices[i] - prices[j]
+                return money
+    return money
 
 
 
@@ -7,6 +13,8 @@ def buyChoco(prices, money):
 
 print(buyChoco([1,2,2], 3))
 print(buyChoco([3,2,3], 3))
+print(buyChoco([98,54,6,34,66,63,52,39], 62))
+print(buyChoco([69,91,78,19,40,13], 94))
 
 
 
