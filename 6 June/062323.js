@@ -1,5 +1,28 @@
 const divideString = (s, k, fill) => {
-    
+    let ansArray = []
+    let stringArray = s.split("")
+    let loops = Math.floor(s.length/k)
+    while (loops >= 0){
+        if (loops > 0){
+            localString = ""
+            for (let i=0;i<k;i++){
+                localString += stringArray[0]
+                stringArray.splice(0,1)
+            }
+            ansArray.push(localString)
+        }
+        else if (loops === 0 && stringArray.length>0){
+            let localString = ""
+            let howManyToFill = k - stringArray.length
+            for (let j=0; j<stringArray.length;j++){
+                localString += stringArray[j]
+            }
+            howManyToFill > 1? localString += fill.repeat(howManyToFill) : localString += fill
+            ansArray.push(localString)
+        }
+        loops --
+    }
+    return ansArray
 };
 
 
@@ -8,7 +31,7 @@ const divideString = (s, k, fill) => {
 
 console.log(divideString("abcdefghi", 3, "x"))
 console.log(divideString("abcdefghij", 3, "x"))
-
+// console.log(divideString("ctoyjrwtngqwt", 8, "n"))
 
 
 
