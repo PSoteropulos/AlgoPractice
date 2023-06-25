@@ -1,5 +1,15 @@
 const buyChoco = (prices, money) => {
-    
+    prices.sort((a,b)=>a-b)
+    console.log(prices)
+    for (let i=0;i<prices.length-1;i++){
+        for (let j=i+1;j<prices.length;j++){
+            if (prices[i] + prices[j] <= money){
+                money = money - prices[i] - prices[j]
+                return money
+            }
+        }
+    }
+    return money
 };
 
 
@@ -7,8 +17,8 @@ const buyChoco = (prices, money) => {
 
 console.log(buyChoco([1,2,2], 3))
 console.log(buyChoco([3,2,3], 3))
-
-
+console.log(buyChoco([98,54,6,34,66,63,52,39], 62))
+console.log(buyChoco([69,91,78,19,40,13], 94))
 
 
 
