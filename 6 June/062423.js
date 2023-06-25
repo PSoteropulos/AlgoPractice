@@ -1,13 +1,23 @@
 const lastStoneWeight = (stones) => {
-    
+    while (stones.length > 1){
+        stones.sort((a,b)=>b-a)
+        if (stones[0]===stones[1]){
+            stones.splice(0,2)
+        }
+        else{
+            stones[0] = stones[0] - stones[1]
+            stones.splice(1,1)
+        }
+    }
+    return stones.length===1? stones[0] : 0
 };
 
 
 
 
 
-console.log(lastStoneWeight[2,7,4,1,8,1])
-console.log(lastStoneWeight[1])
+console.log(lastStoneWeight([2,7,4,1,8,1]))
+console.log(lastStoneWeight([1]))
 
 
 
