@@ -1,5 +1,18 @@
 const findLucky = (arr) => {
-    
+    arr.sort((a,b)=>b-a)
+    let numFrequency = undefined
+    for (let i=0;i<arr.length;i++){
+        if (arr[i] === arr[i-1]){
+            numFrequency ++
+        }
+        else {
+            numFrequency = 1
+        }
+        if (((arr[i]===numFrequency) && (arr[i] === arr[i-1] )&&(arr[i+1]!==arr[i]))||((arr[i]===1)&&(arr[i-1]!==1)&&(arr[i+1]!==1))){
+            return numFrequency
+        }
+    }
+    return -1
 };
 
 
