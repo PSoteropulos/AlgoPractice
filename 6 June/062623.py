@@ -1,5 +1,14 @@
 def findLucky(arr):
-    pass
+    arr.sort(reverse=True)
+    numFrequency = 0
+    for i in range(len(arr)):
+        if arr[i] == arr[i-1]:
+            numFrequency += 1
+        else:
+            numFrequency = 1
+        if (arr[i]==numFrequency and arr[i]==arr[i-1] and (i==len(arr)-1 or arr[i]!=arr[i+1])) or (arr[i]==1 and arr[i-1]!=1 and i==len(arr)-1):
+            return numFrequency
+    return -1
 
 
 
