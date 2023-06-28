@@ -1,5 +1,17 @@
 const minOperations = (logs) => {
-    
+    let position = 0
+    for (let i=0;i<logs.length;i++){
+        if (logs[i]==="../" && position > 0){
+            position --
+        }
+        else if (logs[i]==="./" || (logs[i]==="../" && position == 0)){
+            continue
+        }
+        else {
+            position ++
+        }
+    }
+    return position
 };
 
 
