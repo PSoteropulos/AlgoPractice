@@ -4,7 +4,7 @@ const minOperations = (logs) => {
         if (logs[i]==="../" && position > 0){
             position --
         }
-        else if (logs[i]==="./" || (logs[i]==="../" && position == 0)){
+        else if (logs[i]==="./" || (logs[i]==="../" && position === 0)){
             continue
         }
         else {

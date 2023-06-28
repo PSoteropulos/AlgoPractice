@@ -1,5 +1,13 @@
 def minOperations(logs):
-    pass
+    position = 0
+    for char in logs:
+        if char=="../" and position > 0:
+            position -= 1
+        elif char=="./" or (char=="../" and position == 0):
+            continue
+        else:
+            position += 1
+    return position
 
 
 
