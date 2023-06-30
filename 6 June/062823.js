@@ -1,14 +1,37 @@
 const distributeCandies = (candies, num_people) => {
-    
+    let ansArray = []
+    let count = 1
+    while (candies > 0){
+        for (let i=0; i<num_people; i++){
+            if (candies >= count && ansArray[i]){
+                ansArray[i] += count
+            }
+            else if (candies >= count && !ansArray[i]){
+                ansArray[i] = count
+            }
+            else if (candies < count && candies > 0 && ansArray[i]){
+                ansArray[i] += candies
+            }
+            else if (candies < count && candies>0 && !ansArray[i]){
+                ansArray[i] = candies
+            }
+            else if (candies <=0 && !ansArray[i]){
+                ansArray[i] = 0
+            }
+            candies -= count
+            count ++
+        }
+    }
+    return ansArray
 };
 
 
 
 
 
-console.log(distributeCandies(7, 4))
+// console.log(distributeCandies(7, 4))
 console.log(distributeCandies(10, 3))
-
+// console.log(distributeCandies(600, 40))
 
 
 
