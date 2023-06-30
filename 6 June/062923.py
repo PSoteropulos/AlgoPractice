@@ -1,5 +1,10 @@
 def findSubarrays(nums):
-    pass
+    for i in range(0, len(nums)-2):
+        loop1sum = nums[i]+nums[i+1]
+        for j in range(i+1, len(nums)-1):
+            if nums[j]+nums[j+1]==loop1sum:
+                return True
+    return False
 
 
 
