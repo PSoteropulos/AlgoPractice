@@ -1,5 +1,21 @@
 def distributeCandies(candies, num_people):
-    pass
+    ansArray = []
+    count = 1
+    for i in range(num_people):
+        ansArray.append(0)
+    while (candies > 0):
+        for i in range(num_people):
+            if (candies >= count and ansArray[i] == 0):
+                ansArray[i] = count
+            elif (candies >= count):
+                ansArray[i] += count
+            elif (candies < count and candies>0 and ansArray[i] == 0):
+                ansArray[i] = candies
+            elif (candies < count and candies > 0):
+                ansArray[i] += candies
+            candies -= count
+            count += 1
+    return ansArray
 
 
 
