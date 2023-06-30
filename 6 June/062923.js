@@ -1,5 +1,13 @@
 const findSubarrays = (nums) => {
-    
+    for (let i=0; i<nums.length-2;i++){
+        let loop1sum = nums[i] + nums[i+1]
+        for (let j=i+1;j<nums.length; j++){
+            if (nums[j]+nums[j+1] == loop1sum){
+                return true
+            }
+        }
+    }
+        return false
 };
 
 
