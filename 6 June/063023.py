@@ -1,6 +1,20 @@
 def calculateTax(brackets, income):
-    pass
-
+    taxTotal = 0
+    for i in range(len(brackets)):
+        if income == 0:
+            return 0
+        if income >= brackets[i][0]:
+            if i!=0:
+                taxTotal = (brackets[i][0]-brackets[i-1][0]) * (brackets[i][1]*0.01) + taxTotal
+            else:
+                taxTotal = brackets[i][0] * (brackets[i][1]*0.01) + taxTotal
+        elif i != 0:
+            if income < brackets[i][0] and income > brackets[i-1][0]:
+                taxTotal = (income - brackets[i-1][0]) * (brackets[i][1]*0.01) + taxTotal
+        elif i==0:
+            if income < brackets[i][0]:
+                taxTotal = income * (brackets[i][1]*0.01) + taxTotal
+    return taxTotal
 
 
 
