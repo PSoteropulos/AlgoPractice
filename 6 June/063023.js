@@ -1,5 +1,17 @@
 const calculateTax = (brackets, income) => {
-    
+    let taxTotal = 0
+    for (let i=0; i<brackets.length; i++){
+        if (income === 0){
+            return 0
+        }
+        if (income >= brackets[i][0]){
+            taxTotal = (brackets[i-1]?brackets[i][0]-brackets[i-1][0]:brackets[i][0]) * (brackets[i][1]*0.01) + taxTotal
+        }
+        else if (brackets[i-1]?(income < brackets[i][0] && income > brackets[i-1][0]):income < brackets[i][0]){
+            taxTotal = (brackets[i-1]?income - brackets[i-1][0]:income) * (brackets[i][1]*0.01) + taxTotal
+        }
+    }
+    return taxTotal
 };
 
 
@@ -9,6 +21,7 @@ const calculateTax = (brackets, income) => {
 console.log(calculateTax([[3,50],[7,10],[12,25]], 10))
 console.log(calculateTax([[1,0],[4,25],[5,50]], 2))
 console.log(calculateTax([[2,50]], 0))
+console.log(calculateTax([[10,10]], 5))
 
 
 
