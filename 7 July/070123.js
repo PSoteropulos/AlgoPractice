@@ -1,5 +1,23 @@
 const sortEvenOdd = (nums) => {
-    
+    let evens = []
+    let odds = []
+    let ansArray = []
+    for (let i = 0; i<nums.length; i++){
+        if (i%2===0){
+            evens.push(nums[i])
+        }
+        else {
+            odds.push(nums[i])
+        }
+    }
+    evens.sort((a,b)=>a-b)
+    odds.sort((a,b)=>b-a)
+    let biggerArrayLength = evens.length >= odds.length? evens.length : odds.length
+    for (let j=0;j<biggerArrayLength;j++){
+        evens[j]?ansArray.push(evens[j]):null
+        odds[j]?ansArray.push(odds[j]):null
+    }
+    return ansArray
 };
 
 
