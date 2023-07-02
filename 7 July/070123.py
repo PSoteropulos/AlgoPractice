@@ -1,5 +1,28 @@
 def sortEvenOdd(nums):
-    pass
+    evens = []
+    odds = []
+    ansArray = []
+    for i in range(len(nums)):
+        if i%2==0:
+            evens.append(nums[i])
+        else:
+            odds.append(nums[i])
+    evens.sort()
+    odds.sort(reverse=True)
+    if len(evens) > len(odds):
+        biggerArrayLength = len(evens)
+    else:
+        biggerArrayLength = len(odds)
+    for j in range(biggerArrayLength):
+        try:
+            ansArray.append(evens[j])
+        except:
+            pass
+        try:
+            ansArray.append(odds[j])
+        except:
+            pass
+    return ansArray
 
 
 
@@ -8,7 +31,7 @@ def sortEvenOdd(nums):
 
 print(sortEvenOdd([4,1,2,3]))
 print(sortEvenOdd([2,1]))
-
+print(sortEvenOdd([5,39,33,5,12,27,20,45,14,25,32,33,30,30,9,14,44,15,21]))
 
 
 
