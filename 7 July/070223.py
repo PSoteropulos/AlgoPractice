@@ -1,5 +1,9 @@
 def isPrefixOfWord(sentence, searchWord):
-    pass
+    sentenceArray = sentence.split(" ")
+    for i in range(len(sentenceArray)):
+        if sentenceArray[i].startswith(searchWord):
+            return i+1
+    return -1
 
 
 
