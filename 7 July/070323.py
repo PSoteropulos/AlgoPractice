@@ -1,5 +1,17 @@
 def majorityElement(nums):
-    pass
+    highCount = 1
+    highValue = nums[0]
+    localCount = 1
+    nums.sort()
+    for i in range(len(nums)-1):
+        if nums[i] == nums[i+1]:
+            localCount += 1
+            if localCount>highCount:
+                highCount = localCount
+                highValue = nums[i]
+        else:
+            localCount = 1
+    return highValue
 
 
 
