@@ -1,5 +1,15 @@
 const stringMatching = (words) => {
-    
+    let ansArray = []
+    for (let i=0;i<words.length;i++){
+        for (let j=0;j<words.length;j++){
+            if (words[i]!==words[j] && words[i].includes(words[j])){
+                ansArray.push(words[j])
+            }
+        }
+    }
+    let setArray = new Set(ansArray)
+    let newArray = Array.from(setArray)
+    return newArray
 };
 
 
@@ -10,7 +20,7 @@ const stringMatching = (words) => {
 console.log(stringMatching(["mass","as","hero","superhero"]))
 console.log(stringMatching(["leetcode","et","code"]))
 console.log(stringMatching(["blue","green","bu"]))
-
+console.log(stringMatching(["leetcoder","leetcode","od","hamlet","am"]))
 
 
 
