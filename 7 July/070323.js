@@ -1,5 +1,21 @@
 const majorityElement = (nums) => {
-    
+    let highCount = 1
+    let highValue = nums[0]
+    let localCount = 1
+    nums.sort((a,b)=>a-b)
+    for (let i=0;i<nums.length-1; i++){
+        if (nums[i] === nums[i+1]){
+            localCount ++
+            if (localCount>highCount){
+                highCount = localCount
+                highValue = nums[i]
+            }
+        }
+        else {
+            localCount = 1
+        }
+    }
+    return highValue
 };
 
 
