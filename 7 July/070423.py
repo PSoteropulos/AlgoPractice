@@ -1,5 +1,10 @@
-def stringMatching(self, words: List[str]) -> List[str]:
-    pass
+def stringMatching(words):
+    ansArray = []
+    for word1 in words:
+        for word2 in words:
+            if word1 != word2 and word2 in word1:
+                ansArray.append(word2)
+    return list(set(ansArray))
 
 
 
@@ -8,6 +13,7 @@ def stringMatching(self, words: List[str]) -> List[str]:
 print(stringMatching(["mass","as","hero","superhero"]))
 print(stringMatching(["leetcode","et","code"]))
 print(stringMatching(["blue","green","bu"]))
+print(stringMatching(["leetcoder","leetcode","od","hamlet","am"]))
 
 
 
