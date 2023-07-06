@@ -1,5 +1,32 @@
 const semiOrderedPermutation = (nums) => {
-    
+    let running = true
+    let adjustments = 0
+    while (running){
+        if (nums[0] !== 1){
+            for (let i=1;i<nums.length;i++){
+                if (nums[i]===1){
+                    let temp = nums[i-1]
+                    nums[i-1] = nums[i]
+                    nums[i] = temp
+                    adjustments ++
+                }
+            }
+        }
+        if (nums[nums.length-1]!==nums.length){
+            for (let j=nums.length-2;j>=0;j--){
+                if (nums[j]===nums.length){
+                    let temp = nums[j+1]
+                    nums[j+1] = nums[j]
+                    nums[j] = temp
+                    adjustments ++
+                }
+            }
+        }
+        if (nums[0]===1 && nums[nums.length-1]===nums.length){
+            running = false
+        }
+    }
+    return adjustments
 };
 
 
