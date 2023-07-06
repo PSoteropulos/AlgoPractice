@@ -1,5 +1,24 @@
 def semiOrderedPermutation(nums):
-    pass
+    running = True
+    adjustments = 0
+    while (running):
+        if (nums[0] != 1):
+            for i in range(len(nums)):
+                if (nums[i]==1):
+                    temp = nums[i-1]
+                    nums[i-1] = nums[i]
+                    nums[i] = temp
+                    adjustments +=1
+        if (nums[len(nums)-1]!=len(nums)):
+            for j in range(len(nums)-2,-1,-1):
+                if nums[j]==len(nums):
+                    temp = nums[j+1]
+                    nums[j+1] = nums[j]
+                    nums[j] = temp
+                    adjustments +=1
+        if (nums[0]==1 and nums[len(nums)-1]==len(nums)):
+            running = False
+    return adjustments
 
 
 
