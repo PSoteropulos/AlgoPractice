@@ -1,12 +1,19 @@
 const average = (salary) => {
-    
+    let sum = 0
+    salary.sort((a,b)=>a-b)
+    salary.pop()
+    salary.splice(0,1)
+    for (let i=0;i<salary.length;i++){
+        sum += salary[i]
+    }
+    return sum/salary.length
 };
 
 
 
 
-print(average([4000,3000,1000,2000]))
-print(average([1000,2000,3000]))
+console.log(average([4000,3000,1000,2000]))
+console.log(average([1000,2000,3000]))
 
 
 
