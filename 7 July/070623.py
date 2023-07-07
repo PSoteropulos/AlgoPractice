@@ -1,5 +1,11 @@
 def average(salary):
-    pass
+    sum = 0
+    salary.sort()
+    salary.pop()
+    salary.pop(0)
+    for num in salary:
+        sum += num
+    return sum/len(salary)
 
 
 
