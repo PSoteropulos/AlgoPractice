@@ -1,5 +1,10 @@
 def findOcurrences(text, first, second):
-    pass
+    ansArray = []
+    splitText = text.split(" ")
+    for i in range(len(splitText)-2):
+        if splitText[i]==first and splitText[i+1]==second:
+            ansArray.append(splitText[i+2])
+    return ansArray
 
 
 
