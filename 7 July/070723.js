@@ -13,13 +13,8 @@ const findOcurrences = (text, first, second) => {
 
 
 
-
-
 console.log(findOcurrences("alice is a good girl she is a good student", "a", "good"))
 console.log(findOcurrences("we will we will rock you", "we", "will"))
-
-
-
 
 
 
