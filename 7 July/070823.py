@@ -1,5 +1,19 @@
 def reformatDate(date):
-    pass
+    dateArray = date.split(" ")
+    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    def formatMonth(month):
+        index = months.index(month) + 1
+        if index < 10:
+            index = "0" + str(index)
+        return index
+    def formatDay(day):
+        formattedDay = None
+        if day[1].isnumeric():
+            formattedDay = day[0] + day[1]
+        else:
+            formattedDay = "0" + str(day[0])
+        return formattedDay
+    return f'{dateArray[2]}-{formatMonth(dateArray[1])}-{formatDay(dateArray[0])}'
 
 
 
