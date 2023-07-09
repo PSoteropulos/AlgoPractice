@@ -1,5 +1,24 @@
 const reformatDate = (date) => {
-    
+    let dateArray = date.split(" ")
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    const formatMonth = (month) => {
+        let index = months.indexOf(month) + 1
+        if (index < 10) {
+            index = "0" + index.toString()
+        }
+        return index
+    }
+    const formatDay = (day) => {
+        let formattedDay = undefined
+        if (isNaN(day[1])){
+            formattedDay = "0" + day[0]
+        }
+        else {
+            formattedDay = day[0] + day[1]
+        }
+        return formattedDay
+    }
+    return `${dateArray[2]}-${formatMonth(dateArray[1])}-${formatDay(dateArray[0])}`
 };
 
 
