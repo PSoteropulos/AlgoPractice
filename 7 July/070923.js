@@ -1,5 +1,19 @@
 const isCircularSentence = (sentence) => {
-    
+    let sentenceArray = sentence.split(" ")
+    if (sentenceArray[0][0] === sentenceArray[sentenceArray.length-1][sentenceArray[sentenceArray.length-1].length -1]) {
+        if (sentenceArray.length===1){
+            return true
+        }
+        for (let i=0; i<sentenceArray.length-1; i++){
+            if (sentenceArray[i][sentenceArray[i].length-1] !== sentenceArray[i+1][0]){
+                return false
+            }
+        }
+        return true
+    }
+    else {
+        return false
+    }
 };
 
 
