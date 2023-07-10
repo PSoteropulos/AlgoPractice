@@ -1,6 +1,14 @@
 def isCircularSentence(sentence):
-    pass
-
+    sentenceArray = sentence.split(" ")
+    if sentenceArray[0][0] == sentenceArray[len(sentenceArray)-1][len(sentenceArray[len(sentenceArray)-1]) -1]:
+        if len(sentenceArray) == 1:
+            return True
+        for i in range(len(sentenceArray)-1):
+            if sentenceArray[i][len(sentenceArray[i])-1] != sentenceArray[i+1][0]:
+                return False
+        return True
+    else:
+        return False
 
 
 
