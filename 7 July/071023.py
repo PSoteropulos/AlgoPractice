@@ -1,5 +1,20 @@
 def makeGood(s):
-    pass
+    running = True
+    s = [*s]
+    def isUpperCase(string):
+        return string.upper() == string
+    while (running == True):
+        change = False
+        for i in range(len(s)-1):
+            if ((s[i].lower()==s[i] and s[i+1]==s[i+1].upper() and s[i]==s[i+1].lower()) or (s[i+1].lower()==s[i+1] and s[i]==s[i].upper() and s[i+1]==s[i].lower())):
+                s.pop(i+1)
+                s.pop(i)
+                change = True
+                break
+        if (change==False):
+            running=False
+    string = ""
+    return string.join(s)
 
 
 
