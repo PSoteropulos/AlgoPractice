@@ -1,6 +1,21 @@
 const makeGood = (s) => {
-    
-};
+    let running = true
+    s = s.split("")
+    const isUpperCase =(string) => {
+        return string.toUpperCase() === string;
+    }
+    while (running === true) {
+        let change = false
+        for (let i = 0; i<s.length-1; i++){
+            if ((s[i].toLowerCase()===s[i] && s[i+1]===s[i+1].toUpperCase() && s[i]===s[i+1].toLowerCase()) || (s[i+1].toLowerCase()===s[i+1] && s[i]===s[i].toUpperCase() && s[i+1]===s[i].toLowerCase())){
+                s.splice(i, 2)
+                change = true
+            }
+        }
+        if (!change) running=false
+    }
+    return s.join("")
+}
 
 
 

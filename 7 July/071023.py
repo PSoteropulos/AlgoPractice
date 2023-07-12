@@ -3,8 +3,6 @@ def makeGood(s):
 
 
 
-
-
 print(makeGood("leEeetcode"))
 print(makeGood("abBAcC"))
 print(makeGood("s"))
