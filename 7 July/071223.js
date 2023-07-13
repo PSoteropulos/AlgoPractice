@@ -1,5 +1,18 @@
 const maxAscendingSum = (nums) => {
-    
+    let maxSum = nums[0]
+    let runningSum = nums[0]
+    for (let i = 1; i<nums.length;i++){
+        if (nums[i] > nums [i-1]){
+            runningSum += nums[i]
+        }
+        else {
+            runningSum = nums[i]
+        }
+        if (runningSum > maxSum){
+            maxSum = runningSum
+        }
+    }
+    return maxSum
 };
 
 
