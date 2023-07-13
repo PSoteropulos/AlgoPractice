@@ -1,5 +1,14 @@
 def maxAscendingSum(nums):
-    pass
+    maxSum = nums[0]
+    runningSum = nums[0]
+    for i in range(1, len(nums)):
+        if (nums[i] > nums [i-1]):
+            runningSum += nums[i]
+        else:
+            runningSum = nums[i]
+        if (runningSum > maxSum):
+            maxSum = runningSum
+    return maxSum
 
 
 
