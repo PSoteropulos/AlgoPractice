@@ -1,5 +1,12 @@
 const capitalizeTitle = (title) => {
-    
+    let sentenceArray = title.split(" ")
+    for (let i = 0; i<sentenceArray.length; i++){
+        sentenceArray[i] = sentenceArray[i].toLowerCase()
+        if (sentenceArray[i].length > 2){
+            sentenceArray[i] = sentenceArray[i][0].toUpperCase() + sentenceArray[i].slice(1)
+        }
+    }
+    return sentenceArray.join(" ")
 };
 
 
