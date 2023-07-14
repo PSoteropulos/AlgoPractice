@@ -1,5 +1,10 @@
 def capitalizeTitle(title):
-    pass
+    sentenceArray = title.split(" ")
+    for i in range(len(sentenceArray)):
+        sentenceArray[i] = sentenceArray[i].lower()
+        if (len(sentenceArray[i]) > 2):
+            sentenceArray[i] = sentenceArray[i].capitalize()
+    return ' '.join(sentenceArray)
 
 
 
