@@ -1,5 +1,16 @@
 def getLucky(s, k):
-    pass
+    alphabet = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    positionString = ""
+    answerSum = 0
+    for i in range(len(s)):
+        positionString += str(alphabet.index(s[i]))
+    positionString = [*positionString]
+    for j in range(1,k+1):
+        answerSum = 0
+        for k in range(len(positionString)):
+            answerSum += int(positionString[k])
+        positionString = str(answerSum)
+    return answerSum
 
 
 
