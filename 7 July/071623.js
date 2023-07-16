@@ -1,5 +1,19 @@
 const kItemsWithMaximumSum = (numOnes, numZeros, numNegOnes, k) => {
-    
+    let sum = 0
+    if (k<=numOnes){
+        return k
+    }
+    else {
+        sum += numOnes
+        k -= numOnes
+    }
+    if (k<=numZeros){
+        return sum
+    }
+    else {
+        k -= numZeros
+    }
+    return sum - k
 };
 
 
