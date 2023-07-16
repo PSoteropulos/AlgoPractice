@@ -1,5 +1,15 @@
 def kItemsWithMaximumSum(numOnes, numZeros, numNegOnes, k):
-    pass
+    sum = 0
+    if (k<=numOnes):
+        return k
+    else:
+        sum += numOnes
+        k -= numOnes
+    if (k<=numZeros):
+        return sum
+    else:
+        k -= numZeros
+    return sum - k
 
 
 
