@@ -1,5 +1,20 @@
 const getLucky = (s, k) => {
-    
+    const alphabet = ["0", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    let positionString = ""
+    let answerSum = 0
+    for (let i=0; i<s.length; i++){
+        positionString += alphabet.indexOf(s[i])
+    }
+    positionString = positionString.split("")
+    console.log(positionString)
+    for (let j=1; j<=k; j++){
+        answerSum = 0
+        for (let k=0; k<positionString.length;k++){
+            answerSum += parseInt(positionString[k])
+        }
+        positionString = answerSum.toString()
+    }
+    return answerSum
 };
 
 
