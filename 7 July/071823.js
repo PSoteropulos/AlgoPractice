@@ -1,5 +1,27 @@
 const timeRequiredToBuy = (tickets, k) => {
-    
+    let time = 0
+    let running = true
+    while (running) {
+        let newArray = []
+        let kSubtract = 0
+        for (let i=0; i<tickets.length;i++){
+            time ++
+            tickets[i] --
+            if (tickets[i] > 0){
+                newArray.push(tickets[i])
+            }
+            if (i===k && tickets[i]===0){
+                running = false
+                break
+            }
+            if (tickets[i]===0 && i<k){
+                kSubtract ++
+            }
+        }
+        k -= kSubtract
+        tickets = newArray
+    }
+    return time
 };
 
 
@@ -9,6 +31,7 @@ const timeRequiredToBuy = (tickets, k) => {
 
 console.log(timeRequiredToBuy([2,3,2], 2))
 console.log(timeRequiredToBuy([5,1,1,1], 0))
+console.log(timeRequiredToBuy([84,49,5,24,70,77,87,8], 3))
 
 
 
