@@ -1,5 +1,11 @@
 def containsDuplicate(nums):
-    pass
+    testArray = []
+    for num in nums:
+        if num in testArray:
+            return True
+        else:
+            testArray.append(num)
+    return False
 
 
 
