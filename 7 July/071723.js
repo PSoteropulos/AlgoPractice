@@ -1,5 +1,14 @@
 const containsDuplicate = (nums) => {
-    
+    let testArray = []
+    for (let i=0; i<nums.length; i++){
+        if (testArray.includes(nums[i])){
+            return true
+        }
+        else {
+            testArray.push(nums[i])
+        }
+    }
+    return false
 };
 
 
