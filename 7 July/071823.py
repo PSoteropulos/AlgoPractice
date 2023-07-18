@@ -1,5 +1,22 @@
 def timeRequiredToBuy(tickets, k):
-    pass
+    time = 0
+    running = True
+    while running:
+        newArray = []
+        kSubtract = 0
+        for i in range(len(tickets)):
+            time += 1
+            tickets[i] -= 1
+            if (tickets[i] > 0):
+                newArray.append(tickets[i])
+            if (i==k and tickets[i]==0):
+                running = False
+                break
+            if (tickets[i]==0 and i<k):
+                kSubtract += 1
+        k -= kSubtract
+        tickets = newArray
+    return time
 
 
 
