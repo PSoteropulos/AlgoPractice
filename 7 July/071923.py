@@ -1,5 +1,18 @@
 def reverseOnlyLetters(s):
-    pass
+    alphabetArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    tempArray = []
+    answerString = ""
+    for character in s:
+        if character in alphabetArray:
+            tempArray.append(character)
+    tempArray.reverse()
+    for character in s:
+        if character in alphabetArray:
+            answerString += tempArray[0]
+            tempArray.pop(0)
+        else:
+            answerString += character
+    return answerString
 
 
 
