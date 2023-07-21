@@ -1,5 +1,21 @@
 const maxPower = (s) => {
-    
+    let max = 1
+    let localMax = 1
+    for (let i = 1; i<s.length; i++){
+        if (s[i] === s[i-1]){
+            localMax ++
+            if (localMax > max){
+                max = localMax
+            }
+        }
+        else {
+            if (localMax > max){
+                max = localMax
+            }
+            localMax = 1
+        }
+    }
+    return max
 };
 
 
