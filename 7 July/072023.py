@@ -1,5 +1,16 @@
 def maxPower(s):
-    pass
+    max = 1
+    localMax = 1
+    for i in range(1,len(s)):
+        if s[i] == s[i-1]:
+            localMax += 1
+            if localMax > max:
+                max = localMax
+        else:
+            if localMax > max:
+                max = localMax
+            localMax = 1
+    return max
 
 
 
