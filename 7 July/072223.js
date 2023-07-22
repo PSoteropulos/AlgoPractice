@@ -1,5 +1,15 @@
 const minimumCost = (cost) => {
-    
+    cost.sort((a,b)=>b-a)
+    let totalCost = 0
+    for (let i=0;i<cost.length;i+=3){
+        if (cost[i] && cost[i+1]){
+            totalCost += cost[i] + cost[i+1]
+        }
+        else {
+            totalCost += cost[i]
+        }
+    }
+    return totalCost
 };
 
 
