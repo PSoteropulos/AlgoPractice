@@ -1,6 +1,12 @@
 def minimumCost(cost):
-    pass
-
+    cost.sort(reverse=True)
+    totalCost = 0
+    for i in range(0,len(cost),3):
+        if i+1<len(cost):
+            totalCost += cost[i] + cost[i+1]
+        else:
+            totalCost += cost[i]
+    return totalCost
 
 
 
