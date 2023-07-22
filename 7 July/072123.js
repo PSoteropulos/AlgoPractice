@@ -1,5 +1,29 @@
 const largestInteger = (num) => {
-    
+    let odds = []
+    let evens = []
+    let numString = num.toString()
+    let newNum = ""
+    for (let i =0; i<numString.length; i++){
+        if (numString[i]%2===0){
+            evens.push(numString[i])
+        }
+        else {
+            odds.push(numString[i])
+        }
+    }
+    odds.sort((a,b)=>b-a)
+    evens.sort((a,b)=>b-a)
+    for (let j=0; j<numString.length; j++){
+        if (numString[j]%2===0){
+            newNum += evens[0]
+            evens.splice(0,1)
+        }
+        else {
+            newNum += odds[0]
+            odds.splice(0,1)
+        }
+    }
+    return newNum
 };
 
 
