@@ -1,5 +1,23 @@
 def largestInteger(num):
-    pass
+    odds = []
+    evens = []
+    numString = str(num)
+    newNum = ""
+    for num in numString:
+        if int(num)%2==0:
+            evens.append(num)
+        else:
+            odds.append(num)
+    odds.sort(reverse=True)
+    evens.sort(reverse=True)
+    for num in numString:
+        if int(num)%2==0:
+            newNum += evens[0]
+            evens.pop(0)
+        else:
+            newNum += odds[0]
+            odds.pop(0)
+    return int(newNum)
 
 
 
