@@ -1,7 +1,23 @@
 const numWaterBottles = (numBottles, numExchange) => {
-    
+    let running = true
+    let totalDrank = 0
+    let neededForMore = numExchange
+    while (running) {
+        if (neededForMore > 0 && numBottles === 0) {
+            running = false
+        }
+        else if (neededForMore > 0 && numBottles > 0){
+            totalDrank ++
+            numBottles --
+            neededForMore --
+        }
+        else if (neededForMore===0){
+            neededForMore = numExchange
+            numBottles ++
+        }
+    }
+    return totalDrank
 };
-
 
 
 
