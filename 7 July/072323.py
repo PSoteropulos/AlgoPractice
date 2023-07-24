@@ -1,6 +1,18 @@
 def numWaterBottles(numBottles, numExchange):
-    pass
-
+    running = True
+    totalDrank = 0
+    neededForMore = numExchange
+    while (running) :
+        if (neededForMore > 0 and numBottles == 0) :
+            running = False
+        elif (neededForMore > 0 and  numBottles > 0):
+            totalDrank += 1
+            numBottles -= 1
+            neededForMore -= 1
+        elif (neededForMore==0):
+            neededForMore = numExchange
+            numBottles += 1
+    return totalDrank
 
 
 
