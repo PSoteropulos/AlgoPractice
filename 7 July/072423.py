@@ -1,5 +1,20 @@
 def bestHand(ranks, suits):
-    pass
+    suitsSet = set(suits)
+    ranksObject = {}
+    if len(suitsSet) == 1:
+        return "Flush"
+    for i in range(len(ranks)):
+        if f'{ranks[i]}' in ranksObject:
+            ranksObject[f'{ranks[i]}'] += 1
+        else:
+            ranksObject[f'{ranks[i]}'] = 1
+    sortedDict = sorted(ranksObject.items(), key=lambda kv:(kv[1],kv[0]))
+    if (sortedDict[len(sortedDict)-1][1] >= 3):
+        return "Three of a Kind"
+    elif (sortedDict[len(sortedDict)-1][1] == 2):
+        return "Pair"
+    else:
+        return "High Card"
 
 
 
@@ -8,7 +23,7 @@ def bestHand(ranks, suits):
 print(bestHand([13,2,3,1,9], ["a","a","a","a","a"]))
 print(bestHand([4,4,2,4,4], ["d","a","a","b","c"]))
 print(bestHand([10,10,2,12,9], ["a","b","c","a","d"]))
-
+print(bestHand([2,10,7,10,7], ["a","b","a","d","b"]))
 
 
 
