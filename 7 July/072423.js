@@ -1,5 +1,27 @@
 const bestHand = (ranks, suits) => {
-    
+    let suitsSet = new Set(suits)
+    let ranksObject = {}
+    if (suitsSet.size === 1){
+        return "Flush"
+    }
+    for (let i=0; i < ranks.length; i++){
+        if (`${ranks[i]}` in ranksObject){
+            ranksObject[`${ranks[i]}`] ++
+        }
+        else {
+            ranksObject[`${ranks[i]}`] = 1
+        }
+    }
+    let sorted = Object.entries(ranksObject).sort((a,b)=>a[1]-b[1])
+    if (sorted[sorted.length-1][1] >= 3){
+        return "Three of a Kind"
+    }
+    else if (sorted[sorted.length-1][1] === 2){
+        return "Pair"
+    }
+    else {
+        return "High Card"
+    }
 };
 
 
@@ -10,6 +32,7 @@ const bestHand = (ranks, suits) => {
 console.log(bestHand([13,2,3,1,9], ["a","a","a","a","a"]))
 console.log(bestHand([4,4,2,4,4], ["d","a","a","b","c"]))
 console.log(bestHand([10,10,2,12,9], ["a","b","c","a","d"]))
+console.log(bestHand([2,10,7,10,7], ["a","b","a","d","b"]))
 
 
 
