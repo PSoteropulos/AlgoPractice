@@ -1,4 +1,12 @@
 def specialArray(nums):
+    for i in range(len(nums)+1):
+        occurrences = 0
+        for num in nums:
+            if i <= num:
+                occurrences += 1
+        if occurrences == i:
+            return i
+    return -1
 
 
 
