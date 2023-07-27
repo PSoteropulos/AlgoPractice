@@ -1,6 +1,35 @@
 def checkZeroOnes(s):
-    pass
-
+    maxOne = 0
+    maxZero = 0
+    currentOne = 0
+    currentZero = 0
+    if (s[0] == "1"):
+        currentOne = 1
+        maxOne = 1
+    else: 
+        currentZero = 1
+        maxZero = 1
+    for i in range(1,len(s)):
+        if (s[i] == "1" and s[i-1] == "1"):
+            currentOne += 1
+            currentZero = 0
+        elif (s[i] == "1" and s[i-1] != "1"):
+            currentOne += 1
+            currentZero = 0
+        elif (s[i] == "0" and s[i-1] == "0"):
+            currentZero += 1
+            currentOne = 0
+        elif (s[i] == "0" and s[i-1] != "0"):
+            currentZero += 1
+            currentOne = 0
+        if (currentOne > maxOne):
+            maxOne = currentOne
+        elif (currentZero > maxZero) :
+            maxZero = currentZero
+    if (maxOne > maxZero):
+        return True
+    else:
+        return False
 
 
 
