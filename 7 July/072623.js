@@ -1,5 +1,46 @@
 const checkZeroOnes = (s) => {
-    
+    let maxOne = 0
+    let maxZero = 0
+    let currentOne = 0
+    let currentZero = 0
+    if (s[0] === "1"){
+        currentOne = 1
+        maxOne = 1
+    }
+    else {
+        currentZero = 1
+        maxZero = 1
+    }
+    for (let i=1; i<s.length; i++){
+        if (s[i] === "1" && s[i-1] === "1"){
+            currentOne ++
+            currentZero = 0
+        }
+        else if (s[i] === "1" && s[i-1] !== "1"){
+            currentOne ++
+            currentZero = 0
+        }
+        else if (s[i] === "0" && s[i-1] === "0"){
+            currentZero ++
+            currentOne = 0
+        }
+        else if (s[i] === "0" && s[i-1] !== "0"){
+            currentZero ++
+            currentOne = 0
+        }
+        if (currentOne > maxOne){
+            maxOne = currentOne
+        }
+        else if (currentZero > maxZero) {
+            maxZero = currentZero
+        }
+    }
+    if (maxOne > maxZero) {
+        return true
+    }
+    else {
+        return false
+    }
 };
 
 
