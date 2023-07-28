@@ -1,5 +1,11 @@
 const findDisappearedNumbers = (nums) => {
-    
+    let missingArray = []
+    for (let i = 1; i <= nums.length; i++){
+        if (!nums.includes(i)){
+            missingArray.push(i)
+        }
+    }
+    return missingArray
 };
 
 
