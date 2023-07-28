@@ -1,5 +1,10 @@
 def findDisappearedNumbers(nums):
-    pass
+    numSet = set(nums)
+    missingArray = []
+    for i in range(1,len(nums)+1):
+        if i not in numSet:
+            missingArray.append(i)
+    return missingArray
 
 
 
