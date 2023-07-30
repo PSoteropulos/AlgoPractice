@@ -1,5 +1,16 @@
 const firstUniqChar = (s) => {
-    
+    for (let i = 0; i<s.length; i++){
+        let match = false
+        for (let j=0;j<s.length;j++){
+            if (s[i]===s[j] && i!==j){
+                match = true
+            }
+        }
+        if (match === false){
+            return i
+        }
+    }
+    return -1
 };
 
 
