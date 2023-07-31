@@ -1,5 +1,11 @@
 def arrayRankTransform(arr):
-    pass
+    answerArray = []
+    arraySet = set(arr)
+    sortedArr = sorted(list(arraySet))
+    for num in arr:
+        rank = sortedArr.index(num) + 1
+        answerArray.append(rank)
+    return answerArray
 
 
 
