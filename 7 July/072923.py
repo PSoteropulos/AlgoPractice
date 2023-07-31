@@ -1,5 +1,12 @@
 def largestGoodInteger(num):
-    pass
+    goodInts = [""]
+    currentChar = ""
+    for i in range(len(num)-2):
+        if (num[i] == num[i+1] and num[i] == num[i+2]):
+            currentChar = num[i] + num[i] + num[i]
+            goodInts.append(currentChar)
+    goodInts.sort(reverse=True) 
+    return goodInts[0]
 
 
 
