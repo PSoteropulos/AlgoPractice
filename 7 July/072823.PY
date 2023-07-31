@@ -1,4 +1,4 @@
-def firstUniqChar(s):
+def countQuadruplets(s):
     pass
 
 
@@ -6,9 +6,9 @@ def firstUniqChar(s):
 
 
 
-print(firstUniqChar("leetcode"))
-print(firstUniqChar("loveleetcode"))
-print(firstUniqChar("aabb"))
+print(countQuadruplets([1,2,3,6]))
+print(countQuadruplets([3,3,6,4,5]))
+print(countQuadruplets([1,1,1,3,5]))
 
 
 

@@ -1,16 +1,17 @@
-const firstUniqChar = (s) => {
-    for (let i = 0; i<s.length; i++){
-        let match = false
-        for (let j=0;j<s.length;j++){
-            if (s[i]===s[j] && i!==j){
-                match = true
+const countQuadruplets = (s) => {
+    let answers = 0
+    for (let i = 0; i<s.length-3; i++){
+        for (let j=i+1; j<s.length-2;j++){
+            for(let k=j+1;k<s.length-1;k++){
+                for(let l=j+1; l<s.length;l++){
+                    if(s[i]+s[j]+s[k]===s[l]){
+                        answers ++
+                    }
+                }
             }
         }
-        if (match === false){
-            return i
-        }
     }
-    return -1
+    return answers
 };
 
 
@@ -18,9 +19,9 @@ const firstUniqChar = (s) => {
 
 
 
-console.log(firstUniqChar("leetcode"))
-console.log(firstUniqChar("loveleetcode"))
-console.log(firstUniqChar("aabb"))
+console.log(countQuadruplets([1,2,3,6]))
+console.log(countQuadruplets([3,3,6,4,5]))
+console.log(countQuadruplets([1,1,1,3,5]))
 
 
 
