@@ -1,5 +1,14 @@
 const largestGoodInteger = (num) => {
-    
+    let goodInts = []
+    let currentChar = ""
+    for (let i=0; i<num.length-2; i++){
+        if (num[i] === num[i+1] && num[i] === num[i+2]){
+            currentChar = num[i] + num[i] + num[i]
+            goodInts.push(currentChar)
+        }
+    }
+    goodInts.sort((a,b)=>Number(b) - Number(a))
+    return goodInts[0] ? goodInts[0] : ""
 };
 
 
