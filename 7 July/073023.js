@@ -1,5 +1,11 @@
 const arrayRankTransform = (arr) => {
-    
+    let answerArray = []
+    let sortedArrSet = new Set([...arr].sort((a,b)=>a-b))
+    let sortedArr = Array.from(sortedArrSet)
+    for (let i = 0; i<arr.length; i++){
+        answerArray.push(sortedArr.indexOf(arr[i])+1)
+    }
+    return answerArray
 };
 
 
