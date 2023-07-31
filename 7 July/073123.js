@@ -1,5 +1,24 @@
 const distinctIntegers = (n) => {
-    
+    let numsOnBoard = [n]
+    let numsToRun = [n]
+    let running = true
+    while (running) {
+        let changed = false
+        for (let i =0; i<numsToRun.length;i++){
+            for (let j = numsToRun[i]; j >= 1; j-- ){
+                if (numsToRun[i]%j===1){
+                    numsOnBoard.push(j)
+                    numsToRun.pop()
+                    numsToRun.push(j)
+                    changed = true
+                }
+            }
+        }
+        if (changed === false){
+            break
+        }
+    }
+    return numsOnBoard.length
 };
 
 
