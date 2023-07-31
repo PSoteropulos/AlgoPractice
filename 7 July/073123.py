@@ -1,5 +1,19 @@
 def distinctIntegers(n):
-    pass
+    numsOnBoard = [n]
+    numsToRun = [n]
+    running = True
+    while running:
+        changed = False
+        for i in range(len(numsToRun)):
+            for j in range(numsToRun[i], 0, -1):
+                if (numsToRun[i]%j==1):
+                    numsOnBoard.append(j)
+                    numsToRun.pop()
+                    numsToRun.append(j)
+                    changed = True
+        if (changed == False):
+            break
+    return len(numsOnBoard)
 
 
 
