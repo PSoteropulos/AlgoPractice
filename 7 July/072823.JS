@@ -1,5 +1,6 @@
 const countQuadruplets = (s) => {
     let count = 0
+    console.log("s.len",s.length)
     for (let i = 0; i<s.length-3; i++){
         for (let j=i+1; j<s.length-2;j++){
             for(let k=j+1;k<s.length-1;k++){
@@ -19,10 +20,11 @@ const countQuadruplets = (s) => {
 
 
 
-console.log(countQuadruplets([1,2,3,6]))
-console.log(countQuadruplets([3,3,6,4,5]))
-console.log(countQuadruplets([1,1,1,3,5]))
-console.log(countQuadruplets([90,16,81,40,15,16,61,9,99,44,1,93]))
+// console.log(countQuadruplets([1,2,3,6]))
+// console.log(countQuadruplets([3,3,6,4,5]))
+// console.log(countQuadruplets([1,1,1,3,5]))
+// console.log(countQuadruplets([90,16,81,40,15,16,61,9,99,44,1,93]))
+console.log(countQuadruplets([90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,90,16,81,40,15,16,61,9,99,44,1,93,]))
 
 
 
