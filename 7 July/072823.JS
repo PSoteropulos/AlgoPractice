@@ -1,17 +1,17 @@
 const countQuadruplets = (s) => {
-    let answers = 0
+    let count = 0
     for (let i = 0; i<s.length-3; i++){
         for (let j=i+1; j<s.length-2;j++){
             for(let k=j+1;k<s.length-1;k++){
-                for(let l=j+1; l<s.length;l++){
-                    if(s[i]+s[j]+s[k]===s[l]){
-                        answers ++
+                for(let l=k+1; l<s.length;l++){
+                    if((s[i]+s[j]+s[k]===s[l]) && (i<j<k<l)){
+                        count ++
                     }
                 }
             }
         }
     }
-    return answers
+    return count
 };
 
 
@@ -22,7 +22,7 @@ const countQuadruplets = (s) => {
 console.log(countQuadruplets([1,2,3,6]))
 console.log(countQuadruplets([3,3,6,4,5]))
 console.log(countQuadruplets([1,1,1,3,5]))
-
+console.log(countQuadruplets([90,16,81,40,15,16,61,9,99,44,1,93]))
 
 
 
