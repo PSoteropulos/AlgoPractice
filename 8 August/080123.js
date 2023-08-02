@@ -1,5 +1,33 @@
 const minMaxDifference = (num) => {
-    
+    let numToMaxArray = num.toString().split("")
+    let numToMinArray = num.toString().split("")
+    let maxNumToReplace = ""
+    let minNumToReplace = ""
+    for (let i=0; i<numToMaxArray.length; i++){
+        if (numToMaxArray[i] !== "9"){
+            maxNumToReplace = numToMaxArray[i]
+            console.log(maxNumToReplace)
+            break
+        }
+    }
+    for (let j=0; j<numToMinArray.length; j++){
+        if (numToMaxArray[j] !== "0"){
+            minNumToReplace = numToMinArray[j]
+            break
+        }
+    }
+    for (let i=0; i<numToMaxArray.length; i++){
+        if (numToMaxArray[i] === maxNumToReplace){
+            numToMaxArray[i] = "9"
+        }
+    }
+    for (let j=0; j<numToMinArray.length; j++){
+        if (numToMinArray[j] === minNumToReplace){
+            numToMinArray[j] = "0"
+        }
+    }
+    console.log(maxNumToReplace)
+    return (Number(numToMaxArray.join("")) - Number(numToMinArray.join("")))
 };
 
 
