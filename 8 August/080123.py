@@ -1,6 +1,25 @@
 def minMaxDifference(num):
-    pass
-
+    numToMaxArray = [*str(num)]
+    numToMinArray = [*str(num)]
+    maxNumToReplace = ""
+    minNumToReplace = ""
+    for num in numToMaxArray:
+        if num != "9":
+            maxNumToReplace = num
+            break
+    for num in numToMinArray:
+        if num != "0":
+            minNumToReplace = num
+            break
+    for i in range(len(numToMaxArray)):
+        if numToMaxArray[i] == maxNumToReplace:
+            numToMaxArray[i] = "9"
+    for i in range(len(numToMaxArray)):
+        if numToMinArray[i] == minNumToReplace:
+            numToMinArray[i] = "0"
+    maxString = "".join(numToMaxArray)
+    minString = "".join(numToMinArray)
+    return (int(maxString) - int(minString))
 
 
 
