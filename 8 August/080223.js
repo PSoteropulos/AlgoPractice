@@ -1,5 +1,25 @@
 const findRelativeRanks = (score) => {
-    
+    let scoreToSort = [...score].sort((a,b)=>b-a)
+    let indexArray = []
+    let answerArray = []
+    for (let i=0;i<score.length;i++){
+        indexArray.push(scoreToSort.indexOf(score[i]))
+    }
+    for (let j=0;j<indexArray.length;j++){
+        if (indexArray[j] === 0){
+            answerArray.push("Gold Medal")
+        }
+        else if (indexArray[j] === 1){
+            answerArray.push("Silver Medal")
+        }
+        else if (indexArray[j] === 2){
+            answerArray.push("Bronze Medal")
+        }
+        else{
+            answerArray.push(`${indexArray[j]+1}`)
+        }
+    }
+    return answerArray
 };
 
 
