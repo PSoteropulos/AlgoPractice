@@ -1,5 +1,19 @@
 def findRelativeRanks(score):
-    pass
+    scoreToSort = sorted([*score],reverse=True)
+    indexArray = []
+    answerArray = []
+    for i in range(len(score)):
+        indexArray.append(scoreToSort.index(score[i]))
+    for j in range(len(score)):
+        if (indexArray[j] == 0):
+            answerArray.append("Gold Medal")
+        elif (indexArray[j] == 1):
+            answerArray.append("Silver Medal")
+        elif (indexArray[j] == 2):
+            answerArray.append("Bronze Medal")
+        else:
+            answerArray.append(f'{indexArray[j]+1}')
+    return answerArray
 
 
 
