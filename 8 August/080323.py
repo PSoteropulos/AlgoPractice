@@ -1,5 +1,14 @@
 def isAnagram(s, t):
-    pass
+    sArraySorted = [*s]
+    tArraySorted = [*t]
+    sArraySorted.sort()
+    tArraySorted.sort()
+    if (len(sArraySorted) != len(tArraySorted)):
+        return False
+    for i in range(len(sArraySorted)):
+        if (sArraySorted[i] != tArraySorted[i]):
+            return False
+    return True
 
 
 
