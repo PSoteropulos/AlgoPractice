@@ -1,5 +1,15 @@
 const isAnagram = (s, t) => {
-    
+    let sArraySorted = s.split("").sort()
+    let tArraySorted = t.split("").sort()
+    if (sArraySorted.length !== tArraySorted.length){
+        return false
+    }
+    for (let i = 0; i<sArraySorted.length;i++){
+        if (sArraySorted[i] !== tArraySorted[i]){
+            return false
+        }
+    }
+    return true
 };
 
 
