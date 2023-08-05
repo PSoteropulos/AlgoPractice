@@ -1,5 +1,21 @@
 const countElements = (nums) => {
-    
+    nums.sort((a,b)=>a-b)
+    let count = 0
+    let lowest = nums[0]
+    let highest = nums[nums.length-1]
+    for (let i = 0; i<nums.length; i++){
+        if (nums[i] < lowest){
+            lowest = nums[i]
+        }
+        if (nums[i] > highest){
+            highest = nums[i]
+        }
+        if ((lowest < nums[i]) && (highest > nums[i])){
+            count ++
+        }
+        // console.log({highest}, {lowest}, {count})
+    }
+    return count
 };
 
 
