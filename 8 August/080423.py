@@ -1,5 +1,16 @@
 def countElements(nums):
-    pass
+    nums.sort()
+    count = 0
+    lowest = nums[0]
+    highest = nums[len(nums)-1]
+    for i in range(len(nums)):
+        if (nums[i] < lowest):
+            lowest = nums[i]
+        if (nums[i] > highest):
+            highest = nums[i]
+        if ((lowest < nums[i]) and (highest > nums[i])):
+            count += 1
+    return count
 
 
 
