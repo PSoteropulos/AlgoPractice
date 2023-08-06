@@ -1,5 +1,14 @@
 def findTheDifference(s, t):
-    pass
+    sChanged = [*s]
+    tChanged = [*t]
+    sChanged.sort()
+    tChanged.sort()
+    if (len(s) == 0):
+        return t[0]
+    for i in range(len(s)):
+        if (sChanged[i] != tChanged[i]):
+            return tChanged[i]
+    return tChanged[len(tChanged)-1]
 
 
 
