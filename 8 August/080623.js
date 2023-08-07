@@ -1,5 +1,13 @@
 const averageValue = (nums) => {
-    
+    let values = []
+    let sum = 0
+    for (let i = 0; i < nums.length; i++){
+        if (nums[i] % 6 === 0){
+            values.push(nums[i])
+            sum += nums[i]
+        }
+    }
+    return values.length > 0 ? Math.floor(sum / values.length) : 0
 };
 
 
@@ -9,7 +17,7 @@ const averageValue = (nums) => {
 
 
 console.log(averageValue([1,3,6,10,12,15]))
-console.log(averageValue([1,3,6,10,12,15]))
+console.log(averageValue([1,2,4,7,10]))
 
 
 
