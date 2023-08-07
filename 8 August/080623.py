@@ -1,5 +1,16 @@
+import math
+
 def averageValue(nums):
-    pass
+    values = []
+    sum = 0
+    for i in range(len(nums)):
+        if (nums[i] % 6 == 0):
+            values.append(nums[i])
+            sum += nums[i]
+    if len(values) > 0:
+        return math.floor(sum / len(values))
+    else:
+        return 0
 
 
 
@@ -7,7 +18,7 @@ def averageValue(nums):
 
 
 print(averageValue([1,3,6,10,12,15]))
-print(averageValue([1,3,6,10,12,15]))
+print(averageValue([1,2,4,7,10]))
 
 
 
