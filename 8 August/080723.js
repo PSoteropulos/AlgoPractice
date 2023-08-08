@@ -1,5 +1,19 @@
 const findSpecialInteger = (arr) => {
-    
+    arr.sort((a,b)=>a-b)
+    let average = arr.length/4
+    // let average = Math.floor(arr.length/4)
+    let count = 0
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]===arr[i-1]){
+            count ++
+        }
+        else {
+            count =1
+        }
+        if (count > average){
+            return arr[i]
+        }
+    }
 };
 
 
