@@ -1,6 +1,14 @@
 def slowestKey(releaseTimes, keysPressed):
-    pass
-
+    maxPress = releaseTimes[0]
+    maxChar = keysPressed[0]
+    alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    for i in range(1, len(releaseTimes)):
+        if (releaseTimes[i]-releaseTimes[i-1] > maxPress):
+            maxChar = keysPressed[i]
+            maxPress = releaseTimes[i]-releaseTimes[i-1]
+        if ((releaseTimes[i]-releaseTimes[i-1] == maxPress) and (alphabetArray.index(keysPressed[i]) > alphabetArray.index(maxChar))):
+            maxChar = keysPressed[i]
+    return maxChar
 
 
 
