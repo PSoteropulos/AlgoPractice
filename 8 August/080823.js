@@ -1,5 +1,17 @@
 const slowestKey = (releaseTimes, keysPressed) => {
-    
+    let maxPress = releaseTimes[0]
+    let maxChar = keysPressed[0]
+    let alphabetArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    for (let i = 1; i<releaseTimes.length; i++){
+        if (releaseTimes[i]-releaseTimes[i-1] > maxPress){
+            maxChar = keysPressed[i]
+            maxPress = releaseTimes[i]-releaseTimes[i-1]
+        }
+        if ((releaseTimes[i]-releaseTimes[i-1] === maxPress) && (alphabetArray.indexOf(keysPressed[i]) > alphabetArray.indexOf(maxChar))){
+            maxChar = keysPressed[i]
+        }
+    }
+    return maxChar
 };
 
 
