@@ -1,5 +1,14 @@
 def maxLengthBetweenEqualCharacters(s):
-    pass
+    array = [*s]
+    maxDist = -1
+    for i in range(len(array)-1):
+        localDist = None
+        for j in range(i+1, len(array)):
+            if (array[i] == array[j]):
+                localDist = j-1-i
+        if (localDist != None and localDist > maxDist):
+            maxDist = localDist
+    return maxDist
 
 
 
