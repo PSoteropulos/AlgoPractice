@@ -1,5 +1,18 @@
 const maxLengthBetweenEqualCharacters = (s) => {
-    
+    let array = s.split("")
+    let maxDist = -1
+    for (let i = 0; i<array.length-1;i++){
+        let localDist = undefined
+        for (let j=i+1;j<array.length;j++){
+            if (array[i] === array[j]){
+                localDist = j-1-i
+            }
+        }
+        if (localDist > maxDist){
+            maxDist = localDist
+        }
+    }
+    return maxDist
 };
 
 
