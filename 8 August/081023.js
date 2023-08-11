@@ -1,5 +1,22 @@
 const canConstruct = (ransomNote, magazine) => {
-    
+    let ransomNoteArray = ransomNote.split("").sort()
+    let magazineArray = magazine.split("").sort()
+    let running = true
+    while (running) {
+        let changed = false
+        for (let i = ransomNoteArray.length-1; i>=0; i--){
+            if (magazineArray.includes(ransomNoteArray[i])){
+                let index = magazineArray.indexOf(ransomNoteArray[i])
+                ransomNoteArray.splice(i, 1)
+                magazineArray.splice(index, 1)
+                changed = true
+            }
+        }
+        if (changed === false){
+            running = false
+        }
+    }
+    return ransomNoteArray.length === 0 ? true : false
 };
 
 
@@ -8,10 +25,10 @@ const canConstruct = (ransomNote, magazine) => {
 
 
 
-console.log(canConstruct("a", magazine = "b"))
-console.log(canConstruct("aa", magazine = "ab"))
-console.log(canConstruct("aa", magazine = "aab"))
-
+// console.log(canConstruct("a", "b"))
+// console.log(canConstruct("aa", "ab"))
+// console.log(canConstruct("aa", "aab"))
+console.log(canConstruct("fihjjjjei", "hjibagacbhadfaefdjaeaebgi"))
 
 
 
