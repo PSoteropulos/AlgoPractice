@@ -1,5 +1,18 @@
 def canConstruct(ransomNote, magazine):
-    pass
+    ransomNoteArray = [*ransomNote]
+    magazineArray = [*magazine]
+    running = True
+    while running:
+        changed = False
+        for i in range(len(ransomNoteArray)-1, -1, -1):
+            if ransomNoteArray[i] in magazineArray:
+                index = magazineArray.index(ransomNoteArray[i])
+                ransomNoteArray.pop(i)
+                magazineArray.pop(index)
+                changed = True
+        if (changed == False):
+            running = False
+    return True if len(ransomNoteArray) == 0 else False
 
 
 
