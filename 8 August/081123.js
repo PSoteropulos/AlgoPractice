@@ -1,5 +1,11 @@
 const isThree = (n) => {
-    
+    let divCount = 0
+    for (let i=n; i>0; i--){
+        if (n%i===0){
+            divCount ++
+        }
+    }
+    return divCount === 3 ? true : false
 };
 
 
