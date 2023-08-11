@@ -1,5 +1,9 @@
 def isThree(n):
-    pass
+    divCount = 0
+    for i in range(n, 0, -1):
+        if n%i==0:
+            divCount += 1
+    return True if divCount ==3 else False
 
 
 
