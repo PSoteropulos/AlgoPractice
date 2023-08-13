@@ -1,5 +1,9 @@
 def findKthPositive(arr, k):
-    pass
+    missingArray = []
+    for i in range(1,len(arr)+1+k):
+        if i not in arr:
+            missingArray.append(i)
+    return missingArray[k-1]
 
 
 
