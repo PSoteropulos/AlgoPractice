@@ -1,5 +1,11 @@
 const findKthPositive = (arr, k) => {
-    
+    let missingArray = []
+    for (let i=1; i <= arr.length+k;i++){
+        if (!arr.includes(i)){
+            missingArray.push(i)
+        }
+    }
+    return missingArray[k-1]
 };
 
 
