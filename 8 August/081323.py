@@ -1,5 +1,15 @@
 def isMonotonic(nums):
-    pass
+    monoIncrease = True
+    monoDecrease = True
+    for i in range(1, len(nums)):
+        if (nums[i] < nums[i-1]):
+            monoIncrease = False
+        if (nums[i] > nums[i-1]):
+            monoDecrease = False
+    if (monoIncrease or monoDecrease):
+        return True
+    else :
+        return False
 
 
 
