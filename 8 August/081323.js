@@ -1,5 +1,20 @@
 const isMonotonic = (nums) => {
-    
+    let monoIncrease = true
+    let monoDecrease = true
+    for (let i=1; i<nums.length; i++){
+        if (nums[i] < nums[i-1]){
+            monoIncrease = false
+        }
+        if (nums[i] > nums[i-1]){
+            monoDecrease = false
+        }
+    }
+    if (monoIncrease || monoDecrease){
+        return true
+    }
+    else {
+        return false
+    }
 };
 
 
