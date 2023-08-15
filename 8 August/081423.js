@@ -1,6 +1,18 @@
 const divisorSubstrings = (num, k) => {
-    
-};
+    const numString = num.toString()
+    let count = 0
+    for (let i = 0; i<= numString.length-k; i++){
+        let subString = ""
+        for (let j=i; j<i+k; j++){
+            subString += numString[j]
+        }
+        // console.log(subString)
+        if (num%Number(subString)===0){
+            count ++
+        }
+    }
+    return count
+}
 
 
 
