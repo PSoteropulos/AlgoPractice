@@ -1,6 +1,13 @@
 def divisorSubstrings(num, k):
-    pass
-
+    numString = str(num)
+    count = 0
+    for i in range(len(numString)-k+1):
+        subString = ""
+        for j in range(i, i+k):
+            subString += numString[j]
+        if ((int(subString)!=0) and (num%int(subString)==0)):
+            count += 1
+    return count
 
 
 
