@@ -1,5 +1,24 @@
 def oddString(words):
-    pass
+    differenceArray = []
+    alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    for i in range(len(words)):
+        localArray = []
+        for j in range(len(words[i])-1):
+            localArray.append(alphabet.index(words[i][j+1]) - alphabet.index(words[i][j]))
+        differenceArray.append(localArray)
+    oddOutIndex = None
+    for k in range(len(differenceArray)-2):
+        for h in range(len(differenceArray[k])):
+            if(differenceArray[k][h] == differenceArray[k+1][h]):
+                if (differenceArray[k][h] != differenceArray[k+2][h]):
+                    oddOutIndex = k+2
+            else:
+                if (differenceArray[k+1][h] == differenceArray[k+2][h]):
+                    oddOutIndex = k
+                
+                else:
+                    oddOutIndex = k + 1
+    return words[oddOutIndex]
 
 
 
@@ -7,7 +26,7 @@ def oddString(words):
 
 print(oddString(["adc","wzy","abc"]))
 print(oddString(["aaa","bob","ccc","ddd"]))
-
+print(oddString(["aaaba","sssts","vvvwv","sssts","ooopo","rrrsr","iiiji","pppqp","aabbb","xxxyx","nnnon","bbbcb","hhhih","jjjkj","hhhih","kkklk","yyyzy","jjjkj","nnnon","eeefe","eeefe","ggghg","sssts","cccdc","rrrsr"]))
 
 
 

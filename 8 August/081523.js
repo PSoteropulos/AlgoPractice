@@ -34,8 +34,8 @@ const oddString = (words) => {
 
 
 
-// console.log(oddString(["adc","wzy","abc"]))
-// console.log(oddString(["aaa","bob","ccc","ddd"]))
+console.log(oddString(["adc","wzy","abc"]))
+console.log(oddString(["aaa","bob","ccc","ddd"]))
 console.log(oddString(["aaaba","sssts","vvvwv","sssts","ooopo","rrrsr","iiiji","pppqp","aabbb","xxxyx","nnnon","bbbcb","hhhih","jjjkj","hhhih","kkklk","yyyzy","jjjkj","nnnon","eeefe","eeefe","ggghg","sssts","cccdc","rrrsr"]))
 
 
