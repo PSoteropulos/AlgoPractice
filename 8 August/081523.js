@@ -1,5 +1,32 @@
 const oddString = (words) => {
-    
+    let differenceArray = []
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    for (let i=0; i<words.length; i++){
+        let localArray = []
+        for (let j=0;j<words[i].length -1; j++){
+            localArray.push(alphabet.indexOf(words[i][j+1]) - alphabet.indexOf(words[i][j]))
+        }
+        differenceArray.push(localArray)
+    }
+    let oddOutIndex = undefined
+    for (let k=0; k<differenceArray.length-2; k++){
+        for(let h=0;h<differenceArray[k].length;h++){
+            if(differenceArray[k][h] === differenceArray[k+1][h]){
+                if (differenceArray[k][h] !== differenceArray[k+2][h]){
+                    oddOutIndex = k+2
+                }
+            }
+            else {
+                if (differenceArray[k+1][h] === differenceArray[k+2][h]){
+                    oddOutIndex = k
+                }
+                else {
+                    oddOutIndex = k + 1
+                }
+            }
+        }
+    }
+    return words[oddOutIndex]
 };
 
 
@@ -7,9 +34,9 @@ const oddString = (words) => {
 
 
 
-console.log(oddString(["adc","wzy","abc"]))
-console.log(oddString(["aaa","bob","ccc","ddd"]))
-
+// console.log(oddString(["adc","wzy","abc"]))
+// console.log(oddString(["aaa","bob","ccc","ddd"]))
+console.log(oddString(["aaaba","sssts","vvvwv","sssts","ooopo","rrrsr","iiiji","pppqp","aabbb","xxxyx","nnnon","bbbcb","hhhih","jjjkj","hhhih","kkklk","yyyzy","jjjkj","nnnon","eeefe","eeefe","ggghg","sssts","cccdc","rrrsr"]))
 
 
 
