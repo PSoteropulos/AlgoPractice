@@ -1,5 +1,5 @@
 def theMaximumAchievableX(num, t):
-    pass
+    return num + (2*t)
 
 
 
