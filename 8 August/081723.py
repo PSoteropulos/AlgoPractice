@@ -1,5 +1,9 @@
 def numberOfEmployeesWhoMetTarget(hours, target):
-    pass
+    count = 0
+    for employee in hours:
+        if employee >= target:
+            count += 1
+    return count
 
 
 
