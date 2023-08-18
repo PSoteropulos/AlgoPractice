@@ -1,5 +1,17 @@
 const maxSum = (nums) => {
-    
+    nums.sort((a,b)=>b-a)
+    let answers = []
+    for (let i = 0; i<nums.length-1; i++){
+        for (let h=9;h>=0;h--){
+            for (let j=i+1; j<nums.length; j++){
+                if (nums[i].toString().includes(h) && nums[j].toString().includes(h)){
+                    console.log(nums[i], nums[j])
+                    return(nums[i]+nums[j])
+                }
+            }
+        }
+    }
+    return -1
 };
 
 
@@ -8,7 +20,7 @@ const maxSum = (nums) => {
 
 console.log(maxSum([51,71,17,24,42]))
 console.log(maxSum([1,2,3,4]))
-
+console.log(maxSum([31,25,72,79,74]))
 
 
 
