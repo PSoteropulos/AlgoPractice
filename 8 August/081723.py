@@ -1,70 +1,58 @@
-def removeAnagrams(words):
+def numberOfEmployeesWhoMetTarget(hours, target):
     pass
 
 
 
 
-
-
-
-print(removeAnagrams(["abba","baba","bbaa","cd","cd"]))
-print(removeAnagrams(["a","b","c","d","e"]))
+print(numberOfEmployeesWhoMetTarget(hours = [0,1,2,3,4], target = 2))
+print(numberOfEmployeesWhoMetTarget(hours = [5,1,4,2,2], target = 6))
 
 
 
 
 
 
-# LeetCode Logo
-# Problem List
-# Premium
-# Register
-# or
-# Sign in
-# 2273. Find Resultant Array After Removing Anagrams
+# 2798. Number of Employees Who Met the Target
 # Easy
-# 555
-# 138
+# 207
+# 22
 # Companies
-# You are given a 0-indexed string array words, where words[i] consists of lowercase English letters.
+# There are n employees in a company, numbered from 0 to n - 1. Each employee i has worked for hours[i] hours in the company.
 
-# In one operation, select any index i such that 0 < i < words.length and words[i - 1] and words[i] are anagrams, and delete words[i] from words. Keep performing this operation as long as you can select an index that satisfies the conditions.
+# The company requires each employee to work for at least target hours.
 
-# Return words after performing all operations. It can be shown that selecting the indices for each operation in any arbitrary order will lead to the same result.
+# You are given a 0-indexed array of non-negative integers hours of length n and a non-negative integer target.
 
-# An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase using all the original letters exactly once. For example, "dacb" is an anagram of "abdc".
+# Return the integer denoting the number of employees who worked at least target hours.
 
  
 
 # Example 1:
 
-# Input: words = ["abba","baba","bbaa","cd","cd"]
-# Output: ["abba","cd"]
-# Explanation:
-# One of the ways we can obtain the resultant array is by using the following operations:
-# - Since words[2] = "bbaa" and words[1] = "baba" are anagrams, we choose index 2 and delete words[2].
-#   Now words = ["abba","baba","cd","cd"].
-# - Since words[1] = "baba" and words[0] = "abba" are anagrams, we choose index 1 and delete words[1].
-#   Now words = ["abba","cd","cd"].
-# - Since words[2] = "cd" and words[1] = "cd" are anagrams, we choose index 2 and delete words[2].
-#   Now words = ["abba","cd"].
-# We can no longer perform any operations, so ["abba","cd"] is the final answer.
+# Input: hours = [0,1,2,3,4], target = 2
+# Output: 3
+# Explanation: The company wants each employee to work for at least 2 hours.
+# - Employee 0 worked for 0 hours and didn't meet the target.
+# - Employee 1 worked for 1 hours and didn't meet the target.
+# - Employee 2 worked for 2 hours and met the target.
+# - Employee 3 worked for 3 hours and met the target.
+# - Employee 4 worked for 4 hours and met the target.
+# There are 3 employees who met the target.
 # Example 2:
 
-# Input: words = ["a","b","c","d","e"]
-# Output: ["a","b","c","d","e"]
-# Explanation:
-# No two adjacent strings in words are anagrams of each other, so no operations are performed.
+# Input: hours = [5,1,4,2,2], target = 6
+# Output: 0
+# Explanation: The company wants each employee to work for at least 6 hours.
+# There are 0 employees who met the target.
  
 
 # Constraints:
 
-# 1 <= words.length <= 100
-# 1 <= words[i].length <= 10
-# words[i] consists of lowercase English letters.
+# 1 <= n == hours.length <= 50
+# 0 <= hours[i], target <= 105
 # Accepted
-# 45.2K
+# 50.4K
 # Submissions
-# 78K
+# 57K
 # Acceptance Rate
-# 57.9%
+# 88.5%
