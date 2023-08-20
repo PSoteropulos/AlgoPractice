@@ -1,5 +1,12 @@
 def maximizeSum(nums, k):
-    pass
+    total = 0
+    nums.sort(reverse=True)
+    value = nums[0]
+    while (k):
+        total += value
+        value += 1
+        k -= 1
+    return total
 
 
 
