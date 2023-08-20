@@ -1,5 +1,13 @@
 const maximizeSum = (nums, k) => {
-    
+    let total = 0
+    nums.sort((a,b)=>b-a)
+    let value = nums[0]
+    while (k) {
+        total += value
+        value ++
+        k --
+    }
+    return total
 };
 
 
