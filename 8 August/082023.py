@@ -1,5 +1,11 @@
 def finalString(s):
-    pass
+    string = []
+    for letter in s:
+        if letter == "i":
+            string.reverse()
+        else:
+            string.append(letter)
+    return "".join(string)
 
 
 
