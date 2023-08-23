@@ -1,12 +1,25 @@
 def getTotalX(a, b):
-    pass
+    count = 0
+    for i in range( a[len(a)-1] , b[0]+1):
+        valid = True
+        for num in a:
+            if i%num!=0:
+                valid = False
+                break
+        if valid==True:
+            for num in b:
+                if num%i!=0:
+                    valid = False
+        if valid == True:
+            count +=1
+    return count
 
 
 
 
 
 print(getTotalX([2,4],[16,32,96]))
-print(getTotalX([2,6],[24,36]))
+# print(getTotalX([2,6],[24,36]))
 
 
 

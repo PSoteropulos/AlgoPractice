@@ -1,8 +1,25 @@
 const getTotalX = (a, b) => {
-    
+    let count = 0
+    for (let i=a[a.length-1]; i<=b[0]; i++){
+        let valid = true
+        for (let j=0; j<=a.length;j++){
+            if (i%a[j]!==0){
+                valid = false
+            }
+        }
+        for (let h=0;h<=b.length; h++){
+            if (b[h]%i!==0){
+                valid = false
+            }
+        }
+        if (valid===true){
+            count ++ 
+        }
+    }
+    return count
 }
 
-
+// loop through every number between largest num in a and smallest num in b
 
 
 
