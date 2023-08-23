@@ -1,5 +1,12 @@
 def distinctAverages(nums):
-    pass
+    avgSet = set()
+    nums.sort()
+    while(len(nums)>0):
+        average = (nums[0] + nums[len(nums)-1])/2
+        avgSet.add(average)
+        nums.pop()
+        nums.pop(0)
+    return len(avgSet)
 
 
 
