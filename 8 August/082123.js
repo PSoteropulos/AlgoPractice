@@ -1,5 +1,13 @@
 const distinctAverages = (nums) => {
-    
+    let avgSet = new Set() 
+    nums.sort((a,b)=>a-b)
+    while (nums.length > 0){
+        let average = (nums[0] + nums[nums.length-1])/2
+        avgSet.add(average)
+        nums.pop()
+        nums.splice(0,1)
+    }
+    return avgSet.size
 };
 
 
