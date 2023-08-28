@@ -1,5 +1,17 @@
 def rearrangeCharacters(s, target):
-    pass
+    s = [*s]
+    running = True
+    count = 0
+    while running:
+        for i in range(len(target)):
+            if target[i] in s:
+                s.pop(s.index(target[i]))
+            else:
+                running = False
+                break
+            if i==len(target)-1:
+                count += 1
+    return count
 
 
 
