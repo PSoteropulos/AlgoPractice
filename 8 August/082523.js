@@ -1,5 +1,16 @@
 const largestOddNumber = (num) => {
-    
+    let currentMax = ""
+    let startedOdd = false
+    for (let i = num.length-1; i >= 0; i--){
+        if (Number(num[i])%2!==0 && !startedOdd){
+            currentMax += num[i]
+            startedOdd = true
+        }
+        else if (startedOdd){
+            currentMax += num[i]
+        }
+    }
+    return currentMax.split("").reverse().join("")
 };
 
 
