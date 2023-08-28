@@ -1,5 +1,33 @@
 const maxScore = (s) => {
-    
+    let maxScore = 0
+    s = s.split("")
+    for (let i = 0; i < s.length-1; i++){
+        let localScore = 0
+        let leftString = ""
+        let rightString = ""
+        for (let j = 0; j<s.length;j++){
+            if (j <= i){
+                leftString += s[j]
+            }
+            else {
+                rightString += s[j]
+            }
+        }
+        for (let leftIndex = 0; leftIndex < leftString.length; leftIndex++){
+            if (leftString[leftIndex] === "0"){
+                localScore ++
+            }
+        }
+        for (let rightIndex = 0; rightIndex < rightString.length; rightIndex++){
+            if (rightString[rightIndex] === "1"){
+                localScore ++
+            }
+        }
+        if (localScore > maxScore){
+            maxScore = localScore
+        }
+    }
+    return maxScore
 };
 
 
