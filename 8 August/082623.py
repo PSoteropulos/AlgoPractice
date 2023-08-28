@@ -1,5 +1,18 @@
 def findMaxConsecutiveOnes(nums):
-    pass
+    totalMax = 0
+    currentMax = 0
+    for i in range(len(nums)):
+        if (i==0 and nums[i]==1):
+            currentMax = 1
+        elif (nums[i]==1 and nums[i-1]==1):
+            currentMax += 1
+        elif (nums[i]==1):
+            currentMax = 1
+        else:
+            currentMax = 0
+        if (currentMax > totalMax):
+            totalMax = currentMax
+    return totalMax
 
 
 
