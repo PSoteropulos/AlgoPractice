@@ -1,5 +1,16 @@
 const kLengthApart = (nums, k) => {
-    
+    let indexArray = []
+    for (let i=0; i<nums.length; i++){
+        if (nums[i] === 1){
+            indexArray.push(i)
+        }
+    }
+    for (let j=0; j<indexArray.length-1; j++){
+        if ((indexArray[j+1] - indexArray[j]-1) < k){
+            return false
+        }
+    }
+    return true
 };
 
 

@@ -1,5 +1,10 @@
 def kLengthApart(nums, k):
-    pass
+    indexArray = []
+    for i in range(len(nums)):
+        if (nums[i] == 1):
+            indexArray.append(i)
+    for j in range(len(indexArray)-1):
+        if ((indexArray[j+1] - indexArray[j]-1) < k):
 
 
 
