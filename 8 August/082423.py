@@ -1,5 +1,24 @@
 def maxScore(s):
-    pass
+    maxScore = 0
+    s = [*s]
+    for i in range(len(s)-1):
+        localScore = 0
+        leftString = ""
+        rightString = ""
+        for j in range(len(s)):
+            if (j <= i):
+                leftString += s[j]
+            else:
+                rightString += s[j]
+        for leftIndex in range(len(leftString)):
+            if (leftString[leftIndex] == "0"):
+                localScore += 1
+        for rightIndex in range(len(rightString)):
+            if (rightString[rightIndex] == "1"):
+                localScore += 1
+        if (localScore > maxScore):
+            maxScore = localScore
+    return maxScore
 
 
 
