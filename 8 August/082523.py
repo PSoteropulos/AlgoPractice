@@ -1,5 +1,15 @@
 def largestOddNumber(num):
-    pass
+    currentMax = ""
+    startedOdd = False
+    for i in range(len(num)-1, -1, -1):
+        if ((int(num[i])%2 != 0) and (startedOdd == False)):
+            currentMax += num[i]
+            startedOdd = True
+        elif (startedOdd):
+            currentMax += num[i]
+    answerArray = [*currentMax]
+    answerArray.reverse()
+    return "".join(answerArray)
 
 
 
