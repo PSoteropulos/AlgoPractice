@@ -1,5 +1,22 @@
 const rearrangeCharacters = (s, target) => {
-    
+    s = s.split("")
+    let running = true
+    let count = 0
+    while (running) {
+        for (let i = 0; i<target.length; i++){
+            if (s.includes(target[i])){
+                s.splice(s.indexOf(target[i]), 1)
+            }
+            else {
+                running = false
+                break
+            }
+            if (i===target.length-1){
+                count ++
+            }
+        }
+    }
+    return count
 };
 
 
