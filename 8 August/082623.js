@@ -1,5 +1,24 @@
 const findMaxConsecutiveOnes = (nums) => {
-    
+    let totalMax = 0
+    let currentMax = 0
+    for (let i = 0; i<nums.length; i++){
+        if (i===0 && nums[i]===1){
+            currentMax = 1
+        }
+        else if (nums[i]===1 && nums[i-1]===1){
+            currentMax ++
+        }
+        else if (nums[i]===1){
+            currentMax = 1
+        }
+        else {
+            currentMax = 0
+        }
+        if (currentMax > totalMax){
+            totalMax = currentMax
+        }
+    }
+    return totalMax
 };
 
 
