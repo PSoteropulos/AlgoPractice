@@ -5,6 +5,8 @@ def kLengthApart(nums, k):
             indexArray.append(i)
     for j in range(len(indexArray)-1):
         if ((indexArray[j+1] - indexArray[j]-1) < k):
+            return False
+    return True
 
 
 
