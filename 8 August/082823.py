@@ -1,5 +1,16 @@
 def findEvenNumbers(digits):
-    pass
+    answerSet = set()
+    for i in range(len(digits)):
+        if digits[i] != 0:
+            for j in range(len(digits)):
+                for h in range(len(digits)):
+                    if j!=i and j!=h and h!=i:
+                        newString = str(digits[i]) + str(digits[j]) + str(digits[h])
+                        if int(newString)%2==0:
+                            answerSet.add(int(newString))
+    answerArray = list(answerSet)
+    answerArray.sort()
+    return answerArray
 
 
 
