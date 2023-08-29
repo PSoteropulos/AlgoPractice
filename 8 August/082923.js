@@ -1,5 +1,17 @@
 const mostFrequent = (nums, key) => {
-    
+    let answerObject = {}
+    for (let i=0; i<nums.length-1; i++){
+        if (nums[i] === key){
+            if (`${nums[i+1]}` in answerObject){
+                answerObject[`${nums[i+1]}`] ++
+            }
+            else {
+                answerObject[`${nums[i+1]}`] = 1
+            }
+        }
+    }
+    let answer = Object.entries(answerObject).sort((a,b)=>b[1] - a[1])
+    return answer[0][0]
 };
 
 
@@ -10,7 +22,7 @@ const mostFrequent = (nums, key) => {
 
 console.log(mostFrequent(nums = [1,100,200,1,100], key = 1))
 console.log(mostFrequent(nums = [2,2,2,2,3], key = 2))
-
+console.log(mostFrequent(nums = [2,1000,2,1000,2,3], key = 2))
 
 
 
