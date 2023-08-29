@@ -1,5 +1,20 @@
 const findEvenNumbers = (digits) => {
-    
+    let answerSet = new Set()
+    for (let i=0; i<digits.length; i++){
+        if (digits[i] !== 0){
+            for (let j=0; j<digits.length; j++){
+                for (let h=0; h<digits.length; h++){
+                    if (j!==i&&j!==h&&h!==i){
+                        let newString = digits[i].toString() + digits[j].toString() + digits[h].toString()
+                        if (Number(newString)%2===0){
+                            answerSet.add(Number(newString))
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return Array.from(answerSet).sort((a,b)=>a-b)
 };
 
 
