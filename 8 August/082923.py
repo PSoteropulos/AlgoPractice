@@ -1,6 +1,13 @@
 def mostFrequent(nums, key):
-    pass
-
+    answerObject = {}
+    for i in range(len(nums)-1):
+        if nums[i] == key:
+            if f'{nums[i+1]}' in answerObject:
+                answerObject[f'{nums[i+1]}'] += 1
+            else:
+                answerObject[f'{nums[i+1]}'] = 1
+    sortedDict = sorted(answerObject.items(), key=lambda x:x[1], reverse=True)
+    return int(sortedDict[0][0])
 
 
 
@@ -8,6 +15,7 @@ def mostFrequent(nums, key):
 
 print(mostFrequent(nums = [1,100,200,1,100], key = 1))
 print(mostFrequent(nums = [2,2,2,2,3], key = 2))
+print(mostFrequent(nums = [2,1000,2,1000,2,3], key = 2))
 
 
 
