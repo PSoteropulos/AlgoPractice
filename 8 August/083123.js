@@ -1,7 +1,14 @@
+const isAcronym = (words, s) => {
+    
+};
 
 
 
 
+
+console.log(isAcronym(words = ["alice","bob","charlie"], s = "abc"))
+console.log(isAcronym(words = ["an","apple"], s = "a"))
+console.log(isAcronym(["never","gonna","give","up","on","you"], s = "ngguoy"))
 
 
 
