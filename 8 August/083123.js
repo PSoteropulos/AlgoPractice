@@ -1,5 +1,9 @@
 const isAcronym = (words, s) => {
-    
+    let string = ""
+    for (let i = 0;i<words.length;i++){
+        string += words[i][0]
+    }
+    return string === s? true : false
 };
 
 
