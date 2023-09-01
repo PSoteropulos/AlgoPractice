@@ -1,5 +1,11 @@
 def isAcronym(words, s):
-    pass
+    string = ""
+    for word in words:
+        string += word[0]
+    if string == s:
+        return True
+    else:
+        return False
 
 
 
