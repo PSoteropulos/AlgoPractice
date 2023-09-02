@@ -34,7 +34,7 @@ console.log(findTheArrayConcVal([5,14,13,8,12]))
 // You are given a 0-indexed integer array nums.
 
 // The concatenation of two numbers is the number formed by concatenating their numerals.
-
+// paul sux dix
 // For example, the concatenation of 15, 49 is 1549.
 // The concatenation value of nums is initially equal to 0. Perform this operation until nums becomes empty:
 
