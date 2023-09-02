@@ -6,6 +6,7 @@ def maximumNumberOfStringPairs(words):
 
 
 
+
 print(maximumNumberOfStringPairs(["cd","ac","dc","ca","zz"]))
 print(maximumNumberOfStringPairs(["ab","ba","cc"]))
 print(maximumNumberOfStringPairs(["aa","ab"]))

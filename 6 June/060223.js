@@ -20,8 +20,10 @@ const findTheArrayConcVal = (nums) => {
 
 
 
-// console.log(findTheArrayConcVal([7,52,2,4]))
+console.log(findTheArrayConcVal([7,52,2,4]))
 console.log(findTheArrayConcVal([5,14,13,8,12]))
+
+
 
 
 
