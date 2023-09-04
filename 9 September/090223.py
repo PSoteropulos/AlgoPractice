@@ -1,5 +1,15 @@
 def pivotInteger(n):
-    pass
+    for i in range(1, n+1):
+        first = 0
+        second = 0
+        for j in range(1, i+1):
+            first += j
+        for h in range(i, n+1):
+            second += h
+        if first == second:
+            return i
+    return -1
+
 
 
 
