@@ -1,5 +1,18 @@
 const pivotInteger = (n) => {
-    
+    for (let i=1; i<=n;i++){
+        let first = 0
+        let second = 0
+        for (let j=1; j<=i;j++){
+            first += j
+        }
+        for (let h=i; h<=n;h++){
+            second += h
+        }
+        if (first === second){
+            return i
+        }
+    }
+    return -1
 };
 
 
