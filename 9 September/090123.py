@@ -1,5 +1,12 @@
 def maximumNumberOfStringPairs(words):
-    pass
+    count = 0
+    for i in range(len(words)-1):
+        for j in range(i+1, len(words)):
+            wordArray = [*words[j]]
+            wordArray.reverse()
+            if words[i] == "".join(wordArray):
+                count += 1
+    return count
 
 
 
