@@ -1,5 +1,21 @@
 const minimizedStringLength = (s) => {
-    
+    let copy = [...s]
+    let running = true
+    while (running) {
+        let changed = false
+        for (let i=0; i < copy.length-1; i++){
+            for (let j=i+1; j<copy.length; j++){
+                if (copy[i] === copy[j]){
+                    copy.splice(j, 1)
+                    changed = true
+                }
+            }
+        }
+        if (!changed) {
+            running = false
+        }
+    }
+    return copy.length
 };
 
 
