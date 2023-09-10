@@ -1,5 +1,14 @@
 const splitWordsBySeparator = (words, separator) => {
-    
+    let answerArray = []
+    for (let i=0; i<words.length; i++){
+        let array = words[i].split(`${separator}`)
+        for (let j=0; j<array.length; j++){
+            if (array[j] !== ""){
+                answerArray.push(array[j])
+            }
+        }
+    }
+    return answerArray
 };
 
 
