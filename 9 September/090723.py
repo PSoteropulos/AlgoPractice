@@ -1,5 +1,11 @@
 def splitWordsBySeparator(words, separator):
-    pass
+    answerArray = []
+    for i in range(len(words)):
+        array = words[i].split(f'{separator}')
+        for j in range(len(array)):
+            if (array[j] != ""):
+                answerArray.append(array[j])
+    return answerArray
 
 
 
