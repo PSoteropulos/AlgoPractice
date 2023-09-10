@@ -1,5 +1,8 @@
 def findDelayedArrivalTime(arrivalTime, delayedTime):
-    pass
+    if arrivalTime + delayedTime >= 24:
+        return arrivalTime + delayedTime - 24
+    else:
+        return arrivalTime + delayedTime
 
 
 
