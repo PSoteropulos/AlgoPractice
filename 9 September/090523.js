@@ -1,5 +1,15 @@
 const countSeniors = (details) => {
-    
+    let ages = []
+    let count = 0
+    for (let i = 0; i < details.length; i++){
+        ages.push(details[i][11] + details[i][12])
+    }
+    for (let j=0; j < details.length; j++){
+        if (Number(ages[j])>60){
+            count ++
+        }
+    }
+    return count
 };
 
 
