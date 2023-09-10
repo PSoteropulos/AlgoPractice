@@ -1,6 +1,17 @@
 def minimizedStringLength(s):
-    pass
-
+    copy = [*s]
+    running = True
+    while (running):
+        changed = False
+        for i in range(len(copy)-1):
+            for j in range(i+1, len(copy)):
+                if (copy[i] == copy[j]):
+                    copy.pop(j)
+                    changed = True
+                    break
+        if not changed:
+            running = False
+    return len(copy)
 
 
 
