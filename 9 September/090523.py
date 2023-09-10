@@ -1,5 +1,12 @@
 def countSeniors(details):
-    pass
+    ages = []
+    count = 0
+    for i in range(len(details)):
+        ages.append(details[i][11] + details[i][12])
+    for j in range(len(details)):
+        if int(ages[j])>60:
+            count += 1
+    return count
 
 
 
