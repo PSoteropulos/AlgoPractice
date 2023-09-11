@@ -1,5 +1,15 @@
 def furthestDistanceFromOrigin(moves):
-    pass
+    underScoreCount = 0
+    rCount = 0
+    lCount = 0
+    for char in moves:
+        if char == "_":
+            underScoreCount += 1
+        elif char == "R":
+            rCount += 1
+        elif char == "L":
+            lCount += 1
+    return underScoreCount + abs(rCount-lCount)
 
 
 
