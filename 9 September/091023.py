@@ -1,4 +1,4 @@
-def minimumDifference(nums, k):
+def strongPasswordCheckerII(password):
     pass
 
 
@@ -6,40 +6,56 @@ def minimumDifference(nums, k):
 
 
 
-print(minimumDifference(nums = [90], k = 1))
-print(minimumDifference(nums = [9,4,1,7], k = 2))
+print(strongPasswordCheckerII("IloveLe3tcode!"))
+print(strongPasswordCheckerII("Me+You--IsMyDream"))
+print(strongPasswordCheckerII("1aB!"))
 
 
 
 
 
 
-
-# 1984. Minimum Difference Between Highest and Lowest of K Scores
+# 2299. Strong Password Checker II
 # Easy
-# 867
-# 202
+# 302
+# 36
 # Companies
-# You are given a 0-indexed integer array nums, where nums[i] represents the score of the ith student. You are also given an integer k.
+# A password is said to be strong if it satisfies all the following criteria:
 
-# Pick the scores of any k students from the array so that the difference between the highest and the lowest of the k scores is minimized.
-
-# Return the minimum possible difference.
+# It has at least 8 characters.
+# It contains at least one lowercase letter.
+# It contains at least one uppercase letter.
+# It contains at least one digit.
+# It contains at least one special character. The special characters are the characters in the following string: "!@#$%^&*()-+".
+# It does not contain 2 of the same character in adjacent positions (i.e., "aab" violates this condition, but "aba" does not).
+# Given a string password, return true if it is a strong password. Otherwise, return false.
 
  
 
 # Example 1:
 
-# Input: nums = [90], k = 1
-# Output: 0
-# Explanation: There is one way to pick score(s) of one student:
-# - [90]. The difference between the highest and lowest score is 90 - 90 = 0.
-# The minimum possible difference is 0.
+# Input: password = "IloveLe3tcode!"
+# Output: true
+# Explanation: The password meets all the requirements. Therefore, we return true.
 # Example 2:
 
-# Input: nums = [9,4,1,7], k = 2
-# Output: 2
-# Explanation: There are six ways to pick score(s) of two students:
-# - [9,4,1,7]. The difference between the highest and lowest score is 9 - 4 = 5.
-# - [9,4,1,7]. The difference between the highest and lowest score is 9 - 1 = 8.
-# - [9,4,1,7]. The difference between the highest 
+# Input: password = "Me+You--IsMyDream"
+# Output: false
+# Explanation: The password does not contain a digit and also contains 2 of the same character in adjacent positions. Therefore, we return false.
+# Example 3:
+
+# Input: password = "1aB!"
+# Output: false
+# Explanation: The password does not meet the length requirement. Therefore, we return false.
+ 
+
+# Constraints:
+
+# 1 <= password.length <= 100
+# password consists of letters, digits, and special characters: "!@#$%^&*()-+".
+# Accepted
+# 34.4K
+# Submissions
+# 62.2K
+# Acceptance Rate
+# 55.3%
