@@ -1,5 +1,29 @@
 def strongPasswordCheckerII(password):
-    pass
+    length = True
+    oneLower = False
+    oneUpper = False
+    oneDigit = False
+    oneSpecial = False
+    adjacent = True
+    specials = "!@#$%^&*()-+"
+    if (len(password) < 8):
+        length = False
+    for i in range(len(password)):
+        if ((password[i] == password[i].upper()) and (password[i].lower()!=password[i].upper())):
+            oneUpper = True
+        if ((password[i] == password[i].lower()) and (password[i].lower()!=password[i].upper())):
+            oneLower = True
+        if (password[i].isdigit()):
+            oneDigit = True
+        if (password[i] in specials):
+            oneSpecial = True
+        if (i < len(password) - 1):
+            if (password[i] == password[i+1]):
+                adjacent = False
+    if (length and oneUpper and oneLower and oneDigit and oneSpecial and adjacent):
+        return True
+    else :
+        return False
 
 
 
