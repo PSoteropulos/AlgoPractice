@@ -1,5 +1,27 @@
 const minimumMoves = (s) => {
-    
+    let copy = s.split("")
+    let count = 0
+    let running = true
+    while (running) {
+        let changed = false
+        for (let i = 0; i<copy.length; i++){
+            if (copy[i] === "X"){
+                copy[i] = "O"
+                if (i+1<copy.length){
+                    copy[i+1] = "O"
+                }
+                if (i+2<copy.length){
+                    copy[i+2] = "O"
+                }
+                changed = true
+                count ++
+            }
+        }
+        if (!changed) {
+            running = false
+        }
+    }
+    return count
 };
 
 
