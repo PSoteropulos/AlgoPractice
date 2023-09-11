@@ -1,5 +1,39 @@
 const strongPasswordCheckerII = (password) => {
-    
+    let length = true
+    let oneLower = false
+    let oneUpper = false
+    let oneDigit = false
+    let oneSpecial = false
+    let adjacent = true
+    let specials = "!@#$%^&*()-+"
+    if (password.length < 8){
+        length = false
+    }
+    for (let i=0; i<password.length; i++){
+        if ((password[i] === password[i].toUpperCase()) && (password[i].toLowerCase()!==password[i].toUpperCase())){
+            oneUpper = true
+        }
+        if ((password[i] === password[i].toLowerCase())&& (password[i].toLowerCase()!==password[i].toUpperCase())){
+            oneLower = true
+        }
+        if (isNaN(password[i])===false){
+            oneDigit = true
+        }
+        if (specials.includes(password[i])){
+            oneSpecial = true
+        }
+        if (i < password.length - 1){
+            if (password[i] === password[i+1]){
+                adjacent = false
+            }
+        }
+    }
+    if (length && oneUpper && oneLower && oneDigit && oneSpecial && adjacent){
+        return true
+    }
+    else {
+        return false
+    }
 };
 
 
@@ -8,9 +42,10 @@ const strongPasswordCheckerII = (password) => {
 
 
 
-print(strongPasswordCheckerII("IloveLe3tcode!"))
-print(strongPasswordCheckerII("Me+You--IsMyDream"))
-print(strongPasswordCheckerII("1aB!"))
+console.log(strongPasswordCheckerII("IloveLe3tcode!"))
+console.log(strongPasswordCheckerII("Me+You--IsMyDream"))
+console.log(strongPasswordCheckerII("1aB!"))
+console.log(strongPasswordCheckerII("&3@396+&532#1)5^*^*56$269)(-54(3)7&)@1^)8)(@*@23#-%3189)45+6&8%0756!6+!+6"))
 
 
 
