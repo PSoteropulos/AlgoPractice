@@ -1,5 +1,21 @@
 def minimumMoves(s):
-    pass
+    copy = [*s]
+    count = 0
+    running = True
+    while (running):
+        changed = False
+        for i in range(len(copy)):
+            if (copy[i] == "X"):
+                copy[i] = "O"
+                if (i+1<len(copy)):
+                    copy[i+1] = "O"
+                if (i+2<len(copy)):
+                    copy[i+2] = "O"
+                changed = True
+                count += 1
+        if (not changed):
+            running = False
+    return count
 
 
 
