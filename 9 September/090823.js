@@ -1,5 +1,19 @@
 const furthestDistanceFromOrigin = (moves) => {
-    
+    let underScoreCount = 0
+    let rCount = 0
+    let lCount = 0
+    for (let i=0; i<moves.length; i++){
+        if (moves[i] === "_"){
+            underScoreCount ++
+        }
+        else if (moves[i] === "R"){
+            rCount ++
+        }
+        else if (moves[i] === "L"){
+            lCount ++
+        }
+    }
+    return underScoreCount + (Math.abs(rCount-lCount))
 };
 
 
