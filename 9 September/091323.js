@@ -1,0 +1,48 @@
+const thousandSeparator = (n) => {
+    
+};
+
+
+
+
+
+
+
+console.log(thousandSeparator(987))
+console.log(thousandSeparator(1234))
+
+
+
+
+
+
+
+
+// 1556. Thousand Separator
+// Easy
+// Topics
+// Companies
+// Hint
+// Given an integer n, add a dot (".") as the thousands separator and return it in string format.
+
+ 
+
+// Example 1:
+
+// Input: n = 987
+// Output: "987"
+// Example 2:
+
+// Input: n = 1234
+// Output: "1.234"
+ 
+
+// Constraints:
+
+// 0 <= n <= 231 - 1
+// Accepted
+// 45.1K
+// Submissions
+// 83.3K
+// Acceptance Rate
+// 54.2%
