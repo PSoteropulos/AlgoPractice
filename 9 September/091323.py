@@ -1,5 +1,17 @@
 def thousandSeparator(n):
     stringArray = [*str(n)]
+    while True:
+        count = 0
+        stop = -1
+        for i in range(len(stringArray), stop, -1 ):
+            count += 1
+            if count == 4:
+                stringArray.insert(i, ".")
+                count = 1
+                stop += -1
+            if not i-1:
+                return "".join(stringArray)
+
 
 
 
