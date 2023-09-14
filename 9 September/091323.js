@@ -1,5 +1,21 @@
 const thousandSeparator = (n) => {
-    
+    let stringArray = n.toString().split("")
+    let running = true
+    while (running) {
+        let count = 0
+        for (let i = stringArray.length;; i--){
+            count ++
+            if (!stringArray[i-1]){
+                running = false
+                break
+            }
+            else if (count === 4){
+                stringArray.splice(i, 0, ".")
+                count = 1
+            }
+        }
+    }
+    return stringArray.join("")
 };
 
 
