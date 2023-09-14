@@ -1,5 +1,5 @@
 def thousandSeparator(n):
-    pass
+    stringArray = [*str(n)]
 
 
 
