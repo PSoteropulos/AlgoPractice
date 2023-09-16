@@ -1,5 +1,6 @@
+from math import floor
 def accountBalanceAfterPurchase(purchaseAmount):
-    pass
+    return(100-(floor(purchaseAmount/10+0.5))*10)
 
 
 
@@ -7,7 +8,7 @@ def accountBalanceAfterPurchase(purchaseAmount):
 
 print(accountBalanceAfterPurchase(9))
 print(accountBalanceAfterPurchase(15))
-
+print(accountBalanceAfterPurchase(5))
 
 
 
