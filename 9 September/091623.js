@@ -1,6 +1,25 @@
 const isFascinating = (n) => {
     let numString = n.toString() + (n*2).toString() + (n*3).toString()
-    console.log(numString)
+    let numSet = new Set(numString)
+    for (let i=1; i<10; i++){
+        if (numSet.has("0")){
+            return false
+        }
+        else if (!numSet.has(`${i}`)){
+            return false
+        }
+    }
+    let numArray = Array.from(numSet)
+    let reString = ""
+    for (let i=0;i<9;i++){
+        reString += numArray[i].toString()
+    }
+    for (let i=0;i<numString.length; i++){
+        if (numString[i] !== reString[i]){
+            return false
+        }
+    }
+    return true
 };
 
 
