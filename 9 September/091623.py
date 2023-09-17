@@ -1,5 +1,22 @@
 def isFascinating(n):
-    pass
+    numString = str(n) + str(n*2) + str(n*3)
+    numSet = []
+    for i in range(len(numString)):
+        if numString[i] not in numSet:
+            numSet.append(numString[i])
+    for i in range(1,10):
+        if "0" in numSet:
+            return False
+        elif str(i) not in numSet:
+            return False
+    numArray = list(numSet)
+    reString = ""
+    for i in range(9):
+        reString += str(numArray[i])
+    for i in range(len(numString)):
+        if (numString[i] != reString[i]):
+            return False
+    return True
 
 
 
