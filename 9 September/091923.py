@@ -1,5 +1,13 @@
 def findDifference(nums1, nums2):
-    pass
+    set1 = set()
+    set2 = set()
+    for num in nums1:
+        if num not in nums2:
+            set1.add(num)
+    for num in nums2:
+        if num not in nums1:
+            set2.add(num)
+    return [list(set1), list(set2)]
 
 
 
