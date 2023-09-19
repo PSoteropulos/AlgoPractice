@@ -1,5 +1,9 @@
 const duplicateZeros = (arr) => {
-    
+    for (let i = 1; i < arr.length; i++){
+        if (i-1 === 0){
+            arr.splice(i, 0, 0)
+        }
+    }
 };
 
 
