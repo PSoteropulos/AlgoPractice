@@ -1,5 +1,10 @@
 def minMovesToSeat(seats, students):
-    pass
+    total = 0
+    seats.sort()
+    students.sort()
+    for i in range(len(seats)):
+        total += abs(seats[i]-students[i])
+    return total
 
 
 
