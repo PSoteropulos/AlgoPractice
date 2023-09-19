@@ -1,5 +1,10 @@
 def removeTrailingZeros(num):
-    pass
+    numString = [*num]
+    for i in range(len(numString)-1, -1, -1):
+        if (numString[i] == "0"):
+            numString.pop()
+        else: break
+    return "".join(numString)
 
 
 
