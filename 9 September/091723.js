@@ -1,5 +1,12 @@
 const removeTrailingZeros = (num) => {
-    
+    let numString = num.split("")
+    for (let i=numString.length-1; i>=0; i--){
+        if (numString[i] === "0"){
+            numString.pop()
+        }
+        else break
+    }
+    return numString.join("")
 };
 
 
