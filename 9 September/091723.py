@@ -1,54 +1,47 @@
-def duplicateZeros(arr):
+def removeTrailingZeros(num):
     pass
 
 
 
 
 
-
-print(duplicateZeros([1,0,2,3,0,4,5,0]))
-print(duplicateZeros([1,2,3]))
-
+print(removeTrailingZeros("51230100"))
+print(removeTrailingZeros("123"))
 
 
 
 
-# Code
 
-# Testcase
-# Testcase
-# Result
 
-# 1089. Duplicate Zeros
+# 2710. Remove Trailing Zeros From a String
 # Easy
 # Topics
 # Companies
 # Hint
-# Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
-
-# Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
+# Given a positive integer num represented as a string, return the integer num without trailing zeros as a string.
 
  
 
 # Example 1:
 
-# Input: arr = [1,0,2,3,0,4,5,0]
-# Output: [1,0,0,2,3,0,0,4]
-# Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+# Input: num = "51230100"
+# Output: "512301"
+# Explanation: Integer "51230100" has 2 trailing zeros, we remove them and return integer "512301".
 # Example 2:
 
-# Input: arr = [1,2,3]
-# Output: [1,2,3]
-# Explanation: After calling your function, the input array is modified to: [1,2,3]
+# Input: num = "123"
+# Output: "123"
+# Explanation: Integer "123" has no trailing zeros, we return integer "123".
  
 
 # Constraints:
 
-# 1 <= arr.length <= 104
-# 0 <= arr[i] <= 9
+# 1 <= num.length <= 1000
+# num consists of only digits.
+# num doesn't have any leading zeros.
 # Accepted
-# 374.6K
+# 41.7K
 # Submissions
-# 726.3K
+# 53.2K
 # Acceptance Rate
-# 51.6%
+# 78.3%
