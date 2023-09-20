@@ -1,5 +1,11 @@
 def generateTheString(n):
-    pass
+    string = ""
+    if (n%2==0):
+        string += "a"*(n-1)
+        string += "b"
+    else:
+        string += "a"*(n)
+    return string
 
 
 
