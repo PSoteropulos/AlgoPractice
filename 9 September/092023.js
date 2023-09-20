@@ -1,5 +1,13 @@
 const generateTheString = (n) => {
-    
+    let string = ""
+    if (n%2===0){
+        string += "a".repeat(n-1)
+        string += "b"
+    }
+    else {
+        string += "a".repeat(n)
+    }
+    return string
 };
 
 
