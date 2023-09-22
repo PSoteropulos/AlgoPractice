@@ -1,5 +1,6 @@
 def findNonMinOrMax(nums):
-    pass
+    nums.sort()
+    return -1 if len(nums)<3 else nums[1]
 
 
 
