@@ -1,5 +1,6 @@
 const findNonMinOrMax = (nums) => {
-    
+    nums.sort((a,b)=>a-b)
+    return nums.length<3 ? -1 : nums[1]
 };
 
 
