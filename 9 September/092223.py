@@ -1,5 +1,9 @@
 def numberOfPoints(nums):
-    pass
+    pointSet = set()
+    for pair in nums:
+        for i in range(pair[0], pair[1]+1):
+            pointSet.add(i)
+    return len(pointSet)
 
 
 
