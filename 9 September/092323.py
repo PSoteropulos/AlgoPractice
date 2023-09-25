@@ -1,5 +1,37 @@
 def sortString(s):
-    pass
+    sortedArr = [*s]
+    sortedArr.sort()
+    result = ''
+    while len(sortedArr):
+        smallRunning = True
+        bigRunning = True
+        if (sortedArr[0]):
+            result += sortedArr[0]
+            sortedArr.pop(0)
+        while (smallRunning) :
+            smallChange = False
+            for i in range(len(sortedArr)):
+                if sortedArr[i]>result[len(result)-1]:
+                    result += sortedArr[i]
+                    sortedArr.pop(i)
+                    smallChange = True
+                    break
+            if not smallChange:
+                smallRunning = False
+        if (len(sortedArr)>0) :
+            result += sortedArr[len(sortedArr)-1]
+            sortedArr.pop(len(sortedArr)-1)
+        while (bigRunning) :
+            bigChange = False
+            for i in range(len(sortedArr)-1, -1, -1):
+                if (sortedArr[i]<result[len(result)-1]):
+                    result += sortedArr[i]
+                    sortedArr.pop(i)
+                    bigChange = True
+                    break
+            if not bigChange:
+                bigRunning = False
+    return result
 
 
 
