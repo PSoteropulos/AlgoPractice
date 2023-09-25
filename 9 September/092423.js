@@ -1,20 +1,18 @@
 const makeFancyString = (s) => {
-    let stringArray = s.split("")
-    let running = true
-    while (running) {
-        let changed = false
-        for (let i=0;i<stringArray.length-2; i++){
-            if (stringArray[i]===stringArray[i+1] && stringArray[i]===stringArray[i+2]){
-                stringArray.splice(i,1)
-                changed = true
-                break
-            }
+    let result = '';
+    let count = 1;
+    for (let i = 0; i < s.length; i++) {
+        if (i > 0 && s[i] === s[i - 1]) {
+            count++;
+        } 
+        else {
+            count = 1;
         }
-        if (!changed){
-            running = false
+        if (count < 3) {
+            result += s[i];
         }
     }
-    return stringArray.join("")
+    return result;
 };
 
 
