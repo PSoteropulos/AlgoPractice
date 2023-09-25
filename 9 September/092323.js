@@ -1,5 +1,48 @@
 const sortString = (s) => {
-    
+    let sortedArr = s.split("").sort()
+    let result = ''
+    while (sortedArr.length) {
+        console.log(sortedArr)
+        let smallRunning = true
+        let bigRunning = true
+        if (sortedArr[0]) {
+            result += sortedArr[0]
+            sortedArr.splice(0,1)
+        }
+        while (smallRunning) {
+            let smallChange = false
+            for (let i=0;i<sortedArr.length;i++){
+                if (sortedArr[i]>result[result.length-1]){
+                    result += sortedArr[i]
+                    sortedArr.splice(i,1)
+                    smallChange = true
+                    break
+                }
+            }
+            if (!smallChange){
+                smallRunning = false
+            }
+        }
+        if (sortedArr[sortedArr.length-1]) {
+            result += sortedArr[sortedArr.length-1]
+            sortedArr.splice(sortedArr.length-1,1)
+        }
+        while (bigRunning) {
+            let bigChange = false
+            for (let i=sortedArr.length-1; i>=0; i--){
+                if (sortedArr[i]<result[result.length-1]){
+                    result += sortedArr[i]
+                    sortedArr.splice(i,1)
+                    bigChange = true
+                    break
+                }
+            }
+            if (!bigChange){
+                bigRunning = false
+            }
+        }
+    }
+    return result
 };
 
 
