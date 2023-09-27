@@ -1,46 +1,51 @@
-def rotateString(s, goal):
+def detectCapitalUse(word):
     pass
 
 
 
 
 
-print(rotateString(s = "abcde", goal = "cdeab"))
-print(rotateString(s = "abcde", goal = "abced"))
+
+
+print(detectCapitalUse("USA"))
+print(detectCapitalUse("FlaG"))
 
 
 
 
 
 
-# 796. Rotate String
+
+# 520. Detect Capital
 # Easy
 # Topics
 # Companies
-# Given two strings s and goal, return true if and only if s can become goal after some number of shifts on s.
+# We define the usage of capitals in a word to be right when one of the following cases holds:
 
-# A shift on s consists of moving the leftmost character of s to the rightmost position.
+# All letters in this word are capitals, like "USA".
+# All letters in this word are not capitals, like "leetcode".
+# Only the first letter in this word is capital, like "Google".
+# Given a string word, return true if the usage of capitals in it is right.
 
-# For example, if s = "abcde", then it will be "bcdea" after one shift.
  
 
 # Example 1:
 
-# Input: s = "abcde", goal = "cdeab"
+# Input: word = "USA"
 # Output: true
 # Example 2:
 
-# Input: s = "abcde", goal = "abced"
+# Input: word = "FlaG"
 # Output: false
  
 
 # Constraints:
 
-# 1 <= s.length, goal.length <= 100
-# s and goal consist of lowercase English letters.
+# 1 <= word.length <= 100
+# word consists of lowercase and uppercase English letters.
 # Accepted
-# 243.8K
+# 403.9K
 # Submissions
-# 432.3K
+# 712K
 # Acceptance Rate
-# 56.4%
+# 56.7%
