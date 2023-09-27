@@ -1,5 +1,14 @@
 const intersect = (nums1, nums2) => {
-    
+    let longer = nums1.length>=nums2.length? nums1 : nums2
+    let secondCopy = nums1.length>=nums2.length? nums2 : nums1
+    let answerArray = []
+    for (let i = 0; i <longer.length; i++){
+        if (secondCopy.includes(longer[i])){
+            answerArray.push(longer[i])
+            secondCopy.splice(secondCopy.indexOf(longer[i]),1)
+        }
+    }
+    return answerArray
 };
 
 
@@ -8,7 +17,7 @@ const intersect = (nums1, nums2) => {
 
 
 console.log(intersect(nums1 = [1,2,2,1], nums2 = [2,2]))
-console.log(intersect(nums1 = [1,2,2,1], nums2 = [2,2]))
+console.log(intersect(nums1 = [4,9,5], nums2 = [9,4,9,8,4]))
 
 
 
