@@ -1,5 +1,13 @@
 def detectCapitalUse(word):
-    pass
+    first = word[0].isupper()
+    restUpper = True
+    restLower = True
+    for i in range(1,len(word)):
+        if word[i].isupper():
+            restLower = False
+        if word[i].islower():
+            restUpper = False
+    return True if (first and restUpper) or (first and restLower) or (not first and restLower) else False
 
 
 
