@@ -1,5 +1,25 @@
 const detectCapitalUse = (word) => {
-    
+    let first = (word[0].toUpperCase()===word[0])
+    let restUpper = true
+    let restLower = true
+    for (let i=1; i<word.length; i++){
+        if (word[i].toUpperCase() !== word[i]){
+            restUpper = false
+        }
+        if (word[i].toLowerCase() !== word[i]){
+            restLower = false
+        }
+    }
+    if (first && restUpper){
+        return true
+    }
+    if (first && restLower){
+        return true
+    }
+    if (!first && restLower){
+        return true
+    }
+    return false
 };
 
 
@@ -9,7 +29,7 @@ const detectCapitalUse = (word) => {
 
 console.log(detectCapitalUse("USA"))
 console.log(detectCapitalUse("FlaG"))
-
+console.log(detectCapitalUse("Leetcode"))
 
 
 
