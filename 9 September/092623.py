@@ -1,6 +1,12 @@
 def intersect(nums1, nums2):
-    pass
-
+    longer = nums1 if len(nums1)>=len(nums2) else nums2
+    secondCopy = nums2 if len(nums1)>=len(nums2) else nums1
+    answerArray = []
+    for num in longer:
+        if num in secondCopy:
+            answerArray.append(num)
+            secondCopy.pop(secondCopy.index(num))
+    return answerArray
 
 
 
