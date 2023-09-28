@@ -1,8 +1,18 @@
 const getMinDistance = (nums, target, start) => {
-    if (nums.indexOf(target)===start){
-        return nums.indexOf(target)
+    let min = Infinity
+    for (let i=start;i>=0;i--){
+        if (nums[i]===target&&Math.abs(i-start)<min){
+            min = Math.abs(i-start)
+        }
     }
-    return Math.abs(nums.indexOf(target)-start)
+    if (min!==0){
+        for (let i=start;i<nums.length;i++){
+            if (nums[i]===target&&Math.abs(i-start)<min){
+                min = Math.abs(i-start)
+            }
+        }
+    }
+    return min
 };
 
 
