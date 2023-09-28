@@ -1,5 +1,8 @@
 const getMinDistance = (nums, target, start) => {
-    
+    if (nums.indexOf(target)===start){
+        return nums.indexOf(target)
+    }
+    return Math.abs(nums.indexOf(target)-start)
 };
 
 
