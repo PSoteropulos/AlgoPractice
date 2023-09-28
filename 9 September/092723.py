@@ -1,6 +1,13 @@
 def getMinDistance(nums, target, start):
-    pass
-
+    min = float('inf')
+    for i in range(start, -1, -1):
+        if (nums[i]==target and abs(i-start)<min):
+            min = abs(i-start)
+    if (min!=0):
+        for i in range(start,len(nums)):
+            if (nums[i]==target and abs(i-start)<min):
+                min = abs(i-start)
+    return min
 
 
 
