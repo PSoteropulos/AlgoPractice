@@ -1,5 +1,15 @@
 def pivotIndex(nums):
-    pass
+    for i in range(len(nums)):
+        leftSum = 0
+        rightSum = 0
+        for j in range(len(nums)):
+            if (j<i):
+                leftSum += nums[j]
+            if (j>i):
+                rightSum += nums[j]
+        if (leftSum == rightSum):
+            return i
+    return -1
 
 
 
