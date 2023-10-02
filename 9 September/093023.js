@@ -1,5 +1,15 @@
 const reformat = (s) => {
-    
+    let digits = []
+    let letters = []
+    for (let i=0; i<s.length; i++){
+        if (isNaN(s[i]) === true){
+            letters.push(s[i])
+        }
+        else {
+            digits.push(s[i])
+        }
+    }
+    if (Math.abs(digits.length - letters.length))
 };
 
 
