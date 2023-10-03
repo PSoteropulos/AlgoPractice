@@ -1,6 +1,7 @@
 const reformat = (s) => {
     let digits = []
     let letters = []
+    let newString = ""
     for (let i=0; i<s.length; i++){
         if (isNaN(s[i]) === true){
             letters.push(s[i])
@@ -9,7 +10,25 @@ const reformat = (s) => {
             digits.push(s[i])
         }
     }
-    if (Math.abs(digits.length - letters.length))
+    if (Math.abs(digits.length - letters.length)===1 || Math.abs(digits.length - letters.length)===0){
+        if (digits.length>=letters.length){
+            for (let i=0; i<digits.length;i++){
+                newString += digits[i]
+                if (letters[i]){
+                    newString += letters[i]
+                }
+            }
+        }
+        else {
+            for (let i=0; i<letters.length;i++){
+                newString += letters[i]
+                if (digits[i]){
+                    newString += digits[i]
+                }
+            }
+        }
+    }
+    return newString
 };
 
 
