@@ -1,6 +1,18 @@
 def isHappy(n):
-    pass
-
+    running=True
+    seenSet = set()
+    array = [*str(n)]
+    while running:
+        newNum = 0
+        for num in array:
+            newNum += (int(num)*int(num))
+        if newNum == 1:
+            return True
+        array = [*str(newNum)]
+        if newNum in seenSet:
+            return False
+        else:
+            seenSet.add(newNum)
 
 
 
