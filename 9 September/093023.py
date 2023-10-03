@@ -1,5 +1,24 @@
 def reformat(s):
-    pass
+    digits = []
+    letters = []
+    newString = ""
+    for char in s:
+        if (char.isalpha()):
+            letters.append(char)
+        else:
+            digits.append(char)
+    if abs(len(digits) - len(letters))==1 or abs(len(digits) - len(letters))==0:
+        if len(digits)>=len(letters):
+            for i in range(len(digits)):
+                newString += digits[i]
+                if i < len(letters):
+                    newString += letters[i]
+        else:
+            for i in range(len(letters)):
+                newString += letters[i]
+                if i < len(digits):
+                    newString += digits[i]
+    return newString
 
 
 
@@ -9,7 +28,7 @@ def reformat(s):
 print(reformat("a0b1c2"))
 print(reformat("leetcode"))
 print(reformat("1229857369"))
-
+print(reformat("covid2019"))
 
 
 
