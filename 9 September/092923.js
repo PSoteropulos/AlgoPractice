@@ -1,5 +1,24 @@
 const isHappy = (n) => {
-    
+    let running = true
+    let seenSet = new Set()
+    let array = n.toString().split("")
+    while (running) {
+        let newNum = 0
+        for (let i = 0; i < array.length; i++){
+            newNum += (Number(array[i]) * Number(array[i]))
+        }
+        console.log(newNum)
+        if (newNum === 1){
+            return true
+        }
+        array = newNum.toString().split("")
+        if (seenSet.has(newNum)){
+            return false
+        }
+        else {
+            seenSet.add(newNum)
+        }
+    }
 };
 
 
@@ -7,10 +26,10 @@ const isHappy = (n) => {
 
 
 
-console.log(isHappy(19))
-console.log(isHappy(2))
-
-
+// console.log(isHappy(19))
+// console.log(isHappy(2))
+// console.log(isHappy(7))
+console.log(isHappy(3))
 
 
 
