@@ -1,6 +1,13 @@
 def minNumber(nums1, nums2):
-    pass
-
+    for i in range(10):
+        if i in nums1 and i in nums2:
+            return i
+    nums1.sort()
+    nums2.sort()
+    if nums1[0]<nums2[0]:
+        return int(str(nums1[0]) + str(nums2[0]))
+    else:
+        return int(str(nums2[0]) + str(nums1[0]))
 
 
 
