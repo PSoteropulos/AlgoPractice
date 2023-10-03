@@ -1,5 +1,17 @@
 const minNumber = (nums1, nums2) => {
-    
+    for (let i = 1; i<10;i++){
+        if (nums1.includes(i) && nums2.includes(i)){
+            return i
+        }
+    }
+    nums1.sort((a,b)=>a-b)
+    nums2.sort((a,b)=>a-b)
+    if (nums1[0]<nums2[0]){
+        return Number(nums1[0].toString()+nums2[0].toString())
+    }
+    else {
+        return Number(nums2[0].toString()+nums1[0].toString())
+    }
 };
 
 
