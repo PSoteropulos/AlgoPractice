@@ -1,5 +1,16 @@
 const isCovered = (ranges, left, right) => {
-    
+    let seen = new Set()
+    for (let i=0;i<ranges.length;i++){
+        for (let j=ranges[i][0]; j<=ranges[i][1];j++){
+            seen.add(j)
+        }
+    }
+    for (let i=left;i<=right;i++){
+        if (!seen.has(i)){
+            return false
+        }
+    }
+    return true
 };
 
 
