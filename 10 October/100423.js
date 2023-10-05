@@ -1,5 +1,22 @@
 const reverseVowels = (s) => {
-    
+    let vowelList = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    let newVowels = []
+    let answerString = ""
+    for (let i=0; i<s.length; i++){
+        if (vowelList.includes(s[i])){
+            newVowels.push(s[i])
+        }
+    }
+    for (let i = 0; i<s.length; i++){
+        if (vowelList.includes(s[i])){
+            answerString += newVowels[newVowels.length-1]
+            newVowels.pop()
+        }
+        else {
+            answerString += s[i]
+        }
+    }
+    return answerString
 };
 
 
