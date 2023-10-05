@@ -1,5 +1,17 @@
 def reverseVowels(s):
-    pass
+    vowelList = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    newVowels = []
+    answerString = ""
+    for letter in s:
+        if letter in vowelList:
+            newVowels.append(letter)
+    for i in range(len(s)):
+        if s[i] in vowelList:
+            answerString += newVowels[len(newVowels)-1]
+            newVowels.pop()
+        else:
+            answerString += s[i]
+    return answerString
 
 
 
