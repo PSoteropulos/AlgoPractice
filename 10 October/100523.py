@@ -1,6 +1,17 @@
 def mostFrequentEven(nums):
-    pass
-
+    nums.sort(reverse=True)
+    object = {}
+    maxOccurences = 0
+    most = -1
+    for i in range(len(nums)):
+        if (nums[i]%2==0) and (f'{nums[i]}' in object):
+            object[f'{nums[i]}'] += 1
+        elif nums[i]%2==0:
+            object[f'{nums[i]}'] = 1
+        if (f'{nums[i]}' in object) and (object[f'{nums[i]}'] >= maxOccurences):
+            maxOccurences = object[f'{nums[i]}']
+            most = nums[i]
+    return most
 
 
 
