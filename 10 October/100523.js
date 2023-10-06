@@ -1,5 +1,21 @@
 const mostFrequentEven = (nums) => {
-    
+    nums.sort((a,b)=>b-a)
+    let object = {}
+    let maxOccurences = 0
+    let most = -1
+    for (let i = 0; i<nums.length;i++){
+        if ((nums[i]%2===0) && (`${nums[i]}` in object)){
+            object[`${nums[i]}`] += 1
+        }
+        else if (nums[i]%2===0){
+            object[`${nums[i]}`] = 1
+        }
+        if (object[`${nums[i]}`] >= maxOccurences){
+            maxOccurences = object[`${nums[i]}`]
+            most = nums[i]
+        }
+    }
+    return most
 };
 
 
@@ -11,7 +27,7 @@ const mostFrequentEven = (nums) => {
 console.log(mostFrequentEven([0,1,2,2,4,4,1]))
 console.log(mostFrequentEven([4,4,4,9,2,4]))
 console.log(mostFrequentEven([29,47,21,41,13,37,25,7]))
-
+console.log(mostFrequentEven([8154,9139,8194,3346,5450,9190,133,8239,4606,8671,8412,6290]))
 
 
 
