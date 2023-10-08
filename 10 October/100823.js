@@ -1,5 +1,20 @@
 const rearrangeArray = (nums) => {
-    
+    let positives = []
+    let negatives = []
+    let answerArray = []
+    for (let i = 0; i<nums.length; i++){
+        if (nums[i]<0){
+            negatives.push(nums[i])
+        }
+        else if (nums[i]>0) {
+            positives.push(nums[i])
+        }
+    }
+    for (let i=0; i<positives.length; i++){
+        answerArray.push(positives[i])
+        answerArray.push(negatives[i])
+    }
+    return answerArray
 };
 
 
