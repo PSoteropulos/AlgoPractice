@@ -1,5 +1,13 @@
 def processQueries(queries, m):
-    pass
+    permArray = []
+    for i in range(1, m+1):
+        permArray.append(i)
+    answerArray = []
+    for i in range(len(queries)):
+        answerArray.append(permArray.index(queries[i]))
+        permArray.pop(permArray.index(queries[i]))
+        permArray.insert(0, queries[i])
+    return answerArray
 
 
 
