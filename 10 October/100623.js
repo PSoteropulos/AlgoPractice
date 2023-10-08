@@ -1,5 +1,15 @@
 const processQueries = (queries, m) => {
-    
+    let permArray = []
+    for (let i = 1; i<=m; i++){
+        permArray.push(i)
+    }
+    let answerArray = []
+    for (let i=0;i<queries.length;i++){
+        answerArray.push(permArray.indexOf(queries[i]))
+        permArray.splice(permArray.indexOf(queries[i]), 1)
+        permArray.splice(0,0, queries[i])
+    }
+    return answerArray
 };
 
 
