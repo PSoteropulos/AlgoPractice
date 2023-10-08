@@ -1,5 +1,16 @@
 def rearrangeArray(nums):
-    pass
+    positives = []
+    negatives = []
+    answerArray = []
+    for num in nums:
+        if num<0:
+            negatives.append(num)
+        elif num>0:
+            positives.append(num)
+    for i in range(len(positives)):
+        answerArray.append(positives[i])
+        answerArray.append(negatives[i])
+    return answerArray
 
 
 
