@@ -1,5 +1,10 @@
+import math
+
 def minOperations(n):
-    pass
+    total = 0
+    for i in range(math.floor(n/2)):
+        total += (n - (2*i+1))
+    return total
 
 
 
