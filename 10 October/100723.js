@@ -1,5 +1,9 @@
 const minOperations = (n) => {
-    
+    let total = 0
+    for (let i = 0; i<(n/2);i++){
+        total += (n - (2*i+1))
+    }
+    return total
 };
 
 
