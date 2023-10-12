@@ -1,6 +1,16 @@
 def countPoints(rings):
-    pass
-
+    object = {}
+    count = 0
+    for i in range(0, len(rings), 2):
+        if f'{rings[i+1]}' in object:
+            object[f'{rings[i+1]}'].append(f'{rings[i]}')
+        else:
+            object[f'{rings[i+1]}'] = [f'{rings[i]}']
+    for key in object:
+        localSet = set(object[key])
+        if "R" in localSet and "G" in localSet and "B" in localSet:
+            count += 1
+    return count
 
 
 
