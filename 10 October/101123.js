@@ -1,5 +1,21 @@
 const findThePrefixCommonArray = (A, B) => {
-    
+    let answerArray = []
+    for (let i = 0; i<A.length; i++){
+        let localArrayA = []
+        let localArrayB = []
+        let count = 0
+        for (let j=0; j<=i; j++){
+            localArrayA.push(A[j])
+            localArrayB.push(B[j])
+        }
+        for (let k=0;k<localArrayA.length;k++){
+            if (localArrayB.includes(localArrayA[k])){
+                count ++
+            }
+        }
+        answerArray.push(count)
+    }
+    return answerArray
 };
 
 
