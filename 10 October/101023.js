@@ -1,5 +1,21 @@
 const countPoints = (rings) => {
-    
+    let object = {}
+    let count = 0
+    for (let i=0; i<rings.length; i+=2){
+        if (`${rings[i+1]}` in object){
+            object[`${rings[i+1]}`].push(`${rings[i]}`)
+        }
+        else {
+            object[`${rings[i+1]}`] = [`${rings[i]}`]
+        }
+    }
+    for (let i=0; i<Object.entries(object).length;i++){
+        let localSet = new Set(Object.entries(object)[i][1])
+        if (localSet.has("R") && localSet.has("G") && localSet.has("B")){
+            count ++
+        }
+    }
+    return count
 };
 
 
