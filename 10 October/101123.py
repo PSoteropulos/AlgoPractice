@@ -1,6 +1,17 @@
 def findThePrefixCommonArray(A, B):
-    pass
-
+    answerArray = []
+    for i in range(len(A)):
+        localArrayA = []
+        localArrayB = []
+        count = 0
+        for j in range(i+1):
+            localArrayA.append(A[j])
+            localArrayB.append(B[j])
+        for k in range(len(localArrayA)):
+            if localArrayA[k] in localArrayB:
+                count += 1
+        answerArray.append(count)
+    return answerArray
 
 
 
