@@ -1,5 +1,18 @@
 const minPairSum = (nums) => {
-    
+    nums.sort((a,b)=>a-b)
+    let pairArray = []
+    let pairSum = 0
+    while (nums.length){
+        pairArray.push([nums[0], nums[nums.length-1]])
+        nums.splice(0,1)
+        nums.pop()
+    }
+    for (let i = 0; i<pairArray.length;i++){
+        if ((pairArray[i][0] + pairArray[i][1]) > pairSum){
+            pairSum = (pairArray[i][0] + pairArray[i][1])
+        }
+    }
+    return pairSum
 };
 
 
