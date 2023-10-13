@@ -1,5 +1,15 @@
 def minPairSum(nums):
-    pass
+    nums.sort()
+    pairArray = []
+    pairSum = 0
+    while (len(nums)):
+        pairArray.append([nums[0], nums[len(nums)-1]])
+        nums.pop(0)
+        nums.pop()
+    for i in range(len(pairArray)):
+        if ((pairArray[i][0] + pairArray[i][1]) > pairSum):
+            pairSum = (pairArray[i][0] + pairArray[i][1])
+    return pairSum
 
 
 
