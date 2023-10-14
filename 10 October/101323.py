@@ -1,5 +1,13 @@
 def minTimeToVisitAllPoints(points):
-    pass
+    position = [points[0][0], points[0][1]]
+    count = 0
+    for i in range(1, len(points)):
+        if abs(points[i][0] - position[0]) >= abs(points[i][1] - position[1]):
+            count += abs(points[i][0] - position[0])
+        else:
+            count += abs(points[i][1] - position[1])
+        position = [points[i][0], points[i][1]]
+    return count
 
 
 
