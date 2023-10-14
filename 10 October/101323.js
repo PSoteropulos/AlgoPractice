@@ -1,5 +1,16 @@
 const minTimeToVisitAllPoints = (points) => {
-    
+    let position = [points[0][0], points[0][1]]
+    let count = 0
+    for (let i = 1; i<points.length; i++){
+        if (Math.abs(points[i][0] - position[0]) >= Math.abs(points[i][1] - position[1])){
+            count += Math.abs(points[i][0] - position[0])
+        }
+        else {
+            count += Math.abs(points[i][1] - position[1])
+        }
+        position = [points[i][0], points[i][1]]
+    }
+    return count
 };
 
 
