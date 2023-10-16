@@ -1,5 +1,9 @@
 def arrayPairSum(nums):
-    pass
+    answer = 0
+    nums.sort()
+    for i in range(0, len(nums), 2):
+        answer+=nums[i]
+    return answer
 
 
 
