@@ -1,5 +1,23 @@
 const countGoodRectangles = (rectangles) => {
-    
+    let maxLength = 0
+    let count = 0
+    for (let i=0; i<rectangles.length; i++){
+        let lower = undefined
+        if (rectangles[i][0]<=rectangles[i][1]){
+            lower = rectangles[i][0]
+        }
+        else {
+            lower = rectangles[i][1]
+        }
+        if (lower > maxLength){
+            maxLength = lower
+            count = 1
+        }
+        else if (maxLength == lower){
+            count++
+        }
+    }
+    return count
 };
 
 
