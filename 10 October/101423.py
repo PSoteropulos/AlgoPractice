@@ -1,5 +1,18 @@
 def countGoodRectangles(rectangles):
-    pass
+    maxLength = 0
+    count = 0
+    for pair in rectangles:
+        lower = None
+        if (pair[0]<=pair[1]):
+            lower = pair[0]
+        else :
+            lower = pair[1]
+        if (lower > maxLength):
+            maxLength = lower
+            count = 1
+        elif (maxLength == lower):
+            count+=1
+    return count
 
 
 
