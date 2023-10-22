@@ -1,5 +1,18 @@
 const countStudents = (students, sandwiches) =>{
-    
+    let turnCount = 0
+    while (turnCount !== students.length){
+        if (students[0] === sandwiches[0]){
+            students.splice(0,1)
+            sandwiches.splice(0,1)
+            turnCount = 0
+        }
+        else {
+            students.push(students[0])
+            students.splice(0,1)
+            turnCount ++
+        }
+    }
+    return students.length
 };
 
 
