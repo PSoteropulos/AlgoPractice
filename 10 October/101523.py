@@ -1,12 +1,12 @@
-def oddCells(m, n, indices):
+def countDistinctIntegers(nums):
     pass
 
 
 
 
 
-print(oddCells(m = 2, n = 3, indices = [[0,1],[1,1]]))
-print(oddCells(m = 2, n = 2, indices = [[1,1],[0,0]]))
+print(countDistinctIntegers([1,13,10,12,31]))
+print(countDistinctIntegers([2,2,2]))
 
 
 
@@ -14,50 +14,38 @@ print(oddCells(m = 2, n = 2, indices = [[1,1],[0,0]]))
 
 
 
-# 1252. Cells with Odd Values in a Matrix
-# Easy
+# Code
+
+# Testcase
+# Testcase
+# Result
+
+# 2442. Count Number of Distinct Integers After Reverse Operations
+# Medium
 # Topics
 # Companies
 # Hint
-# There is an m x n matrix that is initialized to all 0's. There is also a 2D array indices where each indices[i] = [ri, ci] represents a 0-indexed location to perform some increment operations on the matrix.
+# You are given an array nums consisting of positive integers.
 
-# For each location indices[i], do both of the following:
+# You have to take each integer in the array, reverse its digits, and add it to the end of the array. You should apply this operation to the original integers in nums.
 
-# Increment all the cells on row ri.
-# Increment all the cells on column ci.
-# Given m, n, and indices, return the number of odd-valued cells in the matrix after applying the increment to all locations in indices.
+# Return the number of distinct integers in the final array.
 
  
 
 # Example 1:
 
-
-# Input: m = 2, n = 3, indices = [[0,1],[1,1]]
+# Input: nums = [1,13,10,12,31]
 # Output: 6
-# Explanation: Initial matrix = [[0,0,0],[0,0,0]].
-# After applying first increment it becomes [[1,2,1],[0,1,0]].
-# The final matrix is [[1,3,1],[1,3,1]], which contains 6 odd numbers.
+# Explanation: After including the reverse of each number, the resulting array is [1,13,10,12,31,1,31,1,21,13].
+# The reversed integers that were added to the end of the array are underlined. Note that for the integer 10, after reversing it, it becomes 01 which is just 1.
+# The number of distinct integers in this array is 6 (The numbers 1, 10, 12, 13, 21, and 31).
 # Example 2:
 
-
-# Input: m = 2, n = 2, indices = [[1,1],[0,0]]
-# Output: 0
-# Explanation: Final matrix = [[2,2],[2,2]]. There are no odd numbers in the final matrix.
+# Input: nums = [2,2,2]
+# Output: 1
+# Explanation: After including the reverse of each number, the resulting array is [2,2,2,2,2,2].
+# The number of distinct integers in this array is 1 (The number 2).
  
 
 # Constraints:
-
-# 1 <= m, n <= 50
-# 1 <= indices.length <= 100
-# 0 <= ri < m
-# 0 <= ci < n
- 
-
-# Follow up: Could you solve this in O(n + m + indices.length) time with only O(n + m) extra space?
-
-# Accepted
-# 102.8K
-# Submissions
-# 131K
-# Acceptance Rate
-# 78.5%
