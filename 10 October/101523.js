@@ -1,5 +1,8 @@
 const countDistinctIntegers = (nums) => {
-    
+    for (let i = nums.length-1; i>=0;i--){
+        nums.push(Number(nums[i].toString().split("").reverse().join("")))
+    }
+    return new Set(nums).size
 };
 
 
@@ -9,7 +12,7 @@ const countDistinctIntegers = (nums) => {
 
 console.log(countDistinctIntegers([1,13,10,12,31]))
 console.log(countDistinctIntegers([2,2,2]))
-
+console.log(countDistinctIntegers([89904,846787,965070,396570,847607,625317,851503,143414,954838,837423,988190,916423,771555,680073,575614,967207,965688]))
 
 
 
