@@ -1,5 +1,15 @@
 def countStudents(students, sandwiches):
-    pass
+    turnCount = 0
+    while turnCount != len(students):
+        if (students[0] == sandwiches[0]):
+            students.pop(0)
+            sandwiches.pop(0)
+            turnCount = 0
+        else:
+            students.append(students[0])
+            students.pop(0)
+            turnCount += 1
+    return len(students)
 
 
 
