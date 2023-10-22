@@ -1,5 +1,11 @@
 def frequencySort(nums):
-    pass
+    object = {}
+    for num in nums:
+        if num in object:
+            object[num] += 1
+        else: 
+            object[num] = 1
+    return sorted(nums, key=lambda x: (object[x], -x))
 
 
 
