@@ -1,5 +1,20 @@
 def findMiddleIndex(nums):
-    pass
+    fromLeft = [0]
+    leftTotal = 0
+    fromRight = [0]
+    rightTotal = 0
+    for num in nums:
+        leftTotal += num
+        fromLeft.append(leftTotal)
+    nums.reverse()
+    for num in nums:
+        rightTotal += num
+        fromRight.append(rightTotal)
+    fromRight.reverse()
+    for i in range(len(fromLeft)-1):
+        if fromLeft[i] == fromRight[i+1]:
+            return i
+    return -1
 
 
 
