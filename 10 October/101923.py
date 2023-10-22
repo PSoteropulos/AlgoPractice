@@ -1,5 +1,11 @@
 def alternateDigitSum(n):
-    pass
+    neg = False
+    total = 0
+    array = [*str(n)]
+    for num in array:
+        total += -int(num) if neg else int(num)
+        neg = not neg
+    return total
 
 
 
