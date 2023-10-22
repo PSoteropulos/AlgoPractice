@@ -1,5 +1,24 @@
 const findMiddleIndex = (nums) => {
-    
+    let fromLeft = [0]
+    let leftTotal = 0
+    let fromRight = [0]
+    let rightTotal = 0
+    for (let i = 0; i<nums.length; i++){
+        leftTotal += nums[i]
+        fromLeft.push(leftTotal)
+    }
+    nums.reverse()
+    for (let i = 0; i<nums.length; i++){
+        rightTotal += nums[i]
+        fromRight.push(rightTotal)
+    }
+    fromRight.reverse()
+    for (let i=0; i<fromLeft.length; i++){
+        if (fromLeft[i] == fromRight[i+1]){
+            return i
+        }
+    }
+    return -1
 };
 
 
