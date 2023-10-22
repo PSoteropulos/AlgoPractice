@@ -1,5 +1,9 @@
 def countDistinctIntegers(nums):
-    pass
+    for i in range(len(nums)-1, -1, -1):
+        array = [*str(nums[i])]
+        array.reverse()
+        nums.append(int("".join(array)))
+    return len(set(nums))
 
 
 
