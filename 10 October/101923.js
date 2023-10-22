@@ -1,5 +1,11 @@
 const alternateDigitSum = (n) => {
-    
+    let neg = false 
+    let total = 0
+    for (let i = 0; i<n.toString().length; i++){
+        neg ? total -= Number(n.toString().split("")[i]) : total += Number(n.toString().split("")[i])
+        neg = !neg
+    }
+    return total
 };
 
 
@@ -9,7 +15,7 @@ const alternateDigitSum = (n) => {
 console.log(alternateDigitSum(521))
 console.log(alternateDigitSum(111))
 console.log(alternateDigitSum(886996))
-
+console.log(alternateDigitSum(25))
 
 
 
