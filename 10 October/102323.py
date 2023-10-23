@@ -1,5 +1,14 @@
 def numberOfLines(widths, s):
-    pass
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    currentLine = 0
+    totalLines = 1
+    for i in range(len(s)):
+        if (widths[alphabet.index(s[i])] + currentLine <= 100):
+            currentLine += widths[alphabet.index(s[i])]
+        else:
+            totalLines += 1
+            currentLine = widths[alphabet.index(s[i])]
+    return [totalLines, currentLine]
 
 
 
