@@ -1,5 +1,16 @@
 def countCharacters(words, chars):
-    pass
+    count = 0
+    for i in range(len(words)):
+        copy = [*chars]
+        allGood = True
+        for j in range(len(words[i])):
+            if words[i][j] in copy:
+                copy.pop(copy.index(words[i][j]))
+            else:
+                allGood = False
+        if (allGood):
+            count += len(words[i])
+    return count
 
 
 
