@@ -1,5 +1,36 @@
 const uncommonFromSentences = (s1, s2) => {
-    
+    let array1 = s1.split(" ")
+    let array2 = s2.split(" ")
+    let object1 = {}
+    let object2 = {}
+    let answerArray = []
+    for (let i = 0; i<array1.length; i++){
+        if (array1[i] in object1){
+            object1[array1[i]] ++
+        }
+        else {
+            object1[array1[i]] = 1
+        }
+    }
+    for (let i = 0; i<array2.length; i++){
+        if (array2[i] in object2){
+            object2[array2[i]] ++
+        }
+        else {
+            object2[array2[i]] = 1
+        }
+    }
+    for (key in object1){
+        if (object1[key]===1 && key in object2 === false){
+            answerArray.push(key)
+        }
+    }
+    for (key in object2){
+        if (object2[key]===1 && key in object1 === false){
+            answerArray.push(key)
+        }
+    }
+    return answerArray
 };
 
 
