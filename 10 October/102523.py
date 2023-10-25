@@ -1,5 +1,26 @@
 def uncommonFromSentences(s1, s2):
-    pass
+    array1 = s1.split(" ")
+    array2 = s2.split(" ")
+    object1 = {}
+    object2 = {}
+    answerArray = []
+    for i in range(len(array1)):
+        if (array1[i] in object1):
+            object1[array1[i]] += 1
+        else: 
+            object1[array1[i]] = 1
+    for i in range(len(array2)):
+        if (array2[i] in object2):
+            object2[array2[i]] += 1
+        else:
+            object2[array2[i]] = 1
+    for key in object1:
+        if (object1[key]==1 and key not in object2):
+            answerArray.append(key)
+    for key in object2:
+        if (object2[key]==1 and key not in object1):
+            answerArray.append(key)
+    return answerArray
 
 
 
