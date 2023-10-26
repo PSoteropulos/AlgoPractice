@@ -1,5 +1,10 @@
 def maxDistance(colors):
-    pass
+    biggestGap = 0
+    for i in range(len(colors)):
+        for j in range(len(colors)):
+            if ((colors[i] != colors[j]) and ((abs(i - j))>biggestGap)):
+                biggestGap = abs(i - j)
+    return biggestGap
 
 
 
