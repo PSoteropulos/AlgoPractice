@@ -1,5 +1,15 @@
 const minimumSum = (nums) => {
-    
+    let minSum = 150
+    for (let i=0; i<nums.length-2;i++){
+        for (let j=i+1; j<nums.length-1;j++){
+            for (let k=j+1;k<nums.length;k++){
+                if ((nums[i] < nums[j]) && (nums[k]<nums[j]) && (nums[i]+nums[j]+nums[k]<minSum)){
+                    minSum = nums[i]+nums[j]+nums[k]
+                }
+            }
+        }
+    }
+    return minSum == 150? -1 : minSum
 };
 
 
