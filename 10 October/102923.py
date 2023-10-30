@@ -1,5 +1,12 @@
 def minOperations(nums, k):
-    pass
+    ops = 0
+    seen = set()
+    for i in range(len(nums)-1, -1, -1):
+        if nums[i] <= k:
+            seen.add(nums[i])
+        ops += 1
+        if len(seen) == k:
+            return ops
 
 
 
