@@ -1,5 +1,15 @@
 const minOperations = (nums, k) => {
-    
+    let ops = 0
+    let seen = new Set()
+    for (let i = nums.length-1; i>=0; i--){
+        if (nums[i]<=k){
+            seen.add(nums[i])
+        }
+        ops ++
+        if (seen.size===k){
+            return ops
+        }
+    }
 };
 
 
