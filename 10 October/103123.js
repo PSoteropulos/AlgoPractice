@@ -1,5 +1,16 @@
 const fillCups = (amount) => {
-    
+    let count = 0
+    let running = true
+    while (running){
+        amount.sort((a,b)=>a-b)
+        if (amount[2] > 0){
+            amount[1] --
+            amount[2] --
+            count ++
+        }
+        else running=false
+    }
+    return count
 };
 
 
