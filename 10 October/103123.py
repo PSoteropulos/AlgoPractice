@@ -1,5 +1,12 @@
 def fillCups(amount):
-    pass
+    count = 0
+    amount.sort()
+    while (amount[2]):
+        amount[1] -=1 
+        amount[2] -=1 
+        count +=1 
+        amount.sort()
+    return count
 
 
 
