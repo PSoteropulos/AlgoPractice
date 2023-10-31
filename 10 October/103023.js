@@ -1,5 +1,23 @@
 const minimumRightShifts = (nums) => {
-    
+    let count = 0
+    let block = nums.length
+    while (block) {
+        let sortedNums = [...nums].sort((a,b)=>a-b)
+        let equal = true
+        for (let i = 0; i<nums.length; i++){
+            if (sortedNums[i] !== nums[i]){
+                equal = false
+            }
+        }
+        if (equal) return count
+        else {
+            count ++
+            block --
+            nums.splice(0,0,nums[nums.length-1])
+            nums.pop()
+        }
+    }
+    return -1
 };
 
 
