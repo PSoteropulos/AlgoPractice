@@ -1,5 +1,21 @@
 def minimumRightShifts(nums):
-    pass
+    count = 0
+    block = len(nums)
+    while (block):
+        sortedNums = [*nums]
+        sortedNums.sort()
+        equal = True
+        for i in range(len(nums)):
+            if (sortedNums[i] != nums[i]):
+                equal = False
+        if (equal):
+            return count
+        else:
+            count += 1
+            block -= 1
+            nums.insert(0, nums[len(nums)-1])
+            nums.pop()
+    return -1
 
 
 
