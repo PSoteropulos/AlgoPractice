@@ -1,5 +1,18 @@
 def minimumDifference(nums, k):
-    pass
+    if len(nums) == 1: return 0
+    nums.sort()
+    minDiff = 10**5
+    for i in range(len(nums)-k+1):
+        max = nums[i]
+        min = nums[i]
+        for j in range(i, i+k):
+            if (nums[j]>max):
+                max = nums[j]
+            if (nums[j]<min):
+                min = nums[j]
+        if (max-min < minDiff):
+            minDiff = max-min
+    return minDiff
 
 
 
