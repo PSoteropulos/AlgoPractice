@@ -1,5 +1,18 @@
 def rotateString(s, goal):
-    pass
+    if len(s) != len(goal): return False
+    array = [*s]
+    count = 0
+    iterations = len(array)
+    while iterations:
+        valid = True
+        for i in range(len(array)):
+            if (array[i] != goal[i]):
+                valid = False
+        if valid: return True
+        array.insert(0, array[len(array)-1])
+        array.pop()
+        iterations -= 1
+    return False
 
 
 
