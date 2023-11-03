@@ -1,5 +1,20 @@
 const rotateString = (s, goal) => {
-    
+    let array = [...s]
+    let count = 0
+    let iterations = array.length
+    while (iterations) {
+        let valid = true
+        for (let i=0; i<array.length; i++){
+            if (array[i] !== goal[i]) {
+                valid = false
+            }
+        }
+        if (valid) return true
+        array.splice(0,0,array[array.length-1])
+        array.pop()
+        iterations --
+    }
+    return false
 };
 
 
