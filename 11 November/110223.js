@@ -1,5 +1,23 @@
 const minimumDifference = (nums, k) => {
-    
+    if (nums.length === 1) return 0
+    nums.sort((a,b)=>a-b)
+    let minDiff = Infinity
+    for (let i=0; i<=nums.length-k;i++){
+        let max = nums[i]
+        let min = nums[i]
+        for (let j=i;j<i+k;j++){
+            if (nums[j]>max){
+                max = nums[j]
+            }
+            if (nums[j]<min){
+                min = nums[j]
+            }
+        }
+        if (max-min < minDiff){
+            minDiff = max-min
+        }
+    }
+    return minDiff
 };
 
 
