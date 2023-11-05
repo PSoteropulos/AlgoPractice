@@ -1,5 +1,15 @@
 def findRestaurant(list1, list2):
-    pass
+    commons = []
+    smallestSum = len(list1) + len(list2)
+    biggerList = list1 if len(list1) >= len(list2) else list2
+    smallerList = list2 if len(list1) >= len(list2) else list1
+    for i in range(len(biggerList)):
+        if (biggerList[i] in smallerList and (i + smallerList.index(biggerList[i]))<smallestSum):
+            commons = [(biggerList[i])]
+            smallestSum = i + smallerList.index(biggerList[i])
+        elif (biggerList[i] in smallerList and (i + smallerList.index(biggerList[i]))==smallestSum):
+            commons.append(biggerList[i])
+    return commons
 
 
 
