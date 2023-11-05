@@ -1,5 +1,14 @@
 const removeDuplicates = (nums) => {
-    
+    let numSet = new Set()
+    for (let i = nums.length-1; i>=0; i--){
+        if (numSet.has(nums[i])){
+            nums.splice(i, 1)
+        }
+        else {
+            numSet.add(nums[i])
+        }
+    }
+    return nums.length
 };
 
 
