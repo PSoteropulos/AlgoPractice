@@ -1,6 +1,11 @@
 def removeDuplicates(nums):
-    pass
-
+    numSet = set()
+    for i in range(len(nums)-1, -1, -1):
+        if (nums[i] in numSet):
+            nums.pop(i)
+        else:
+            numSet.add(nums[i])
+    return len(nums)
 
 
 
