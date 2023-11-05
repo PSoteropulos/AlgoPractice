@@ -1,5 +1,18 @@
 const findRestaurant = (list1, list2) => {
-    
+    let commons = []
+    let smallestSum = list1.length + list2.length
+    let biggerList = list1.length >= list2.length? list1 : list2
+    let smallerList = list1.length >= list2.length? list2 : list1
+    for (let i = 0; i<biggerList.length; i++){
+        if (smallerList.includes(biggerList[i]) && (i + smallerList.indexOf(biggerList[i]))<smallestSum){
+            commons = [(biggerList[i])]
+            smallestSum = i + smallerList.indexOf(biggerList[i])
+        }
+        else if (smallerList.includes(biggerList[i]) && (i + smallerList.indexOf(biggerList[i]))===smallestSum){
+            commons.push(biggerList[i])
+        }
+    }
+    return commons
 };
 
 
