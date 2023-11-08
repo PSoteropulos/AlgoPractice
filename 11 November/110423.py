@@ -1,5 +1,10 @@
 def isPrefixString(s, words):
-    pass
+    concatString = ""
+    for word in words:
+        concatString += word
+        if (s == concatString):
+            return True
+    return False
 
 
 
