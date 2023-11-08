@@ -1,5 +1,12 @@
 const isPrefixString = (s, words) => {
-    
+    let concatString = ""
+    for (let i = 0; i < words.length; i++){
+        concatString += words[i]
+        if (s === concatString){
+            return true
+        }
+    }
+    return false
 };
 
 
