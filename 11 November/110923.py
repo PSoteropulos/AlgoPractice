@@ -1,5 +1,13 @@
 def checkValid(matrix):
-    pass
+    num_range = set(range(1, len(matrix) + 1))
+    for row in matrix:
+        if set(row) != num_range:
+            return False
+    for j in range(len(matrix)):
+        column = set(matrix[i][j] for i in range(len(matrix)))
+        if column != num_range:
+            return False
+    return True
 
 
 
