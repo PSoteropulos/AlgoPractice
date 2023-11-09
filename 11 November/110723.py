@@ -1,5 +1,23 @@
 def gcdOfStrings(str1, str2):
-    pass
+    longerString = str1 if len(str1) >= len(str2) else str2
+    shorterString = str1 if len(str1) < len(str2) else str2
+    stringWeCheck = shorterString
+    while (len(stringWeCheck) > 0):
+        if (len(longerString) % len(stringWeCheck) == 0 and len(shorterString) % len(stringWeCheck) == 0):
+            valid = True
+            for i in range(0, len(longerString), len(stringWeCheck)):
+                if (longerString[i:i + len(stringWeCheck)] != stringWeCheck):
+                    valid = False
+                    break
+            if (valid):
+                for i in range(0, len(shorterString), len(stringWeCheck)):
+                    if (shorterString[i:i + len(stringWeCheck)] != stringWeCheck):
+                        valid = False
+                        break
+            if (valid):
+                return stringWeCheck
+        stringWeCheck = stringWeCheck[:-1]
+    return ""
 
 
 
