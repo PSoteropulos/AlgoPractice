@@ -1,5 +1,26 @@
 const duplicateZeros = (arr) => {
-
+    let possibleDups = 0
+    let newLength = arr.length - 1
+    for (let i = 0; i <= newLength - possibleDups; i++) {
+        if (arr[i] == 0) {
+        if (i == newLength - possibleDups) {
+            arr[newLength] = 0
+            newLength -= 1
+            break
+        }
+        possibleDups++
+        }
+    }
+    for (let i = newLength-possibleDups; i >= 0; i--) {
+        if (arr[i] == 0) {
+            arr[i + possibleDups] = 0;
+            possibleDups--;
+            arr[i + possibleDups] = 0;
+        } 
+        else {
+            arr[i + possibleDups] = arr[i];
+        }
+    }
 }
 
 
