@@ -1,5 +1,29 @@
 const gcdOfStrings = (str1, str2) => {
-    
+    let longerString = str1.length >= str2.length ? str1 : str2
+    let shorterString = str1.length < str2.length ? str1 : str2
+    let stringWeCheck = shorterString
+    while (stringWeCheck.length > 0) {
+        if (longerString.length % stringWeCheck.length === 0 && shorterString.length % stringWeCheck.length === 0) {
+            let valid = true
+            for (let i = 0; i < longerString.length; i += stringWeCheck.length) {
+                if (longerString.substring(i, i + stringWeCheck.length) !== stringWeCheck) {
+                    valid = false
+                    break
+                }
+            }
+            if (valid) {
+                for (let i = 0; i < shorterString.length; i += stringWeCheck.length) {
+                    if (shorterString.substring(i, i + stringWeCheck.length) !== stringWeCheck) {
+                        valid = false
+                        break
+                    }
+                }
+            }
+            if (valid) return stringWeCheck
+        }
+        stringWeCheck = stringWeCheck.slice(0, -1)
+    }
+    return ""
 };
 
 
