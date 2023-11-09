@@ -1,5 +1,20 @@
 def largeGroupPositions(s):
-    pass
+    answers = []
+    currentChar = s[0]
+    currentStart = 0
+    count = 1
+    for i in range(len(s)):
+        if (s[i] == currentChar):
+            count += 1
+            if (i == len(s)-1 and count >=3):
+                answers.append([currentStart, i])
+        else:
+            if (count>=3):
+                answers.append([currentStart, i-1])
+            currentChar = s[i]
+            currentStart = i
+            count = 1
+    return answers
 
 
 
