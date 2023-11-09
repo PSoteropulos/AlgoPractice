@@ -1,5 +1,25 @@
 const largeGroupPositions = (s) => {
-    
+    const answers = []
+    let currentChar = s[0]
+    let currentStart = 0
+    let count = 1
+    for (let i = 1; i<s.length; i++){
+        if (s[i] === currentChar){
+            count ++
+            if (i === s.length-1 && count >=3){
+                answers.push([currentStart, i])
+            }
+        }
+        else {
+            if (count>=3){
+                answers.push([currentStart, i-1])
+            }
+            currentChar = s[i]
+            currentStart = i
+            count = 1
+        }
+    }
+    return answers
 };
 
 
