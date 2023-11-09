@@ -13,12 +13,12 @@ const duplicateZeros = (arr) => {
     }
     for (let i = newLength-possibleDups; i >= 0; i--) {
         if (arr[i] == 0) {
-            arr[i + possibleDups] = 0;
-            possibleDups--;
-            arr[i + possibleDups] = 0;
+            arr[i + possibleDups] = 0
+            possibleDups--
+            arr[i + possibleDups] = 0
         } 
         else {
-            arr[i + possibleDups] = arr[i];
+            arr[i + possibleDups] = arr[i]
         }
     }
 }
