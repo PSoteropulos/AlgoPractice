@@ -1,5 +1,22 @@
 def duplicateZeros(arr):
-    pass
+    possible_dups = 0
+    new_length = len(arr) - 1
+    i = 0
+    while i <= new_length - possible_dups:
+        if arr[i] == 0:
+            if i == new_length - possible_dups:
+                arr[new_length] = 0
+                new_length -= 1
+                break
+            possible_dups += 1
+        i += 1
+    for i in range(new_length - possible_dups, -1, -1):
+        if arr[i] == 0:
+            arr[i + possible_dups] = 0
+            possible_dups -= 1
+            arr[i + possible_dups] = 0
+        else:
+            arr[i + possible_dups] = arr[i]
 
 
 
@@ -7,9 +24,9 @@ def duplicateZeros(arr):
 
 
 
-print(duplicateZeros([1,0,2,3,0,4,5,0]))
-print(duplicateZeros([1,2,3]))
-
+# print(duplicateZeros([1,0,2,3,0,4,5,0]))
+# print(duplicateZeros([1,2,3]))
+print(duplicateZeros([0,1,7,6,0,2,0,7]))
 
 
 
