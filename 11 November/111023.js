@@ -1,5 +1,11 @@
 const nextGreatestLetter = (letters, target) => {
-    
+    let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    for (let i=0; i<letters.length; i++){
+        if (alphabet.indexOf(letters[i]) > alphabet.indexOf(target)){
+            return letters[i]
+        }
+    }
+    return letters[0]
 };
 
 
@@ -8,9 +14,9 @@ const nextGreatestLetter = (letters, target) => {
 
 
 
-print(nextGreatestLetter(letters = ["c","f","j"], target = "a"))
-print(nextGreatestLetter(letters = ["c","f","j"], target = "c"))
-print(nextGreatestLetter(letters = ["x","x","y","y"], target = "z"))
+console.log(nextGreatestLetter(letters = ["c","f","j"], target = "a"))
+console.log(nextGreatestLetter(letters = ["c","f","j"], target = "c"))
+console.log(nextGreatestLetter(letters = ["x","x","y","y"], target = "z"))
 
 
 
