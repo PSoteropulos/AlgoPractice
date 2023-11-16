@@ -1,5 +1,12 @@
 def differenceOfSums(n, m):
-    pass
+    notDivisible = 0
+    divisible = 0
+    for i in range(1,n+1):
+        if i % m == 0:
+            divisible += i
+        else: 
+            notDivisible += i
+    return notDivisible - divisible
 
 
 
