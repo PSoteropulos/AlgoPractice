@@ -1,5 +1,10 @@
 const differenceOfSums = (n, m) =>{
-    
+    let notDivisible = 0
+    let divisible = 0
+    for (let i=1; i <=n; i++){
+        i % m === 0 ? divisible += i : notDivisible += i
+    }
+    return notDivisible - divisible
 };
 
 
