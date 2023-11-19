@@ -1,6 +1,18 @@
 def check(nums):
-    pass
-
+    sortedArray = sorted([*nums])
+    iterations = len(nums)
+    while iterations:
+        thisRun = True
+        for i in range(len(nums)):
+            if sortedArray[i] != nums[i]:
+                nums.append(nums[0])
+                nums.pop(0)
+                iterations -= 1
+                thisRun = False
+                break
+        if thisRun:
+            return True
+    return False
 
 
 
