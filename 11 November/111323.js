@@ -1,5 +1,19 @@
 const getMaximumGenerated = (n) => {
-    
+    if (n===0) return 0
+    let array = [0,1]
+        for (let i=1; i<n;){
+            if (2<=(2*i)<=n){
+                array.push(array[i])
+            }
+            if (2<=(2*i+1) && (2*i+1)<=n){
+                array.push(array[i]+array[i+1])
+            }
+            if (array.length<n){
+                i++
+            }
+            else break
+        }
+        return Math.max(...array)
 };
 
 
@@ -10,8 +24,9 @@ const getMaximumGenerated = (n) => {
 console.log(getMaximumGenerated(7))
 console.log(getMaximumGenerated(3))
 console.log(getMaximumGenerated(2))
-
-
+console.log(getMaximumGenerated(5))
+console.log(getMaximumGenerated(0))
+console.log(getMaximumGenerated(15))
 
 
 
