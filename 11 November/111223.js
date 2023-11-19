@@ -1,5 +1,20 @@
 const check = (nums) => {
-    
+    let sortedArray = [...nums].sort((a,b)=>a-b)
+    let iterations = nums.length
+    while (iterations) {
+        let thisRun = true
+        for (let i = 0; i<nums.length; i++){
+            if (sortedArray[i] !== nums[i]){
+                nums.push(nums[0])
+                nums.splice(0,1)
+                iterations --
+                thisRun = false
+                break
+            }
+        }
+        if (thisRun) return true
+    }
+    return false
 };
 
 
