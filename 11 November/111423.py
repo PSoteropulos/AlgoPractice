@@ -1,5 +1,11 @@
 def isGood(nums):
-    pass
+    if len(nums) < 2: return False
+    nums.sort()
+    for i in range(len(nums)-2, -1, -1):
+        if i==len(nums)-2:
+            if (nums[i]!=nums[i+1]) or (nums[i]!=len(nums)-1): return False
+        elif (nums[i]!=nums[i+1]-1): return False
+    return True
 
 
 
