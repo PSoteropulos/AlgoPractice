@@ -1,5 +1,12 @@
 def secondHighest(s):
-    pass
+    numberSet = set()
+    for letter in s:
+        if ((letter.isalpha() == False) and (letter not in numberSet)):
+            numberSet.add(int(letter))
+    numbers = sorted([*numberSet])
+    if ((len(numbers)>1)):
+        return numbers[len(numbers)-2]
+    return -1
 
 
 
