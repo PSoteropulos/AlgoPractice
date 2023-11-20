@@ -1,5 +1,23 @@
 const findLengthOfLCIS = (nums) => {
-    
+    let max = 1
+    let current = 1
+    for (let i = 1; i<nums.length;i++){
+        if (nums[i]>nums[i-1]){
+            current ++
+        }
+        else {
+            if (current>max){
+                max = current
+            }
+            current = 1
+        }
+        if (i === nums.length-1){
+            if (current>max){
+                max = current
+            }
+        }
+    }
+    return max
 };
 
 
@@ -10,6 +28,7 @@ const findLengthOfLCIS = (nums) => {
 
 console.log(findLengthOfLCIS([1,3,5,4,7]))
 console.log(findLengthOfLCIS([2,2,2,2,2]))
+console.log(findLengthOfLCIS([1,3,5,7]))
 
 
 
