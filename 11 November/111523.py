@@ -1,5 +1,21 @@
 def summaryRanges(nums):
-    pass
+    if (len(nums) == 0): return []
+    if (len(nums) == 1): return [f'{nums[0]}']
+    answers = []
+    start = nums[0]
+    for i in range(1, len(nums)):
+        if (nums[i]!=nums[i-1]+1):
+            if (nums[i-1]==start):
+                answers.append(f'{start}')
+            else:
+                answers.append(f'{start}->{nums[i-1]}')
+            start = nums[i]
+        if (i==len(nums)-1):
+            if (nums[i]==start):
+                answers.append(f'{nums[i]}')
+            else:
+                answers.append(f'{start}->{nums[i]}')
+    return answers
 
 
 
@@ -8,7 +24,7 @@ def summaryRanges(nums):
 
 print(summaryRanges([0,1,2,4,5,7]))
 print(summaryRanges([0,2,3,4,6,8,9]))
-
+print(summaryRanges([]))
 
 
 
