@@ -1,5 +1,15 @@
 const secondHighest = (s) => {
-    
+    let numberSet = new Set()
+    for (let i=0; i<s.length; i++){
+        if ((isNaN(s[i]) === false) && (numberSet.has(Number(s[i]))===false)){
+            numberSet.add(Number(s[i]))
+        }
+    }
+    let numbers = [...numberSet].sort((a,b)=>a-b)
+    if ((numbers.length>1)){
+        return numbers[numbers.length-2]
+    }
+    return -1
 };
 
 
@@ -9,8 +19,8 @@ const secondHighest = (s) => {
 
 
 
-print(secondHighest("dfa12321afd"))
-print(secondHighest("abc1111"))
+console.log(secondHighest("dfa12321afd"))
+console.log(secondHighest("abc1111"))
 
 
 
