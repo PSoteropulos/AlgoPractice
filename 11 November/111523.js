@@ -1,5 +1,27 @@
 const summaryRanges = (nums) => {
-    
+    if (nums.length === 1) return [`${nums[0]}`]
+    let answers = []
+    let start = nums[0]
+    for (let i=1;i<nums.length;i++){
+        if (nums[i]!==nums[i-1]+1){
+            if (nums[i-1]===start){
+                answers.push(`${start}`)
+            }
+            else {
+                answers.push(`${start}->${nums[i-1]}`)
+            }
+            start = nums[i]
+        }
+        if (i===nums.length-1){
+            if (nums[i]===start){
+                answers.push(`${nums[i]}`)
+            }
+            else {
+                answers.push(`${start}->${nums[i]}`)
+            }
+        }
+    }
+    return answers
 };
 
 
