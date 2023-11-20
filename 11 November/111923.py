@@ -1,5 +1,14 @@
 def findContentChildren(g, s):
-    pass
+    count = 0
+    g.sort()
+    s.sort()
+    for i in range(len(g)):
+        for j in range(len(s)):
+            if (s[j] >= g[i]):
+                count += 1
+                s.pop(j)
+                break
+    return count
 
 
 
@@ -8,6 +17,8 @@ def findContentChildren(g, s):
 
 print(findContentChildren(g = [1,2,3], s = [1,1]))
 print(findContentChildren(g = [1,2], s = [1,2,3]))
+print(findContentChildren(g =[10,9,8,7], s = [5,6,7,8]))
+print(findContentChildren(g =[10,9,8,7,10,9,8,7], s = [10,9,8,7]))
 
 
 
