@@ -1,5 +1,13 @@
 const isGood = (nums) => {
-    
+    if (nums.length < 2) return false
+    nums.sort((a,b)=>a-b)
+    for(let i = nums.length-2; i>=0; i--){
+        if (i===nums.length-2){
+            if ((nums[i]!==nums[i+1]) || (nums[i]!==nums.length-1)) return false
+        }
+        else if (nums[i]!==nums[i+1]-1) return false
+    }
+    return true
 };
 
 
