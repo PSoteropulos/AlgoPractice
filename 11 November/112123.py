@@ -1,5 +1,17 @@
 def convertToBase7(num):
-    pass
+    negative = False
+    if num < 0:
+        negative = True
+        num = -num
+    base7 = ""
+    while num > 0:
+        base7 = str(num % 7) + base7
+        num //= 7
+    if base7 == "":
+        base7 = "0"
+    elif negative:
+        base7 = "-" + base7
+    return base7
 
 
 
