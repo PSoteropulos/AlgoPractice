@@ -1,5 +1,19 @@
 const hardestWorker = (n, logs) => {
-    
+    let currentMax = logs[0][1]
+    let maxWorker = logs[0][0]
+    for (let i = 1; i<logs.length; i++){
+        if (logs[i][1] - logs[i-1][1] > currentMax){
+            currentMax = logs[i][1] - logs[i-1][1]
+            maxWorker = logs[i][0]
+        }
+        else if (logs[i][1] - logs[i-1][1] === currentMax){
+            currentMax = logs[i][1] - logs[i-1][1]
+            if (logs[i][0] < maxWorker){
+                maxWorker = logs[i][0]
+            }
+        }
+    }
+    return maxWorker
 };
 
 
