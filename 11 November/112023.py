@@ -1,5 +1,15 @@
 def hardestWorker(n, logs):
-    pass
+    currentMax = logs[0][1]
+    maxWorker = logs[0][0]
+    for i in range(1,len(logs)):
+        if (logs[i][1] - logs[i-1][1] > currentMax):
+            currentMax = logs[i][1] - logs[i-1][1]
+            maxWorker = logs[i][0]
+        elif (logs[i][1] - logs[i-1][1] == currentMax):
+            currentMax = logs[i][1] - logs[i-1][1]
+            if (logs[i][0] < maxWorker):
+                maxWorker = logs[i][0]
+    return maxWorker
 
 
 
