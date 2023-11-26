@@ -1,5 +1,16 @@
 def countBeautifulPairs(nums):
-    pass
+    def gcd(num1, num2):
+        while (num2 != 0):
+            temp = num2
+            num2 = num1 % num2
+            num1 = temp
+        return num1
+    count = 0
+    for i in range(len(nums)-1):
+        for j in range(i+1,len(nums)):
+            if (gcd(int(str(nums[i])[0]), int(str(nums[j])[-1])) ==1):
+                count+=1
+    return count
 
 
 
