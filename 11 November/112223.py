@@ -1,5 +1,22 @@
 def reverseStr(s, k):
-    pass
+    newString = ""
+    for i in range(0, len(s), 2*k):
+        firstChar = []
+        others = []
+        thisString = ""
+        for j in range(i, i+(2*k), 1):
+            if (j < i+ k):
+                if j<len(s):
+                    firstChar.append(s[j])
+            elif j<len(s):
+                others.append(s[j])
+            else: break
+        firstChar.reverse()
+        firstChar = "".join(firstChar)
+        others = "".join(others)
+        thisString = firstChar + others
+        newString += thisString
+    return newString
 
 
 
@@ -8,7 +25,7 @@ def reverseStr(s, k):
 
 print(reverseStr(s = "abcdefg", k = 2))
 print(reverseStr(s = "abcd", k = 2))
-
+print(reverseStr(s = "a", k = 2))
 
 
 
