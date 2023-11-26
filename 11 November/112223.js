@@ -1,5 +1,23 @@
 const reverseStr = (s, k) => {
-    
+    let newString = ""
+    for (let i = 0; i < s.length; i += 2*k){
+        let firstChar = []
+        let others = []
+        let thisString = ""
+        for (let j = i; j < i+(2*k); j++){
+            if (j < i+ k){
+                firstChar.push(s[j])
+            }
+            else {
+                others.push(s[j])
+            }
+        }
+        firstChar = firstChar.reverse().join("")
+        others = others.join("")
+        thisString = firstChar + others
+        newString += thisString
+    }
+    return newString
 };
 
 
