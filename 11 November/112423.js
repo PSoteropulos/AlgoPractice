@@ -1,5 +1,25 @@
 const findJudge = (n, trust) => {
-    
+    if (n===1 && trust.length===0){
+        return 1
+    }
+    let peopleTrusting = Array.from(new Set(trust.map(index=>index[0])))
+    let trustCount = {}
+    for (let i = 0; i < trust.length; i++){
+        if (`${trust[i][1]}` in trustCount){
+            trustCount[`${trust[i][1]}`] ++
+        }
+        else {
+            trustCount[`${trust[i][1]}`] = 1
+        }
+    }
+    trustCount = Object.entries(trustCount).sort((a,b)=>a[1]-b[1])
+    let highestTrusts = trustCount.filter(item=>item[1]===trustCount[trustCount.length-1][1])
+    for (let i = 0; i<highestTrusts.length; i++){
+        if ((peopleTrusting.includes(Number(highestTrusts[i][0])) === false) && (highestTrusts[i][1] === n-1)){
+            return highestTrusts[i][0]
+        }
+    }
+    return -1
 };
 
 
@@ -12,7 +32,8 @@ const findJudge = (n, trust) => {
 console.log(findJudge(n = 2, trust = [[1,2]]))
 console.log(findJudge(n = 3, trust = [[1,3],[2,3]]))
 console.log(findJudge(n = 3, trust = [[1,3],[2,3],[3,1]]))
-
+console.log(findJudge(n = 4, trust = [[1,3],[1,4],[2,3],[2,4],[4,3]]))
+console.log(findJudge(n = 3, trust = [[1,2],[2,3]]))
 
 
 
