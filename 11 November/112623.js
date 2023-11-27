@@ -1,5 +1,19 @@
 const balancedStringSplit = (s) => {
-    
+    let LCount = 0
+    let RCount = 0
+    let totalCount = 0
+    for (let i = 0; i <s.length; i++){
+        if (s[i] === "L"){
+            LCount ++
+        }
+        else {
+            RCount ++
+        }
+        if (RCount === LCount){
+            totalCount ++
+        }
+    }
+    return totalCount
 };
 
 
