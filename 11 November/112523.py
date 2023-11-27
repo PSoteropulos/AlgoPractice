@@ -1,5 +1,30 @@
 def largestSumAfterKNegations(nums, k):
-    pass
+    negatives = []
+    positives = []
+    for num in nums:
+        if num>0:
+            positives.append(num)
+        elif num<0:
+            negatives.append(num)
+    negatives.sort(reverse=True)
+    positives.sort(reverse=True)
+    for i in range(k):
+        if len(negatives):
+            positives.append(-(negatives[-1]))
+            positives.sort(reverse=True)
+            negatives.pop()
+        elif 0 in nums:
+            break
+        else:
+            negatives.append(-(positives[-1]))
+            negatives.sort(reverse=True)
+            positives.pop()
+    finalArray = [*negatives, *positives]
+    print(finalArray)
+    sum = 0
+    for num in finalArray:
+        sum += num
+    return sum
 
 
 
