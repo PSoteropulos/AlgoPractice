@@ -9,11 +9,12 @@ const largestSumAfterKNegations = (nums, k) => {
             negatives.push(nums[i])
         }
     }
+    negatives.sort((a,b)=>b-a)
+    positives.sort((a,b)=>b-a)
     for (let i = 1; i <= k; i++){
-        negatives.sort((a,b)=>b-a)
-        positives.sort((a,b)=>b-a)
         if (negatives.length){
             positives.push(-(negatives.slice(-1)))
+            positives.sort((a,b)=>b-a)
             negatives.pop()
         }
         else if (nums.includes(0)){
@@ -21,6 +22,7 @@ const largestSumAfterKNegations = (nums, k) => {
         }
         else {
             negatives.push(-(positives.slice(-1)))
+            negatives.sort((a,b)=>b-a)
             positives.pop()
         }
     }
