@@ -1,5 +1,35 @@
 const largestSumAfterKNegations = (nums, k) => {
-    
+    let negatives = []
+    let positives = []
+    for (let i = 0; i<nums.length; i++){
+        if (nums[i]>0){
+            positives.push(nums[i])
+        }
+        else if (nums[i]<0){
+            negatives.push(nums[i])
+        }
+    }
+    for (let i = 1; i <= k; i++){
+        negatives.sort((a,b)=>b-a)
+        positives.sort((a,b)=>b-a)
+        if (negatives.length){
+            positives.push(-(negatives.slice(-1)))
+            negatives.pop()
+        }
+        else if (nums.includes(0)){
+            break
+        }
+        else {
+            negatives.push(-(positives.slice(-1)))
+            positives.pop()
+        }
+    }
+    let finalArray = [...negatives, ...positives]
+    let sum = 0
+    for (let i = 0; i<finalArray.length;i++){
+        sum += finalArray[i]
+    }
+    return sum
 };
 
 
@@ -8,10 +38,10 @@ const largestSumAfterKNegations = (nums, k) => {
 
 
 
-console.log(largestSumAfterKNegations(nums = [4,2,3], k = 1))
-console.log(largestSumAfterKNegations(nums = [3,-1,0,2], k = 3))
-console.log(largestSumAfterKNegations(nums = [2,-3,-1,5,-4], k = 2))
-
+// console.log(largestSumAfterKNegations(nums = [4,2,3], k = 1))
+// console.log(largestSumAfterKNegations(nums = [3,-1,0,2], k = 3))
+// console.log(largestSumAfterKNegations(nums = [2,-3,-1,5,-4], k = 2))
+console.log(largestSumAfterKNegations(nums =[-2,9,9,8,4], k = 5))
 
 
 
