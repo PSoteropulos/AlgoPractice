@@ -1,6 +1,15 @@
 def balancedStringSplit(s):
-    pass
-
+    LCount = 0
+    RCount = 0
+    totalCount = 0
+    for letter in s:
+        if letter == "L":
+            LCount += 1
+        else:
+            RCount += 1
+        if RCount == LCount:
+            totalCount +=1
+    return totalCount
 
 
 
