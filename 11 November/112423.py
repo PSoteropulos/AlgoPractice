@@ -1,5 +1,19 @@
 def findJudge(n, trust):
-    pass
+    if (n==1 and len(trust)==0):
+        return 1
+    peopleTrusting = list(set(t[0] for t in trust))
+    trustCount = {}
+    for i in range(len(trust)):
+        if trust[i][1] in trustCount:
+            trustCount[trust[i][1]] += 1
+        else:
+            trustCount[trust[i][1]] = 1
+    trustCount = sorted(trustCount.items(), key=lambda x:x[1])
+    highestTrusts = [item for item in trustCount if item[1] == trustCount[-1][1]]
+    for i in range(len(highestTrusts)):
+        if (highestTrusts[i][0] not in peopleTrusting) and (highestTrusts[i][1] == n-1):
+            return highestTrusts[i][0]
+    return -1
 
 
 
