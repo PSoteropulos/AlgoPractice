@@ -1,5 +1,13 @@
 const maxCoins = (piles) => {
-    
+    let count = 0
+    piles.sort((a,b)=>a-b)
+    while (piles.length) {
+        count += piles[piles.length-2]
+        piles.splice(piles.length-2,1)
+        piles.splice(0,1)
+        piles.pop()
+    }
+    return count
 };
 
 
