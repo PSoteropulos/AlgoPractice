@@ -1,5 +1,14 @@
 const groupThePeople = (groupSizes) => {
-    
+    let groups = {}
+    let answerArray = []
+    for (let i=0; i<groupSizes.length;i++){
+        if (groupSizes[i] in groups) {
+            groups[groupSizes[i]].push[i]
+            if (groups[groupSizes[i]].push[i]){
+                
+            }
+        }
+    }
 };
 
 
