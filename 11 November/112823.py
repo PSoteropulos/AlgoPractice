@@ -1,5 +1,12 @@
 def maxCoins(piles):
-    pass
+    count = 0
+    piles.sort()
+    while (len(piles)):
+        count += piles[len(piles)-2]
+        piles.pop(len(piles)-2)
+        piles.pop(0)
+        piles.pop()
+    return count
 
 
 
