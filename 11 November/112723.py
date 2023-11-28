@@ -1,5 +1,18 @@
 def groupThePeople(groupSizes):
-    pass
+    groups = {}
+    answerArray = []
+    for i in range(len(groupSizes)):
+        if (groupSizes[i] in groups):
+            groups[groupSizes[i]].append(i)
+            if (len(groups[groupSizes[i]]) == groupSizes[i]):
+                answerArray.append(groups[groupSizes[i]])
+                groups[groupSizes[i]] = []
+        else:
+            groups[groupSizes[i]] = [i]
+            if (len(groups[groupSizes[i]]) == groupSizes[i]):
+                answerArray.append(groups[groupSizes[i]])
+                groups[groupSizes[i]] = []
+    return answerArray
 
 
 
