@@ -1,5 +1,22 @@
 var backspaceCompare = function(s, t) {
-    
+    let longestString = s.length >= t.length? s : t
+    let s1 = ""
+    let s2 = ""
+    for (let i = 0; i < longestString.length; i++){
+        if (i<s.length && s[i]!=="#"){
+            s1 += s[i]
+        }
+        else if (i<s.length) {
+            s1 = s1.slice(0,-1)
+        }
+        if (i<t.length && t[i]!=="#"){
+            s2 += t[i]
+        }
+        else if (i<t.length) {
+            s2 = s2.slice(0,-1)
+        }
+    }
+    return s1 === s2 ? true : false
 };
 
 
