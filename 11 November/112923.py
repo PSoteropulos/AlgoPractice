@@ -1,5 +1,17 @@
 def backspaceCompare(s, t):
-    pass
+    longestString = s if len(s) >= len(t) else t
+    s1 = ""
+    s2 = ""
+    for i in range(len(longestString)):
+        if (i<len(s) and s[i]!="#"):
+            s1 += s[i]
+        elif (i<len(s)):
+            s1 = s1[:-1]
+        if (i<len(t) and t[i]!="#"):
+            s2 += t[i]
+        elif (i<len(t)):
+            s2 = s2[:-1]
+    return True if s1 == s2 else False
 
 
 
