@@ -1,5 +1,19 @@
 def isStrictlyPalindromic(n):
-    pass
+    def to_base(num, base):
+        if num == 0:
+            return '0'
+        digits = []
+        while num:
+            digits.append(str(num % base))
+            num //= base
+        return ''.join(reversed(digits))
+
+    for i in range(2, n - 1):
+        base_i_string = to_base(n, i)
+        if base_i_string != base_i_string[::-1]:
+            return False
+
+    return True
 
 
 
