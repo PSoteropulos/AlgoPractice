@@ -1,5 +1,10 @@
 def maxWidthOfVerticalArea(points):
-    pass
+    maxDist = 0
+    sortedPoints = sorted(points, key=lambda x: x[0])
+    for i in range(1, len(sortedPoints)):
+        if (sortedPoints[i][0] - sortedPoints[i-1][0] > maxDist):
+            maxDist = sortedPoints[i][0] - sortedPoints[i-1][0]
+    return maxDist
 
 
 
