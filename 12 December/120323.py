@@ -1,5 +1,28 @@
+import math
+
 def countLargestGroup(n):
-    pass
+    sumGroups = {}
+    def sumOfDigits(num):
+        # return sum(int(digit) for digit in str(num)) using list comprehension/generators
+        sum = 0
+        while (num > 0):
+            sum += num % 10
+            num = math.floor(num / 10)
+        return sum
+    for i in range(1, n+1):
+        sum = sumOfDigits(i)
+        if sum not in sumGroups:
+            sumGroups[sum] = []
+        sumGroups[sum].append(i)
+    maxGroupSize = 0
+    for group in sumGroups.values():
+        if len(group) > maxGroupSize:
+            maxGroupSize = len(group)
+    largestGroupsCount = 0
+    for group in sumGroups.values():
+        if len(group) == maxGroupSize:
+            largestGroupsCount+= 1
+    return largestGroupsCount
 
 
 
