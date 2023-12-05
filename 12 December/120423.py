@@ -1,5 +1,12 @@
 def minOperations(boxes):
-    pass
+    answers = []
+    for i in range(len(boxes)):
+        operations = 0
+        for j in range(len(boxes)):
+            if (boxes[j]=="1"):
+                operations += abs(i-j)
+        answers.append(operations)
+    return answers
 
 
 
