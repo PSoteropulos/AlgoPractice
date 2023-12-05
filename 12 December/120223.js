@@ -1,5 +1,22 @@
 const checkArithmeticSubarrays = (nums, l, r) => {
-    
+    let answers = []
+    for (let i=0; i<l.length; i++){
+        let subarray = []
+        for (let j = l[i]; j <= r[i]; j++){
+            subarray.push(nums[j])
+        }
+        subarray.sort((a,b)=>a-b)
+        let difference = subarray[1]-subarray[0]
+        let current = true
+        for (let j = 1; j<subarray.length; j++){
+            if (subarray[j] - subarray[j-1] !== difference){
+                current = false
+                break
+            }
+        }
+        answers.push(current)
+    }
+    return answers
 };
 
 
