@@ -1,5 +1,18 @@
 def checkArithmeticSubarrays(nums, l, r):
-    pass
+    answers = []
+    for i in range(len(l)):
+        subarray = []
+        for j in range(l[i], r[i]+1):
+            subarray.append(nums[j])
+        subarray.sort()
+        difference = subarray[1]-subarray[0]
+        current = True
+        for j in range(1, len(subarray)):
+            if (subarray[j] - subarray[j-1] != difference):
+                current = False
+                break
+        answers.append(current)
+    return answers
 
 
 
