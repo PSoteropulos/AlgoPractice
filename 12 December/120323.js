@@ -1,6 +1,32 @@
 const countLargestGroup = (n) => {
-    
-};
+    const sumGroups = {}
+    const sumOfDigits = (num) => {
+        let sum = 0
+        while (num > 0) {
+            sum += num % 10
+            num = Math.floor(num / 10)
+        }
+        return sum
+    }
+    for (let i = 1; i <= n; i++) {
+        const sum = sumOfDigits(i)
+        if (!sumGroups[sum]) {
+            sumGroups[sum] = []
+        }
+        sumGroups[sum].push(i)
+    }
+    let maxGroupSize = 0
+    for (const group in sumGroups) {
+        maxGroupSize = Math.max(maxGroupSize, sumGroups[group].length)
+    }
+    let largestGroupsCount = 0
+    for (const group in sumGroups) {
+        if (sumGroups[group].length === maxGroupSize) {
+            largestGroupsCount++
+        }
+    }
+    return largestGroupsCount
+}
 
 
 
@@ -10,7 +36,7 @@ const countLargestGroup = (n) => {
 
 console.log(countLargestGroup(13))
 console.log(countLargestGroup(2))
-
+console.log(countLargestGroup(46))
 
 
 
