@@ -1,7 +1,18 @@
 const isValid = (s) => {
-    
+    if (s.length === 1) return false
+    let current = []
+    let openers = ["(", "[", "{"]
+    if (openers.includes(s[0]) === false) return false
+    for (let i = 0; i < s.length; i++){
+        if ((current[current.length-1] === "(" && s[i]===")") || (current[current.length-1] === "[" && s[i]==="]") || (current[current.length-1] === "{" && s[i]==="}")){
+            current.pop()
+        }
+        else {
+            current.push(s[i])
+        }
+    }
+    return current.length ? false : true
 };
-
 
 
 
@@ -10,6 +21,7 @@ const isValid = (s) => {
 console.log(isValid("()"))
 console.log(isValid("()[]{}"))
 console.log(isValid("(]"))
+console.log(isValid("(])"))
 
 
 
