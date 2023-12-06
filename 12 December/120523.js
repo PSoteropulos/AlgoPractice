@@ -1,5 +1,23 @@
 const sortVowels = (s) => {
-    
+    let vowelList = ["a", "e", "i", "o", "u"]
+    let vowels = []
+    let finalString = ""
+    for (let i = 0; i < s.length; i++){
+        if (vowelList.includes(s[i].toLowerCase())){
+            vowels.push(s[i])
+        }
+    }
+    vowels.sort((a,b)=>b.charCodeAt() - a.charCodeAt())
+    for (let i = 0; i<s.length; i++){
+        if (vowelList.includes(s[i].toLowerCase())){
+            finalString += vowels[vowels.length-1]
+            vowels.pop()
+        }
+        else {
+            finalString += s[i]
+        }
+    }
+    return finalString
 };
 
 
