@@ -1,5 +1,18 @@
 def sortVowels(s):
-    pass
+    vowelList = ["a", "e", "i", "o", "u"]
+    vowels = []
+    finalString = ""
+    for char in s:
+        if char.lower() in vowelList:
+            vowels.append(char)
+    sortedVowels = sorted(vowels, key = lambda x: -ord(x))
+    for char in s:
+        if char.lower() in vowelList:
+            finalString += sortedVowels[len(sortedVowels)-1]
+            sortedVowels.pop()
+        else:
+            finalString += char
+    return finalString
 
 
 
