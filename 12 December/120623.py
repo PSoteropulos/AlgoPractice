@@ -1,5 +1,16 @@
 def longestCommonPrefix(strs):
-    pass
+    actual = ""
+    sortedArray = sorted(strs, key=lambda x: len(x))
+    for i in range(len(sortedArray[0])):
+        valid = True
+        for j in range(len(sortedArray)):
+            if (sortedArray[j][i] != sortedArray[0][i]):
+                valid = False
+                break
+            elif (valid and j==len(sortedArray)-1):
+                actual += sortedArray[0][i]
+        if not valid: break
+    return actual
 
 
 
