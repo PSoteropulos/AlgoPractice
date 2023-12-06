@@ -1,5 +1,16 @@
 def isValid(s):
-    pass
+    current = []
+    openers = ["(", "[", "{"]
+    if len(s)== 1 or s[0] not in openers: return False
+    for char in s:
+        if len(current):
+            if ((current[-1] == "(" and char == ")") or (current[-1] == "[" and char=="]") or (current[-1] == "{" and char =="}")):
+                current.pop()
+            else:
+                current.append(char)
+        else:
+            current.append(char)
+    return False if len(current) else True
 
 
 
