@@ -1,5 +1,14 @@
-def strStr(self, haystack, needle):
-    pass
+def strStr(haystack, needle):
+    if len(needle) > len(haystack): return -1
+    for i in range(len(haystack)-len(needle)+1):
+        if haystack[i] == needle[0]:
+            match = True
+            for j in range(len(needle)):
+                if haystack[i+j] != needle[j]:
+                    match = False
+                    break
+            if (match): return i
+    return -1
 
 
 
@@ -7,7 +16,7 @@ def strStr(self, haystack, needle):
 
 print(strStr(haystack = "sadbutsad", needle = "sad"))
 print(strStr(haystack = "leetcode", needle = "leeto"))
-
+print(strStr(haystack = "mississippi", needle = "issipi"))
 
 
 
