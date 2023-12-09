@@ -1,5 +1,47 @@
 def romanToInt(s):
-    pass
+    sum = 0
+    i = len(s)-1
+    while i >= 0:
+        if (s[i] == "I"):
+            sum += 1
+        elif (s[i] == "V"):
+            if i>0 and (s[i-1] == "I"):
+                sum += 4
+                i -= 1
+            else:
+                sum += 5
+        elif (s[i] == "X"):
+            if i>0 and  (s[i-1] == "I"):
+                sum += 9
+                i -= 1
+            else:
+                sum += 10
+        elif (s[i] == "L"):
+            if i>0 and  (s[i-1] == "X"):
+                sum += 40
+                i -= 1
+            else:
+                sum += 50
+        elif (s[i] == "C"):
+            if i>0 and  (s[i-1] == "X"):
+                sum += 90
+                i -= 1
+            else:
+                sum += 100
+        elif (s[i] == "D"):
+            if i>0 and  (s[i-1] == "C"):
+                sum += 400
+                i -= 1
+            else:
+                sum += 500
+        elif (s[i] == "M"):
+            if i>0 and  (s[i-1] == "C"):
+                sum += 900
+                i -= 1
+            else:
+                sum += 1000
+        i -= 1
+    return sum
 
 
 
