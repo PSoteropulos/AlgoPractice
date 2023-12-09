@@ -1,5 +1,6 @@
 def lengthOfLastWord(s):
-    pass
+    word_array = [word for word in s.split(" ") if word != '']
+    return len(word_array[-1])
 
 
 
