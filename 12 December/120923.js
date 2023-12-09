@@ -1,5 +1,6 @@
 const lengthOfLastWord = (s) => {
-    
+    let wordArray = s.split(" ").filter((char)=>(char !== ''))
+    return wordArray[wordArray.length-1].length
 };
 
 
