@@ -1,5 +1,10 @@
 def isPalindrome(s):
-    pass
+    validCharSet = set("0123456789abcdefghijklmnopqrstuvwxyz")
+    cleanString = ""
+    for char in s:
+        if char.lower() in validCharSet:
+            cleanString += char.lower()
+    return True if cleanString == cleanString[::-1] else False
 
 
 
