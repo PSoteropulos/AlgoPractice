@@ -1,5 +1,12 @@
 const isPalindrome = (s) => {
-    
+    let validCharSet = new Set("0123456789abcdefghijklmnopqrstuvwxyz")
+    let cleanString = ""
+    for (let i = 0; i < s.length; i++){
+        if (validCharSet.has(s[i].toLowerCase())){
+            cleanString += s[i].toLowerCase()
+        }
+    }
+    return cleanString === cleanString.split("").reverse().join("") ? true : false
 };
 
 
