@@ -1,5 +1,8 @@
 def findDuplicate(nums):
-    pass
+    numSet = set()
+    for num in nums:
+        if num in numSet: return num
+        else: numSet.add(num)
 
 
 
