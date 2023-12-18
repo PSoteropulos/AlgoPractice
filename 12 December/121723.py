@@ -1,5 +1,10 @@
 def repeatedCharacter(s):
-    pass
+    encountered = set()
+    for letter in s:
+        if letter in encountered:
+            return letter
+        else:
+            encountered.add(letter)
 
 
 
