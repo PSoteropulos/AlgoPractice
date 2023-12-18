@@ -1,5 +1,13 @@
 const repeatedCharacter = (s) => {
-    
+    let encountered = new Set()
+    for (let i = 0; i <s.length; i++){
+        if (encountered.has(s[i])){
+            return s[i]
+        }
+        else {
+            encountered.add(s[i])
+        }
+    }
 };
 
 
