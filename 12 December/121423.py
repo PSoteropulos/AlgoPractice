@@ -4,13 +4,8 @@ def isIsomorphic(s, t):
     for i in range(len(s)):
         if ((s[i] in charObjectS.keys() and t[i] != charObjectS[s[i]]) or (t[i] in charObjectT.keys() and s[i] != charObjectT[t[i]])):
             return False
-        elif ((s[i] in charObjectS.keys() and t[i] == charObjectS[s[i]]) and (t[i] in charObjectT.keys() and s[i] == charObjectT[t[i]])):
-            continue
-        else:
-            if (s[i] not in charObjectS.keys()):
-                charObjectS[s[i]] = t[i]
-            if (t[i] not in charObjectT.keys()):
-                charObjectT[t[i]] = s[i]
+        charObjectS[s[i]] = t[i]
+        charObjectT[t[i]] = s[i]
     return True
 
 
