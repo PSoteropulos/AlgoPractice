@@ -1,12 +1,12 @@
 def isIsomorphic(s, t):
-    charObjectS = {}
-    charObjectT = {}
-    for i in range(len(s)):
+    charObjectS = {} # first we set up two objects to hold the character to character mappings for each string
+    charObjectT = {} # do note that we need two objects since its possible one string has correct character mapping and the other does not
+    for i in range(len(s)): # s and t are equal length so iterate through the length of either/both
         if ((s[i] in charObjectS.keys() and t[i] != charObjectS[s[i]]) or (t[i] in charObjectT.keys() and s[i] != charObjectT[t[i]])):
-            return False
-        charObjectS[s[i]] = t[i]
+            return False # this guard clause first checks if the current character in s is already a key:value pair in our mapping object for s, and if it is then checks to see if the value at t corresponds to that mapping. If it does NOT then the strings are not isomorphic and we return false. We check for the flipside of that with t. If either fails, the strings are not isomorphic
+        charObjectS[s[i]] = t[i] # the next two lines assume the guard clause was not activated. Therefore (first) charObjectS[s[i]] isnt yet mapped OR it does equal t[i], and second is the flipped equivalent
         charObjectT[t[i]] = s[i]
-    return True
+    return True # if the guard clause is never activated then the loop will execute fully and we will return true
 
 
 
