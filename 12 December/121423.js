@@ -5,17 +5,8 @@ const isIsomorphic = (s, t) => {
         if ((s[i] in charObjectS && t[i] !== charObjectS[s[i]]) || (t[i] in charObjectT && s[i] !== charObjectT[t[i]])){
             return false
         }
-        else if ((s[i] in charObjectS && t[i] === charObjectS[s[i]]) && (t[i] in charObjectT && s[i] === charObjectT[t[i]])){
-            continue
-        }
-        else {
-            if (s[i] in charObjectS === false){
-                charObjectS[s[i]] = t[i]
-            }
-            if (t[i] in charObjectT === false){
-                charObjectT[t[i]] = s[i]
-            }
-        }
+        charObjectS[s[i]] = t[i]
+        charObjectT[t[i]] = s[i]
     }
     return true
 };
