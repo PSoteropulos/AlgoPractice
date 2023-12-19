@@ -1,5 +1,23 @@
 const isIsomorphic = (s, t) => {
-    
+    let charObjectS = {}
+    let charObjectT = {}
+    for (let i = 0; i<s.length; i++){
+        if ((s[i] in charObjectS && t[i] !== charObjectS[s[i]]) || (t[i] in charObjectT && s[i] !== charObjectT[t[i]])){
+            return false
+        }
+        else if ((s[i] in charObjectS && t[i] === charObjectS[s[i]]) && (t[i] in charObjectT && s[i] === charObjectT[t[i]])){
+            continue
+        }
+        else {
+            if (s[i] in charObjectS === false){
+                charObjectS[s[i]] = t[i]
+            }
+            if (t[i] in charObjectT === false){
+                charObjectT[t[i]] = s[i]
+            }
+        }
+    }
+    return true
 };
 
 
@@ -10,6 +28,7 @@ const isIsomorphic = (s, t) => {
 console.log(isIsomorphic(s = "egg", t = "add"))
 console.log(isIsomorphic(s = "foo", t = "bar"))
 console.log(isIsomorphic(s = "paper", t = "title"))
+console.log(isIsomorphic(s = "badc", t = "baba"))
 
 
 
