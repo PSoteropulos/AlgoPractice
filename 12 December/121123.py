@@ -1,5 +1,11 @@
 def repeatedSubstringPattern(s):
-    pass
+    for i in range(1, len(s) // 2 + 1):
+        if len(s) % i == 0:
+            sub_string = s[:i]
+            repeat_count = len(s) // len(sub_string)
+            if sub_string * repeat_count == s:
+                return True
+    return False
 
 
 
