@@ -1,5 +1,6 @@
+import math
 def totalMoney(n):
-    pass
+    return int((28 * (math.floor(n / 7)) + 7 * ((math.floor(n / 7)) * ((math.floor(n / 7)) - 1)) / 2) + ((2 * ((math.floor(n / 7)) + 1) + (n % 7) - 1) * (n % 7) / 2))
 
 
 
