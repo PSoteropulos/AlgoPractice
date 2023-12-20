@@ -1,5 +1,19 @@
 const repeatedSubstringPattern = (s) => {
-    
+    let subString = s[0]
+    while (subString.length < s.length){
+        for (let i = 0; i<s.length; i+=subString.length){
+            let valid = true
+            for (let j=i; j<subString.length; j++){
+                console.log(subString[j], s[j])
+                if (subString[j] !== s[j]){
+                    valid = false
+                }
+            }
+            if (valid) return true
+        }
+        subString += s[subString.length]
+    }
+    return false
 };
 
 
