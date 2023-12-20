@@ -1,21 +1,24 @@
 const repeatedSubstringPattern = (s) => {
     let subString = s[0]
-    while (subString.length < s.length){
-        for (let i = 0; i<s.length; i+=subString.length){
-            let valid = true
-            for (let j=i; j<subString.length; j++){
-                console.log(subString[j], s[j])
-                if (subString[j] !== s[j]){
-                    valid = false
-                }
-            }
-            if (valid) return true
+    for (let i = 1; i <= s.length / 2; i++) {
+        subString = s.substring(0, i);
+        let repeatCount = Math.floor(s.length / subString.length)
+        if (subString.repeat(repeatCount) === s) {
+            return true
         }
-        subString += s[subString.length]
     }
     return false
 };
 
+
+// gpt optimization
+// const repeatedSubstringPattern = (s) => {
+//     // Concatenate s with itself
+//     let doubleS = s + s;
+
+//     // Check if s exists in doubleS, starting from index 1 up to the second last character
+//     return doubleS.slice(1, -1).includes(s);
+// };
 
 
 
