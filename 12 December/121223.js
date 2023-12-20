@@ -1,5 +1,14 @@
 const isPowerOfFour = (n) => {
-    
+    if (n <= 0) {
+        return false
+    }
+    while (n !== 1) {
+        if (n % 4 !== 0) {
+            return false
+        }
+        n = n / 4
+    }
+    return true
 };
 
 
@@ -10,7 +19,8 @@ const isPowerOfFour = (n) => {
 console.log(isPowerOfFour(16))
 console.log(isPowerOfFour(5))
 console.log(isPowerOfFour(1))
-
+console.log(isPowerOfFour(0))
+console.log(isPowerOfFour(4))
 
 
 
