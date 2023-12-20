@@ -1,8 +1,13 @@
 const totalMoney = (n) => {
-    let steps = [1, 3, 6, 10, 15, 21, 28]
-    console.log(28*Math.floor(n/7) + ((Math.floor(n/7)-1)*7) + (steps[n%7-1]))
-    console.log(steps[n%7-1])
-};
+    // let completeWeeks = (Math.floor(n / 7))
+    // let totalForCompleteWeeks = 28 * completeWeeks + 7 * (completeWeeks * (completeWeeks - 1)) / 2 //sum of first n natural numbers => first week doesnt count
+    // let remainingDays = (n % 7)
+    // let startOfLastWeek = completeWeeks + 1
+    // let totalForRemainingDays = (2 * startOfLastWeek + remainingDays - 1) * remainingDays / 2
+    // return totalForCompleteWeeks + totalForRemainingDays
+
+    return (28 * (Math.floor(n / 7)) + 7 * ((Math.floor(n / 7)) * ((Math.floor(n / 7)) - 1)) / 2) + ((2 * ((Math.floor(n / 7)) + 1) + (n % 7) - 1) * (n % 7) / 2)
+}
 
 
 
