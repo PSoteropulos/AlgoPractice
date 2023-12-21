@@ -1,5 +1,16 @@
 const wordPattern = (pattern, s) => {
-    
+    let sArray = s.split(" ")
+    let patternObject = {}
+    let sObject = {}
+    if (sArray.length !== pattern.length) return false
+    for (let i = 0; i<pattern.length; i++){
+        if ((pattern[i] in patternObject && sArray[i] !== patternObject[pattern[i]]) || (sArray[i] in sObject && pattern[i] !== sObject[sArray[i]])){
+            return false
+        }
+        patternObject[pattern[i]] = sArray[i]
+        sObject[sArray[i]] = pattern[i]
+    }
+    return true
 };
 
 
@@ -8,11 +19,11 @@ const wordPattern = (pattern, s) => {
 
 
 
-console.log(wordPattern(pattern = "abba", s = "dog cat cat dog"))
-console.log(wordPattern(pattern = "abba", s = "dog cat cat fish"))
-console.log(wordPattern(pattern = "aaaa", s = "dog cat cat dog"))
-
-
+// console.log(wordPattern(pattern = "abba", s = "dog cat cat dog"))
+// console.log(wordPattern(pattern = "abba", s = "dog cat cat fish"))
+// console.log(wordPattern(pattern = "aaaa", s = "dog cat cat dog"))
+// console.log(wordPattern(pattern = "abba", s = "dog dog dog dog"))
+console.log(wordPattern(pattern = "abba", s = "dog constructor constructor dog"))
 
 
 
