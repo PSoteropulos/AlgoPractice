@@ -19,8 +19,8 @@ const isSubsequence = (s, t) => {
 
 
 
-// console.log(isSubsequence(s = "abc", t = "ahbgdc"))
-// console.log(isSubsequence(s = "axc", t = "ahbgdc"))
+console.log(isSubsequence(s = "abc", t = "ahbgdc"))
+console.log(isSubsequence(s = "axc", t = "ahbgdc"))
 console.log(isSubsequence(s = "aaaaaa", t = "bbaaaa"))
 
 
