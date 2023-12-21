@@ -1,5 +1,17 @@
 const isSubsequence = (s, t) => {
-    
+    let currentIndex = 0
+    for (let i = 0; i<s.length; i++){
+        console.log({i}, {currentIndex})
+        while (currentIndex <= t.length){
+            if (s[i] === t[currentIndex]){
+                currentIndex ++
+                break
+            }
+            currentIndex ++
+        }
+        if (currentIndex > t.length) return false
+    }
+    return true
 };
 
 
@@ -7,8 +19,9 @@ const isSubsequence = (s, t) => {
 
 
 
-console.log(isSubsequence(s = "abc", t = "ahbgdc"))
-console.log(isSubsequence(s = "axc", t = "ahbgdc"))
+// console.log(isSubsequence(s = "abc", t = "ahbgdc"))
+// console.log(isSubsequence(s = "axc", t = "ahbgdc"))
+console.log(isSubsequence(s = "aaaaaa", t = "bbaaaa"))
 
 
 
