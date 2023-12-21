@@ -1,5 +1,14 @@
-def isSubsequence(s, t) -> bool:
-    pass
+def isSubsequence(s, t):
+    currentIndex = 0
+    for i in range(len(s)):
+        while currentIndex < len(t):
+            if s[i] == t[currentIndex]:
+                currentIndex += 1
+                break
+            currentIndex += 1
+        else:
+            return False
+    return True
 
 
 
