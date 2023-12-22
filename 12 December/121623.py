@@ -1,5 +1,14 @@
 def wordPattern(pattern, s):
-    pass
+    sArray = s.split(" ")
+    patternObject = {}
+    sObject = {}
+    if len(sArray)!=len(pattern): return False
+    for i in range(len(pattern)):
+        if (pattern[i] in patternObject and sArray[i] != patternObject[pattern[i]]) or (sArray[i] in sObject and pattern[i] != sObject[sArray[i]]):
+            return False
+        patternObject[pattern[i]] = sArray[i]
+        sObject[sArray[i]] = pattern[i]
+    return True
 
 
 
