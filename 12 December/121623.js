@@ -4,21 +4,16 @@ const wordPattern = (pattern, s) => {
     let sObject = {}
     if (sArray.length !== pattern.length) return false
     for (let i = 0; i<pattern.length; i++){
-        // console.log("before",{sArray}, {pattern}, {sObject}, {patternObject})
-        // console.log(pattern[i], sArray[i])
-        // console.log("pattern[i] in patternObject", pattern[i] in patternObject, "sArray[i] !== patternObject[pattern[i]]", `${sArray[i]}` !== patternObject[pattern[i]], "sArray[i] in sObject", sArray[i] in sObject, "pattern[i] !== sObject[sArray[i]]", pattern[i] !== sObject[sArray[i]])
-        console.log(sArray[i], {i}, {sObject})
-        console.log(typeof(sArray[i]))
-        if ((pattern[i] in patternObject && sArray[i] !== patternObject[pattern[i]]) || (`${sArray[i]}` in sObject && pattern[i] !== sObject[`${sArray[i]}`])){
+        if ((Object.hasOwn(patternObject,pattern[i]) && sArray[i] !== patternObject[pattern[i]]) || (Object.hasOwn(sObject, sArray[i]) && pattern[i] !== sObject[`${sArray[i]}`])){
             return false
         }
         patternObject[pattern[i]] = sArray[i]
         sObject[`${sArray[i]}`] = pattern[i]
-        // console.log("after",{sArray}, {pattern}, {sObject}, {patternObject})
     }
     return true
 };
 
+//have to use Object.hasOwn() since 'xyz in object' will check for all properties. This is way 'constructor' kept failing- object prototype has an attribute called constructor
 
 
 
