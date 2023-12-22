@@ -20,10 +20,10 @@ const wordPattern = (pattern, s) => {
 
 
 
-// console.log(wordPattern(pattern = "abba", s = "dog cat cat dog"))
-// console.log(wordPattern(pattern = "abba", s = "dog cat cat fish"))
-// console.log(wordPattern(pattern = "aaaa", s = "dog cat cat dog"))
-// console.log(wordPattern(pattern = "abba", s = "dog dog dog dog"))
+console.log(wordPattern(pattern = "abba", s = "dog cat cat dog"))
+console.log(wordPattern(pattern = "abba", s = "dog cat cat fish"))
+console.log(wordPattern(pattern = "aaaa", s = "dog cat cat dog"))
+console.log(wordPattern(pattern = "abba", s = "dog dog dog dog"))
 console.log(wordPattern(pattern = "abba", s = "dog constructor constructor dog"))
 
 
