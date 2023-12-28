@@ -1,19 +1,21 @@
 def summaryRanges(nums):
-    if (len(nums) == 0): return []
+    # handle edge cases
+    if (len(nums) == 0): return [] 
     if (len(nums) == 1): return [f'{nums[0]}']
-    answers = []
-    start = nums[0]
-    for i in range(1, len(nums)):
-        if (nums[i]!=nums[i-1]+1):
-            if (nums[i-1]==start):
+
+    answers = [] # initialize array to store answers
+    start = nums[0] # initialize a dynamic starting point, starting at beginning
+    for i in range(1, len(nums)): # iterate through each entry in nums, starting at index 1 since start variable is index 0
+        if (nums[i]!=nums[i-1]+1): # if current value is not a consecutive number from the previous value
+            if (nums[i-1]==start): # if previous value is the same as start its a single number range
                 answers.append(f'{start}')
-            else:
+            else: # otherwise its a valid range from start
                 answers.append(f'{start}->{nums[i-1]}')
-            start = nums[i]
-        if (i==len(nums)-1):
-            if (nums[i]==start):
+            start = nums[i] # update start to the current value either way since it is the new starting point 
+        if (i==len(nums)-1): # special case for last index in array
+            if (nums[i]==start): # single number range
                 answers.append(f'{nums[i]}')
-            else:
+            else: # otherwise valid range from start to last value
                 answers.append(f'{start}->{nums[i]}')
     return answers
 
