@@ -1,12 +1,13 @@
 #12/28 TA Algo refactor
 def containsDuplicate(nums):
-    numSet = set()
-    for i in range(len(nums)):
-        if nums[i] in numSet:
+    numSet = set() # initialize a new empty set to track seen values
+    for i in range(len(nums)): # iterate through all of nums
+        if nums[i] in numSet: # if number is in the set, its a duplicate so we return true
             return True
-        else:
+        else: # otherwise we add it to our set of seen numbers
             numSet.add(nums[i])
-    return False
+    return False # if we get this far then we havent returned true, so there havent been any dups
+
 
 #old
 # def containsDuplicate(nums):
@@ -15,7 +16,6 @@ def containsDuplicate(nums):
 #         if nums[i] == nums[i+1]:
 #             return True
 #     return False
-
 
 
 
