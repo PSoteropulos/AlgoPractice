@@ -1,9 +1,20 @@
+#12/28 TA Algo refactor
 def containsDuplicate(nums):
-    nums.sort()
-    for i in range(len(nums)-1):
-        if nums[i] == nums[i+1]:
+    numSet = set()
+    for i in range(len(nums)):
+        if nums[i] in numSet:
             return True
+        else:
+            numSet.add(nums[i])
     return False
+
+#old
+# def containsDuplicate(nums):
+#     nums.sort()
+#     for i in range(len(nums)-1):
+#         if nums[i] == nums[i+1]:
+#             return True
+#     return False
 
 
 
