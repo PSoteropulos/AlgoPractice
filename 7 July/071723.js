@@ -1,15 +1,32 @@
+// 12/28 ta algo refactor
 const containsDuplicate = (nums) => {
-    let testArray = []
-    for (let i=0; i<nums.length; i++){
-        if (testArray.includes(nums[i])){
+    let numSet = new Set()
+    for (let i = 0; i < nums.length; i++){
+        if (numSet.has(nums[i])){
             return true
         }
-        else {
-            testArray.push(nums[i])
+        else{
+            numSet.add(nums[i])
         }
     }
     return false
 };
+
+
+
+// old
+// const containsDuplicate = (nums) => {
+//     let testArray = []
+//     for (let i=0; i<nums.length; i++){
+//         if (testArray.includes(nums[i])){
+//             return true
+//         }
+//         else {
+//             testArray.push(nums[i])
+//         }
+//     }
+//     return false
+// };
 
 
 
