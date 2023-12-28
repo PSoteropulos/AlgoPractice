@@ -1,15 +1,15 @@
 // 12/28 ta algo refactor
 const containsDuplicate = (nums) => {
-    let numSet = new Set()
-    for (let i = 0; i < nums.length; i++){
-        if (numSet.has(nums[i])){
+    let numSet = new Set() // initialize a new empty set to track seen values
+    for (let i = 0; i < nums.length; i++){ // iterate through all of nums
+        if (numSet.has(nums[i])){ // if number is in the set, its a duplicate so we return true
             return true
         }
-        else{
+        else{ // otherwise we add it to our set of seen numbers
             numSet.add(nums[i])
         }
     }
-    return false
+    return false // if we get this far then we havent returned true, so there havent been any dups
 };
 
 
