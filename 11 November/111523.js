@@ -1,22 +1,22 @@
 const summaryRanges = (nums) => {
-    if (nums.length === 1) return [`${nums[0]}`]
-    let answers = []
-    let start = nums[0]
-    for (let i=1;i<nums.length;i++){
-        if (nums[i]!==nums[i-1]+1){
-            if (nums[i-1]===start){
+    if (nums.length === 1) return [`${nums[0]}`] // handle edge case
+    let answers = [] // initialize array to store answers
+    let start = nums[0] // initialize a dynamic starting point, starting at beginning
+    for (let i=1;i<nums.length;i++){ // iterate through each entry in nums, starting at index 1 since start variable is index 0
+        if (nums[i]!==nums[i-1]+1){ // if current value is not a consecutive number from the previous value
+            if (nums[i-1]===start){ // if previous value is the same as start its a single number range
                 answers.push(`${start}`)
             }
-            else {
+            else { // otherwise its a valid range from start
                 answers.push(`${start}->${nums[i-1]}`)
             }
-            start = nums[i]
+            start = nums[i] // update start to the current value either way since it is the new starting point 
         }
-        if (i===nums.length-1){
-            if (nums[i]===start){
+        if (i===nums.length-1){ // special case for last index in array
+            if (nums[i]===start){ //single number range
                 answers.push(`${nums[i]}`)
             }
-            else {
+            else { //otherwise valid range from start to last value
                 answers.push(`${start}->${nums[i]}`)
             }
         }
