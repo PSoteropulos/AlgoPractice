@@ -1,5 +1,12 @@
 def maxProfit(prices):
-    pass
+    maxProfit = 0
+    minPrice = prices[0]
+    for i, num in enumerate(prices, 1):
+        if num < minPrice:
+            minPrice = num
+        elif num - minPrice > maxProfit:
+            maxProfit = num - minPrice
+    return maxProfit
 
 
 
