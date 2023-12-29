@@ -1,14 +1,16 @@
 const maxProfit = (prices) => {
     let maxProfit = 0
-    for (let i = 0; i<prices.length-1; i++){
-        for (let j = i+1; j<prices.length; j++){
-            if (prices[j] - prices[i] > maxProfit){
-                maxProfit = prices[j] - prices[i]
-            }
+    let minPrice = prices[0]
+    for (let i = 1; i < prices.length; i++) {
+        if (prices[i] < minPrice) {
+            minPrice = prices[i]
+        } else if (prices[i] - minPrice > maxProfit) {
+            maxProfit = prices[i] - minPrice
         }
     }
     return maxProfit
-};
+}
+// initially used a nested for loop (O(n^2)) but revised to address minPrice in line
 
 
 
