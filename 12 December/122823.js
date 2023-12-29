@@ -1,5 +1,20 @@
 const longestPalindrome = (s) => {
-    
+    const occurrences = new Map()
+    for (let i = 0; i < s.length; i++){
+        occurrences.set(s[i], (occurrences.get(s[i]) || 0) + 1)
+    }
+    let total = 0
+    let hasOdd = false
+    for (let count of occurrences.values()){
+        if (count % 2 === 0) {
+            total += count
+        } 
+        else {
+            hasOdd = true
+            total += count - 1 // Add the largest even number less than count
+        }
+    }
+    return hasOdd ? total + 1 : total // Add 1 for the center letter if there's any odd count
 };
 
 
@@ -9,6 +24,7 @@ const longestPalindrome = (s) => {
 
 console.log(longestPalindrome("abccccdd"))
 console.log(longestPalindrome("a"))
+console.log(longestPalindrome("civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"))
 
 
 
