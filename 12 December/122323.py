@@ -1,5 +1,9 @@
 def removeElement(nums, val):
-    pass
+    i = len(nums)-1
+    while i >= 0:
+        if nums[i] == val:
+            nums.pop(i)
+        i -= 1
 
 
 
