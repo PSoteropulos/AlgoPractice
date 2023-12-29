@@ -1,5 +1,25 @@
+# utilizing enumerate
 def containsNearbyDuplicate(nums, k):
-    pass
+    seen_nums = {}
+    for i, num in enumerate(nums):
+        if num in seen_nums:
+            if i - seen_nums[num] <= k:
+                return True
+        seen_nums[num] = i
+    return False
+
+
+
+
+# original way
+# def containsNearbyDuplicate(nums, k):
+#     seenNums = {}
+#     for i in range(len(nums)):
+#         if nums[i] in seenNums:
+#             if i-seenNums[nums[i]] <= k:
+#                 return True
+#         seenNums[nums[i]] = i
+#     return False
 
 
 
