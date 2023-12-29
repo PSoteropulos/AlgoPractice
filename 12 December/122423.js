@@ -1,22 +1,46 @@
+// below is gpt assisted binary search implementation; binary search halves the range each time you iterate O(log n) as opposed to iterating over each item in order O(n)
 const searchRange = (nums, target) => {
-    if (nums.length === 1 && nums[0]===target){
-        return [0,0]
+    // Helper function to find the leftmost (or rightmost) index
+    const binarySearch = (left, right, findFirst) => {
+        while (left <= right) {
+            const mid = Math.floor((left + right) / 2)
+            if (nums[mid] > target || (findFirst && nums[mid] === target)) {
+                right = mid - 1
+            } else {
+                left = mid + 1
+            }
+        }
+        return left
     }
-    let first = undefined
-    let last = undefined
-    for (let i = 0; i<nums.length; i++){
-        if (nums[i]===target && !first){
-            first = i
-        }
-        if (nums[nums.length-1-i]===target && !last){
-            last = nums.length-1-i
-        }
-        if (first>=0 && last>=0){
-            return [first,last]
-        }
+    
+    const start = binarySearch(0, nums.length - 1, true)
+    if (start === nums.length || nums[start] !== target) {
+        return [-1, -1]
     }
-    return [-1, -1]
-};
+    const end = binarySearch(0, nums.length - 1, false) - 1
+    return [start, end]
+}
+
+// primary attempt
+// const searchRange = (nums, target) => {
+//     if (nums.length === 1 && nums[0]===target){
+//         return [0,0]
+//     }
+//     let first = undefined
+//     let last = undefined
+//     for (let i = 0; i<nums.length; i++){
+//         if (nums[i]===target && !first){
+//             first = i
+//         }
+//         if (nums[nums.length-1-i]===target && !last){
+//             last = nums.length-1-i
+//         }
+//         if (first>=0 && last>=0){
+//             return [first,last]
+//         }
+//     }
+//     return [-1, -1]
+// };
 
 
 
