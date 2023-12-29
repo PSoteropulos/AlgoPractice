@@ -1,5 +1,19 @@
 const findErrorNums = (nums) =>{
-    
+    let dup = undefined
+    let seen = new Set()
+    for (let i = 0; i < nums.length; i++){
+        if (seen.has(nums[i])){
+            dup = nums[i]
+        }
+        else {
+            seen.add(nums[i])
+        }
+    }
+    for (let i = 1; i <= nums.length; i++){
+        if (!seen.has(i)){
+            return [dup, i]
+        }
+    }
 };
 
 
@@ -8,8 +22,10 @@ const findErrorNums = (nums) =>{
 
 
 
-console.log(findErrorNums([1,2,2,4]))
-console.log(findErrorNums([1,1]))
+// console.log(findErrorNums([1,2,2,4]))
+// console.log(findErrorNums([1,1]))
+// console.log(findErrorNums([3,2,3,4,6,5]))
+console.log(findErrorNums([1,5,3,2,2,7,6,4,8,9]))
 
 
 
