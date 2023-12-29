@@ -1,5 +1,20 @@
 def searchRange(nums, target):
-    pass
+    def binarySearch(left, right, findFirst):
+        while left <= right:
+            mid = (left + right) // 2
+            if nums[mid] > target or (findFirst and nums[mid] == target):
+                right = mid - 1
+            else:
+                left = mid + 1
+        return left
+
+    start = binarySearch(0, len(nums) - 1, True)
+    if start == len(nums) or nums[start] != target:
+        return [-1, -1]
+    
+    end = binarySearch(0, len(nums) - 1, False) - 1
+    return [start, end]
+
 
 
 
