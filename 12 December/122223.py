@@ -1,5 +1,8 @@
 def searchInsert(nums, target):
-    pass
+    for i, num in enumerate(nums):
+        if num >= target:
+            return i
+    return len(nums)
 
 
 
