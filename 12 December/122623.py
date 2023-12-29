@@ -1,5 +1,14 @@
 def firstUniqChar(s):
-    pass
+    occurrences = {}
+    for char in s:
+        if char in occurrences.keys():
+            occurrences[char] += 1
+        else:
+            occurrences[char] = 1
+    for i, char in enumerate(s):
+        if occurrences[char] == 1:
+            return i
+    return -1
 
 
 
