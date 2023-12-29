@@ -1,5 +1,14 @@
 def findErrorNums(nums):
-    pass
+    dup = None
+    seen = set()
+    for i, num in enumerate(nums):
+        if (num in seen):
+            dup = num
+        else:
+            seen.add(num)
+    for i, num in enumerate(nums, 1):
+        if i not in seen:
+            return [dup, i]
 
 
 
