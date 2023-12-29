@@ -1,5 +1,14 @@
 const containsNearbyDuplicate = (nums, k) => {
-    
+    let seenNums = new Map()
+    for (let i = 0; i<nums.length; i++){
+        if (seenNums.has(nums[i])){
+            if (i-seenNums.get(nums[i]) <= k){
+                return true
+            }
+        }
+        seenNums.set(nums[i],i)
+    }
+    return false
 };
 
 
@@ -10,7 +19,8 @@ const containsNearbyDuplicate = (nums, k) => {
 console.log(containsNearbyDuplicate(nums = [1,2,3,1], k = 3))
 console.log(containsNearbyDuplicate(nums = [1,0,1,1], k = 1))
 console.log(containsNearbyDuplicate(nums = [1,2,3,1,2,3], k = 2))
-
+console.log(containsNearbyDuplicate(nums = [99,99], k = 2))
+console.log(containsNearbyDuplicate(nums = [2,2], k = 3))
 
 
 
