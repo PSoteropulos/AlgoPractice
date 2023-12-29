@@ -1,5 +1,19 @@
 def longestPalindrome(s):
-    pass
+    occurrences = {}
+    for char in s:
+        if char in occurrences.keys():
+            occurrences[char] += 1
+        else:
+            occurrences[char] = 1
+    total = 0
+    hasOdd = False
+    for count in occurrences.values():
+        if count%2 == 0:
+            total += count
+        else:
+            hasOdd = True
+            total += count - 1
+    return total+1 if hasOdd else total
 
 
 
