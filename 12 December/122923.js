@@ -4,7 +4,8 @@ const maxProfit = (prices) => {
     for (let i = 1; i < prices.length; i++) {
         if (prices[i] < minPrice) {
             minPrice = prices[i]
-        } else if (prices[i] - minPrice > maxProfit) {
+        }
+        else if (prices[i] - minPrice > maxProfit) {
             maxProfit = prices[i] - minPrice
         }
     }
