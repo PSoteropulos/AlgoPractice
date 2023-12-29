@@ -1,6 +1,19 @@
 const commonChars = (words) => {
-    
-};
+    let commonChars = words[0].split('')
+    for (let i = 1; i < words.length; i++) {
+        let tempCommonChars = []
+        for (let j = 0; j < commonChars.length; j++) {
+            let char = commonChars[j]
+            if (words[i].includes(char)) {
+                tempCommonChars.push(char)
+                words[i] = words[i].replace(char, '')
+            }
+        }
+        commonChars = tempCommonChars
+    }
+    return commonChars
+}
+
 
 
 
