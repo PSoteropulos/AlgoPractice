@@ -1,5 +1,18 @@
 const firstUniqChar = (s) => {
-    
+    let occurrences = new Map()
+    for (let i = 0; i<s.length; i++){
+        if (occurrences.has(s[i])) {
+            occurrences.set(s[i], occurrences.get(s[i]) + 1);
+        } else {
+            occurrences.set(s[i], 1);
+        }
+    }
+    for (let i = 0; i<s.length; i++){
+        if (occurrences.get(s[i]) === 1){
+            return i
+        }
+    }
+    return -1
 }
 
 
