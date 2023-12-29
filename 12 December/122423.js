@@ -1,15 +1,32 @@
 const searchRange = (nums, target) => {
-    
+    if (nums.length === 1 && nums[0]===target){
+        return [0,0]
+    }
+    let first = undefined
+    let last = undefined
+    for (let i = 0; i<nums.length; i++){
+        if (nums[i]===target && !first){
+            first = i
+        }
+        if (nums[nums.length-1-i]===target && !last){
+            last = nums.length-1-i
+        }
+        if (first>=0 && last>=0){
+            return [first,last]
+        }
+    }
+    return [-1, -1]
 };
 
 
 
 
 
-
-console.log(searchRange(nums = [5,7,7,8,8,10], target = 8))
-console.log(searchRange(nums = [5,7,7,8,8,10], target = 6))
-console.log(searchRange(nums = [], target = 0))
+// console.log(searchRange(nums = [2,2], target = 2))
+// console.log(searchRange(nums = [5,7,7,8,8,10], target = 8))
+// console.log(searchRange(nums = [5,7,7,8,8,10], target = 6))
+// console.log(searchRange(nums = [], target = 0))
+console.log(searchRange(nums = [1,1,2], target = 1))
 
 
 
