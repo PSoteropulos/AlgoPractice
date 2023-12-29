@@ -1,5 +1,13 @@
 def commonChars(words):
-    pass
+    common_chars = list(words[0])
+    for word in words[1:]:
+        temp_common_chars = []
+        for char in common_chars:
+            if char in word:
+                temp_common_chars.append(char)
+                word = word.replace(char, '', 1)
+        common_chars = temp_common_chars
+    return common_chars
 
 
 
