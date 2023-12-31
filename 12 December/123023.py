@@ -1,4 +1,13 @@
+def dominantIndex(nums):
+    pass
 
+
+
+
+
+
+print(dominantIndex([3,6,1,0]))
+print(dominantIndex([1,2,3,4]))
 
 
 
