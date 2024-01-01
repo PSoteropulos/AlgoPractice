@@ -1,5 +1,9 @@
 def dominantIndex(nums):
-    pass
+    max_index = nums.index(max(nums))
+    for i in range(len(nums)):
+        if max_index != i and nums[max_index] < 2 * nums[i]:
+            return -1
+    return max_index
 
 
 
