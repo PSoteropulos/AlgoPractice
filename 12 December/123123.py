@@ -1,5 +1,17 @@
+import re
 def mostCommonWord(paragraph, banned):
-    pass
+    banned_set = set(word.lower() for word in banned)
+    max_freq_word = ''
+    max_freq = 0
+    word_count = {}
+    words = re.findall(r'\w+', paragraph.lower())
+    for word in words:
+        if word not in banned_set:
+            word_count[word] = word_count.get(word, 0) + 1
+            if word_count[word] > max_freq:
+                max_freq_word = word
+                max_freq = word_count[word]
+    return max_freq_word
 
 
 
