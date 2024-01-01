@@ -1,6 +1,41 @@
+//optimized solution (removes unnecessary sort and accounts for comma separated words)
 const mostCommonWord = (paragraph, banned) => {
-    
-}
+    const bannedSet = new Set(banned.map(word => word.toLowerCase()))
+    let wordMap = new Map()
+    let maxFreqWord = ''
+    let maxFreq = 0
+    const words = paragraph.toLowerCase().replace(/[!?',;.]/g, ' ').split(/\s+/)
+    for (const word of words) {
+        if (!bannedSet.has(word)) {
+            wordMap.set(word, (wordMap.get(word) || 0) + 1)
+            if (wordMap.get(word) > maxFreq) {
+                maxFreqWord = word
+                maxFreq = wordMap.get(word)
+            }
+        }
+    }
+    return maxFreqWord
+};
+
+
+// original implementation (trouble with test case that had comma separated words instead of space)
+// const mostCommonWord = (paragraph, banned) => {
+//     let cleanParagraphArray = paragraph.replace(/[!?',;.]/g, '').split(" ")
+//     let wordMap = new Map()
+//     for (let i = 0; i <cleanParagraphArray.length; i++){
+//         if (wordMap.has(cleanParagraphArray[i].toLowerCase())) {
+//             wordMap.set(cleanParagraphArray[i].toLowerCase(), wordMap.get(cleanParagraphArray[i].toLowerCase()) + 1);
+//         } else {
+//             wordMap.set(cleanParagraphArray[i].toLowerCase(), 1);
+//         }
+//     }
+//     let sortedArray = (Array.from(wordMap)).sort((a,b)=>b[1]-a[1])
+//     for (let i = 0; i<sortedArray.length; i++){
+//         if (!banned.includes(sortedArray[i][0])){
+//             return sortedArray[i][0]
+//         }
+//     }
+// }
 
 
 
