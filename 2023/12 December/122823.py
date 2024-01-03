@@ -1,19 +1,19 @@
 def longestPalindrome(s):
-    occurrences = {}
-    for char in s:
-        if char in occurrences.keys():
+    occurrences = {} # init new dict to track occurrence counts
+    for char in s: # iterate over string to set occurrence counts
+        if char in occurrences.keys(): # set the value to 1 if key:value isnt in map yet, otherwise increment
             occurrences[char] += 1
         else:
             occurrences[char] = 1
-    total = 0
-    hasOdd = False
-    for count in occurrences.values():
-        if count%2 == 0:
+    total = 0 # init variable to store length of palindrome
+    hasOdd = False # flag to check for odd character count (since this requires subtraction of 1 to make even)
+    for count in occurrences.values(): # iterate through map values
+        if count%2 == 0: # if even, add it to total length
             total += count
         else:
-            hasOdd = True
+            hasOdd = True # else set the odd flag, and add the length -1 to palindrome (chars must be pairs except for possibly one char in center)
             total += count - 1
-    return total+1 if hasOdd else total
+    return total+1 if hasOdd else total # add 1 for the center letter if any odd count (since it will be center/pivot point)
 
 
 
