@@ -1,13 +1,14 @@
 const isPowerOfFour = (n) => {
-    if (n <= 0) {
+    if (n <= 0) { // handle edge cases
         return false
     }
-    while (n !== 1) {
-        if (n % 4 !== 0) {
+    while (n !== 1) { // keep dividing by four until n is != 1
+        if (n % 4 !== 0) { // if it isnt at any point divisible by 4 then we return false
             return false
         }
-        n = n / 4
+        n = n / 4 // otherwise keep dividing by four
     }
+    // if the loop completes and n === 1 then its a power of four
     return true
 };
 
