@@ -1,17 +1,18 @@
 const isSubsequence = (s, t) => {
-    let currentIndex = 0
-    for (let i = 0; i<s.length; i++){
-        console.log({i}, {currentIndex})
-        while (currentIndex <= t.length){
-            if (s[i] === t[currentIndex]){
-                currentIndex ++
+    let currentIndex = 0 // init var to easily track current position in t
+    for (let i = 0; i<s.length; i++){ // iterate over each char in s
+        // console.log({i}, {currentIndex})
+        // iterate through string t starting from currentIndex
+        while (currentIndex <= t.length){ 
+            if (s[i] === t[currentIndex]){ // if current char of s matches the char at currentIndex of t
+                currentIndex ++ // move to next character in t and exit inner loop
                 break
             }
-            currentIndex ++
+            currentIndex ++ // move to next character in t if no match
         }
-        if (currentIndex > t.length) return false
+        if (currentIndex > t.length) return false // if currentIndex exceeds ength of t, s is not a subsequence of t
     }
-    return true
+    return true //if func hasn't returned false, s is a subsequence of t
 };
 
 
