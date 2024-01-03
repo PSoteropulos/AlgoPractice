@@ -1,14 +1,14 @@
 def isSubsequence(s, t):
-    currentIndex = 0
-    for i in range(len(s)):
-        while currentIndex < len(t):
-            if s[i] == t[currentIndex]:
-                currentIndex += 1
+    currentIndex = 0 # init var to easily track current position in t
+    for i in range(len(s)): # iterate over each char in s
+        while currentIndex < len(t): # iterate through string t starting from currentIndex
+            if s[i] == t[currentIndex]: # if current char of s matches the char at currentIndex of t
+                currentIndex += 1 # move to next character in t and exit inner loop
                 break
-            currentIndex += 1
+            currentIndex += 1 # move to next character in t if no match
         else:
-            return False
-    return True
+            return False # if currentIndex exceeds ength of t, s is not a subsequence of t
+    return True # if func hasn't returned false, s is a subsequence of t
 
 
 
