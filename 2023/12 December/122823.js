@@ -1,20 +1,20 @@
 const longestPalindrome = (s) => {
-    const occurrences = new Map()
-    for (let i = 0; i < s.length; i++){
-        occurrences.set(s[i], (occurrences.get(s[i]) || 0) + 1)
+    const occurrences = new Map() //init new map to track occurrence counts
+    for (let i = 0; i < s.length; i++){ // iterate over string to set occurrence counts
+        occurrences.set(s[i], (occurrences.get(s[i]) || 0) + 1) // set the value to 0 if key:value isnt in map yet, then increment either way
     }
-    let total = 0
-    let hasOdd = false
-    for (let count of occurrences.values()){
-        if (count % 2 === 0) {
+    let total = 0 // init variable to store length of palindrome
+    let hasOdd = false // flag to check for odd character count (since this requires subtraction of 1 to make even)
+    for (let count of occurrences.values()){ //iterate through map values
+        if (count % 2 === 0) { // if even, add it to total length
             total += count
         } 
         else {
-            hasOdd = true
-            total += count - 1 // Add the largest even number less than count
+            hasOdd = true // else set the odd flag, and add the length -1 to palindrome (chars must be pairs except for possibly one char in center)
+            total += count - 1
         }
     }
-    return hasOdd ? total + 1 : total // Add 1 for the center letter if there's any odd count
+    return hasOdd ? total + 1 : total // add 1 for the center letter if any odd count (since it will be center/pivot point)
 };
 
 
