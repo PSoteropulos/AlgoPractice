@@ -1,5 +1,16 @@
 def findShortestSubArray(nums):
-    pass
+    count, first_occurrence, last_occurrence = {}, {}, {}
+    for i, num in enumerate(nums):
+        count[num] = count.get(num, 0) + 1
+        if num not in first_occurrence:
+            first_occurrence[num] = i
+        last_occurrence[num] = i
+    degree = max(count.values())
+    max_freq_elements = [num for num, freq in count.items() if freq == degree]
+    min_length = float('inf')
+    for num in max_freq_elements:
+        min_length = min(min_length, last_occurrence[num] - first_occurrence[num] + 1)
+    return min_length
 
 
 
