@@ -1,5 +1,8 @@
 const maximumProduct = (nums) => {
-    
+    nums.sort((a, b) => a - b)
+    let max1 = nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3]
+    let max2 = nums[0] * nums[1] * nums[nums.length - 1]
+    return Math.max(max1, max2)
 };
 
 
@@ -10,6 +13,7 @@ const maximumProduct = (nums) => {
 console.log(maximumProduct([1,2,3]))
 console.log(maximumProduct([1,2,3,4]))
 console.log(maximumProduct([-1,-2,-3]))
+console.log(maximumProduct([1,0,100]))
 
 
 
