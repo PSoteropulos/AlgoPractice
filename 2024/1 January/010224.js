@@ -1,5 +1,15 @@
 const findLHS = (nums) => {
-    
+    let freq = new Map()
+    for (let i = 0; i < nums.length; i++){
+        freq.set(nums[i], (freq.get(nums[i])||0)+1)
+    }
+    let longest = 0
+    for (let [num, count] of freq){
+        if (freq.has(num+1)){
+            longest = Math.max(longest, count + freq.get(num+1))
+        }
+    }
+    return longest
 };
 
 
