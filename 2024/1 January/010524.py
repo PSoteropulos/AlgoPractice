@@ -1,6 +1,16 @@
 def thirdMax(nums):
-    pass
-
+    firstMax, secondMax, thirdMax = -float("inf"), -float("inf"), -float("inf")
+    for num in nums:
+        if (num > firstMax):
+            thirdMax = secondMax
+            secondMax = firstMax
+            firstMax = num
+        elif (num > secondMax and num < firstMax):
+            thirdMax = secondMax
+            secondMax = num
+        elif (num > thirdMax and num < secondMax):
+            thirdMax = num
+    return thirdMax if thirdMax != -float("inf") else firstMax
 
 
 
@@ -8,7 +18,7 @@ def thirdMax(nums):
 print(thirdMax([3,2,1]))
 print(thirdMax([1,2]))
 print(thirdMax([2,2,3,1]))
-
+print(thirdMax([3,3,4,3,4,3,0,3,3]))
 
 
 
