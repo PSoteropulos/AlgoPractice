@@ -1,5 +1,22 @@
 const findShortestSubArray = (nums) => {
-    
+    let count = {}
+    let first = {}
+    let last = {}
+    let degree = 0
+    for (let i = 0; i<nums.length; i++){
+        count[nums[i]] = (count[nums[i]] || 0) + 1
+        degree = Math.max(degree, count[nums[i]])
+        if (first[nums[i]] === undefined){
+            first[nums[i]] = i
+        }
+        last[nums[i]] = i
+    }
+    let maxFreqElements = Object.keys(count).filter(num => count[num] === degree)
+    let minLength = Infinity
+    maxFreqElements.forEach(num => {
+        minLength = Math.min(minLength, last[num] - first[num] + 1)
+    })
+    return minLength
 };
 
 
