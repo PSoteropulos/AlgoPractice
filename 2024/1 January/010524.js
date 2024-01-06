@@ -1,5 +1,11 @@
 const thirdMax = (nums) => {
-    
+    let numSet = new Set()
+    for (let i = 0; i < nums.length; i++){
+        numSet.add(nums[i])
+    }
+    let sortedArray = Array.from(numSet).sort((a,b)=>a-b)
+    console.log(sortedArray)
+    return sortedArray[sortedArray.length-3] !== undefined? sortedArray[sortedArray.length-3] : sortedArray[sortedArray.length-1]
 };
 
 
@@ -10,6 +16,7 @@ const thirdMax = (nums) => {
 console.log(thirdMax([3,2,1]))
 console.log(thirdMax([1,2]))
 console.log(thirdMax([2,2,3,1]))
+console.log(thirdMax([3,3,4,3,4,3,0,3,3]))
 
 
 
