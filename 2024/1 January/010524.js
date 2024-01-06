@@ -1,3 +1,4 @@
+//original solution
 const thirdMax = (nums) => {
     let numSet = new Set()
     for (let i = 0; i < nums.length; i++){
@@ -7,6 +8,24 @@ const thirdMax = (nums) => {
     console.log(sortedArray)
     return sortedArray[sortedArray.length-3] !== undefined? sortedArray[sortedArray.length-3] : sortedArray[sortedArray.length-1]
 };
+
+//optimized
+// const thirdMax = (nums) => {
+//     let firstMax = -Infinity, secondMax = -Infinity, thirdMax = -Infinity;
+//     for (let num of nums) {
+//         if (num > firstMax) {
+//             thirdMax = secondMax
+//             secondMax = firstMax
+//             firstMax = num
+//         } else if (num > secondMax && num < firstMax) {
+//             thirdMax = secondMax
+//             secondMax = num
+//         } else if (num > thirdMax && num < secondMax) {
+//             thirdMax = num
+//         }
+//     }
+//     return thirdMax !== -Infinity ? thirdMax : firstMax
+// }
 
 
 
