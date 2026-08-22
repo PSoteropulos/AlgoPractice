@@ -1,0 +1,12 @@
+# AlgoPractice
+
+## Daily Challenges
+
+An automated daily rotation of original data structures & algorithms
+practice problems. Each entry lives under `challenges/<date>-<slug>/` with a
+`problem.md` statement and stub solutions in five languages; a worked
+reference solution lives under `solutions/<date>-<slug>/reference.md`.
+
+| Date | Title | Difficulty | Topic | Languages | Link |
+| --- | --- | --- | --- | --- | --- |
+| 2026-08-21 | Longest Balanced Parity Subarray | Medium | Arrays / Prefix Sums | Python, TypeScript, C#, Java, Go | [challenges/2026-08-21-longest-balanced-parity-subarray](challenges/2026-08-21-longest-balanced-parity-subarray) |
