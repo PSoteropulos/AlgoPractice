@@ -12,3 +12,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-08-21 | Longest Balanced Parity Subarray | Medium | Arrays / Prefix Sums | Python, TypeScript, C#, Java, Go | [challenges/2026-08-21-longest-balanced-parity-subarray](challenges/2026-08-21-longest-balanced-parity-subarray) |
 | 2026-08-22 | Longest Doubling Chain | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-08-22-longest-doubling-chain](challenges/2026-08-22-longest-doubling-chain) |
 | 2026-08-23 | Capped Team Merges | Easy | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-08-23-capped-team-merges](challenges/2026-08-23-capped-team-merges) |
+| 2026-08-24 | Second-Deepest Level Sum | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-08-24-second-deepest-level-sum](challenges/2026-08-24-second-deepest-level-sum) |
