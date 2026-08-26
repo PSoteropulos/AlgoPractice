@@ -14,3 +14,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-08-23 | Capped Team Merges | Easy | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-08-23-capped-team-merges](challenges/2026-08-23-capped-team-merges) |
 | 2026-08-24 | Second-Deepest Level Sum | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-08-24-second-deepest-level-sum](challenges/2026-08-24-second-deepest-level-sum) |
 | 2026-08-25 | One Free Toll Road | Hard | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-08-25-one-free-toll-road](challenges/2026-08-25-one-free-toll-road) |
+| 2026-08-26 | Kth Highest Score Live Feed | Medium | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-08-26-kth-highest-score-live-feed](challenges/2026-08-26-kth-highest-score-live-feed) |
