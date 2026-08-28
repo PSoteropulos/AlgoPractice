@@ -16,3 +16,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-08-25 | One Free Toll Road | Hard | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-08-25-one-free-toll-road](challenges/2026-08-25-one-free-toll-road) |
 | 2026-08-26 | Kth Highest Score Live Feed | Medium | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-08-26-kth-highest-score-live-feed](challenges/2026-08-26-kth-highest-score-live-feed) |
 | 2026-08-27 | Mirror Car Weight | Easy | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-08-27-mirror-car-weight](challenges/2026-08-27-mirror-car-weight) |
+| 2026-08-28 | Undo-Redo Notepad | Medium | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-08-28-undo-redo-notepad](challenges/2026-08-28-undo-redo-notepad) |
