@@ -19,3 +19,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-08-28 | Undo-Redo Notepad | Medium | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-08-28-undo-redo-notepad](challenges/2026-08-28-undo-redo-notepad) |
 | 2026-08-29 | Stable Sensor Window | Medium | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-08-29-stable-sensor-window](challenges/2026-08-29-stable-sensor-window) |
 | 2026-08-30 | Loyalty Tier Lookup | Easy | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-08-30-loyalty-tier-lookup](challenges/2026-08-30-loyalty-tier-lookup) |
+| 2026-08-31 | No Repeat in Three Consecutive Murals | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-08-31-no-repeat-in-three-consecutive-murals](challenges/2026-08-31-no-repeat-in-three-consecutive-murals) |
