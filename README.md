@@ -21,3 +21,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-08-30 | Loyalty Tier Lookup | Easy | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-08-30-loyalty-tier-lookup](challenges/2026-08-30-loyalty-tier-lookup) |
 | 2026-08-31 | No Repeat in Three Consecutive Murals | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-08-31-no-repeat-in-three-consecutive-murals](challenges/2026-08-31-no-repeat-in-three-consecutive-murals) |
 | 2026-09-01 | Beacon Array Maximum Signal | Hard | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-09-01-beacon-array-maximum-signal](challenges/2026-09-01-beacon-array-maximum-signal) |
+| 2026-09-02 | Trailhead Autocomplete | Medium | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-09-02-trailhead-autocomplete](challenges/2026-09-02-trailhead-autocomplete) |
