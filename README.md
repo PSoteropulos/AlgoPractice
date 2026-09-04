@@ -23,3 +23,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-01 | Beacon Array Maximum Signal | Hard | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-09-01-beacon-array-maximum-signal](challenges/2026-09-01-beacon-array-maximum-signal) |
 | 2026-09-02 | Trailhead Autocomplete | Medium | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-09-02-trailhead-autocomplete](challenges/2026-09-02-trailhead-autocomplete) |
 | 2026-09-03 | Study Pod Booking Window | Easy | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-09-03-study-pod-booking-window](challenges/2026-09-03-study-pod-booking-window) |
+| 2026-09-04 | Snack Budget Combos | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-09-04-snack-budget-combos](challenges/2026-09-04-snack-budget-combos) |
