@@ -26,3 +26,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-04 | Snack Budget Combos | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-09-04-snack-budget-combos](challenges/2026-09-04-snack-budget-combos) |
 | 2026-09-05 | Coprime Storage Bins | Hard | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-09-05-coprime-storage-bins](challenges/2026-09-05-coprime-storage-bins) |
 | 2026-09-06 | Marquee Run Compressor | Easy | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-09-06-marquee-run-compressor](challenges/2026-09-06-marquee-run-compressor) |
+| 2026-09-07 | Flavor-Equivalent Batches | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-09-07-flavor-equivalent-batches](challenges/2026-09-07-flavor-equivalent-batches) |
