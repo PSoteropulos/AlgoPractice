@@ -27,3 +27,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-05 | Coprime Storage Bins | Hard | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-09-05-coprime-storage-bins](challenges/2026-09-05-coprime-storage-bins) |
 | 2026-09-06 | Marquee Run Compressor | Easy | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-09-06-marquee-run-compressor](challenges/2026-09-06-marquee-run-compressor) |
 | 2026-09-07 | Flavor-Equivalent Batches | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-09-07-flavor-equivalent-batches](challenges/2026-09-07-flavor-equivalent-batches) |
+| 2026-09-08 | Mixer Friend Circles | Easy | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-09-08-mixer-friend-circles](challenges/2026-09-08-mixer-friend-circles) |
