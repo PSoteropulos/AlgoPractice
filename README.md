@@ -28,3 +28,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-06 | Marquee Run Compressor | Easy | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-09-06-marquee-run-compressor](challenges/2026-09-06-marquee-run-compressor) |
 | 2026-09-07 | Flavor-Equivalent Batches | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-09-07-flavor-equivalent-batches](challenges/2026-09-07-flavor-equivalent-batches) |
 | 2026-09-08 | Mixer Friend Circles | Easy | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-09-08-mixer-friend-circles](challenges/2026-09-08-mixer-friend-circles) |
+| 2026-09-09 | Canopy Balance Point | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-09-09-canopy-balance-point](challenges/2026-09-09-canopy-balance-point) |
