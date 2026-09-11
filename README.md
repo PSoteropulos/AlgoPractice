@@ -30,3 +30,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-08 | Mixer Friend Circles | Easy | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-09-08-mixer-friend-circles](challenges/2026-09-08-mixer-friend-circles) |
 | 2026-09-09 | Canopy Balance Point | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-09-09-canopy-balance-point](challenges/2026-09-09-canopy-balance-point) |
 | 2026-09-10 | Broadcast Reach | Easy | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-09-10-broadcast-reach](challenges/2026-09-10-broadcast-reach) |
+| 2026-09-11 | Prep Line Priority | Hard | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-09-11-prep-line-priority](challenges/2026-09-11-prep-line-priority) |
