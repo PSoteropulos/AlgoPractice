@@ -31,3 +31,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-09 | Canopy Balance Point | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-09-09-canopy-balance-point](challenges/2026-09-09-canopy-balance-point) |
 | 2026-09-10 | Broadcast Reach | Easy | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-09-10-broadcast-reach](challenges/2026-09-10-broadcast-reach) |
 | 2026-09-11 | Prep Line Priority | Hard | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-09-11-prep-line-priority](challenges/2026-09-11-prep-line-priority) |
+| 2026-09-12 | Ferris Wheel Gondola Upgrade Distance | Medium | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-09-12-ferris-wheel-gondola-upgrade-distance](challenges/2026-09-12-ferris-wheel-gondola-upgrade-distance) |
