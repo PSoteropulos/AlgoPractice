@@ -33,3 +33,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-11 | Prep Line Priority | Hard | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-09-11-prep-line-priority](challenges/2026-09-11-prep-line-priority) |
 | 2026-09-12 | Ferris Wheel Gondola Upgrade Distance | Medium | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-09-12-ferris-wheel-gondola-upgrade-distance](challenges/2026-09-12-ferris-wheel-gondola-upgrade-distance) |
 | 2026-09-13 | Merged Step-Count Timeline | Easy | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-09-13-merged-step-count-timeline](challenges/2026-09-13-merged-step-count-timeline) |
+| 2026-09-14 | Tour Bus Occupancy Window | Medium | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-09-14-tour-bus-occupancy-window](challenges/2026-09-14-tour-bus-occupancy-window) |
