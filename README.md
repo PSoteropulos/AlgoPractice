@@ -36,3 +36,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-14 | Tour Bus Occupancy Window | Medium | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-09-14-tour-bus-occupancy-window](challenges/2026-09-14-tour-bus-occupancy-window) |
 | 2026-09-15 | Even Shift Split | Hard | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-09-15-even-shift-split](challenges/2026-09-15-even-shift-split) |
 | 2026-09-16 | Busker Booking Maximizer | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-09-16-busker-booking-maximizer](challenges/2026-09-16-busker-booking-maximizer) |
+| 2026-09-17 | Beacon Cap Compliance | Easy | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-09-17-beacon-cap-compliance](challenges/2026-09-17-beacon-cap-compliance) |
