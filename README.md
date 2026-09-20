@@ -39,3 +39,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-17 | Beacon Cap Compliance | Easy | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-09-17-beacon-cap-compliance](challenges/2026-09-17-beacon-cap-compliance) |
 | 2026-09-18 | Callsign Prefix Guard | Medium | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-09-18-callsign-prefix-guard](challenges/2026-09-18-callsign-prefix-guard) |
 | 2026-09-19 | Workshop Marathon Scheduler | Hard | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-09-19-workshop-marathon-scheduler](challenges/2026-09-19-workshop-marathon-scheduler) |
+| 2026-09-20 | High-Score Reel Combinations | Easy | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-09-20-high-score-reel-combinations](challenges/2026-09-20-high-score-reel-combinations) |
