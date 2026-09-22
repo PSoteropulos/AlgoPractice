@@ -41,3 +41,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-19 | Workshop Marathon Scheduler | Hard | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-09-19-workshop-marathon-scheduler](challenges/2026-09-19-workshop-marathon-scheduler) |
 | 2026-09-20 | High-Score Reel Combinations | Easy | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-09-20-high-score-reel-combinations](challenges/2026-09-20-high-score-reel-combinations) |
 | 2026-09-21 | Harmonic Pair Counter | Medium | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-09-21-harmonic-pair-counter](challenges/2026-09-21-harmonic-pair-counter) |
+| 2026-09-22 | Roll Call Scanner Glitch | Easy | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-09-22-roll-call-scanner-glitch](challenges/2026-09-22-roll-call-scanner-glitch) |
