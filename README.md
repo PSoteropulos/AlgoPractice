@@ -43,3 +43,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-21 | Harmonic Pair Counter | Medium | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-09-21-harmonic-pair-counter](challenges/2026-09-21-harmonic-pair-counter) |
 | 2026-09-22 | Roll Call Scanner Glitch | Easy | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-09-22-roll-call-scanner-glitch](challenges/2026-09-22-roll-call-scanner-glitch) |
 | 2026-09-23 | Booster Network Merge Sizes | Medium | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-09-23-booster-network-merge-sizes](challenges/2026-09-23-booster-network-merge-sizes) |
+| 2026-09-24 | Longest Balanced Staffing Window | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-09-24-longest-balanced-staffing-window](challenges/2026-09-24-longest-balanced-staffing-window) |
