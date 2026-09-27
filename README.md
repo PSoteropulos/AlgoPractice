@@ -46,3 +46,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-24 | Longest Balanced Staffing Window | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-09-24-longest-balanced-staffing-window](challenges/2026-09-24-longest-balanced-staffing-window) |
 | 2026-09-25 | Relay Hop Budget | Hard | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-09-25-relay-hop-budget](challenges/2026-09-25-relay-hop-budget) |
 | 2026-09-26 | Steady Relay Subtrees | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-09-26-steady-relay-subtrees](challenges/2026-09-26-steady-relay-subtrees) |
+| 2026-09-27 | Tray Stack Consolidation | Easy | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-09-27-tray-stack-consolidation](challenges/2026-09-27-tray-stack-consolidation) |
