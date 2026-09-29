@@ -48,3 +48,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-26 | Steady Relay Subtrees | Medium | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-09-26-steady-relay-subtrees](challenges/2026-09-26-steady-relay-subtrees) |
 | 2026-09-27 | Tray Stack Consolidation | Easy | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-09-27-tray-stack-consolidation](challenges/2026-09-27-tray-stack-consolidation) |
 | 2026-09-28 | Cooling Duct Coverage | Hard | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-09-28-cooling-duct-coverage](challenges/2026-09-28-cooling-duct-coverage) |
+| 2026-09-29 | Gap-Rule Tip Jar | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-09-29-gap-rule-tip-jar](challenges/2026-09-29-gap-rule-tip-jar) |
