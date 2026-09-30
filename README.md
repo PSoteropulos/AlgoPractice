@@ -49,3 +49,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-27 | Tray Stack Consolidation | Easy | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-09-27-tray-stack-consolidation](challenges/2026-09-27-tray-stack-consolidation) |
 | 2026-09-28 | Cooling Duct Coverage | Hard | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-09-28-cooling-duct-coverage](challenges/2026-09-28-cooling-duct-coverage) |
 | 2026-09-29 | Gap-Rule Tip Jar | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-09-29-gap-rule-tip-jar](challenges/2026-09-29-gap-rule-tip-jar) |
+| 2026-09-30 | Odd-Sum Batch Flip | Medium | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-09-30-odd-sum-batch-flip](challenges/2026-09-30-odd-sum-batch-flip) |
