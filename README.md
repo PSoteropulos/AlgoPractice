@@ -52,3 +52,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-09-30 | Odd-Sum Batch Flip | Medium | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-09-30-odd-sum-batch-flip](challenges/2026-09-30-odd-sum-batch-flip) |
 | 2026-10-01 | Kth Closest Dock Pairing | Hard | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-10-01-kth-closest-dock-pairing](challenges/2026-10-01-kth-closest-dock-pairing) |
 | 2026-10-02 | Dim Signal Windows | Medium | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-10-02-dim-signal-windows](challenges/2026-10-02-dim-signal-windows) |
+| 2026-10-03 | Rotated Label Pairs | Easy | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-10-03-rotated-label-pairs](challenges/2026-10-03-rotated-label-pairs) |
