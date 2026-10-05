@@ -54,3 +54,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-02 | Dim Signal Windows | Medium | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-10-02-dim-signal-windows](challenges/2026-10-02-dim-signal-windows) |
 | 2026-10-03 | Rotated Label Pairs | Easy | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-10-03-rotated-label-pairs](challenges/2026-10-03-rotated-label-pairs) |
 | 2026-10-04 | Shortest Unique Shortcodes | Medium | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-10-04-shortest-unique-shortcodes](challenges/2026-10-04-shortest-unique-shortcodes) |
+| 2026-10-05 | Fewest Beacon Towers | Medium | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-10-05-fewest-beacon-towers](challenges/2026-10-05-fewest-beacon-towers) |
