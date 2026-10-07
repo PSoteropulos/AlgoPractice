@@ -56,3 +56,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-04 | Shortest Unique Shortcodes | Medium | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-10-04-shortest-unique-shortcodes](challenges/2026-10-04-shortest-unique-shortcodes) |
 | 2026-10-05 | Fewest Beacon Towers | Medium | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-10-05-fewest-beacon-towers](challenges/2026-10-05-fewest-beacon-towers) |
 | 2026-10-06 | Floodlight Placement Budget | Hard | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-10-06-floodlight-placement-budget](challenges/2026-10-06-floodlight-placement-budget) |
+| 2026-10-07 | Synchronized Lantern Flashes | Easy | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-10-07-synchronized-lantern-flashes](challenges/2026-10-07-synchronized-lantern-flashes) |
