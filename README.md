@@ -58,3 +58,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-06 | Floodlight Placement Budget | Hard | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-10-06-floodlight-placement-budget](challenges/2026-10-06-floodlight-placement-budget) |
 | 2026-10-07 | Synchronized Lantern Flashes | Easy | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-10-07-synchronized-lantern-flashes](challenges/2026-10-07-synchronized-lantern-flashes) |
 | 2026-10-08 | Spaced Banner Arrangements | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-10-08-spaced-banner-arrangements](challenges/2026-10-08-spaced-banner-arrangements) |
+| 2026-10-09 | Cable Delay Reachability | Medium | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-10-09-cable-delay-reachability](challenges/2026-10-09-cable-delay-reachability) |
