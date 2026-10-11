@@ -60,3 +60,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-08 | Spaced Banner Arrangements | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-10-08-spaced-banner-arrangements](challenges/2026-10-08-spaced-banner-arrangements) |
 | 2026-10-09 | Cable Delay Reachability | Medium | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-10-09-cable-delay-reachability](challenges/2026-10-09-cable-delay-reachability) |
 | 2026-10-10 | Conveyor Belt Log | Easy | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-10-10-conveyor-belt-log](challenges/2026-10-10-conveyor-belt-log) |
+| 2026-10-11 | Ridge Line Sorter | Medium | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-10-11-ridge-line-sorter](challenges/2026-10-11-ridge-line-sorter) |
