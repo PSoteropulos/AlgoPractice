@@ -65,3 +65,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-13 | Fewest Extra Tunnels | Hard | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-10-13-fewest-extra-tunnels](challenges/2026-10-13-fewest-extra-tunnels) |
 | 2026-10-14 | Affordable Shift Blocks | Easy | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-10-14-affordable-shift-blocks](challenges/2026-10-14-affordable-shift-blocks) |
 | 2026-10-15 | Busiest Loading Bay | Medium | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-10-15-busiest-loading-bay](challenges/2026-10-15-busiest-loading-bay) |
+| 2026-10-16 | Widest Lantern Spacing | Medium | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-10-16-widest-lantern-spacing](challenges/2026-10-16-widest-lantern-spacing) |
