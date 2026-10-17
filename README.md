@@ -66,3 +66,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-14 | Affordable Shift Blocks | Easy | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-10-14-affordable-shift-blocks](challenges/2026-10-14-affordable-shift-blocks) |
 | 2026-10-15 | Busiest Loading Bay | Medium | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-10-15-busiest-loading-bay](challenges/2026-10-15-busiest-loading-bay) |
 | 2026-10-16 | Widest Lantern Spacing | Medium | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-10-16-widest-lantern-spacing](challenges/2026-10-16-widest-lantern-spacing) |
+| 2026-10-17 | Next Higher Tide Gauge | Easy | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-10-17-next-higher-tide-gauge](challenges/2026-10-17-next-higher-tide-gauge) |
