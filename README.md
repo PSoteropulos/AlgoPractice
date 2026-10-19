@@ -68,3 +68,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-16 | Widest Lantern Spacing | Medium | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-10-16-widest-lantern-spacing](challenges/2026-10-16-widest-lantern-spacing) |
 | 2026-10-17 | Next Higher Tide Gauge | Easy | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-10-17-next-higher-tide-gauge](challenges/2026-10-17-next-higher-tide-gauge) |
 | 2026-10-18 | Varied Ferry Hops | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-10-18-varied-ferry-hops](challenges/2026-10-18-varied-ferry-hops) |
+| 2026-10-19 | Harmonic Shift Totals | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-10-19-harmonic-shift-totals](challenges/2026-10-19-harmonic-shift-totals) |
