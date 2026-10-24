@@ -73,3 +73,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-21 | Prefix Popularity Scores | Medium | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-10-21-prefix-popularity-scores](challenges/2026-10-21-prefix-popularity-scores) |
 | 2026-10-22 | Oven Pickup Deadlines | Hard | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-10-22-oven-pickup-deadlines](challenges/2026-10-22-oven-pickup-deadlines) |
 | 2026-10-23 | Quiet Channel Pairs | Easy | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-10-23-quiet-channel-pairs](challenges/2026-10-23-quiet-channel-pairs) |
+| 2026-10-24 | Balanced Truck Loads | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-10-24-balanced-truck-loads](challenges/2026-10-24-balanced-truck-loads) |
