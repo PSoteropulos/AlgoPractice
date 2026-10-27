@@ -76,3 +76,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-24 | Balanced Truck Loads | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-10-24-balanced-truck-loads](challenges/2026-10-24-balanced-truck-loads) |
 | 2026-10-25 | Even-Sum Cargo Flip | Medium | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-10-25-even-sum-cargo-flip](challenges/2026-10-25-even-sum-cargo-flip) |
 | 2026-10-26 | Blackout Clusters | Hard | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-10-26-blackout-clusters](challenges/2026-10-26-blackout-clusters) |
+| 2026-10-27 | Triple-Divisor Badges | Medium | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-10-27-triple-divisor-badges](challenges/2026-10-27-triple-divisor-badges) |
