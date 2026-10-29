@@ -78,3 +78,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-26 | Blackout Clusters | Hard | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-10-26-blackout-clusters](challenges/2026-10-26-blackout-clusters) |
 | 2026-10-27 | Triple-Divisor Badges | Medium | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-10-27-triple-divisor-badges](challenges/2026-10-27-triple-divisor-badges) |
 | 2026-10-28 | Above-Average Branches | Easy | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-10-28-above-average-branches](challenges/2026-10-28-above-average-branches) |
+| 2026-10-29 | No-Repeat Stepping Stones | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-10-29-no-repeat-stepping-stones](challenges/2026-10-29-no-repeat-stepping-stones) |
