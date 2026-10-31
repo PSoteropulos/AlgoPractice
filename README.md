@@ -80,3 +80,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-28 | Above-Average Branches | Easy | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-10-28-above-average-branches](challenges/2026-10-28-above-average-branches) |
 | 2026-10-29 | No-Repeat Stepping Stones | Medium | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-10-29-no-repeat-stepping-stones](challenges/2026-10-29-no-repeat-stepping-stones) |
 | 2026-10-30 | Matching Lantern Rows | Medium | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-10-30-matching-lantern-rows](challenges/2026-10-30-matching-lantern-rows) |
+| 2026-10-31 | Window Deviation Costs | Hard | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-10-31-window-deviation-costs](challenges/2026-10-31-window-deviation-costs) |
