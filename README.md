@@ -83,3 +83,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-10-31 | Window Deviation Costs | Hard | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-10-31-window-deviation-costs](challenges/2026-10-31-window-deviation-costs) |
 | 2026-11-01 | Rival Table Assignments | Medium | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-11-01-rival-table-assignments](challenges/2026-11-01-rival-table-assignments) |
 | 2026-11-02 | Shortest Repeating Tile | Easy | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-11-02-shortest-repeating-tile](challenges/2026-11-02-shortest-repeating-tile) |
+| 2026-11-03 | Even Relay Legs | Medium | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-11-03-even-relay-legs](challenges/2026-11-03-even-relay-legs) |
