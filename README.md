@@ -86,3 +86,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-11-03 | Even Relay Legs | Medium | Binary Search | Python, TypeScript, C#, Java, Go | [challenges/2026-11-03-even-relay-legs](challenges/2026-11-03-even-relay-legs) |
 | 2026-11-04 | Heavy Truck Routes | Medium | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-11-04-heavy-truck-routes](challenges/2026-11-04-heavy-truck-routes) |
 | 2026-11-05 | Balanced Shift Split | Hard | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-11-05-balanced-shift-split](challenges/2026-11-05-balanced-shift-split) |
+| 2026-11-06 | Calm Reading Stretches | Medium | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-11-06-calm-reading-stretches](challenges/2026-11-06-calm-reading-stretches) |
