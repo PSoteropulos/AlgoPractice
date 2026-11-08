@@ -88,3 +88,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-11-05 | Balanced Shift Split | Hard | Dynamic Programming | Python, TypeScript, C#, Java, Go | [challenges/2026-11-05-balanced-shift-split](challenges/2026-11-05-balanced-shift-split) |
 | 2026-11-06 | Calm Reading Stretches | Medium | Two Pointers / Sliding Window | Python, TypeScript, C#, Java, Go | [challenges/2026-11-06-calm-reading-stretches](challenges/2026-11-06-calm-reading-stretches) |
 | 2026-11-07 | Crate Chain Reaction | Easy | Stacks / Queues | Python, TypeScript, C#, Java, Go | [challenges/2026-11-07-crate-chain-reaction](challenges/2026-11-07-crate-chain-reaction) |
+| 2026-11-08 | Ribbon Cut Palindromes | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-11-08-ribbon-cut-palindromes](challenges/2026-11-08-ribbon-cut-palindromes) |
