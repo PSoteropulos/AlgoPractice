@@ -91,3 +91,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-11-08 | Ribbon Cut Palindromes | Medium | Backtracking | Python, TypeScript, C#, Java, Go | [challenges/2026-11-08-ribbon-cut-palindromes](challenges/2026-11-08-ribbon-cut-palindromes) |
 | 2026-11-09 | Triple-Balanced Delivery Run | Medium | Hashing | Python, TypeScript, C#, Java, Go | [challenges/2026-11-09-triple-balanced-delivery-run](challenges/2026-11-09-triple-balanced-delivery-run) |
 | 2026-11-10 | Lantern Hub Placement | Hard | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-11-10-lantern-hub-placement](challenges/2026-11-10-lantern-hub-placement) |
+| 2026-11-11 | Bookend Tag Pairs | Hard | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-11-11-bookend-tag-pairs](challenges/2026-11-11-bookend-tag-pairs) |
