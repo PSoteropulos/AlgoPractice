@@ -93,3 +93,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-11-10 | Lantern Hub Placement | Hard | Trees | Python, TypeScript, C#, Java, Go | [challenges/2026-11-10-lantern-hub-placement](challenges/2026-11-10-lantern-hub-placement) |
 | 2026-11-11 | Bookend Tag Pairs | Hard | Tries | Python, TypeScript, C#, Java, Go | [challenges/2026-11-11-bookend-tag-pairs](challenges/2026-11-11-bookend-tag-pairs) |
 | 2026-11-12 | Exact Alarm Windows | Medium | Bit Manipulation | Python, TypeScript, C#, Java, Go | [challenges/2026-11-12-exact-alarm-windows](challenges/2026-11-12-exact-alarm-windows) |
+| 2026-11-13 | Drone Battery Swaps | Easy | Greedy | Python, TypeScript, C#, Java, Go | [challenges/2026-11-13-drone-battery-swaps](challenges/2026-11-13-drone-battery-swaps) |
