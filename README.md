@@ -97,3 +97,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-11-14 | Pendulum Playlist Reorder | Medium | Linked Lists | Python, TypeScript, C#, Java, Go | [challenges/2026-11-14-pendulum-playlist-reorder](challenges/2026-11-14-pendulum-playlist-reorder) |
 | 2026-11-15 | Charging Bay Dispatch | Medium | Heaps | Python, TypeScript, C#, Java, Go | [challenges/2026-11-15-charging-bay-dispatch](challenges/2026-11-15-charging-bay-dispatch) |
 | 2026-11-16 | Island Ferry Vouchers | Hard | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-11-16-island-ferry-vouchers](challenges/2026-11-16-island-ferry-vouchers) |
+| 2026-11-17 | Ledger Trailing Zeros | Easy | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-11-17-ledger-trailing-zeros](challenges/2026-11-17-ledger-trailing-zeros) |
