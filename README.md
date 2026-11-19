@@ -99,3 +99,4 @@ reference solution lives under `solutions/<date>-<slug>/reference.md`.
 | 2026-11-16 | Island Ferry Vouchers | Hard | Graphs | Python, TypeScript, C#, Java, Go | [challenges/2026-11-16-island-ferry-vouchers](challenges/2026-11-16-island-ferry-vouchers) |
 | 2026-11-17 | Ledger Trailing Zeros | Easy | Math / Number Theory | Python, TypeScript, C#, Java, Go | [challenges/2026-11-17-ledger-trailing-zeros](challenges/2026-11-17-ledger-trailing-zeros) |
 | 2026-11-18 | Dial Lock Alignment | Medium | Arrays / Strings | Python, TypeScript, C#, Java, Go | [challenges/2026-11-18-dial-lock-alignment](challenges/2026-11-18-dial-lock-alignment) |
+| 2026-11-19 | Redundant Park Trails | Easy | Union-Find | Python, TypeScript, C#, Java, Go | [challenges/2026-11-19-redundant-park-trails](challenges/2026-11-19-redundant-park-trails) |
